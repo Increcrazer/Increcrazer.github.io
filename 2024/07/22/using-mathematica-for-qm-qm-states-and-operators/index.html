@@ -450,7 +450,7 @@
 \vec{\boldsymbol{\psi}}(t)=\exp\left[-\frac{\mathrm{i}}{\hbar}\int_{t_0}^t\boldsymbol{H}(s)\mathrm{d}s\right]\cdot\vec{\boldsymbol{\psi}}(t_0).</script><h3 id="3-4-特殊情况：-哈密顿量是时不变的"><a href="#3-4-特殊情况：-哈密顿量是时不变的" class="headerlink" title="3.4 特殊情况： 哈密顿量是时不变的"></a>3.4 特殊情况： 哈密顿量是时不变的</h3><p>可以直接解出薛定谔方程，其<br><strong>计算机语言</strong>为：</p>
 <script type="math/tex; mode=display">
 \vec{\boldsymbol{\psi}}(t)=\exp\left[-\frac{\mathrm{i}(t-t_0)}\hbar\boldsymbol{H}\right]\cdot\vec{\boldsymbol{\psi}}(t_0).</script><pre class="language-wolfram" data-language="wolfram"><code class="language-wolfram">phi<span class="token operator">:=</span> <span class="token operator">=</span> Flatten<span class="token punctuation">[</span>KroneckerProduct<span class="token punctuation">[</span> phi1<span class="token punctuation">,</span> phi2<span class="token punctuation">,</span> phi3<span class="token punctuation">]</span><span class="token punctuation">]</span></code></pre>
-<h2 id="4-基矢的计算机构造"><a href="#4-基矢的计算机构造" class="headerlink" title="4 基矢的计算机构造"></a>4 基矢的计算机构造</h2><h2 id="4-1-多维系统的描述"><a href="#4-1-多维系统的描述" class="headerlink" title="4.1 多维系统的描述"></a>4.1 多维系统的描述</h2><p>多维量子态的数学描述如下：</p>
+<h2 id="4-基矢的计算机构造"><a href="#4-基矢的计算机构造" class="headerlink" title="4 基矢的计算机构造"></a>4 基矢的计算机构造</h2><h3 id="4-1-多维系统的描述"><a href="#4-1-多维系统的描述" class="headerlink" title="4.1 多维系统的描述"></a>4.1 多维系统的描述</h3><p>多维量子态的数学描述如下：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}|\psi\rangle=\left[\sum_{i_1=1}^{n_1}\psi_{i_1}^{(1)}|i_1\rangle^{(1)}\right]\otimes\left[\sum_{i_2=1}^{n_2}\psi_{i_2}^{(2)}|i_2\rangle^{(2)}\right]\otimes\cdots\otimes\left[\sum_{i_N=1}^{n_N}\psi_{i_N}^{(N)}|i_N\rangle^{(N)}\right]\\&\\=\sum_{i_1=1}^{n_1}\sum_{i_2=1}^{n_2}\cdots\sum_{i_N=1}^{n_N}\left[\psi_{i_1}^{(1)}\psi_{i_2}^{(2)}\ldots\psi_{i_N}^{(N)}\right]|i_1,i_2,\ldots,i_N\rangle\end{aligned},</script><p><strong>计算机语言</strong>为：<br></p><pre class="language-wolfram" data-language="wolfram"><code class="language-wolfram">U<span class="token punctuation">[</span>∆<span class="token blank regex">t_</span>?NumericQ<span class="token punctuation">]</span> <span class="token operator">:=</span> MatrixExp<span class="token punctuation">[</span><span class="token operator">-</span>I<span class="token operator">*</span>H<span class="token operator">*</span>N<span class="token punctuation">[</span>∆t<span class="token punctuation">]</span><span class="token operator">/</span><span class="token operator">~</span><span class="token punctuation">]</span></code></pre><br>多维算符的数学描述如下：<p></p>
 <script type="math/tex; mode=display">
@@ -463,7 +463,7 @@ H2 <span class="token operator">=</span> KroneckerProduct<span class="token punc
 H3 <span class="token operator">=</span> KroneckerProduct<span class="token punctuation">[</span>IdentityMatrix<span class="token punctuation">[</span>Dimensions<span class="token punctuation">[</span>h1<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
                     IdentityMatrix<span class="token punctuation">[</span>Dimensions<span class="token punctuation">[</span>h2<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
                     h3<span class="token punctuation">]</span><span class="token operator">;</span></code></pre><p></p>
-<h2 id="4-2-偏迹的描述"><a href="#4-2-偏迹的描述" class="headerlink" title="4.2 偏迹的描述"></a>4.2 偏迹的描述</h2><p>数学描述如下，假如有一个三体系统：</p>
+<h3 id="4-2-偏迹的描述"><a href="#4-2-偏迹的描述" class="headerlink" title="4.2 偏迹的描述"></a>4.2 偏迹的描述</h3><p>数学描述如下，假如有一个三体系统：</p>
 <script type="math/tex; mode=display">
 \hat{\rho}_{\mathrm{ABC}}=\sum_{i,i^{\prime}=1}^{d_{\mathrm{A}}}\sum_{j,j^{\prime}=1}^{d_{\mathrm{B}}}\sum_{k,k^{\prime}=1}^{d_{\mathrm{C}}}\rho_{i,j,k,i^{\prime},j^{\prime},k^{\prime}}|i_{\mathrm{A}},j_{\mathrm{B}},k_{\mathrm{C}}\rangle\langle i_{\mathrm{A}}^{\prime},j_{\mathrm{B}}^{\prime},k_{\mathrm{C}}^{\prime}|,</script><p>其中$\rho$是个6维张量。对B求偏迹的数学公式为：</p>
 <script type="math/tex; mode=display">
@@ -498,7 +498,7 @@ H3 <span class="token operator">=</span> KroneckerProduct<span class="token punc
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2024/07/22/using-mathematica-for-qm-qm-states-and-operators/">http://example.com/2024/07/22/using-mathematica-for-qm-qm-states-and-operators/</a>
+                    <a href="http://increcrazer.github.io/2024/07/22/using-mathematica-for-qm-qm-states-and-operators/">http://increcrazer.github.io/2024/07/22/using-mathematica-for-qm-qm-states-and-operators/</a>
                 </span>
             </div>
             <div class="reprint__notice">
