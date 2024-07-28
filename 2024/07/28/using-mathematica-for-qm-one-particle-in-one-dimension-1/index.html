@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Using Mathematica for QM  quantum motion in real space, WYA">
-    <meta name="description" content="0 介绍">
+    <meta name="keywords" content="Using Mathematica for QM  one particle in one dimension (1), WYA">
+    <meta name="description" content="0 动机追求静态网页支持在线mathematica是个错误的方向，直接将笔记上传至mathematica云端就行。但是mathematica的排版一直很难用，就算调用matex包，mathematica依然对latex语言支持很差劲。经过尝">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Using Mathematica for QM  quantum motion in real space | WYA</title>
+    <title>Using Mathematica for QM  one particle in one dimension (1) | WYA</title>
     <link rel="icon" type="image/png" href="/medias/wyafavicon.png">
     
 
@@ -52,9 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WYA" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 7.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="WYA" type="application/atom+xml">
 </head>
 
 
@@ -320,7 +320,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Using Mathematica for QM  quantum motion in real space</h1>
+                    <h1 class="description center-align post-title">Using Mathematica for QM  one particle in one dimension (1)</h1>
                 </div>
             </div>
         </div>
@@ -369,7 +369,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-07-22
+                    2024-07-28
                 </div>
                 
 
@@ -378,7 +378,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    3
+                    398
                 </div>
                 
 
@@ -398,7 +398,52 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="0-介绍"><a href="#0-介绍" class="headerlink" title="0 介绍"></a>0 介绍</h2>
+                <h2 id="0-动机"><a href="#0-动机" class="headerlink" title="0 动机"></a>0 动机</h2><p>追求静态网页支持在线mathematica是个错误的方向，直接将笔记上传至mathematica云端就行。但是mathematica的排版一直很难用，就算调用matex包，mathematica依然对latex语言支持很差劲。经过尝试，意外发现它对MathML脚本支持比较完善。另外，将枯燥的standardform转换为traditionalform可以将代码语言转换成公式语言，一定程度上能增加代码可读性。</p>
+<p>然而，一些mathematica的动态或静态图片结果不会加载在云端，需要在云端运行或者下载到本地运行，这就比较麻烦。</p>
+<p><strong>因此，主页放上要点和结论性的图片，同时附上mathematica笔记本链接，会是一个不错的结合。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.wolframcloud.com/env/wya1759991046/Published/Use%20mathematica%20for%20QM%204.1.1_4.1.6.nb">mathematica笔记本链接</a></p>
+<h2 id="1-要点"><a href="#1-要点" class="headerlink" title="1 要点"></a>1 要点</h2><ul>
+<li>finite-resolution position basis(FRPS/PS)本质上是对Dirac basis的采样</li>
+<li>PS是离散的，和momentum basis(MS)的关系为：基系数互为DST-1变换(type-1 discrete sine transform)</li>
+<li>有一些算符用MS展开简单，另一些用PS展开简单，例如动能算符用MS展开简单，势能算符用PS展开简单。求得一种展开，另一种展开通过DST-1变换就行了。</li>
+</ul>
+<h2 id="2-视觉知识"><a href="#2-视觉知识" class="headerlink" title="2 视觉知识"></a>2 视觉知识</h2><ul>
+<li>MB的归一正交性验证</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/07/28/X2Pc3BZMUw4mohe.png" alt=""></p>
+<ul>
+<li>MB的完备性验证</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/07/28/opAHTkgm5Q694Nl.gif" alt=""></p>
+<ul>
+<li>PB在Dirac Basis中的展开系数</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/07/28/XMpgNf9iU1YqwHz.gif" alt=""></p>
+<ul>
+<li>$\hat{\mathcal{x}}$在MB展开</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/07/28/rOIfuNoX6vKd2Qx.png" alt=""></p>
+<ul>
+<li>$\hat{\mathcal{x}}$在PB展开</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/07/28/LvRpePJoAmKzCiH.png" alt=""> </p>
+<ul>
+<li>$\hat{\mathcal{T}}$在MB展开</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/07/28/McX5g7bmaxYnKGr.png" alt=""></p>
+<ul>
+<li>$\hat{\mathcal{T}}$在PB展开</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/07/28/hkHgr6tCR2yDY1x.png" alt=""></p>
+<ul>
+<li>$\hat{\mathcal{P}}$在MB展开，可以发现只有虚部</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/07/28/yUav1CXTif6bsRq.png" alt=""></p>
+<ul>
+<li>$\hat{\mathcal{P}}$在PB展开，可以发现只有虚部</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/07/28/ZlTSKvp3oQLGkNM.png" alt=""></p>
+
                 
             </div>
             <hr/>
@@ -424,7 +469,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://increcrazer.github.io/2024/07/22/using-mathematica-for-qm-quantum-motion-in-real-space/">http://increcrazer.github.io/2024/07/22/using-mathematica-for-qm-quantum-motion-in-real-space/</a>
+                    <a href="http://increcrazer.github.io/2024/07/28/using-mathematica-for-qm-one-particle-in-one-dimension-1/">http://increcrazer.github.io/2024/07/28/using-mathematica-for-qm-one-particle-in-one-dimension-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -542,16 +587,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2024/07/24/using-mathematica-for-qm-qm-states-and-operators-fu-ben/">
+                <a href="/2024/07/28/using-mathematica-for-qm-one-particle-in-one-dimension-1/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/07/23/Yt4d6WPlrjbkBMJ.jpg" class="responsive-img" alt="Using Mathematica for QM  QM： states and operators">
+                        <img src="https://s2.loli.net/2024/07/23/Yt4d6WPlrjbkBMJ.jpg" class="responsive-img" alt="Using Mathematica for QM  one particle in one dimension (1)">
                         
-                        <span class="card-title">Using Mathematica for QM  QM： states and operators</span>
+                        <span class="card-title">Using Mathematica for QM  one particle in one dimension (1)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -561,9 +607,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-07-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -576,6 +622,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -591,15 +638,15 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/07/22/using-mathematica-for-qm-quantum-motion-in-real-space/">
+                <a href="/2024/07/24/using-mathematica-for-qm-qm-states-and-operators/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/07/23/Yt4d6WPlrjbkBMJ.jpg" class="responsive-img" alt="Using Mathematica for QM  quantum motion in real space">
+                        <img src="https://s2.loli.net/2024/07/23/Yt4d6WPlrjbkBMJ.jpg" class="responsive-img" alt="Using Mathematica for QM  QM： states and operators">
                         
-                        <span class="card-title">Using Mathematica for QM  quantum motion in real space</span>
+                        <span class="card-title">Using Mathematica for QM  QM： states and operators</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -610,7 +657,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-24
                             </span>
                         <span class="publish-author">
                             
@@ -624,7 +671,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -871,7 +917,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">1.7k</span>
+                        class="white-color">2.1k</span>
             
             
             

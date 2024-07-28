@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-07-24T02:29:08.184Z</updated>
+  <updated>2024-07-28T06:16:29.817Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Using Mathematica for QM  QM： states and operators</title>
-    <link href="http://increcrazer.github.io/2024/07/24/using-mathematica-for-qm-qm-states-and-operators-fu-ben/"/>
-    <id>http://increcrazer.github.io/2024/07/24/using-mathematica-for-qm-qm-states-and-operators-fu-ben/</id>
-    <published>2024-07-24T15:23:10.515Z</published>
-    <updated>2024-07-24T02:29:08.184Z</updated>
+    <title>Using Mathematica for QM  one particle in one dimension (1)</title>
+    <link href="http://increcrazer.github.io/2024/07/28/using-mathematica-for-qm-one-particle-in-one-dimension-1/"/>
+    <id>http://increcrazer.github.io/2024/07/28/using-mathematica-for-qm-one-particle-in-one-dimension-1/</id>
+    <published>2024-07-27T18:42:30.045Z</published>
+    <updated>2024-07-28T06:16:29.817Z</updated>
     
     
       
@@ -42,18 +42,18 @@
   </entry>
   
   <entry>
-    <title>Using Mathematica for QM  quantum motion in real space</title>
-    <link href="http://increcrazer.github.io/2024/07/22/using-mathematica-for-qm-quantum-motion-in-real-space/"/>
-    <id>http://increcrazer.github.io/2024/07/22/using-mathematica-for-qm-quantum-motion-in-real-space/</id>
-    <published>2024-07-22T14:26:25.083Z</published>
-    <updated>2024-07-24T15:25:03.804Z</updated>
+    <title>Using Mathematica for QM  QM： states and operators</title>
+    <link href="http://increcrazer.github.io/2024/07/24/using-mathematica-for-qm-qm-states-and-operators/"/>
+    <id>http://increcrazer.github.io/2024/07/24/using-mathematica-for-qm-qm-states-and-operators/</id>
+    <published>2024-07-24T15:23:10.515Z</published>
+    <updated>2024-07-27T19:26:32.491Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;0-介绍&quot;&gt;&lt;a href=&quot;#0-介绍&quot; class=&quot;headerlink&quot; title=&quot;0 介绍&quot;&gt;&lt;/a&gt;0</summary>
+    <summary type="html">&lt;h2 id=&quot;0-动机&quot;&gt;&lt;a href=&quot;#0-动机&quot; class=&quot;headerlink&quot; title=&quot;0 动机&quot;&gt;&lt;/a&gt;0</summary>
         
       
     
