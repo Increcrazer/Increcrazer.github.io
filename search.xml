@@ -8,7 +8,7 @@
       <link href="/2024/07/30/die-ceng-zu-kang/"/>
       <url>/2024/07/30/die-ceng-zu-kang/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://s2.loli.net/2024/07/30/D9UOSApXMT4EBdj.png" alt=""><br>与阻抗计算工具的结果吻合：<br><img src="https://s2.loli.net/2024/07/30/JCwgvN4IMdceSlb.png" alt=""><br><img src="https://s2.loli.net/2024/07/30/xoYAMfbRiZKE2pu.png" alt=""><br>参考：<br><a href="https://zhuanlan.zhihu.com/p/512495251">PCB板材的基础知识</a><br><a href="https://baijiahao.baidu.com/s?id=1787683941435650876&amp;wfr=spider&amp;for=pc">高速PCB的铜箔选用指南</a><br><a href="https://www.protoexpress.com/tools/pcb-impedance-calculator/">Impedance Calculator</a></p>]]></content>
+        <content type="html"><![CDATA[<p>这是一张14层的叠层阻抗表，黄色标注了1-4层的三阶盲埋：<br><img src="https://s2.loli.net/2024/07/30/D9UOSApXMT4EBdj.png" alt=""><br>与阻抗计算工具的结果吻合：<br><img src="https://s2.loli.net/2024/07/30/JCwgvN4IMdceSlb.png" alt=""><br><img src="https://s2.loli.net/2024/07/30/xoYAMfbRiZKE2pu.png" alt=""><br>参考：<br><a href="https://zhuanlan.zhihu.com/p/512495251">PCB板材的基础知识</a><br><a href="https://baijiahao.baidu.com/s?id=1787683941435650876&amp;wfr=spider&amp;for=pc">高速PCB的铜箔选用指南</a><br><a href="https://www.protoexpress.com/tools/pcb-impedance-calculator/">Impedance Calculator</a></p>]]></content>
       
       
       <categories>
