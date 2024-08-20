@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>PAX1000偏振数据反复横跳排查记录</title>
-      <link href="/2024/08/13/pax1000-pian-zhen-shu-ju-fan-fu-heng-tiao-pai-cha-ji-lu/"/>
-      <url>/2024/08/13/pax1000-pian-zhen-shu-ju-fan-fu-heng-tiao-pai-cha-ji-lu/</url>
-      
-        <content type="html"><![CDATA[<p>这是一张14层的叠层阻抗表，黄色标注了1-4层的三阶盲埋：<br><img src="" alt=""><br>与阻抗计算工具的结果吻合：<br><img src="https://s2.loli.net/2024/08/14/CDgvbOGtxYfuJH4.png" alt=""><br><img src="https://s2.loli.net/2024/08/14/189yViDQWUPrMwJ.png" alt=""><br><img src="https://s2.loli.net/2024/08/14/h6iZ83xGlEamqTt.png" alt=""></p><p>参考：<br><a href="https://zhuanlan.zhihu.com/p/512495251">PCB板材的基础知识</a><br><a href="https://baijiahao.baidu.com/s?id=1787683941435650876&amp;wfr=spider&amp;for=pc">高速PCB的铜箔选用指南</a><br><a href="https://www.protoexpress.com/tools/pcb-impedance-calculator/">Impedance Calculator</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> instrument </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> instrument, optics </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>叠层阻抗表</title>
       <link href="/2024/07/30/die-ceng-zu-kang/"/>
       <url>/2024/07/30/die-ceng-zu-kang/</url>
