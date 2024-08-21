@@ -55,9 +55,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WYA" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 7.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="WYA" type="application/atom+xml">
 </head>
 
 
@@ -381,7 +381,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.2k
+                    1.3k
                 </div>
                 
 
@@ -413,7 +413,8 @@
 <li>PAX1000自带软件数据在横跳数据之间，但不是正中间。</li>
 </ul>
 <p><img src="https://s2.loli.net/2024/08/21/ROHPFrzL8yIShW4.jpg" alt="visa传输数据"><br><img src="https://s2.loli.net/2024/08/21/MrA7OFbKNexI5LE.png" alt="PAX1000软件数据"></p>
-<h2 id="1-朔源"><a href="#1-朔源" class="headerlink" title="1 朔源"></a>1 朔源</h2><p>查阅手册发现原因可能是前些天准直器松动后我重新固定了，但是没有校准，于是我手动校准了一下PAX1000，发现数据反复横跳的现象确实消失了，且visa读出数据与软件数据完全吻合。然而，为什么不准直会引入奇数次谐振？为了解释这个问题，我们首先要知道PAX1000的工作原理。<br><img src="https://s2.loli.net/2024/08/21/ALkfWGJZsV4NHmo.png" alt="FOURIER ANALYSIS USING A ROTATING QUARTER-WAVE RETARDER"><br>由于PAX1000使用了上世纪的旋转波片技术，所以随便翻一本经典的偏振书籍就能找到解释：不同的偏振光经过旋转1/4波片及固定极化片，再经过光电探测可以得到随时间变化的光电流</p>
+<h2 id="1-朔源"><a href="#1-朔源" class="headerlink" title="1 朔源"></a>1 朔源</h2><p>查阅手册发现原因可能是前些天准直器松动后我重新固定了，但是没有校准。而没有校准会出现以下问题，即引入奇数次谐波：<br><em>“The angular alignment is critical for another reason: As explained in the section Rotating Waveplate Technique , the photo current is analyzed by a Fast Fourier Transformation and ideally<br>consists only of even-numbered components (harmonics). If the beam hits the waveplate not<br>exactly perpendicular, unwanted odd-numbered harmonics will appear in the photo current. The<br>same happens, if the incident beam consists reflected from the inner surface of the hollow shaft<br>light components. These unwanted components have a significant impact on the measurement<br>accuracy. The Alignment Assistance tool can be used to align the beam, which will minimize<br>the contribution from unwanted components.”</em></p>
+<p>于是我手动校准了一下PAX1000，发现数据反复横跳的现象确实消失了，且visa读出数据与软件数据完全吻合。然而，为什么不准直会引入奇数次谐振？为了解释这个问题，我们首先要知道PAX1000的工作原理。<br><img src="https://s2.loli.net/2024/08/21/ALkfWGJZsV4NHmo.png" alt="FOURIER ANALYSIS USING A ROTATING QUARTER-WAVE RETARDER"><br>由于PAX1000使用了上世纪的旋转波片技术，所以随便翻一本经典的偏振书籍就能找到解释：不同的偏振光经过旋转1/4波片及固定极化片，再经过光电探测可以得到随时间变化的光电流</p>
 <script type="math/tex; mode=display">
 I(\theta)=\frac{1}{2}\left[\left(S_{0}+\frac{S_{1}}{2}\right)+\frac{S_{1}}{2}\cos4\theta+\frac{S_{2}}{2}\sin4\theta-S_{3}\sin2\theta\right]
 \\=\frac{1}{2}[A-B\sin2\omega t+C\cos4\omega t+D\sin4\omega t]</script><p>这是傅里叶展开，于是可以通过积分算系数，再解方程求偏振参数：</p>
@@ -908,7 +909,7 @@ D & =\frac{4}{N} \sum_{n=1}^{N} I\left(n \theta_{j}\right) \sin 4 n \theta_{j}
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">4.8k</span>
+                        class="white-color">4.9k</span>
             
             
             
