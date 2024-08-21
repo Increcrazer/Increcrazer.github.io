@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-08-19T03:16:21.594Z</updated>
+  <updated>2024-08-21T14:31:34.526Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Thorlabs PAX1000不校准会出现的现象及其背后原理的探讨</title>
+    <link href="http://increcrazer.github.io/2024/08/21/thorlabs-pax1000-bu-xiao-zhun-hui-chu-xian-de-xian-xiang-ji-qi-bei-hou-yuan-li-de-tan-tao/"/>
+    <id>http://increcrazer.github.io/2024/08/21/thorlabs-pax1000-bu-xiao-zhun-hui-chu-xian-de-xian-xiang-ji-qi-bei-hou-yuan-li-de-tan-tao/</id>
+    <published>2024-08-21T11:43:58.729Z</published>
+    <updated>2024-08-21T14:31:34.526Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-现象&quot;&gt;&lt;a href=&quot;#0-现象&quot; class=&quot;headerlink&quot; title=&quot;0 现象&quot;&gt;&lt;/a&gt;0 现象&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;前几天使用matlab</summary>
+        
+      
+    
+    
+    
+    <category term="apparatus" scheme="http://increcrazer.github.io/categories/apparatus/"/>
+    
+    
+    <category term="apparatus, polarization" scheme="http://increcrazer.github.io/tags/apparatus-polarization/"/>
+    
+  </entry>
   
   <entry>
     <title>叠层阻抗表</title>
