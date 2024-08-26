@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-08-24T08:32:36.547Z</updated>
+  <updated>2024-08-26T07:21:43.220Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>河边</title>
+    <link href="http://increcrazer.github.io/2024/08/26/he-bian/"/>
+    <id>http://increcrazer.github.io/2024/08/26/he-bian/</id>
+    <published>2024-08-26T03:17:49.517Z</published>
+    <updated>2024-08-26T07:21:43.220Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;20240825&quot;&gt;&lt;a href=&quot;#20240825&quot; class=&quot;headerlink&quot; title=&quot;20240825&quot;&gt;&lt;/a&gt;20240825&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="diary" scheme="http://increcrazer.github.io/categories/diary/"/>
+    
+    
+    <category term="diary, landscape" scheme="http://increcrazer.github.io/tags/diary-landscape/"/>
+    
+  </entry>
   
   <entry>
     <title>Thorlabs PAX1000不准直会发生的现象及原因探寻</title>
