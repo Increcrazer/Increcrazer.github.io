@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-08-26T07:21:43.220Z</updated>
+  <updated>2024-09-16T11:44:54.682Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>角度⇔弧度</title>
+    <link href="http://increcrazer.github.io/2024/09/16/jiao-du-hu-du/"/>
+    <id>http://increcrazer.github.io/2024/09/16/jiao-du-hu-du/</id>
+    <published>2024-09-16T07:54:57.050Z</published>
+    <updated>2024-09-16T11:44:54.682Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;table-container&quot;&gt;
+    &lt;div class=&quot;table-title&quot;&gt;角度⇔弧度转换器&lt;/div&gt;
+    &lt;table id=&quot;conversionTable&quot; class=&quot;display&quot;&gt;
+        &lt;thead&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
+    
+    
+    <category term="tool, convert" scheme="http://increcrazer.github.io/tags/tool-convert/"/>
+    
+  </entry>
   
   <entry>
     <title>河边</title>
