@@ -489,12 +489,12 @@ th, td {
 $(document).ready(function() {
     // 角度转换为弧度的函数
     function toRadians(angle) {
-        return (angle * Math.PI / 180).toFixed(4);
+        return (angle * Math.PI / 180).toFixed(7);
     }
 
     // 弧度转换为角度的函数
     function toDegrees(radian) {
-        return (radian * 180 / Math.PI).toFixed(2);
+        return (radian * 180 / Math.PI).toFixed(5);
     }
 
     // 监听角度输入框的输入事件，实时转换为弧度
