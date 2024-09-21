@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-09-18T06:17:36.628Z</updated>
+  <updated>2024-09-21T06:31:39.241Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>频率啁啾的定量理解</title>
+    <link href="http://increcrazer.github.io/2024/09/21/pin-lu-zhou-jiu-can-shu-de-ding-liang-li-jie/"/>
+    <id>http://increcrazer.github.io/2024/09/21/pin-lu-zhou-jiu-can-shu-de-ding-liang-li-jie/</id>
+    <published>2024-09-21T03:22:34.792Z</published>
+    <updated>2024-09-21T06:31:39.241Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-简介&quot;&gt;&lt;a href=&quot;#0-简介&quot; class=&quot;headerlink&quot; title=&quot;0 简介&quot;&gt;&lt;/a&gt;0 简介&lt;/h2&gt;&lt;p&gt;众所周知，在信号路径某点上，信号的时域波形表达式如下:&lt;/p&gt;
+&lt;script type=&quot;math/tex;</summary>
+        
+      
+    
+    
+    
+    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
+    
+    
+    <category term="optics, signal" scheme="http://increcrazer.github.io/tags/optics-signal/"/>
+    
+  </entry>
+  
+  <entry>
     <title>自由空间量子信道计算工具</title>
     <link href="http://increcrazer.github.io/2024/09/16/zi-you-kong-jian-liang-zi-xin-dao-ji-suan-gong-ju/"/>
     <id>http://increcrazer.github.io/2024/09/16/zi-you-kong-jian-liang-zi-xin-dao-ji-suan-gong-ju/</id>
     <published>2024-09-16T13:41:29.059Z</published>
-    <updated>2024-09-18T06:17:36.628Z</updated>
+    <updated>2024-09-20T15:43:54.436Z</updated>
     
     
       

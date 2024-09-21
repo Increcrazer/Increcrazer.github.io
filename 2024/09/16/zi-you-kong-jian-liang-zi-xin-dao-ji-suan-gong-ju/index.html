@@ -393,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    721
+                    743
                 </div>
                 
 
@@ -496,6 +496,10 @@ calculatetransdBm();
                 <td>波长 (nm)</td>
                 <td><input type="number" id="wavelength" value="1550.92" step="0.01"></td>
             </tr>
+            <tr id="photonfrequencyRow">
+                <td>光子频率 (THz)</td>
+                <td id="photonfrequency">1.2808177450e-19</td>
+            </tr>
             <tr id="photonEnergyRow">
                 <td>单光子能量 (J)</td>
                 <td id="photonEnergy">1.2808177450e-19</td>
@@ -549,7 +553,11 @@ function calculateSinglePhotonEnergy() {
     var wavelength = parseFloat(document.getElementById('wavelength').value);
     var SinglePhotonEnergy = 6.62607015 * 1e-34 * 299792458/(wavelength*1e-9);
     var scientificNotation = SinglePhotonEnergy.toExponential(10);
+
+    var photonfrequency  = 299792458/(wavelength * 1e-9)/1e12;
     document.getElementById('photonEnergy').innerText = scientificNotation;
+    document.getElementById('photonfrequency').innerText = photonfrequency.toFixed(4);
+
 
     return scientificNotation;
 }
@@ -911,7 +919,7 @@ th, td {
     text-align: center;
     width: 65%;
 }
-#photonEnergyRow, #decoy2RatioRow, #averagePhotonPulseRow, 
+#photonEnergyRow, #decoy2RatioRow, #averagePhotonPulseRow, #photonfrequencyRow,
 #sourcePowerRow, #sourcePowerdBmRow, 
 #spaceLossRow, #ABLossRow,#ABLossdBRow,
 #powerdBmRow, #transdBmRow, #totalEfficiencyRow, #totalEfficiencydBRow,
@@ -1063,17 +1071,16 @@ th, td {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2024/09/16/zi-you-kong-jian-liang-zi-xin-dao-ji-suan-gong-ju/">
+                <a href="/2024/09/21/pin-lu-zhou-jiu-can-shu-de-ding-liang-li-jie/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/09/16/Fuwlm2vojInzMhx.jpg" class="responsive-img" alt="自由空间量子信道计算工具">
+                        <img src="https://s2.loli.net/2024/09/21/xouVb3lDgeWqAPG.jpg" class="responsive-img" alt="频率啁啾的定量理解">
                         
-                        <span class="card-title">自由空间量子信道计算工具</span>
+                        <span class="card-title">频率啁啾的定量理解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1083,9 +1090,9 @@ th, td {
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-16
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-09-21
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1098,12 +1105,11 @@ th, td {
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tool-QKD/">
-                        <span class="chip bg-color">tool, QKD</span>
+                    <a href="/tags/optics-signal/">
+                        <span class="chip bg-color">optics, signal</span>
                     </a>
                     
                 </div>
@@ -1393,7 +1399,7 @@ th, td {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">6.3k</span>
+                        class="white-color">7.1k</span>
             
             
             
