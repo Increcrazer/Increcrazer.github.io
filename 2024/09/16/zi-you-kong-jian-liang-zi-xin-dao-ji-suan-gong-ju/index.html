@@ -448,7 +448,7 @@
     let dbm = parseFloat(document.getElementById("dbmInput").value);
     if (!isNaN(dbm)) {
       let watt = Math.pow(10, dbm / 10) / 1000;
-      document.getElementById("wattInput").value = watt.toFixed(6);
+      document.getElementById("wattInput").value = watt.toFixed(9);
     } else {
       document.getElementById("wattInput").value = "";
     }
