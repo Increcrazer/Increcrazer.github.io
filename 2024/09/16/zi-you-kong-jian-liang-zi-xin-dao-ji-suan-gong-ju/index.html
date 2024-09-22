@@ -5,16 +5,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="自由空间量子信道计算工具, WYA">
-    <meta name="description" content="功率/损耗单位转换器
-    功率/损耗单位转换器
-    
+    <meta name="description" content="功率单位转换器
+  功率单位转换器
+     
         
             
-                参数
-                值
+                功率 (W)
+                功率 (dBm)
             
         
-        ">
+    ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -393,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    743
+                    900
                 </div>
                 
 
@@ -413,73 +413,128 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="功率-损耗单位转换器"><a href="#功率-损耗单位转换器" class="headerlink" title="功率/损耗单位转换器"></a>功率/损耗单位转换器</h2><div class="table-container">
-    <div class="table-title">功率/损耗单位转换器</div>
-    <table id="powerConversionTable" class="display">
+                <h2 id="功率单位转换器"><a href="#功率单位转换器" class="headerlink" title="功率单位转换器"></a>功率单位转换器</h2><div class="conversion-table">
+  <div class="table-title">功率单位转换器</div>
+     <table id="powerconverter" class="display">
         <thead>
             <tr>
-                <th>参数</th>
-                <th>值</th>
+                <th>功率 (W)</th>
+                <th>功率 (dBm)</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>功率 (W)</td>
-                <td><input type="number" id="powerW" value="1e-9" step="1e-10"></td>
+                <td><input type="number" id="wattInput" placeholder="Enter power in W"></td>
+                <td><input type="number" id="dbmInput" placeholder="Enter power in dBm"></td>
             </tr>
-            <tr id="powerdBmRow">
-                <td>功率 (dBm)</td>
-                <td id="powerdBm">N/A</td>
-            </tr>
-            <tr>
-                <td>损耗/透射率 </td>
-                <td><input type="number" id="trans" value="0.1" step="0.01"></td>
-            </tr>            
-            <tr id="transdBmRow">
-                <td>损耗/透射率 (dB)</td>
-                <td id="transdBm">N/A</td>
-            </tr>           
         </tbody>
     </table>
 </div>
 
 <script>
-function calculatePowerdBm() {
-    var powerW = parseFloat(document.getElementById('powerW').value);
-
-    // 验证输入是否为有效数字
-    if (!isNaN(powerW) && powerW > 0) {
-        // 计算功率dBm
-        var powerdBm = 10 * Math.log10(powerW * 1e3);  // 转换为dBm
-        document.getElementById('powerdBm').innerText = powerdBm.toFixed(2);
+  // Conversion from Watt to dBm
+  function convertToDbm() {
+    let watt = parseFloat(document.getElementById("wattInput").value);
+    if (!isNaN(watt) && watt > 0) {
+      let dbm = 10 * Math.log10(watt * 1000);
+      document.getElementById("dbmInput").value = dbm.toFixed(2);
     } else {
-        document.getElementById('powerdBm').innerText = 'N/A';
+      document.getElementById("dbmInput").value = "";
     }
-}
+  }
 
-function calculatetransdBm() {
-    var trans = parseFloat(document.getElementById('trans').value);
-
-    // 验证输入是否为有效数字
-    if (!isNaN(trans) && trans > 0) {
-        // 计算功率dBm
-        var transdBm = 10 * Math.log10(trans);  // 转换为dBm
-        document.getElementById('transdBm').innerText = transdBm.toFixed(2);
+  // Conversion from dBm to Watt
+  function convertToWatt() {
+    let dbm = parseFloat(document.getElementById("dbmInput").value);
+    if (!isNaN(dbm)) {
+      let watt = Math.pow(10, dbm / 10) / 1000;
+      document.getElementById("wattInput").value = watt.toFixed(6);
     } else {
-        document.getElementById('transdBm').innerText = 'N/A';
+      document.getElementById("wattInput").value = "";
     }
-}
+  }
 
-// 监听输入框的输入事件，实时更新计算结果
-document.getElementById('powerW').addEventListener('input', calculatePowerdBm);
-document.getElementById('trans').addEventListener('input', calculatetransdBm);
+  // Add listeners to detect input changes
+  function addInputListeners() {
+    document.getElementById("wattInput").addEventListener("input", convertToDbm);
+    document.getElementById("dbmInput").addEventListener("input", convertToWatt);
+  }
 
-// 初始化计算
-calculatePowerdBm();
-calculatetransdBm();
+  // Initialization function to set default values (if needed)
+  function initializeInputs() {
+    // Optional: Set a default value (initialization)
+    document.getElementById("wattInput").value = "1"; // Default 1 W
+    convertToDbm(); // Convert the default watt to dBm on load
+  }
+
+  // Run the initialization and add listeners when the page loads
+  document.addEventListener("DOMContentLoaded", function() {
+    initializeInputs(); // Initialize input values
+    addInputListeners(); // Add event listeners for real-time conversion
+  });
 </script>
 
 
+<div class="conversion-table">
+  <div class="table-title">透射率单位转换器</div>
+     <table id="powerconverter" class="display">
+        <thead>
+            <tr>
+                <th>透射率/损耗</th>
+                <th>透射率/损耗 (dB)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="number" id="transinput" placeholder="Enter power in W" min="0" max="1" step="0.01"></td>
+                <td><input type="number" id="dbInput" placeholder="Enter power in dBm" max="0"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+  // Conversion from Watt to dBm
+  function transconvertToDbm() {
+    let watt = parseFloat(document.getElementById("transinput").value);
+    if (!isNaN(watt) && watt > 0) {
+      let dbm = 10 * Math.log10(watt);
+      document.getElementById("dbInput").value = dbm.toFixed(2);
+    } else {
+      document.getElementById("dbInput").value = "";
+    }
+  }
+
+  // Conversion from dBm to Watt
+  function transconvertToWatt() {
+    let dbm = parseFloat(document.getElementById("dbInput").value);
+    if (!isNaN(dbm)) {
+      let watt = Math.pow(10, dbm / 10);
+      document.getElementById("transinput").value = watt.toFixed(6);
+    } else {
+      document.getElementById("transinput").value = "";
+    }
+  }
+
+  // Add listeners to detect input changes
+  function transaddInputListeners() {
+    document.getElementById("transinput").addEventListener("input", transconvertToDbm);
+    document.getElementById("dbInput").addEventListener("input", transconvertToWatt);
+  }
+
+  // Initialization function to set default values (if needed)
+  function transinitializeInputs() {
+    // Optional: Set a default value (initialization)
+    document.getElementById("transinput").value = "1"; // Default 1 W
+    transconvertToDbm(); // Convert the default watt to dBm on load
+  }
+
+  // Run the initialization and add listeners when the page loads
+  document.addEventListener("DOMContentLoaded", function() {
+    transinitializeInputs(); // Initialize input values
+    transaddInputListeners(); // Add event listeners for real-time conversion
+  });
+</script>
 
 <hr>
 <h2 id="光源功率计算器"><a href="#光源功率计算器" class="headerlink" title="光源功率计算器"></a>光源功率计算器</h2><div class="table-container">
@@ -922,7 +977,7 @@ th, td {
 #photonEnergyRow, #decoy2RatioRow, #averagePhotonPulseRow, #photonfrequencyRow,
 #sourcePowerRow, #sourcePowerdBmRow, 
 #spaceLossRow, #ABLossRow,#ABLossdBRow,
-#powerdBmRow, #transdBmRow, #totalEfficiencyRow, #totalEfficiencydBRow,
+#totalEfficiencyRow, #totalEfficiencydBRow,
 #eventCountRow, #totalnoiseRow, #noiseBERRow, #QBERRow
  {
     background-color: skyblue;
@@ -1399,7 +1454,7 @@ th, td {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">7.1k</span>
+                        class="white-color">7.3k</span>
             
             
             
