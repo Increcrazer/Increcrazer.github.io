@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-10-27T14:40:20.312Z</updated>
+  <updated>2024-11-03T15:28:22.557Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://increcrazer.github.io/2024/10/27/new-focus-1544-guang-dian-tan-ce-qi-shou-ce-zhai-lu/"/>
     <id>http://increcrazer.github.io/2024/10/27/new-focus-1544-guang-dian-tan-ce-qi-shou-ce-zhai-lu/</id>
     <published>2024-10-27T14:19:28.827Z</published>
-    <updated>2024-10-27T14:40:20.312Z</updated>
+    <updated>2024-11-03T15:28:22.557Z</updated>
     
     
       
@@ -34,7 +34,7 @@
     
     
     
-    <category term="apparatus" scheme="http://increcrazer.github.io/categories/apparatus/"/>
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
     
     
     <category term="apparatus, datasheet" scheme="http://increcrazer.github.io/tags/apparatus-datasheet/"/>
@@ -46,7 +46,7 @@
     <link href="http://increcrazer.github.io/2024/09/21/pin-lu-zhou-jiu-de-ding-liang-li-jie/"/>
     <id>http://increcrazer.github.io/2024/09/21/pin-lu-zhou-jiu-de-ding-liang-li-jie/</id>
     <published>2024-09-21T03:22:34.792Z</published>
-    <updated>2024-09-21T06:31:39.241Z</updated>
+    <updated>2024-11-03T15:30:00.114Z</updated>
     
     
       
@@ -60,7 +60,7 @@
     
     
     
-    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
     
     
     <category term="optics, signal" scheme="http://increcrazer.github.io/tags/optics-signal/"/>
@@ -124,7 +124,7 @@
     <link href="http://increcrazer.github.io/2024/08/26/he-bian/"/>
     <id>http://increcrazer.github.io/2024/08/26/he-bian/</id>
     <published>2024-08-26T03:17:49.517Z</published>
-    <updated>2024-08-26T07:21:43.220Z</updated>
+    <updated>2024-11-03T15:29:42.421Z</updated>
     
     
       
@@ -137,7 +137,7 @@
     
     
     
-    <category term="diary" scheme="http://increcrazer.github.io/categories/diary/"/>
+    <category term="vision" scheme="http://increcrazer.github.io/categories/vision/"/>
     
     
     <category term="diary, landscape" scheme="http://increcrazer.github.io/tags/diary-landscape/"/>
@@ -149,7 +149,7 @@
     <link href="http://increcrazer.github.io/2024/08/21/thorlabs-pax1000-bu-zhun-zhi-hui-fa-sheng-de-xian-xiang-ji-yuan-yin-tan-xun/"/>
     <id>http://increcrazer.github.io/2024/08/21/thorlabs-pax1000-bu-zhun-zhi-hui-fa-sheng-de-xian-xiang-ji-yuan-yin-tan-xun/</id>
     <published>2024-08-21T11:43:58.729Z</published>
-    <updated>2024-08-24T08:32:36.547Z</updated>
+    <updated>2024-11-03T15:28:46.549Z</updated>
     
     
       
@@ -163,7 +163,7 @@
     
     
     
-    <category term="apparatus" scheme="http://increcrazer.github.io/categories/apparatus/"/>
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
     
     
     <category term="apparatus, polarization" scheme="http://increcrazer.github.io/tags/apparatus-polarization/"/>
@@ -175,7 +175,7 @@
     <link href="http://increcrazer.github.io/2024/07/30/die-ceng-zu-kang/"/>
     <id>http://increcrazer.github.io/2024/07/30/die-ceng-zu-kang/</id>
     <published>2024-07-30T13:10:49.062Z</published>
-    <updated>2024-10-27T14:40:15.077Z</updated>
+    <updated>2024-11-03T15:29:14.134Z</updated>
     
     
       
@@ -188,7 +188,7 @@
     
     
     
-    <category term="electronic" scheme="http://increcrazer.github.io/categories/electronic/"/>
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
     
     
     <category term="electronic, PCB" scheme="http://increcrazer.github.io/tags/electronic-PCB/"/>
@@ -200,7 +200,7 @@
     <link href="http://increcrazer.github.io/2024/07/29/project-jz-cun-chu-qi-bei-wang-lu/"/>
     <id>http://increcrazer.github.io/2024/07/29/project-jz-cun-chu-qi-bei-wang-lu/</id>
     <published>2024-07-29T12:10:32.756Z</published>
-    <updated>2024-07-29T16:52:28.607Z</updated>
+    <updated>2024-11-03T15:28:36.161Z</updated>
     
     
       
@@ -213,7 +213,7 @@
     
     
     
-    <category term="electronic" scheme="http://increcrazer.github.io/categories/electronic/"/>
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
     
     
     <category term="electronic, memory" scheme="http://increcrazer.github.io/tags/electronic-memory/"/>
@@ -225,7 +225,7 @@
     <link href="http://increcrazer.github.io/2024/07/28/dji-mini4k-pai-zhao-mo-shi-ce-shi/"/>
     <id>http://increcrazer.github.io/2024/07/28/dji-mini4k-pai-zhao-mo-shi-ce-shi/</id>
     <published>2024-07-28T11:59:11.246Z</published>
-    <updated>2024-07-30T14:34:33.567Z</updated>
+    <updated>2024-11-03T15:27:15.458Z</updated>
     
     
       
@@ -238,7 +238,7 @@
     
     
     
-    <category term="drone" scheme="http://increcrazer.github.io/categories/drone/"/>
+    <category term="toy" scheme="http://increcrazer.github.io/categories/toy/"/>
     
     
     <category term="drone, mini4K" scheme="http://increcrazer.github.io/tags/drone-mini4K/"/>
@@ -250,7 +250,7 @@
     <link href="http://increcrazer.github.io/2024/07/28/using-mathematica-for-qm-one-particle-in-one-dimension-1/"/>
     <id>http://increcrazer.github.io/2024/07/28/using-mathematica-for-qm-one-particle-in-one-dimension-1/</id>
     <published>2024-07-27T18:42:30.045Z</published>
-    <updated>2024-07-28T06:49:02.054Z</updated>
+    <updated>2024-11-03T15:28:56.203Z</updated>
     
     
       
@@ -263,7 +263,7 @@
     
     
     
-    <category term="mathematica" scheme="http://increcrazer.github.io/categories/mathematica/"/>
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
     
     
     <category term="mathematica, quantum mechanics" scheme="http://increcrazer.github.io/tags/mathematica-quantum-mechanics/"/>
@@ -275,7 +275,7 @@
     <link href="http://increcrazer.github.io/2024/07/24/using-mathematica-for-qm-qm-states-and-operators/"/>
     <id>http://increcrazer.github.io/2024/07/24/using-mathematica-for-qm-qm-states-and-operators/</id>
     <published>2024-07-24T15:23:10.515Z</published>
-    <updated>2024-07-27T19:26:32.491Z</updated>
+    <updated>2024-11-03T15:29:04.851Z</updated>
     
     
       
@@ -288,7 +288,7 @@
     
     
     
-    <category term="mathematica" scheme="http://increcrazer.github.io/categories/mathematica/"/>
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
     
     
     <category term="mathematica, quantum mechanics" scheme="http://increcrazer.github.io/tags/mathematica-quantum-mechanics/"/>
