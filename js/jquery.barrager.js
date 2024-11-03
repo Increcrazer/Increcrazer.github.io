@@ -8,7 +8,7 @@
 	$.fn.barrager = function(barrage) {
 		barrage = $.extend({
 			close: true,
-			max: 10,
+			max: 12,
 			speed: 16,
 			color: '#ffffff',
 		}, barrage || {});
