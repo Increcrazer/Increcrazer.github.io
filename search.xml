@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>New Focus 1544光电探测器 手册摘录</title>
+      <link href="/2024/10/27/new-focus-1544-guang-dian-tan-ce-qi-shou-ce-zhai-lu/"/>
+      <url>/2024/10/27/new-focus-1544-guang-dian-tan-ce-qi-shou-ce-zhai-lu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-光纤带宽计算公式"><a href="#1-光纤带宽计算公式" class="headerlink" title="1 光纤带宽计算公式"></a>1 光纤带宽计算公式</h2><p><img src="https://s2.loli.net/2024/10/27/GranqXmziMswvZO.png" alt=""></p><h2 id="2-连接器带宽"><a href="#2-连接器带宽" class="headerlink" title="2 连接器带宽"></a>2 连接器带宽</h2><p><img src="https://s2.loli.net/2024/10/27/2HUjq8ni4SyDBzT.png" alt=""><br>Wiltron K即2.92 mm，Wiltron V即1.85 mm</p><hr><p>参考：<br><a href="https://baijiahao.baidu.com/s?id=1738309212838303347&amp;wfr=spider&amp;for=pc">一图区分1.85mm/2.4mm/2.92mm/3.5mm/SMA射频接头</a><br><a href="https://zhuanlan.zhihu.com/p/521535803">射频同轴连接器和电缆指南</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> apparatus </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> apparatus, datasheet </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>频率啁啾的定量理解</title>
       <link href="/2024/09/21/pin-lu-zhou-jiu-de-ding-liang-li-jie/"/>
       <url>/2024/09/21/pin-lu-zhou-jiu-de-ding-liang-li-jie/</url>
@@ -133,7 +158,7 @@
       <link href="/2024/07/30/die-ceng-zu-kang/"/>
       <url>/2024/07/30/die-ceng-zu-kang/</url>
       
-        <content type="html"><![CDATA[<p>这是一张14层的叠层阻抗表，黄色标注了1-4层的三阶盲埋：<br><img src="https://s2.loli.net/2024/07/30/D9UOSApXMT4EBdj.png" alt=""><br><strong>注：FR4图中写错，FR4 = Fire Resist level4，是一种防火等级，因为PCB需要有主动阻燃性，所以需要FR4材料。FR4一般都指core(芯板)中间黄色部分，其厚度为规定值，以core形态成品售往PCB工厂，所以FR4一般也指core。PP(prepreg，又称半固化片)也属于FR4，只不过部分固化，PCB 制造商使用它来将蚀刻芯粘合在一起。可参考：<a href="https://electronics.stackexchange.com/questions/356063/what-exactly-is-prepreg-and-core-in-a-pcb">What exactly is prepreg and core in a PCB?</a></strong></p><p>与阻抗计算工具的结果吻合：<br><img src="https://s2.loli.net/2024/07/30/JCwgvN4IMdceSlb.png" alt=""><br><img src="https://s2.loli.net/2024/07/30/xoYAMfbRiZKE2pu.png" alt=""><br>参考：<br><a href="https://zhuanlan.zhihu.com/p/512495251">PCB板材的基础知识</a><br><a href="https://baijiahao.baidu.com/s?id=1787683941435650876&amp;wfr=spider&amp;for=pc">高速PCB的铜箔选用指南</a><br><a href="https://www.sunshinepcb.com/news/knowledge/81.html">PCB叠层设计指南 | 从材料选型到叠构设计</a><br><a href="https://www.protoexpress.com/tools/pcb-impedance-calculator/">Impedance Calculator</a><br>附12层叠层阻抗表：<br><img src="https://s2.loli.net/2024/08/19/ShYKyzBtGqRonud.png" alt=""></p>]]></content>
+        <content type="html"><![CDATA[<p>这是一张14层的叠层阻抗表，黄色标注了1-4层的三阶盲埋：<br><img src="https://s2.loli.net/2024/07/30/D9UOSApXMT4EBdj.png" alt=""><br><strong>注：FR4图中写错，FR4 = Fire Resist level4，是一种防火等级，因为PCB需要有主动阻燃性，所以需要FR4材料。FR4一般都指core(芯板)中间黄色部分，其厚度为规定值，以core形态成品售往PCB工厂，所以FR4一般也指core。PP(prepreg，又称半固化片)也属于FR4，只不过部分固化，PCB 制造商使用它来将蚀刻芯粘合在一起。可参考：<a href="https://electronics.stackexchange.com/questions/356063/what-exactly-is-prepreg-and-core-in-a-pcb">What exactly is prepreg and core in a PCB?</a></strong></p><p>与阻抗计算工具的结果吻合：<br><img src="https://s2.loli.net/2024/07/30/JCwgvN4IMdceSlb.png" alt=""><br><img src="https://s2.loli.net/2024/07/30/xoYAMfbRiZKE2pu.png" alt=""></p><hr><p>参考：<br><a href="https://zhuanlan.zhihu.com/p/512495251">PCB板材的基础知识</a><br><a href="https://baijiahao.baidu.com/s?id=1787683941435650876&amp;wfr=spider&amp;for=pc">高速PCB的铜箔选用指南</a><br><a href="https://www.sunshinepcb.com/news/knowledge/81.html">PCB叠层设计指南 | 从材料选型到叠构设计</a><br><a href="https://www.protoexpress.com/tools/pcb-impedance-calculator/">Impedance Calculator</a><br>附12层叠层阻抗表：<br><img src="https://s2.loli.net/2024/08/19/ShYKyzBtGqRonud.png" alt=""></p>]]></content>
       
       
       <categories>

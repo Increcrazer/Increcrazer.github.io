@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-09-21T06:31:39.241Z</updated>
+  <updated>2024-10-27T14:40:20.312Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>New Focus 1544光电探测器 手册摘录</title>
+    <link href="http://increcrazer.github.io/2024/10/27/new-focus-1544-guang-dian-tan-ce-qi-shou-ce-zhai-lu/"/>
+    <id>http://increcrazer.github.io/2024/10/27/new-focus-1544-guang-dian-tan-ce-qi-shou-ce-zhai-lu/</id>
+    <published>2024-10-27T14:19:28.827Z</published>
+    <updated>2024-10-27T14:40:20.312Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-光纤带宽计算公式&quot;&gt;&lt;a href=&quot;#1-光纤带宽计算公式&quot; class=&quot;headerlink&quot; title=&quot;1 光纤带宽计算公式&quot;&gt;&lt;/a&gt;1 光纤带宽计算公式&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="apparatus" scheme="http://increcrazer.github.io/categories/apparatus/"/>
+    
+    
+    <category term="apparatus, datasheet" scheme="http://increcrazer.github.io/tags/apparatus-datasheet/"/>
+    
+  </entry>
   
   <entry>
     <title>频率啁啾的定量理解</title>
@@ -150,7 +175,7 @@
     <link href="http://increcrazer.github.io/2024/07/30/die-ceng-zu-kang/"/>
     <id>http://increcrazer.github.io/2024/07/30/die-ceng-zu-kang/</id>
     <published>2024-07-30T13:10:49.062Z</published>
-    <updated>2024-08-31T15:02:22.380Z</updated>
+    <updated>2024-10-27T14:40:15.077Z</updated>
     
     
       
