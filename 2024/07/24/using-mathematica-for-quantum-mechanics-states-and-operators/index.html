@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Using Mathematica for QM  one particle in one dimension (1), WYA">
-    <meta name="description" content="0 动机追求静态网页支持在线mathematica是个错误的方向，直接将笔记上传至mathematica云端就行。但是mathematica的排版一直很难用，就算调用matex包，mathematica依然对latex语言支持很差劲。经过尝">
+    <meta name="keywords" content="Using Mathematica for Quantum Mechanics：states and operators, WYA">
+    <meta name="description" content="0 动机这是我的第一篇博客，没有获奖感言，锻炼下markdown使用以及测试下hexo-renderer-kramed渲染器的稳定性倒是有必要的。
+
+‘The limits of my language mean the limits of">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Using Mathematica for QM  one particle in one dimension (1) | WYA</title>
+    <title>Using Mathematica for Quantum Mechanics：states and operators | WYA</title>
     <link rel="icon" type="image/png" href="/medias/wyafavicon.png">
     
 
@@ -326,7 +328,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Using Mathematica for QM  one particle in one dimension (1)</h1>
+                    <h1 class="description center-align post-title">Using Mathematica for Quantum Mechanics：states and operators</h1>
                 </div>
             </div>
         </div>
@@ -375,7 +377,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-07-28
+                    2024-07-24
                 </div>
                 
 
@@ -384,14 +386,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    398
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 
@@ -414,51 +416,57 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="0-动机"><a href="#0-动机" class="headerlink" title="0 动机"></a>0 动机</h2><p>追求静态网页支持在线mathematica是个错误的方向，直接将笔记上传至mathematica云端就行。但是mathematica的排版一直很难用，就算调用matex包，mathematica依然对latex语言支持很差劲。经过尝试，意外发现它对MathML脚本支持比较完善。另外，将枯燥的standardform转换为traditionalform可以将代码语言转换成公式语言，一定程度上能增加代码可读性。</p>
-<p>然而，一些mathematica的动态或静态图片结果不会加载在云端，需要在云端运行或者下载到本地运行，这就比较麻烦。</p>
-<p><strong>因此，主页放上要点和结论性的图片，同时附上mathematica笔记本链接，会是一个不错的结合。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://www.wolframcloud.com/env/wya1759991046/Published/Use%20mathematica%20for%20QM%204.1.1_4.1.6.nb">mathematica笔记本链接</a></p>
-<h2 id="1-要点"><a href="#1-要点" class="headerlink" title="1 要点"></a>1 要点</h2><ul>
-<li>finite-resolution position basis(FRPS/PS)本质上是对Dirac basis的采样</li>
-<li>PS是离散的，和momentum basis(MS)的关系为：基系数互为DST-1变换(type-1 discrete sine transform)</li>
-<li>有一些算符用MS展开简单，另一些用PS展开简单，例如动能算符用MS展开简单，势能算符用PS展开简单。求得一种展开，另一种展开通过DST-1变换就行了。</li>
-</ul>
-<h2 id="2-视觉知识"><a href="#2-视觉知识" class="headerlink" title="2 视觉知识"></a>2 视觉知识</h2><ul>
-<li>MB的归一正交性验证</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/07/28/X2Pc3BZMUw4mohe.png" alt=""></p>
-<ul>
-<li>MB的完备性验证</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/07/28/opAHTkgm5Q694Nl.gif" alt=""></p>
-<ul>
-<li>PB在Dirac Basis中的展开系数</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/07/28/XMpgNf9iU1YqwHz.gif" alt=""></p>
-<ul>
-<li>$\hat{\mathcal{x}}$在MB展开</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/07/28/rOIfuNoX6vKd2Qx.png" alt=""></p>
-<ul>
-<li>$\hat{\mathcal{x}}$在PB展开</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/07/28/LvRpePJoAmKzCiH.png" alt=""> </p>
-<ul>
-<li>$\hat{\mathcal{T}}$在MB展开</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/07/28/McX5g7bmaxYnKGr.png" alt=""></p>
-<ul>
-<li>$\hat{\mathcal{T}}$在PB展开</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/07/28/2NG6qnwhYiFUvP1.png" alt=""></p>
-<ul>
-<li>$\hat{\mathcal{P}}$在MB展开，可以发现只有虚部</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/07/28/yUav1CXTif6bsRq.png" alt=""></p>
-<ul>
-<li>$\hat{\mathcal{P}}$在PB展开，可以发现只有虚部</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/07/28/1Qr4ztxgvTuUXL3.png" alt=""></p>
+                <h2 id="0-动机"><a href="#0-动机" class="headerlink" title="0 动机"></a>0 动机</h2><p>这是我的第一篇博客，没有获奖感言，锻炼下markdown使用以及测试下hexo-renderer-kramed渲染器的稳定性倒是有必要的。</p>
+<hr>
+<p><em>‘The limits of my language mean the limits of my world.’</em> —— Ludwig Wittgenstein</p>
+<p>量子力学数学语言和代码语言之间的关系是什么？</p>
+<h2 id="1-基矢的表示"><a href="#1-基矢的表示" class="headerlink" title="1 基矢的表示"></a>1 基矢的表示</h2><h3 id="1-1-算符和量子态的计算机语言"><a href="#1-1-算符和量子态的计算机语言" class="headerlink" title="1.1 算符和量子态的计算机语言"></a>1.1 算符和量子态的计算机语言</h3><script type="math/tex; mode=display">
+\hat{\mathcal{A}}=\sum_{ij}A_{ij} |i\rangle\langle j|,</script><script type="math/tex; mode=display">
+|\psi\rangle=\sum_i\psi_i|i\rangle,</script><h3 id="1-2-有限空间的处理方法"><a href="#1-2-有限空间的处理方法" class="headerlink" title="1.2 有限空间的处理方法"></a>1.2 有限空间的处理方法</h3><script type="math/tex; mode=display">
+\hat{\mathcal{A}}=\mathbb{1} \cdot \hat{\mathcal{A}} \cdot \mathbb{1}=(\hat{P}+\hat{Q}) \cdot \hat{\mathcal{A}} \cdot(\hat{P}+\hat{Q})=\hat{P} \cdot \hat{\mathcal{A}} \cdot \hat{P}+\hat{P} \cdot \hat{\mathcal{A}} \cdot \hat{Q}+\hat{Q} \cdot \hat{\mathcal{A}} \cdot \hat{P}+\hat{Q} \cdot \hat{\mathcal{A}} \cdot \hat{Q} \\
+= \underbrace{\sum_{i j} A_{i j}|i\rangle\langle j|}_{\text {within described subspace }}+\underbrace{\hat{P} \cdot \hat{\mathcal{A}} \cdot \hat{Q}+\hat{Q} \cdot \hat{\mathcal{A}} \cdot \hat{P}}_{\text {neglected coupling to (high-energy) part }}+\underbrace{\hat{Q} \cdot \hat{\mathcal{A}} \cdot \hat{Q}}_{\text {neglected (high-energy) part }},</script><script type="math/tex; mode=display">
+|\psi\rangle=1\cdot|\psi\rangle=(\hat{P}+\hat{Q})\cdot|\psi\rangle=\underbrace{\sum_i\psi_i |i\rangle}_{\text{within described subspace}}+\underbrace{\hat{Q}|\psi\rangle}_{\text{neglected (high-energy) part}}.</script><h2 id="2-时不变薛定谔方程"><a href="#2-时不变薛定谔方程" class="headerlink" title="2 时不变薛定谔方程"></a>2 时不变薛定谔方程</h2><p>数学语言为：</p>
+<script type="math/tex; mode=display">
+\hat{\mathcal{H}}|\psi\rangle=E|\psi\rangle,</script><p><strong>计算机语言</strong>为：</p>
+<script type="math/tex; mode=display">
+\sum_jH_{mj}\psi_j=E\psi_m,</script><p>其向量形式为$H\cdot\vec{\psi}=E\vec{\boldsymbol{\psi}}$.</p>
+<h2 id="3-时变薛定谔方程"><a href="#3-时变薛定谔方程" class="headerlink" title="3 时变薛定谔方程"></a>3 时变薛定谔方程</h2><p>数学语言为：</p>
+<script type="math/tex; mode=display">
+\mathrm{i}\hbar\frac{\mathrm{d}}{\mathrm{d}t}|\psi(t)\rangle=\hat{\mathcal{H}}(t)|\psi(t)\rangle,</script><p>解方程得到：<br>$|\psi(t)\rangle=\hat{\mathcal{U}}(t_0;t)|\psi(t_0)\rangle$, 其中$\hat{\mathcal{U}}(t_0;t)$为传播子，对其用Magnus expansion得到$\hat{\mathcal{U}}(t_0;t)=\exp\left[\sum_{k=1}^\infty\hat{\Omega}_k(t_0;t)\right]$.</p>
+<h3 id="3-1-假设基矢时不变，去解方程"><a href="#3-1-假设基矢时不变，去解方程" class="headerlink" title="3.1 假设基矢时不变，去解方程"></a>3.1 假设基矢时不变，去解方程</h3><p>假设$\hat{\mathcal{H}}(t)=\sum_{ij}H_{ij}(t) |i\rangle\langle j|$, $|\psi(t)\rangle=\sum\psi_i(t)\mid i\rangle$, 带入时变薛定谔方程，可以得到<br><strong>计算机语言</strong>为：</p>
+<script type="math/tex; mode=display">
+\mathrm{i}\hbar\dot{\psi}_m(t)=\sum_kH_{mk}(t)\psi_k(t),</script><p>其向量形式为$\mathrm{i}\hbar\dot{\vec{\boldsymbol{\psi}}}(t)=H(t)\cdot\vec{\boldsymbol{\psi}}(t)$.</p>
+<h3 id="3-2-假设基矢时变，去解方程（用于相互作用图景）"><a href="#3-2-假设基矢时变，去解方程（用于相互作用图景）" class="headerlink" title="3.2 假设基矢时变，去解方程（用于相互作用图景）"></a>3.2 假设基矢时变，去解方程（用于相互作用图景）</h3><p>相互作用下哈密顿量为：$\hat{\mathcal{H}}(t)=\hat{\mathcal{H}}_0+\hat{\mathcal{H}}_1(t)$. 假设$\hat{\mathcal{H}}_0$可以对角化，即$\hat{\mathcal{H}}_0|i\rangle=E_i|i\rangle$, 则时变基矢表达式为：$|i(t)\rangle=e^{-\mathrm{i}E_it/\hbar}|i\rangle$, 于是可以将量子态用时变基展开：</p>
+<script type="math/tex; mode=display">
+|\psi(t)\rangle=\sum_i\psi_i(t)\mid i(t)\rangle=\sum_i\psi_i(t)e^{-\mathrm{i}E_it/\hbar}|i\rangle,</script><p>将之带入时变薛定谔方程，可以得到<br><strong>计算机语言</strong>为：</p>
+<script type="math/tex; mode=display">
+\mathrm{i}\hbar\dot{\psi}_k(t)=\sum_j\psi_j(t)e^{-\mathrm{i}(E_j-E_k)t/\hbar}\langle k|\hat{\mathcal{H}}_1(t)|j\rangle=\sum_j\psi_j(t)e^{-\mathrm{i}(E_j-E_k)t/\hbar}{\mathcal{H}}_{1_{kj}}(t).</script><h3 id="3-3-特殊情况：-left-hat-mathcal-H-t-hat-mathcal-H-t’-right-0-forall-t-t’"><a href="#3-3-特殊情况：-left-hat-mathcal-H-t-hat-mathcal-H-t’-right-0-forall-t-t’" class="headerlink" title="3.3 特殊情况： $\left[\hat{\mathcal{H}}(t),\hat{\mathcal{H}}(t’)\right]=0 \forall(t,t’)$"></a>3.3 特殊情况： $\left[\hat{\mathcal{H}}(t),\hat{\mathcal{H}}(t’)\right]=0 \forall(t,t’)$</h3><p>可以直接解出薛定谔方程，其<br><strong>计算机语言</strong>为：</p>
+<script type="math/tex; mode=display">
+\vec{\boldsymbol{\psi}}(t)=\exp\left[-\frac{\mathrm{i}}{\hbar}\int_{t_0}^t\boldsymbol{H}(s)\mathrm{d}s\right]\cdot\vec{\boldsymbol{\psi}}(t_0).</script><h3 id="3-4-特殊情况：-哈密顿量是时不变的"><a href="#3-4-特殊情况：-哈密顿量是时不变的" class="headerlink" title="3.4 特殊情况： 哈密顿量是时不变的"></a>3.4 特殊情况： 哈密顿量是时不变的</h3><p>可以直接解出薛定谔方程，其<br><strong>计算机语言</strong>为：</p>
+<script type="math/tex; mode=display">
+\vec{\boldsymbol{\psi}}(t)=\exp\left[-\frac{\mathrm{i}(t-t_0)}\hbar\boldsymbol{H}\right]\cdot\vec{\boldsymbol{\psi}}(t_0).</script><pre class="language-wolfram" data-language="wolfram"><code class="language-wolfram">phi:= = Flatten[KroneckerProduct[ phi1, phi2, phi3]]</code></pre>
+<h2 id="4-基矢的计算机构造"><a href="#4-基矢的计算机构造" class="headerlink" title="4 基矢的计算机构造"></a>4 基矢的计算机构造</h2><h3 id="4-1-多维系统的描述"><a href="#4-1-多维系统的描述" class="headerlink" title="4.1 多维系统的描述"></a>4.1 多维系统的描述</h3><p>多维量子态的数学描述如下：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}|\psi\rangle=\left[\sum_{i_1=1}^{n_1}\psi_{i_1}^{(1)}|i_1\rangle^{(1)}\right]\otimes\left[\sum_{i_2=1}^{n_2}\psi_{i_2}^{(2)}|i_2\rangle^{(2)}\right]\otimes\cdots\otimes\left[\sum_{i_N=1}^{n_N}\psi_{i_N}^{(N)}|i_N\rangle^{(N)}\right]\\&\\=\sum_{i_1=1}^{n_1}\sum_{i_2=1}^{n_2}\cdots\sum_{i_N=1}^{n_N}\left[\psi_{i_1}^{(1)}\psi_{i_2}^{(2)}\ldots\psi_{i_N}^{(N)}\right]|i_1,i_2,\ldots,i_N\rangle\end{aligned},</script><p><strong>计算机语言</strong>为：<br></p><pre class="language-wolfram" data-language="wolfram"><code class="language-wolfram">U[∆t_?NumericQ] := MatrixExp[-I*H*N[∆t]/~]</code></pre><br>多维算符的数学描述如下：<p></p>
+<script type="math/tex; mode=display">
+\begin{aligned}\hat{A}=\left[\sum_{i_{1}=1}^{n_{1}}\sum_{j_{1}=1}^{n_{1}}a_{i_{1},j_{1}}^{(1)}|i_{1}\rangle^{(1)}\langle j_{1}|^{(1)}\right]\otimes\left[\sum_{i_{2}=1}^{n_{2}}\sum_{j_{2}=1}^{n_{2}}a_{i_{2},j_{2}}^{(2)}|i_{2}\rangle^{(2)}\langle j_{2}|^{(2)}\right]\otimes\cdots\otimes\left[\sum_{i_{N}=1}^{n_{N}}\sum_{i_{N}=1}^{n_{N}}a_{i_{N},j_{N}}^{(N)}|i_{N}\rangle^{(N)}\langle j_{N}|^{(N)}\right]\\&\\=\sum_{i_{1}=1}^{n_{1}}\sum_{j_{1}=1}^{n_{1}}\sum_{i_{2}=1}^{n_{2}}\sum_{j_{2}=1}^{n_{2}}\cdots\sum_{i_{N}=1}^{n_{N}}\sum_{j_{N}=1}^{n_{N}}\left[a_{i_{1}j_{1}}^{(1)}a_{i_{2}j_{2}}^{(2)}\cdots a_{i_{N}j_{N}}^{(N)}\right]|i_{1},i_{2},\ldots,i_{N}\rangle\langle j_{1},j_{2},\ldots,j_{N}|.\end{aligned}</script><p><strong>计算机语言</strong>为：<br></p><pre class="language-wolfram" data-language="wolfram"><code class="language-wolfram">A = KroneckerProduct[a1, a2, a3]</code></pre><br>我们经常考察作用在某一成员空间的算符，这种算符的<br><strong>计算机语言</strong>（假设为三体系统）为<br><pre class="language-wolfram" data-language="wolfram"><code class="language-wolfram">H1 = KroneckerProduct[h1,
+                    IdentityMatrix[Dimensions[h2]],
+                    IdentityMatrix[Dimensions[h3]]];
+H2 = KroneckerProduct[IdentityMatrix[Dimensions[h1]],
+                    h2,
+                    IdentityMatrix[Dimensions[h3]]];
+H3 = KroneckerProduct[IdentityMatrix[Dimensions[h1]],
+                    IdentityMatrix[Dimensions[h2]],
+                    h3];</code></pre><p></p>
+<h3 id="4-2-偏迹的描述"><a href="#4-2-偏迹的描述" class="headerlink" title="4.2 偏迹的描述"></a>4.2 偏迹的描述</h3><p>数学描述如下，假如有一个三体系统：</p>
+<script type="math/tex; mode=display">
+\hat{\rho}_{\mathrm{ABC}}=\sum_{i,i^{\prime}=1}^{d_{\mathrm{A}}}\sum_{j,j^{\prime}=1}^{d_{\mathrm{B}}}\sum_{k,k^{\prime}=1}^{d_{\mathrm{C}}}\rho_{i,j,k,i^{\prime},j^{\prime},k^{\prime}}|i_{\mathrm{A}},j_{\mathrm{B}},k_{\mathrm{C}}\rangle\langle i_{\mathrm{A}}^{\prime},j_{\mathrm{B}}^{\prime},k_{\mathrm{C}}^{\prime}|,</script><p>其中$\rho$是个6维张量。对B求偏迹的数学公式为：</p>
+<script type="math/tex; mode=display">
+\begin{gathered}
+\hat{\rho}_{\mathrm{AC}}=\sum_{j^{\prime\prime}=1}^{d_{\mathrm{B}}}\langle j_{\mathrm{B}}^{\prime\prime}|\hat{\rho}_{\mathrm{ABC}}|j_{\mathrm{B}}^{\prime\prime}\rangle\\=\sum_{j^{\prime\prime}=1}^{d_{\mathrm{B}}}\langle j_{\mathrm{B}}^{\prime\prime}|\left\lfloor\sum_{i,i^{\prime}=1}^{d_{\mathrm{A}}}\sum_{j,j^{\prime}=1}^{d_{\mathrm{B}}}\sum_{k,k^{\prime}=1}^{d_{\mathrm{C}}}\rho_{i,j,k,i^{\prime},j^{\prime},k^{\prime}}|i_{\mathrm{A}},j_{\mathrm{B}},k_{\mathrm{C}}\rangle\langle i_{\mathrm{A}}^{\prime},j_{\mathrm{B}}^{\prime},k_{\mathrm{C}}^{\prime}|\right\rfloor|j_{\mathrm{B}}^{\prime\prime}\rangle \\
+=\sum_{j^{\prime\prime}=1}^{d_{B}}\sum_{i,i^{\prime}=1}^{d_{A}}\sum_{j,j=1}^{d_{B}}\sum_{k,k^{\prime}=1}^{d_{C}}\rho_{i,j,k,i^{\prime},j^{\prime},k^{\prime}}\langle j_{B}^{\prime\prime}|i_{A},j_{B},k_{C}\rangle\langle i_{A}^{\prime},j_{B}^{\prime},k_{C}^{\prime}|j_{B}^{\prime\prime}\rangle\\=\sum_{j^{\prime\prime}=1}^{d_{B}}\sum_{i,i^{\prime}=1}^{d_{A}}\sum_{j,j^{\prime}=1}^{d_{B}}\sum_{k,k^{\prime}=1}^{d_{C}}\rho_{i,j,k,i^{\prime},j^{\prime},k^{\prime}}[\delta_{j^{\prime\prime},j}|i_{A},k_{C}\rangle]\left[\delta_{j^{\prime\prime},j^{\prime}}\langle i_{A}^{\prime},k_{C}^{\prime}\right|] \\
+=\sum_{i,i^{\prime}=1}^{d_{A}}\sum_{k,k^{\prime}=1}^{d_{C}}\left[\sum_{j=1}^{d_{B}}\rho_{i,j,k,i^{\prime},j,k^{\prime}}\right]|i_{A},k_{C}\rangle\langle i_{A}^{\prime},k_{C}^{\prime}|,
+\end{gathered}</script><p>可见这是对6维张量在2&amp;5维上的压缩操作。<br>所以用<strong>计算机语言</strong>去表示偏迹，可以先把$\hat{\rho}_{\mathrm{ABC}}$重塑成6维张量：<br></p><pre class="language-wolfram" data-language="wolfram"><code class="language-wolfram">R = ArrayReshape[ρABC, {dA,dB,dC,dA,dB,dC}]</code></pre><br>然后在2&amp;5维上进行压缩操作：<br><pre class="language-wolfram" data-language="wolfram"><code class="language-wolfram">S = TensorContract[R, {2,5}]</code></pre><br>最后再还原成密度矩阵形式(2维张量)：<br><pre class="language-wolfram" data-language="wolfram"><code class="language-wolfram">ρAC = Flatten[S, {{1,2}, {3,4}}]</code></pre><p></p>
 
                 
             </div>
@@ -485,7 +493,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://increcrazer.github.io/2024/07/28/using-mathematica-for-qm-one-particle-in-one-dimension-1/">http://increcrazer.github.io/2024/07/28/using-mathematica-for-qm-one-particle-in-one-dimension-1/</a>
+                    <a href="http://increcrazer.github.io/2024/07/24/using-mathematica-for-quantum-mechanics-states-and-operators/">http://increcrazer.github.io/2024/07/24/using-mathematica-for-quantum-mechanics-states-and-operators/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -607,12 +615,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/07/28/dji-mini4k-pai-zhao-mo-shi-ce-shi/">
+                <a href="/2024/07/28/using-mathematica-for-quantum-mechanics-one-particle-in-one-dimension/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/07/28/khmgWQRvVCzpHZK.jpg" class="responsive-img" alt="DJI mini4K拍照模式测试">
+                        <img src="https://s2.loli.net/2024/07/23/Yt4d6WPlrjbkBMJ.jpg" class="responsive-img" alt="Using Mathematica for Quantum Mechanics：one particle in one dimension">
                         
-                        <span class="card-title">DJI mini4K拍照模式测试</span>
+                        <span class="card-title">Using Mathematica for Quantum Mechanics：one particle in one dimension</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -629,8 +637,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/toy/" class="post-category">
-                                    toy
+                            <a href="/categories/science/" class="post-category">
+                                    science
                                 </a>
                             
                             
@@ -640,8 +648,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/drone-mini4K/">
-                        <span class="chip bg-color">drone, mini4K</span>
+                    <a href="/tags/mathematica-quantum-mechanics/">
+                        <span class="chip bg-color">mathematica, quantum mechanics</span>
                     </a>
                     
                 </div>
@@ -652,15 +660,15 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2024/07/24/using-mathematica-for-qm-qm-states-and-operators/">
+                <a href="/2024/07/24/using-mathematica-for-quantum-mechanics-states-and-operators/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/07/23/Yt4d6WPlrjbkBMJ.jpg" class="responsive-img" alt="Using Mathematica for QM  QM： states and operators">
+                        <img src="https://s2.loli.net/2024/07/23/Yt4d6WPlrjbkBMJ.jpg" class="responsive-img" alt="Using Mathematica for Quantum Mechanics：states and operators">
                         
-                        <span class="card-title">Using Mathematica for QM  QM： states and operators</span>
+                        <span class="card-title">Using Mathematica for Quantum Mechanics：states and operators</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -685,6 +693,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
