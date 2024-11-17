@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-11-03T15:28:22.557Z</updated>
+  <updated>2024-11-17T16:13:42.551Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>损耗换算工具</title>
+    <link href="http://increcrazer.github.io/2024/11/17/sun-hao-huan-suan-gong-ju/"/>
+    <id>http://increcrazer.github.io/2024/11/17/sun-hao-huan-suan-gong-ju/</id>
+    <published>2024-11-17T14:52:23.543Z</published>
+    <updated>2024-11-17T16:13:42.551Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-公式&quot;&gt;&lt;a href=&quot;#1-公式&quot; class=&quot;headerlink&quot; title=&quot;1 公式&quot;&gt;&lt;/a&gt;1 公式&lt;/h2&gt;&lt;script type=&quot;math/tex;</summary>
+        
+      
+    
+    
+    
+    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
+    
+    
+    <category term="tool, convert" scheme="http://increcrazer.github.io/tags/tool-convert/"/>
+    
+  </entry>
   
   <entry>
     <title>New Focus 1544光电探测器 手册摘录</title>
@@ -42,11 +67,11 @@
   </entry>
   
   <entry>
-    <title>频率啁啾的定量理解</title>
-    <link href="http://increcrazer.github.io/2024/09/21/pin-lu-zhou-jiu-de-ding-liang-li-jie/"/>
-    <id>http://increcrazer.github.io/2024/09/21/pin-lu-zhou-jiu-de-ding-liang-li-jie/</id>
+    <title>对频率啁啾的定量理解</title>
+    <link href="http://increcrazer.github.io/2024/09/21/dui-pin-lu-zhou-jiu-de-ding-liang-li-jie/"/>
+    <id>http://increcrazer.github.io/2024/09/21/dui-pin-lu-zhou-jiu-de-ding-liang-li-jie/</id>
     <published>2024-09-21T03:22:34.792Z</published>
-    <updated>2024-11-17T13:58:26.038Z</updated>
+    <updated>2024-11-17T14:54:35.478Z</updated>
     
     
       
@@ -94,11 +119,11 @@
   </entry>
   
   <entry>
-    <title>角度⇔弧度</title>
-    <link href="http://increcrazer.github.io/2024/09/16/jiao-du-hu-du/"/>
-    <id>http://increcrazer.github.io/2024/09/16/jiao-du-hu-du/</id>
+    <title>角度弧度换算工具</title>
+    <link href="http://increcrazer.github.io/2024/09/16/jiao-du-hu-du-huan-suan-gong-ju/"/>
+    <id>http://increcrazer.github.io/2024/09/16/jiao-du-hu-du-huan-suan-gong-ju/</id>
     <published>2024-09-16T07:54:57.050Z</published>
-    <updated>2024-09-18T06:18:21.734Z</updated>
+    <updated>2024-11-17T14:53:02.667Z</updated>
     
     
       
@@ -120,11 +145,11 @@
   </entry>
   
   <entry>
-    <title>河边</title>
-    <link href="http://increcrazer.github.io/2024/08/26/he-bian/"/>
-    <id>http://increcrazer.github.io/2024/08/26/he-bian/</id>
+    <title>河边风光</title>
+    <link href="http://increcrazer.github.io/2024/08/26/he-bian-feng-guang/"/>
+    <id>http://increcrazer.github.io/2024/08/26/he-bian-feng-guang/</id>
     <published>2024-08-26T03:17:49.517Z</published>
-    <updated>2024-11-03T15:29:42.421Z</updated>
+    <updated>2024-11-17T14:54:14.621Z</updated>
     
     
       
@@ -171,11 +196,11 @@
   </entry>
   
   <entry>
-    <title>叠层阻抗表</title>
-    <link href="http://increcrazer.github.io/2024/07/30/die-ceng-zu-kang/"/>
-    <id>http://increcrazer.github.io/2024/07/30/die-ceng-zu-kang/</id>
+    <title>叠层阻抗含义</title>
+    <link href="http://increcrazer.github.io/2024/07/30/die-ceng-zu-kang-han-yi/"/>
+    <id>http://increcrazer.github.io/2024/07/30/die-ceng-zu-kang-han-yi/</id>
     <published>2024-07-30T13:10:49.062Z</published>
-    <updated>2024-11-03T15:29:14.134Z</updated>
+    <updated>2024-11-17T14:53:40.393Z</updated>
     
     
       
