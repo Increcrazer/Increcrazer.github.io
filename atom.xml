@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-11-23T06:45:39.577Z</updated>
+  <updated>2024-12-03T14:11:44.615Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微腔参数计算工具</title>
+    <link href="http://increcrazer.github.io/2024/12/03/wei-qiang-can-shu-ji-suan-gong-ju/"/>
+    <id>http://increcrazer.github.io/2024/12/03/wei-qiang-can-shu-ji-suan-gong-ju/</id>
+    <published>2024-12-03T11:08:12.258Z</published>
+    <updated>2024-12-03T14:11:44.615Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/12/03/MRpbCKg2SDXBk5N.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1-公式&quot;&gt;&lt;a href=&quot;#1-公式&quot; class=&quot;headerlink&quot; title=&quot;1</summary>
+        
+      
+    
+    
+    
+    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
+    
+    
+    <category term="tool, photonics" scheme="http://increcrazer.github.io/tags/tool-photonics/"/>
+    
+  </entry>
   
   <entry>
     <title>损耗换算工具</title>
