@@ -7,10 +7,10 @@
     <meta name="keywords" content="微腔参数计算工具, WYA">
     <meta name="description" content="
 1 公式
+k^{2}+r^{2}=1
 a^{2}=\exp(-\alpha L)
 \mathrm{FSR(length)}=\frac{\lambda^{2}}{n_{g} L}
-\mathrm{FSR(freq)}=\frac{c}{n_{g} L}
-n_{g}=">
+\mathrm{FSR(freq)}=\frac{c}{n">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -389,14 +389,14 @@ n_{g}=">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    462
+                    559
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -421,6 +421,7 @@ n_{g}=">
             <div id="articleContent">
                 <p><img src="https://s2.loli.net/2024/12/03/MRpbCKg2SDXBk5N.png" alt=""></p>
 <h2 id="1-公式"><a href="#1-公式" class="headerlink" title="1 公式"></a>1 公式</h2><script type="math/tex; mode=display">
+k^{2}+r^{2}=1</script><script type="math/tex; mode=display">
 a^{2}=\exp(-\alpha L)</script><script type="math/tex; mode=display">
 \mathrm{FSR(length)}=\frac{\lambda^{2}}{n_{g} L}</script><script type="math/tex; mode=display">
 \mathrm{FSR(freq)}=\frac{c}{n_{g} L}</script><script type="math/tex; mode=display">
@@ -432,7 +433,18 @@ n_{g}=n_{\mathrm{eff}}+\omega \frac{d n_{\mathrm{eff}}}{d \omega}</script><scrip
 \mathrm { Q-factor }=\frac{\pi n_{g} L \sqrt{r a}}{\lambda_{\mathrm{res}}(1-r a)}</script></li>
 </ul>
 <script type="math/tex; mode=display">
-\mathrm { Finess }=\frac{\pi \sqrt{r a}}{1-r a}</script><ul>
+\mathrm { Finess }=\frac{\pi \sqrt{r a}}{1-r a}</script><p>当$\alpha$和$k$很小时，</p>
+<script type="math/tex; mode=display">
+\sqrt{r a}=\sqrt{1-k^2}\sqrt{a}
+\\≈(1-0.5k^2)\exp(-0.5\alpha L)
+\\≈\exp(-0.5k^2)\exp(-0.5\alpha L)
+\\=\exp(-0.5k^2-0.5\alpha L)</script><p>设$\alpha_{tot}=0.5k^2+0.5\alpha L$，则</p>
+<script type="math/tex; mode=display">
+\sqrt{r a}=\exp(-\alpha_{tot})</script><script type="math/tex; mode=display">
+\mathrm { Finess }=\frac{\pi \sqrt{r a}}{1-r a}
+\\=\frac{\pi}{\frac{1}{\sqrt{r a}}-\sqrt{r a}}
+\\=\frac{\pi}{\exp(\alpha_{tot})-\exp(-\alpha_{tot})}
+\\≈\frac{\pi}{2\alpha_{tot}}</script><ul>
 <li>Add-drop<script type="math/tex; mode=display">
 \text { Q-factor }=\frac{\pi n_{g} L \sqrt{r_{1} r_{2} a}}{\lambda_{\text {res }}\left(1-r_{1} r_{2} a\right)}</script></li>
 </ul>
@@ -1091,7 +1103,7 @@ window.onload = calculateFSR();
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">8.3k</span>
+                        class="white-color">8.4k</span>
             
             
             
