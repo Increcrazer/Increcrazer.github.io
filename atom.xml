@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-12-10T15:18:13.275Z</updated>
+  <updated>2024-12-29T04:26:17.182Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>股市常识（持续更新）</title>
+    <link href="http://increcrazer.github.io/2024/12/23/gu-shi-chang-shi-chi-xu-geng-xin/"/>
+    <id>http://increcrazer.github.io/2024/12/23/gu-shi-chang-shi-chi-xu-geng-xin/</id>
+    <published>2024-12-23T13:23:34.844Z</published>
+    <updated>2024-12-29T04:26:17.182Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;K线&quot;&gt;&lt;a href=&quot;#K线&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="economics" scheme="http://increcrazer.github.io/categories/economics/"/>
+    
+    
+    <category term="stock, leek" scheme="http://increcrazer.github.io/tags/stock-leek/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线性和非线性效应公式速查</title>
+    <link href="http://increcrazer.github.io/2024/12/17/xian-xing-he-fei-xian-xing-xiao-ying-gong-shi-su-cha/"/>
+    <id>http://increcrazer.github.io/2024/12/17/xian-xing-he-fei-xian-xing-xiao-ying-gong-shi-su-cha/</id>
+    <published>2024-12-17T07:42:26.923Z</published>
+    <updated>2024-12-29T04:28:59.945Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-线性效应&quot;&gt;&lt;a href=&quot;#1-线性效应&quot; class=&quot;headerlink&quot; title=&quot;1 线性效应&quot;&gt;&lt;/a&gt;1 线性效应&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;对$n(&#92;omega)$在$&#92;omega_0$处展开&lt;/p&gt;
+&lt;script</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="photonics, tool" scheme="http://increcrazer.github.io/tags/photonics-tool/"/>
+    
+  </entry>
   
   <entry>
     <title>微腔参数计算工具</title>
@@ -47,7 +99,7 @@
     <link href="http://increcrazer.github.io/2024/11/17/sun-hao-huan-suan-gong-ju/"/>
     <id>http://increcrazer.github.io/2024/11/17/sun-hao-huan-suan-gong-ju/</id>
     <published>2024-11-17T14:52:23.543Z</published>
-    <updated>2024-11-23T06:45:39.577Z</updated>
+    <updated>2024-12-17T08:31:16.221Z</updated>
     
     
       

@@ -4,10 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="对频率啁啾的定量理解, WYA">
-    <meta name="description" content="0 简介众所周知，在信号路径某点上，信号的时域波形表达式如下:
+    <meta name="keywords" content="线性和非线性效应公式速查, WYA">
+    <meta name="description" content="1 线性效应
+对$n(\omega)$在$\omega_0$处展开
 
-E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},其中$I_k(t)=\e">
+n(\omega)=n(\omega)=n_0+n_1(\omega-\omega_0)+\frac{1}{2!}n_2(\omega-\omega_0)^2+\frac">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +20,7 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},其�
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>对频率啁啾的定量理解 | WYA</title>
+    <title>线性和非线性效应公式速查 | WYA</title>
     <link rel="icon" type="image/png" href="/medias/wyafavicon.png">
     
 
@@ -323,12 +324,12 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},其�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2024/09/21/xouVb3lDgeWqAPG.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2024/12/29/6MOpqyQS1IsjBic.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">对频率啁啾的定量理解</h1>
+                    <h1 class="description center-align post-title">线性和非线性效应公式速查</h1>
                 </div>
             </div>
         </div>
@@ -352,8 +353,8 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},其�
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/optics-signal/">
-                                <span class="chip bg-color">optics, signal</span>
+                            <a href="/tags/photonics-tool/">
+                                <span class="chip bg-color">photonics, tool</span>
                             </a>
                         
                     </div>
@@ -377,7 +378,7 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},其�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-09-21
+                    2024-12-17
                 </div>
                 
 
@@ -386,14 +387,14 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},其�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    781
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    7 分
                 </div>
                 
 
@@ -416,18 +417,225 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},其�
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="0-简介"><a href="#0-简介" class="headerlink" title="0 简介"></a>0 简介</h2><p>众所周知，在信号路径某点上，信号的时域波形表达式如下:</p>
+                <h2 id="1-线性效应"><a href="#1-线性效应" class="headerlink" title="1 线性效应"></a>1 线性效应</h2><ul>
+<li><p>对$n(\omega)$在$\omega_0$处展开</p>
 <script type="math/tex; mode=display">
-E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},</script><p>其中$I_k(t)=\exp\{-t^2/2\tau_p^2\}/(\tau_p\sqrt{2\pi})$是强度的时域包络，下图为半高宽$\tau_p=50 ps$的包络：<br><img src="https://s2.loli.net/2024/09/21/3krS9iLTNfKaPCF.jpg" alt=""><br>$\beta$是和频率啁啾有关的量，其量纲为[$1/s^2$]，不难发现可以类比于加速度。实际上，$E_k(t)$的相位项就是人为的泰勒展开。$\varphi(t)=\nu(t-t_k)+\beta(t-t_k)^2+\varphi_k$完全就是匀加速运动中路程表达式的类比：$x = vt+1/2at^2+x_0$，所以$\nu(t) = \nu+2\beta t$，即$\beta$的符号决定$\nu(t)$随时间的增减，进而引出所谓的<strong>正负啁啾</strong>概念。</p>
-<p>然而，有一个值得思考的点是：$v(t) = v+at$可以小于0，即速度方向可以相反，而频率$\nu(t) = \nu+2\beta t$应当总是正的，假如$\beta$足够大使得$\nu(t)$在时间上出现频率0点，那么会怎样？</p>
-<h2 id="1-仿真分析"><a href="#1-仿真分析" class="headerlink" title="1 仿真分析"></a>1 仿真分析</h2><p>由于光频一般都是几百THz的水平，所以1ps内光已经震动了几百次，50ps内线性项震动了近万次，mathematica看不出任何细节，所以这里仿真的光频为0.06THz，这样在±200ps内线性项大概震动20次；另外，由于非线性项为2次，所以$\beta$也要在0.06的基础上除以大约一个仿真时间的数量级以保证mathematica看出细节，这里$\beta$范围先选取为$[-0.001, 0.001]$：<br><img src="https://s2.loli.net/2024/09/21/eGKQR1m9fVCxOIJ.gif" alt="$\nu=0.06$,$\beta∈[-0.001, 0.001]$"></p>
-<p>可以发现，当$\beta$为某一个值时，频率并非我们想的那样随时间单调增加或单调减少。从$\varphi(t)$的图像可以看出频率0点随着$\beta$的变化，这与$E_k(t)$低频项的位移是一致的：<br><img src="https://s2.loli.net/2024/09/21/KZSkwQAI8nXOJUv.gif" alt="$\nu=0.06$,$\beta∈[-0.001, 0.001]$"></p>
-<p>我们再把$\beta$范围缩小为$[-0.0001, 0.0001]$进行仿真，可以发现当$\beta$为某一个值时，频率随随时间单调增加或单调减少了，这种情况就符合我们对于<strong>正负啁啾</strong>概念的认知：<br><img src="https://s2.loli.net/2024/09/21/qO2leNaA7u8BhWf.gif" alt="$\nu=0.06$,$\beta∈[-0.0001, 0.0001]$"><br>这也能从$\varphi(t)$的图像进行解释，其斜率总是单调的：<br><img src="https://s2.loli.net/2024/09/21/NVsCSjq3T9kJOtp.gif" alt="$\nu=0.06$,$\beta∈[-0.0001, 0.0001]$"></p>
-<h2 id="2-实际DFB激光器是哪种情况？"><a href="#2-实际DFB激光器是哪种情况？" class="headerlink" title="2 实际DFB激光器是哪种情况？"></a>2 实际DFB激光器是哪种情况？</h2><p>1550 nm光频大约为193THz，$\beta=0.02 /ps^2$，这样的参数带入mathematca就是一团浆糊。所以这里取出时刻片段200~200.01ps,对$tk$进行扫描以看清波形的细节和全貌：<br><img src="https://s2.loli.net/2024/09/21/xYgrC8aWkqycvwf.gif" alt="$\nu=193$,$\beta=0.02$"><br>观察到：频率几乎不随时间变化。我们可以从$\varphi(t)$图像进一步验证我们的观察：<br><img src="https://s2.loli.net/2024/09/21/XkOhEYDZFwtLpA9.gif" alt="$\nu=193$,$\beta∈[-0.1, 0.1]$"><br>可以发现，斜率变化相当小，即频率变化相当小；另外，即使在$\beta=0.1$这种尺度范围内，频率依然是单调的。所以可以推断，实际中一般不会出现频率为0的情况，但是不排除这种情况能够被物理实现。</p>
-<h2 id="参考文献及代码"><a href="#参考文献及代码" class="headerlink" title="参考文献及代码"></a>参考文献及代码</h2><ol>
-<li>Yuan Z L, Lucamarini M, Dynes J F, et al. Interference of short optical pulses from independent gain-switched laser diodes for quantum secure communications[J]. Physical Review Applied, 2014, 2(6): 064006.</li>
-<li><a target="_blank" rel="noopener" href="https://www.wolframcloud.com/obj/wya1759991046/Published/chirp.nb">mathematica笔记本链接</a></li>
-</ol>
+n(\omega)=n(\omega)=n_0+n_1(\omega-\omega_0)+\frac{1}{2!}n_2(\omega-\omega_0)^2+\frac{1}{3!}n_3(\omega-\omega_0)^3+\cdots</script><script type="math/tex; mode=display">
+n_i=(\frac{d^in}{d\omega^i})_{\omega=\omega_0}</script><p><strong><em>注：这里采用笔者的书写习惯，$n_2$并非kerr系数。表示非线性均用大写$N$.</em></strong></p>
+</li>
+<li><p>对$\beta(\omega)$在$\omega_0$处展开</p>
+<script type="math/tex; mode=display">
+\beta(\omega)=n(\omega)\frac{\omega}{c}=\beta_0+\beta_1(\omega-\omega_0)+\frac{1}{2!}\beta_2(\omega-\omega_0)^2+\frac{1}{3!}\beta_3(\omega-\omega_0)^3+\cdots</script><script type="math/tex; mode=display">
+\beta_i=(\frac{d^i\beta}{d\omega^i})_{\omega=\omega_0}=(\omega n_i+in_{i-1})/c</script><p>其中一次项和二次项需要关注，它们分别称作<strong>一阶色散/群延迟</strong>和<strong>二阶色散</strong></p>
+<script type="math/tex; mode=display">
+\beta_1=(\omega n_1+n)/c=1/v_g</script><script type="math/tex; mode=display">
+\beta_2=(\omega n_2+2n_1)/c</script></li>
+<li><p>对$\omega({\mu})$在$\mu=0处$展开，$\omega({\mu})$代表周期性频谱的谐振角频率</p>
+<script type="math/tex; mode=display">
+\omega(\mu)=\omega_{0}+D_{1} \mu+\frac{D_{2}}{2!} \mu^{2}+\frac{D_{3}}{3!} \mu^{3}+\ldots \quad(\mu=\ldots-3,-2,-1,0,1,2,3 \ldots)</script><script type="math/tex; mode=display">
+D_i=(\frac{d^i\omega}{d\mu^i})_{\omega=\omega_0}</script><p>由于$m$和$\mu$是同一个物理量，所以$n(\omega)\cdot\omega\cdot L/c=2\pi m$两边分别对$m$求导可得$D_i$.<br>其中一次项和二次项需要关注，它们分别称作<strong>一阶色散系数/FSR</strong>和<strong>二阶群速度色散系(2-order GVD)</strong>：</p>
+<script type="math/tex; mode=display">
+D_1=\frac{2\pi}{\beta_1L}=2\pi\frac{v_g}{L}=FSR(rad/s)</script><script type="math/tex; mode=display">
+D_2=-\frac{\beta_2D_1^2}{\beta_1}(rad/s)</script></li>
+<li><p>色散参量</p>
+<script type="math/tex; mode=display">
+D=\frac{d\beta_1}{d\lambda}=\frac{d}{d\omega}\left(\frac{d\beta}{d\omega}\right)\cdot\frac{d\omega}{d\lambda}=\beta_2\cdot\frac{d\omega}{d\lambda}</script><script type="math/tex; mode=display">
+\frac{d\omega}{d\lambda}=-\frac{2\pi c}{\lambda^2}</script><script type="math/tex; mode=display">
+D=-\beta_2\cdot\frac{2\pi c}{\lambda^2}(s/m^2)</script><p>其单位一般为ps/nm/km，描述光纤或波导中波长引起的脉冲展宽。该物理量和$D_2$不同，后者代表FSR随模序的变化。</p>
+</li>
+<li><p>正常色散和反常色散<br>正常色散：$\beta_2&gt;0,D&lt;0,D_2&lt;0$,低频快</p>
+<p>反常色散：$\beta_2&lt;0,D&gt;0,D_2&gt;0$,高频快</p>
+</li>
+</ul>
+<h2 id="2-非线性效应"><a href="#2-非线性效应" class="headerlink" title="2 非线性效应"></a>2 非线性效应</h2><ul>
+<li><p>3阶非线性(Kerr)</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\vec{P} 
+&= \vec{P}^{(1)} + \vec{P}^{(2)} + \vec{P}^{(3)} + \cdots \\
+&= \boldsymbol{\varepsilon}_0\left(\boldsymbol{\chi}^{(1)} \cdot \vec{E} 
+    + \boldsymbol{\chi}^{(2)} {:} \vec{E} \vec{E} 
+    + \boldsymbol{\chi}^{(3)} {:} \vec{E} \vec{E} \vec{E} 
+    + \cdots\right),
+\end{aligned}</script><p>:表示高阶张量乘积。每个维度上的极化强度为：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+P_i
+&= {P_i}^{(1)}+{P_i}^{(2)}+{P_i}^{(3)} \\
+&= \boldsymbol{\varepsilon}_0\left(\sum_{j}\chi_{ij}^{(1)}E_{1j}+\sum_{jk}\chi_{ijk}^{(2)}E_{1j}E_{2k}+\sum_{jkl}\chi_{ijkl}^{(3)}E_{1j}E_{2k}E_{3l}+\cdots\right),(i,j,k...\in\{x,y,z\})
+\end{aligned}</script><p>假设所有电场同一个方向极化，且我们只考虑该方向上的极化强度（因为我们的目的是求出该方向上的折射率，只有该方向上的折射率会影响电场），所以极化强度可退化为标量形式：</p>
+<script type="math/tex; mode=display">
+P(\boldsymbol{r},t)=\epsilon_0\left(\chi^{(1)}E(\boldsymbol{r},t)+\chi^{(2)}E^2(\boldsymbol{r},t)+\chi^{(3)}E^3(\boldsymbol{r},t)+\ldots\right)</script><p>再着重考虑Kerr效应：</p>
+<script type="math/tex; mode=display">
+P^{(3)}(\boldsymbol{r},t)=\epsilon_{0}\chi^{(3)}\left(E_{1}(\boldsymbol{r})e^{i\omega_{1}t}+E_{2}(\boldsymbol{r})e^{i\omega_{2}t}+E_{3}(\boldsymbol{r})e^{i\omega_{3}t}+\mathrm{c.c.}\right)^{3}</script><p>去掉44项中相消的项，得到：</p>
+<script type="math/tex; mode=display">
+P^{(3)}(\boldsymbol{r},t)=\epsilon_0\chi^{(3)}\left(E(\boldsymbol{r})\cos\omega t\right)^3=\frac{1}{4}\epsilon_0\chi^{(3)}E^3(\boldsymbol{r})\cos3\omega t+\frac{3}{4}\epsilon_0\chi^{(3)}E^3(\boldsymbol{r})\cos\omega t</script><p>我们只需要三次项，因为一次项归于泵浦被滤除。于是可得：</p>
+<script type="math/tex; mode=display">
+P^{(3)}(\boldsymbol{r},t)=\frac{3}{4}\epsilon_0\chi^{(3)}E^3(\boldsymbol{r})\cos\omega t=\epsilon_0\epsilon_{NL}E(\boldsymbol{r},t)</script><script type="math/tex; mode=display">
+\epsilon_{NL}=\frac{3}{4}\chi^{(3)}|E(\boldsymbol{r},t)|^2</script><script type="math/tex; mode=display">
+\begin{aligned}
+n^{\prime}
+&=\left(1+\chi^{(1)}+\epsilon_{NL}\right)^{1/2}\\
+&\approx n+\frac{\epsilon_{NL}}{2n}\\
+&=n+N_2I\\
+&=n+(3\chi^{(3)}/4n^2\epsilon_0c)*(n\epsilon_0c|E|^2/2)
+\end{aligned}</script><p>另外定义$\gamma$:</p>
+<script type="math/tex; mode=display">
+\gamma=\frac{\omega_0N_2}{cA_\mathrm{eff}}</script></li>
+<li><p>Kerr腔体光学</p>
+<ul>
+<li><p>Ikeda Map</p>
+<ul>
+<li><p>未归一化</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{\partial A}{\partial z}
+&=-\frac{\alpha_{i}}{2}A-i\frac{\beta_{2}}{2}\frac{\partial^{2}A}{\partial t^{2}}+i\gamma|A|^{2}A,\\
+A^{m+1}(0,t)
+&=\sqrt{1-\theta}e^{-i\delta}A^{m}(L,t)+\sqrt{\theta}A_{\mathrm{in}}
+\end{aligned}</script></li>
+<li><p>归一化</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{\partial\psi^{m}}{\partial\xi}
+&=-\frac{\alpha}{2}\psi^m-is\frac{\partial^2\psi^m}{\partial\tau^2}+i|\psi^m|^2\psi^m,\\
+\psi^{m+1}(0,\tau)
+&=\sqrt{1-\alpha}e^{-i\delta}\psi^{m}(1,\tau)+\sqrt{\alpha}\psi_{\mathrm{in}}.
+\end{aligned}</script></li>
+</ul>
+</li>
+<li><p>LLE(本质是Ikeda Map精简版，适用于慢变光场，减小计算量)</p>
+<ul>
+<li>归一化<script type="math/tex; mode=display">
+\frac{\partial\psi}{\partial\eta}=-\left(\alpha+i\delta\right)\psi-is\frac{\partial^{2}\psi}{\partial\tau^{2}}+i{\left|\psi\right|}^{2}\psi+\sqrt{\alpha}\psi_{\mathrm{in}}</script></li>
+</ul>
+</li>
+<li><p>归一化系数等参数</p>
+<script type="math/tex; mode=display">
+\xi=\frac{z}{z_0},\quad\tau=\frac{t}{t_0},\quad\psi=\frac{A}{A_0},\quad\psi_{in}=\frac{A_{in}}{A_0}</script><script type="math/tex; mode=display">
+z_0=L,\quad t_0=\sqrt{\frac{|\beta_2|L}{2}},\quad A_0=\sqrt{\frac{1}{L\gamma}}</script></li>
+</ul>
+</li>
+</ul>
+<script>
+  function calculateRow(row) {
+    // 获取输入值
+    var lambda = parseFloat(document.getElementById('lambda_' + row).value); // λ (nm)
+    var n = parseFloat(document.getElementById('n_' + row).value); // n (有效折射率的正数部分)
+    var beta2 = parseFloat(document.getElementById('beta2_' + row).value); // β2
+    var chi3 = parseFloat(document.getElementById('chi3_' + row).value); // chi3
+    var r = parseFloat(document.getElementById('r_' + row).value); // r (um)
+    var Aeff = parseFloat(document.getElementById('Aeff_' + row).value); // Aeff (nm^2)
+
+    // 计算公式
+    var L = 2 * Math.PI * r; // L(um)
+    var N2 = (3 * chi3) / (4 * Math.pow(n, 2) * 8.854187817e-12 * 3e8); // N2(m^2/W)
+    var gamma = (2 * Math.PI * N2) / (lambda * 1e-9 * Aeff * 1e-18); // γ(标准单位)
+    var t0 = Math.sqrt(Math.abs(beta2) * L * 1e-6 / 2) * 1e15; // t0(fs)
+    var A0 = Math.sqrt(1 / (L * 1e-6 * gamma)); // A0(V/m)
+
+    // 显示结果
+    document.getElementById('L_' + row).innerText = L.toFixed(3);
+    document.getElementById('N2_' + row).innerText = N2.toExponential(3);
+    document.getElementById('gamma_' + row).innerText = gamma.toExponential(3);
+    document.getElementById('t0_' + row).innerText = t0.toFixed(3);
+    document.getElementById('A0_' + row).innerText = A0.toExponential(3);
+  }
+
+  // 页面加载时自动计算初始值
+  window.onload = function () {
+    for (let i = 1; i <= 5; i++) {
+      calculateRow(i);
+    }
+  };
+</script>
+
+<table border="1">
+  <tbody><tr>
+    <th>λ (nm)</th>
+    <th>n (有效折射率的实数部分)</th>
+    <th>β2</th>
+    <th>chi3</th>
+    <th>r (um)</th>
+    <th>Aeff (nm²)</th>
+    <th>L (um)</th>
+    <th>N2 (m²/W)</th>
+    <th>γ (标准单位)</th>
+    <th>t0 (fs)</th>
+    <th>A0 (V/m)</th>
+  </tr>
+  <!-- 第一行 -->
+  <tr>
+    <td><input id="lambda_1" type="number" value="1550" min="0" step="1" oninput="calculateRow(1)"></td>
+    <td><input id="n_1" type="number" value="4" min="0" step="0.01" oninput="calculateRow(1)"></td>
+    <td><input id="beta2_1" type="number" value="1e-26" step="1e-26" oninput="calculateRow(1)"></td>
+    <td><input id="chi3_1" type="number" value="1e-18" step="1e-18" oninput="calculateRow(1)"></td>
+    <td><input id="r_1" type="number" value="100" min="0" step="1" oninput="calculateRow(1)"></td>
+    <td><input id="Aeff_1" type="number" value="3" min="0" step="1" oninput="calculateRow(1)"></td>
+    <td id="L_1">-</td>
+    <td id="N2_1">-</td>
+    <td id="gamma_1">-</td>
+    <td id="t0_1">-</td>
+    <td id="A0_1">-</td>
+  </tr>
+  <!-- 第二行 -->
+  <tr>
+    <td><input id="lambda_2" type="number" value="1550" min="0" step="1" oninput="calculateRow(2)"></td>
+    <td><input id="n_2" type="number" value="4" min="0" step="0.01" oninput="calculateRow(2)"></td>
+    <td><input id="beta2_2" type="number" value="1e-26" step="1e-26" oninput="calculateRow(2)"></td>
+    <td><input id="chi3_2" type="number" value="1e-18" step="1e-18" oninput="calculateRow(2)"></td>
+    <td><input id="r_2" type="number" value="100" min="0" step="1" oninput="calculateRow(2)"></td>
+    <td><input id="Aeff_2" type="number" value="3" min="0" step="1" oninput="calculateRow(2)"></td>
+    <td id="L_2">-</td>
+    <td id="N2_2">-</td>
+    <td id="gamma_2">-</td>
+    <td id="t0_2">-</td>
+    <td id="A0_2">-</td>
+  </tr>
+  <!-- 第三行 -->
+  <tr>
+    <td><input id="lambda_3" type="number" value="1550" min="0" step="1" oninput="calculateRow(3)"></td>
+    <td><input id="n_3" type="number" value="4" min="0" step="0.01" oninput="calculateRow(3)"></td>
+    <td><input id="beta2_3" type="number" value="1e-26" step="1e-26" oninput="calculateRow(3)"></td>
+    <td><input id="chi3_3" type="number" value="1e-18" step="1e-18" oninput="calculateRow(3)"></td>
+    <td><input id="r_3" type="number" value="100" min="0" step="1" oninput="calculateRow(3)"></td>
+    <td><input id="Aeff_3" type="number" value="3" min="0" step="1" oninput="calculateRow(3)"></td>
+    <td id="L_3">-</td>
+    <td id="N2_3">-</td>
+    <td id="gamma_3">-</td>
+    <td id="t0_3">-</td>
+    <td id="A0_3">-</td>
+  </tr>
+  <!-- 第四行 -->
+  <tr>
+    <td><input id="lambda_4" type="number" value="1550" min="0" step="1" oninput="calculateRow(4)"></td>
+    <td><input id="n_4" type="number" value="4" min="0" step="0.01" oninput="calculateRow(4)"></td>
+    <td><input id="beta2_4" type="number" value="1e-26" step="1e-26" oninput="calculateRow(4)"></td>
+    <td><input id="chi3_4" type="number" value="1e-18" step="1e-18" oninput="calculateRow(4)"></td>
+    <td><input id="r_4" type="number" value="100" min="0" step="1" oninput="calculateRow(4)"></td>
+    <td><input id="Aeff_4" type="number" value="3" min="0" step="1" oninput="calculateRow(4)"></td>
+    <td id="L_4">-</td>
+    <td id="N2_4">-</td>
+    <td id="gamma_4">-</td>
+    <td id="t0_4">-</td>
+    <td id="A0_4">-</td>
+  </tr>
+  <!-- 第五行 -->
+  <tr>
+    <td><input id="lambda_5" type="number" value="1550" min="0" step="1" oninput="calculateRow(5)"></td>
+    <td><input id="n_5" type="number" value="4" min="0" step="0.01" oninput="calculateRow(5)"></td>
+    <td><input id="beta2_5" type="number" value="1e-26" step="1e-26" oninput="calculateRow(5)"></td>
+    <td><input id="chi3_5" type="number" value="1e-18" step="1e-18" oninput="calculateRow(5)"></td>
+    <td><input id="r_5" type="number" value="100" min="0" step="1" oninput="calculateRow(5)"></td>
+    <td><input id="Aeff_5" type="number" value="3" min="0" step="1" oninput="calculateRow(5)"></td>
+    <td id="L_5">-</td>
+    <td id="N2_5">-</td>
+    <td id="gamma_5">-</td>
+    <td id="t0_5">-</td>
+    <td id="A0_5">-</td>
+  </tr>
+</tbody></table>
+
 
                 
             </div>
@@ -454,7 +662,7 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},</scr
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://increcrazer.github.io/2024/09/21/dui-pin-lu-zhou-jiu-de-ding-liang-li-jie/">http://increcrazer.github.io/2024/09/21/dui-pin-lu-zhou-jiu-de-ding-liang-li-jie/</a>
+                    <a href="http://increcrazer.github.io/2024/12/17/xian-xing-he-fei-xian-xing-xiao-ying-gong-shi-su-cha/">http://increcrazer.github.io/2024/12/17/xian-xing-he-fei-xian-xing-xiao-ying-gong-shi-su-cha/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -492,8 +700,8 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},</scr
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/optics-signal/">
-                                    <span class="chip bg-color">optics, signal</span>
+                                <a href="/tags/photonics-tool/">
+                                    <span class="chip bg-color">photonics, tool</span>
                                 </a>
                             
                         </div>
@@ -576,12 +784,12 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},</scr
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/10/27/new-focus-1544-guang-dian-tan-ce-qi-shou-ce-zhai-lu/">
+                <a href="/2024/12/23/gu-shi-chang-shi-chi-xu-geng-xin/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/09/16/Fuwlm2vojInzMhx.jpg" class="responsive-img" alt="New Focus 1544光电探测器 手册摘录">
+                        <img src="https://s2.loli.net/2024/12/29/lcQG1FKo5A4sPUe.jpg" class="responsive-img" alt="股市常识（持续更新）">
                         
-                        <span class="card-title">New Focus 1544光电探测器 手册摘录</span>
+                        <span class="card-title">股市常识（持续更新）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -592,14 +800,14 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},</scr
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-10-27
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-12-23
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/science/" class="post-category">
-                                    science
+                            <a href="/categories/economics/" class="post-category">
+                                    economics
                                 </a>
                             
                             
@@ -609,8 +817,8 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},</scr
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/apparatus-datasheet/">
-                        <span class="chip bg-color">apparatus, datasheet</span>
+                    <a href="/tags/stock-leek/">
+                        <span class="chip bg-color">stock, leek</span>
                     </a>
                     
                 </div>
@@ -624,12 +832,12 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},</scr
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/09/16/zi-you-kong-jian-liang-zi-xin-dao-ji-suan-gong-ju/">
+                <a href="/2024/12/03/wei-qiang-can-shu-ji-suan-gong-ju/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/09/16/Fuwlm2vojInzMhx.jpg" class="responsive-img" alt="自由空间量子信道计算工具">
+                        <img src="https://s2.loli.net/2024/09/16/Fuwlm2vojInzMhx.jpg" class="responsive-img" alt="微腔参数计算工具">
                         
-                        <span class="card-title">自由空间量子信道计算工具</span>
+                        <span class="card-title">微腔参数计算工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -640,7 +848,7 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},</scr
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-12-03
                             </span>
                         <span class="publish-author">
                             
@@ -657,8 +865,8 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[\nu_k(t-t_k)+\beta(t-t_k)^2+\phi_k]\},</scr
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tool-QKD/">
-                        <span class="chip bg-color">tool, QKD</span>
+                    <a href="/tags/tool-photonics/">
+                        <span class="chip bg-color">tool, photonics</span>
                     </a>
                     
                 </div>
