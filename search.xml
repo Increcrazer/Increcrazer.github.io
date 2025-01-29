@@ -13,14 +13,14 @@
       
       <categories>
           
-          <category> science </category>
+          <category> note </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> QKD, journal </tag>
+            <tag> QKD, decoy </tag>
             
         </tags>
       
@@ -38,14 +38,14 @@
       
       <categories>
           
-          <category> science </category>
+          <category> note </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> QKD, journal </tag>
+            <tag> QKD, decoy </tag>
             
         </tags>
       
@@ -63,14 +63,14 @@
       
       <categories>
           
-          <category> science </category>
+          <category> note </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> QKD, journal </tag>
+            <tag> QKD, decoy </tag>
             
         </tags>
       
@@ -83,19 +83,19 @@
       <link href="/2025/01/20/ma2005-gong-shi-tui-dao/"/>
       <url>/2025/01/20/ma2005-gong-shi-tui-dao/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326"><strong><em>Ma X, Qi B, Zhao Y, et al. Practical decoy state for quantum key distribution[J]. Physical Review A—Atomic, Molecular, and Optical Physics, 2005, 72(1): 012326.</em></strong></a></p><p><strong>主要内容</strong>：</p><ul><li>分析了更一般的诱骗态协议（1强度信号$\mu$ + 2强度诱骗$\nu_1,\nu_2$），相比之下<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230503"><strong><em>Wang2005</em></strong></a>只分析了1强度诱骗 + 1真空诱骗的情况；</li><li>指出当$\nu_1,\nu_2$无限小时，能准确估计$Y_1$的下界和$e_1$的上界，从而能使$Y_1[1-H_2(e_1)]$最大。这和无限多诱骗态协议是一个效果，因此用诱骗态数目用两个就足够；</li><li>分析了2强度诱骗方案相比于2真空诱骗方案的估计误差（$Y_1$和$e_1$），并指出对于1强度诱骗 + 1真空诱骗方案，即使强度诱骗态光子数很高，估计误差也不会有很大影响;</li><li>讨论了有限码长带来的统计波动对参数估计的影响（有限码长影响$Q$和$E$的估计，从而影响$Y_1$和$e_1$的估计）。需要注意这种情况下$\nu_1,\nu_2$不是越小越好，因为会使得诱骗态探测事件减小，从而增加统计波动（以摸奖举例，假如彩票公司声称中奖概率$1/10^6$，你人傻钱多想验证下彩票公司是不是没骗你，那么你至少得中个10次8次才能验证，你中个1次2次算出来的中奖概率误差很大）；</li><li>提出了单诱骗态协议（1强度）。</li></ul><hr><h2 id="1-10-、-11"><a href="#1-10-、-11" class="headerlink" title="1 (10)、(11)"></a>1 (10)、(11)</h2><script type="math/tex; mode=display">\begin{aligned}Q_{\mu}&= \sum_{i=0}^{\infty}Y_{i}\frac{\mu^{i}}{i!}e^{-\mu} \\&= \sum_{i=0}^{\infty}Y_{0}\frac{\mu^{i}}{i!}e^{-\mu}+\sum_{i=0}^{\infty}\eta_{i}\frac{\mu^{i}}{i!}e^{-\mu}\\&= \sum_{i=0}^{\infty}Y_{0}\frac{\mu^{i}}{i!}e^{-\mu}+\sum_{i=0}^{\infty}[1-(1-\eta)^i]\frac{\mu^{i}}{i!}e^{-\mu}\\&= Y_{0}+1-\sum_{i=0}^{\infty}\frac{[(1-\eta)\mu]^{i}}{i!}e^{-\mu} \\&= Y_{0}+1-e^{[(1-\eta)\mu]}e^{-\mu} \\&= Y_0+1-e^{-\eta\mu}\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}E_{\mu}Q_{\mu}&= \sum_{i=0}^{\infty}e_{i}Y_{i}\frac{\mu^{i}}{i!}e^{-\mu} \\&= \sum_{i=0}^{\infty}\frac{e_0Y_0+e_{detector}\eta_i}{Y_i}Y_{i}\frac{\mu^{i}}{i!}e^{-\mu} \\&= \sum_{i=0}^{\infty}(e_0Y_0+e_{detector}\eta_i)\frac{\mu^{i}}{i!}e^{-\mu} \\&= e_0Y_0+e_{detector}\sum_{i=0}^{\infty}\eta_{i}\frac{\mu^{i}}{i!}e^{-\mu} \\&= e_0Y_0+e_{detector}(1-e^{-\eta\mu})\end{aligned}</script><h2 id="2-12"><a href="#2-12" class="headerlink" title="2 (12)"></a>2 (12)</h2><p>当$Y_0$和$\eta$很小时，$Q_{\mu}≈1-e^{-\eta\mu}≈\eta\mu$，$E_{\mu}Q_{\mu}≈e_{detector}(1-e^{-\eta\mu})≈e_{detector}\eta\mu$，所以$E_{\mu}≈e_{detector}$；$\eta_i≈i\eta$也是小值，所以$e_i≈e_{detector}$；$Q_1=Y_1\mu e^{-\mu}=(Y_0+\eta_{1})\mu e^{-\mu}≈(Y_0+\eta)\mu e^{-\mu}≈\eta\mu e^{-\mu}$. 所以：</p><script type="math/tex; mode=display">\begin{aligned}R&\geqslant q\{-Q_{\mu}f(E_{\mu})H_{2}(E_{\mu})+Q_{1}[1-H_{2}(e_{1})]\} \\&≈ q\{-\eta\mu f(e_{detector})H_{2}(e_{detector})+\eta\mu e^{-\mu}[1-H_{2}(e_{detector})]\}\end{aligned}</script><p>该式为凸函数，令之导数等于0得式(12).</p><h2 id="3-18"><a href="#3-18" class="headerlink" title="3 (18)"></a>3 (18)</h2><p>本质是为了消除$Y1$.</p><script type="math/tex; mode=display">\begin{aligned}\nu_{1}Q_{\nu_{2}}e^{\nu_{2}}-\nu_{2}Q_{\nu_{1}}e^{\nu_{1}} &= \nu_{1}\sum_{i=0}^\infty Y_i\frac{\nu_{2}^i}{i!}-\nu_{2}\sum_{i=0}^\infty Y_i\frac{\nu_{1}^i}{i!} \\&= (\nu_1-\nu_2)Y_0 + \sum_{i=0}^\infty (\nu_{1}Y_i\frac{\nu_{2}^i}{i!}-\nu_{2}Y_i\frac{\nu_{1}^i}{i!}) \\&= (\nu_1-\nu_2)Y_0 +0+ \sum_{i=2}^\infty Y_i\frac{\nu_{1}\nu_{2}^i-\nu_{2}\nu_{1}^i}{i!} \\&= (\nu_1-\nu_2)Y_0 +0- \nu_{1}\nu_{2}\sum_{i=2}^\infty Y_i\frac{\nu_{1}^{i-1}-\nu_{2}^{i-1}}{i!} \\&= (\nu_1-\nu_2)Y_0-\nu_1\nu_2\left(Y_2\frac{\nu_1-\nu_2}{2!}+Y_3\frac{\nu_1^2-\nu_2^2}{3!}+\cdots\right)\end{aligned}</script><h2 id="4-20"><a href="#4-20" class="headerlink" title="4 (20)"></a>4 (20)</h2><p>本质是为了消除$Y0$.</p><script type="math/tex; mode=display">\begin{aligned}\sum_{i=2}^\infty\frac{Y_i}{i!}(\nu_1^i-\nu_2^i)&= \sum_{i=2}^\infty\frac{Y_i}{i!}\frac{\nu_1^i-\nu_2^i}{\mu^{i}}\mu^{i} \\&\leqslant\frac{\nu_1^2-\nu_2^2}{\mu^2}\sum_{i=2}^\infty Y_i\frac{\mu^i}{i!} \\\end{aligned}</script><h2 id="5-25"><a href="#5-25" class="headerlink" title="5 (25)"></a>5 (25)</h2><p>因为：</p><script type="math/tex; mode=display">\begin{aligned}E_{\nu_1}Q_{\nu_1}e^{\nu_1}-E_{\nu_2}Q_{\nu_2}e^{\nu_2}&= e_1Y_1(\nu_1-\nu_2)+\sum_{i=2}^{\infty}e_iY_i\frac{\nu_1^i-\nu_2^i}{i!} \\& \geqslant e_1Y_1(\nu_1-\nu_2) \\& \geqslant e_1Y_1^{L,\nu_1,\nu_2}(\nu_1-\nu_2)\end{aligned}</script><p>所以：</p><script type="math/tex; mode=display">\begin{aligned}e_1\leqslant e_1^{U,\nu_1,\nu_2}=\frac{E_{\nu_1}Q_{\nu_1}e^{\nu_1}-E_{\nu_2}Q_{\nu_2}e^{\nu_2}}{(\nu_1-\nu_2)Y_1^{L,\nu_1,\nu_2}}\end{aligned}</script><h2 id="6-27-、-28"><a href="#6-27-、-28" class="headerlink" title="6 (27)、(28)"></a>6 (27)、(28)</h2><p>作者将$\nu_1\to0\mathrm{~and~}\nu_2\to0$称为<strong>诱骗态的渐进情况</strong>。这两个式子是带入Eve不存在的情况得出来的，以表征渐进情况可以达到无误差估计。然后现实情况下，渐进情况对于$(21)$和$(25)$式都无意义，所以不能将两个真空态作为诱骗态。</p><h2 id="7-40-勘误？"><a href="#7-40-勘误？" class="headerlink" title="7 (40) 勘误？"></a>7 (40) 勘误？</h2><p>应为：</p><script type="math/tex; mode=display">e_{1}\leqslant\overline{e}_{1}^{U,\nu}=\frac{E_{\nu}Q_{\nu}e^{\nu}}{Y_{1}^{L,\nu,0}\nu}</script>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326"><strong><em>Ma X, Qi B, Zhao Y, et al. Practical decoy state for quantum key distribution[J]. Physical Review A—Atomic, Molecular, and Optical Physics, 2005, 72(1): 012326.</em></strong></a></p><p><strong>主要内容</strong>：</p><ul><li>总的来说是一篇奠定目前在用的诱骗态协议雏形的文章；</li><li>分析了更一般的诱骗态协议（1强度信号$\mu$ + 2强度诱骗$\nu_1,\nu_2$），相比之下<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230503"><strong><em>Wang2005</em></strong></a>只分析了1强度诱骗 + 1真空诱骗的情况；</li><li>指出当$\nu_1,\nu_2$无限小时，能准确估计$Y_1$的下界和$e_1$的上界，从而能使$Y_1[1-H_2(e_1)]$最大。这和无限多诱骗态协议是一个效果，因此用诱骗态数目用两个就足够；</li><li>分析了2强度诱骗方案相比于2真空诱骗方案的估计误差（$Y_1$和$e_1$），并指出对于1强度诱骗 + 1真空诱骗方案，即使强度诱骗态光子数很高，估计误差也不会有很大影响;</li><li>讨论了有限码长带来的统计波动对参数估计的影响（有限码长影响$Q$和$E$的估计，从而影响$Y_1$和$e_1$的估计）。需要注意这种情况下$\nu_1,\nu_2$不是越小越好，因为会使得诱骗态探测事件减小，从而增加统计波动（以摸奖举例，假如彩票公司声称中奖概率$1/10^6$，你人傻钱多想验证下彩票公司是不是没骗你，那么你至少得中个10次8次才能验证，你中个1次2次算出来的中奖概率误差很大）；</li><li>提出了单诱骗态协议（1强度）。</li></ul><hr><h2 id="1-10-、-11"><a href="#1-10-、-11" class="headerlink" title="1 (10)、(11)"></a>1 (10)、(11)</h2><script type="math/tex; mode=display">\begin{aligned}Q_{\mu}&= \sum_{i=0}^{\infty}Y_{i}\frac{\mu^{i}}{i!}e^{-\mu} \\&= \sum_{i=0}^{\infty}Y_{0}\frac{\mu^{i}}{i!}e^{-\mu}+\sum_{i=0}^{\infty}\eta_{i}\frac{\mu^{i}}{i!}e^{-\mu}\\&= \sum_{i=0}^{\infty}Y_{0}\frac{\mu^{i}}{i!}e^{-\mu}+\sum_{i=0}^{\infty}[1-(1-\eta)^i]\frac{\mu^{i}}{i!}e^{-\mu}\\&= Y_{0}+1-\sum_{i=0}^{\infty}\frac{[(1-\eta)\mu]^{i}}{i!}e^{-\mu} \\&= Y_{0}+1-e^{[(1-\eta)\mu]}e^{-\mu} \\&= Y_0+1-e^{-\eta\mu}\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}E_{\mu}Q_{\mu}&= \sum_{i=0}^{\infty}e_{i}Y_{i}\frac{\mu^{i}}{i!}e^{-\mu} \\&= \sum_{i=0}^{\infty}\frac{e_0Y_0+e_{detector}\eta_i}{Y_i}Y_{i}\frac{\mu^{i}}{i!}e^{-\mu} \\&= \sum_{i=0}^{\infty}(e_0Y_0+e_{detector}\eta_i)\frac{\mu^{i}}{i!}e^{-\mu} \\&= e_0Y_0+e_{detector}\sum_{i=0}^{\infty}\eta_{i}\frac{\mu^{i}}{i!}e^{-\mu} \\&= e_0Y_0+e_{detector}(1-e^{-\eta\mu})\end{aligned}</script><h2 id="2-12"><a href="#2-12" class="headerlink" title="2 (12)"></a>2 (12)</h2><p>当$Y_0$和$\eta$很小时，$Q_{\mu}≈1-e^{-\eta\mu}≈\eta\mu$，$E_{\mu}Q_{\mu}≈e_{detector}(1-e^{-\eta\mu})≈e_{detector}\eta\mu$，所以$E_{\mu}≈e_{detector}$；$\eta_i≈i\eta$也是小值，所以$e_i≈e_{detector}$；$Q_1=Y_1\mu e^{-\mu}=(Y_0+\eta_{1})\mu e^{-\mu}≈(Y_0+\eta)\mu e^{-\mu}≈\eta\mu e^{-\mu}$. 所以：</p><script type="math/tex; mode=display">\begin{aligned}R&\geqslant q\{-Q_{\mu}f(E_{\mu})H_{2}(E_{\mu})+Q_{1}[1-H_{2}(e_{1})]\} \\&≈ q\{-\eta\mu f(e_{detector})H_{2}(e_{detector})+\eta\mu e^{-\mu}[1-H_{2}(e_{detector})]\}\end{aligned}</script><p>该式为凸函数，令之导数等于0得式(12).</p><h2 id="3-18"><a href="#3-18" class="headerlink" title="3 (18)"></a>3 (18)</h2><p>本质是为了消除$Y1$.</p><script type="math/tex; mode=display">\begin{aligned}\nu_{1}Q_{\nu_{2}}e^{\nu_{2}}-\nu_{2}Q_{\nu_{1}}e^{\nu_{1}} &= \nu_{1}\sum_{i=0}^\infty Y_i\frac{\nu_{2}^i}{i!}-\nu_{2}\sum_{i=0}^\infty Y_i\frac{\nu_{1}^i}{i!} \\&= (\nu_1-\nu_2)Y_0 + \sum_{i=0}^\infty (\nu_{1}Y_i\frac{\nu_{2}^i}{i!}-\nu_{2}Y_i\frac{\nu_{1}^i}{i!}) \\&= (\nu_1-\nu_2)Y_0 +0+ \sum_{i=2}^\infty Y_i\frac{\nu_{1}\nu_{2}^i-\nu_{2}\nu_{1}^i}{i!} \\&= (\nu_1-\nu_2)Y_0 +0- \nu_{1}\nu_{2}\sum_{i=2}^\infty Y_i\frac{\nu_{1}^{i-1}-\nu_{2}^{i-1}}{i!} \\&= (\nu_1-\nu_2)Y_0-\nu_1\nu_2\left(Y_2\frac{\nu_1-\nu_2}{2!}+Y_3\frac{\nu_1^2-\nu_2^2}{3!}+\cdots\right)\end{aligned}</script><h2 id="4-20"><a href="#4-20" class="headerlink" title="4 (20)"></a>4 (20)</h2><p>本质是为了消除$Y0$.</p><script type="math/tex; mode=display">\begin{aligned}\sum_{i=2}^\infty\frac{Y_i}{i!}(\nu_1^i-\nu_2^i)&= \sum_{i=2}^\infty\frac{Y_i}{i!}\frac{\nu_1^i-\nu_2^i}{\mu^{i}}\mu^{i} \\&\leqslant\frac{\nu_1^2-\nu_2^2}{\mu^2}\sum_{i=2}^\infty Y_i\frac{\mu^i}{i!} \\\end{aligned}</script><h2 id="5-25"><a href="#5-25" class="headerlink" title="5 (25)"></a>5 (25)</h2><p>因为：</p><script type="math/tex; mode=display">\begin{aligned}E_{\nu_1}Q_{\nu_1}e^{\nu_1}-E_{\nu_2}Q_{\nu_2}e^{\nu_2}&= e_1Y_1(\nu_1-\nu_2)+\sum_{i=2}^{\infty}e_iY_i\frac{\nu_1^i-\nu_2^i}{i!} \\& \geqslant e_1Y_1(\nu_1-\nu_2) \\& \geqslant e_1Y_1^{L,\nu_1,\nu_2}(\nu_1-\nu_2)\end{aligned}</script><p>所以：</p><script type="math/tex; mode=display">\begin{aligned}e_1\leqslant e_1^{U,\nu_1,\nu_2}=\frac{E_{\nu_1}Q_{\nu_1}e^{\nu_1}-E_{\nu_2}Q_{\nu_2}e^{\nu_2}}{(\nu_1-\nu_2)Y_1^{L,\nu_1,\nu_2}}\end{aligned}</script><h2 id="6-27-、-28"><a href="#6-27-、-28" class="headerlink" title="6 (27)、(28)"></a>6 (27)、(28)</h2><p>作者将$\nu_1\to0\mathrm{~and~}\nu_2\to0$称为<strong>诱骗态的渐进情况</strong>。这两个式子是带入Eve不存在的情况得出来的，以表征渐进情况可以达到无误差估计。然后现实情况下，渐进情况对于$(21)$和$(25)$式都无意义，所以不能将两个真空态作为诱骗态。</p><h2 id="7-40-勘误？"><a href="#7-40-勘误？" class="headerlink" title="7 (40) 勘误？"></a>7 (40) 勘误？</h2><p>应为：</p><script type="math/tex; mode=display">e_{1}\leqslant\overline{e}_{1}^{U,\nu}=\frac{E_{\nu}Q_{\nu}e^{\nu}}{Y_{1}^{L,\nu,0}\nu}</script>]]></content>
       
       
       <categories>
           
-          <category> science </category>
+          <category> note </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> QKD, journal </tag>
+            <tag> QKD, decoy </tag>
             
         </tags>
       
@@ -113,14 +113,14 @@
       
       <categories>
           
-          <category> science </category>
+          <category> note </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> QKD, journal </tag>
+            <tag> QKD, timebin </tag>
             
         </tags>
       

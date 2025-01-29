@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-01-29T03:17:41.867Z</updated>
+  <updated>2025-01-29T06:10:25.293Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://increcrazer.github.io/2025/01/27/lo2005-jing-jian-ban/"/>
     <id>http://increcrazer.github.io/2025/01/27/lo2005-jing-jian-ban/</id>
     <published>2025-01-27T14:49:51.377Z</published>
-    <updated>2025-01-29T03:17:41.867Z</updated>
+    <updated>2025-01-29T06:10:25.293Z</updated>
     
     
       
@@ -34,10 +34,10 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, journal" scheme="http://increcrazer.github.io/tags/QKD-journal/"/>
+    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
     
   </entry>
   
@@ -46,7 +46,7 @@
     <link href="http://increcrazer.github.io/2025/01/26/wang2005-gong-shi-tui-dao/"/>
     <id>http://increcrazer.github.io/2025/01/26/wang2005-gong-shi-tui-dao/</id>
     <published>2025-01-26T13:47:54.672Z</published>
-    <updated>2025-01-28T15:09:56.986Z</updated>
+    <updated>2025-01-29T06:10:20.983Z</updated>
     
     
       
@@ -59,10 +59,10 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, journal" scheme="http://increcrazer.github.io/tags/QKD-journal/"/>
+    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
     
   </entry>
   
@@ -71,7 +71,7 @@
     <link href="http://increcrazer.github.io/2025/01/20/hwang2003-jing-jian-ban/"/>
     <id>http://increcrazer.github.io/2025/01/20/hwang2003-jing-jian-ban/</id>
     <published>2025-01-20T14:22:53.724Z</published>
-    <updated>2025-01-28T15:08:01.866Z</updated>
+    <updated>2025-01-29T06:10:29.697Z</updated>
     
     
       
@@ -84,10 +84,10 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, journal" scheme="http://increcrazer.github.io/tags/QKD-journal/"/>
+    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
     
   </entry>
   
@@ -96,7 +96,7 @@
     <link href="http://increcrazer.github.io/2025/01/20/ma2005-gong-shi-tui-dao/"/>
     <id>http://increcrazer.github.io/2025/01/20/ma2005-gong-shi-tui-dao/</id>
     <published>2025-01-19T16:20:26.595Z</published>
-    <updated>2025-01-28T15:35:59.289Z</updated>
+    <updated>2025-01-29T06:10:33.026Z</updated>
     
     
       
@@ -109,10 +109,10 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, journal" scheme="http://increcrazer.github.io/tags/QKD-journal/"/>
+    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
     
   </entry>
   
@@ -121,7 +121,7 @@
     <link href="http://increcrazer.github.io/2025/01/14/rusca2018-gong-shi-tui-dao/"/>
     <id>http://increcrazer.github.io/2025/01/14/rusca2018-gong-shi-tui-dao/</id>
     <published>2025-01-14T12:42:34.560Z</published>
-    <updated>2025-01-29T03:49:00.555Z</updated>
+    <updated>2025-01-29T06:10:37.581Z</updated>
     
     
       
@@ -134,10 +134,10 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, journal" scheme="http://increcrazer.github.io/tags/QKD-journal/"/>
+    <category term="QKD, timebin" scheme="http://increcrazer.github.io/tags/QKD-timebin/"/>
     
   </entry>
   
