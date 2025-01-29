@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2024-12-29T07:20:35.402Z</updated>
+  <updated>2025-01-29T03:17:41.867Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,131 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Lo2005-精简版</title>
+    <link href="http://increcrazer.github.io/2025/01/27/lo2005-jing-jian-ban/"/>
+    <id>http://increcrazer.github.io/2025/01/27/lo2005-jing-jian-ban/</id>
+    <published>2025-01-27T14:49:51.377Z</published>
+    <updated>2025-01-29T03:17:41.867Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230504&quot;&gt;&lt;strong&gt;&lt;em&gt;Lo H K, Ma X, Chen K. Decoy state quantum key</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="QKD, journal" scheme="http://increcrazer.github.io/tags/QKD-journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Wang2005-公式推导</title>
+    <link href="http://increcrazer.github.io/2025/01/26/wang2005-gong-shi-tui-dao/"/>
+    <id>http://increcrazer.github.io/2025/01/26/wang2005-gong-shi-tui-dao/</id>
+    <published>2025-01-26T13:47:54.672Z</published>
+    <updated>2025-01-28T15:09:56.986Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230503&quot;&gt;&lt;strong&gt;&lt;em&gt;Wang X B. Beating the photon-number-splitting</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="QKD, journal" scheme="http://increcrazer.github.io/tags/QKD-journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hwang2003-精简版</title>
+    <link href="http://increcrazer.github.io/2025/01/20/hwang2003-jing-jian-ban/"/>
+    <id>http://increcrazer.github.io/2025/01/20/hwang2003-jing-jian-ban/</id>
+    <published>2025-01-20T14:22:53.724Z</published>
+    <updated>2025-01-28T15:08:01.866Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901&quot;&gt;&lt;strong&gt;&lt;em&gt;Hwang W Y. Quantum key distribution with high</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="QKD, journal" scheme="http://increcrazer.github.io/tags/QKD-journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ma2005-公式推导</title>
+    <link href="http://increcrazer.github.io/2025/01/20/ma2005-gong-shi-tui-dao/"/>
+    <id>http://increcrazer.github.io/2025/01/20/ma2005-gong-shi-tui-dao/</id>
+    <published>2025-01-19T16:20:26.595Z</published>
+    <updated>2025-01-28T15:35:59.289Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326&quot;&gt;&lt;strong&gt;&lt;em&gt;Ma X, Qi B, Zhao Y, et al. Practical decoy state</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="QKD, journal" scheme="http://increcrazer.github.io/tags/QKD-journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rusca2018-公式推导</title>
+    <link href="http://increcrazer.github.io/2025/01/14/rusca2018-gong-shi-tui-dao/"/>
+    <id>http://increcrazer.github.io/2025/01/14/rusca2018-gong-shi-tui-dao/</id>
+    <published>2025-01-14T12:42:34.560Z</published>
+    <updated>2025-01-29T03:49:00.555Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.052336&quot;&gt;&lt;strong&gt;&lt;em&gt;Rusca D, Boaron A, Curty M, et al. Security proof</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="QKD, journal" scheme="http://increcrazer.github.io/tags/QKD-journal/"/>
+    
+  </entry>
   
   <entry>
     <title>两种统计分布</title>
@@ -380,31 +505,6 @@
     <id>http://increcrazer.github.io/2024/07/28/using-mathematica-for-quantum-mechanics-one-particle-in-one-dimension/</id>
     <published>2024-07-27T18:42:30.045Z</published>
     <updated>2024-11-17T16:22:49.419Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;0-动机&quot;&gt;&lt;a href=&quot;#0-动机&quot; class=&quot;headerlink&quot; title=&quot;0 动机&quot;&gt;&lt;/a&gt;0</summary>
-        
-      
-    
-    
-    
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
-    
-    
-    <category term="mathematica, quantum mechanics" scheme="http://increcrazer.github.io/tags/mathematica-quantum-mechanics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Using Mathematica for Quantum Mechanics：states and operators</title>
-    <link href="http://increcrazer.github.io/2024/07/24/using-mathematica-for-quantum-mechanics-states-and-operators/"/>
-    <id>http://increcrazer.github.io/2024/07/24/using-mathematica-for-quantum-mechanics-states-and-operators/</id>
-    <published>2024-07-24T15:23:10.515Z</published>
-    <updated>2024-11-17T16:22:57.246Z</updated>
     
     
       
