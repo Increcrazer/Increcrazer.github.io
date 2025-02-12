@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-02-08T14:20:15.077Z</updated>
+  <updated>2025-01-29T06:14:32.642Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,55 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>备忘</title>
-    <link href="http://increcrazer.github.io/2025/02/08/bei-wang/"/>
-    <id>http://increcrazer.github.io/2025/02/08/bei-wang/</id>
-    <published>2025-02-08T14:07:27.516Z</published>
-    <updated>2025-02-08T14:20:15.077Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;互联网并非永恒，做好网页备份&quot;&gt;&lt;a href=&quot;#互联网并非永恒，做好网页备份&quot; class=&quot;headerlink&quot; title=&quot;互联网并非永恒，做好网页备份&quot;&gt;&lt;/a&gt;互联网并非永恒，做好网页备份&lt;/h1&gt;&lt;p&gt;案例：&lt;br&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
-    
-    
-    <category term="tool, notebook" scheme="http://increcrazer.github.io/tags/tool-notebook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://increcrazer.github.io/2025/01/30/xin-jian-wen-ben-wen-dang/"/>
-    <id>http://increcrazer.github.io/2025/01/30/xin-jian-wen-ben-wen-dang/</id>
-    <published>2025-01-30T08:46:54.768Z</published>
-    <updated>2025-01-30T09:42:36.464Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;义士路&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.360doc.com/content/22/0618/17/73276229_1036530775.shtml&quot;&gt;74年前，发生在镇江河滨公园对面的大火和爆炸&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;西津渡&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Lo2005-精简版</title>
@@ -520,6 +471,56 @@
     
     
     <category term="electronic, memory" scheme="http://increcrazer.github.io/tags/electronic-memory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DJI mini4K拍照模式测试</title>
+    <link href="http://increcrazer.github.io/2024/07/28/dji-mini4k-pai-zhao-mo-shi-ce-shi/"/>
+    <id>http://increcrazer.github.io/2024/07/28/dji-mini4k-pai-zhao-mo-shi-ce-shi/</id>
+    <published>2024-07-28T11:59:11.246Z</published>
+    <updated>2024-11-03T15:27:15.458Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;动机&quot;&gt;&lt;a href=&quot;#动机&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="toy" scheme="http://increcrazer.github.io/categories/toy/"/>
+    
+    
+    <category term="drone, mini4K" scheme="http://increcrazer.github.io/tags/drone-mini4K/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Using Mathematica for Quantum Mechanics：one particle in one dimension</title>
+    <link href="http://increcrazer.github.io/2024/07/28/using-mathematica-for-quantum-mechanics-one-particle-in-one-dimension/"/>
+    <id>http://increcrazer.github.io/2024/07/28/using-mathematica-for-quantum-mechanics-one-particle-in-one-dimension/</id>
+    <published>2024-07-27T18:42:30.045Z</published>
+    <updated>2024-11-17T16:22:49.419Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-动机&quot;&gt;&lt;a href=&quot;#0-动机&quot; class=&quot;headerlink&quot; title=&quot;0 动机&quot;&gt;&lt;/a&gt;0</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="mathematica, quantum mechanics" scheme="http://increcrazer.github.io/tags/mathematica-quantum-mechanics/"/>
     
   </entry>
   
