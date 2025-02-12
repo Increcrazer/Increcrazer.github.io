@@ -397,7 +397,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    900
+                    912
                 </div>
                 
 
@@ -702,6 +702,10 @@ calculateSourcePower();
                 <td><input type="number" id="distance" value="30" min="0"></td>
             </tr>
             <tr>
+                <td>发送口径 (m)</td>
+                <td><input type="number" id="transmitterDiameter" value="0.1" step="0.02"></td>
+            </tr>
+            <tr>
                 <td>接收口径 (m)</td>
                 <td><input type="number" id="receiverDiameter" value="0.28" step="0.02"></td>
             </tr>
@@ -730,6 +734,7 @@ function calculateSpaceLoss() {
     // 获取用户输入的值
     var divergenceAngle = parseFloat(document.getElementById('divergenceAngle').value);
     var distance = parseFloat(document.getElementById('distance').value);
+    var transmitterDiameter = parseFloat(document.getElementById('transmitterDiameter').value);
     var receiverDiameter = parseFloat(document.getElementById('receiverDiameter').value);
     var atmosphericLoss = parseFloat(document.getElementById('atmosphericLoss').value);
 
@@ -742,8 +747,8 @@ function calculateSpaceLoss() {
     // 验证输入是否为有效数字
     if (!isNaN(divergenceAngle) && !isNaN(distance) && !isNaN(receiverDiameter) && !isNaN(atmosphericLoss)) {
         // 计算空间损耗的公式
-        if (receiverDiameter <= divergenceAngle * distance / 1000){
-            var spaceLoss = Math.pow((receiverDiameter / (divergenceAngle * distance / 1000)), 2);
+        if (receiverDiameter <= transmitterDiameter + 2 * divergenceAngle * distance / 1000){
+            var spaceLoss = Math.pow((receiverDiameter / (transmitterDiameter + 2 * divergenceAngle * distance / 1000)), 2);
         }
         else {
             var spaceLoss = 1;
@@ -1490,7 +1495,7 @@ th, td {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">14.7k</span>
+                        class="white-color">14.8k</span>
             
             
             
