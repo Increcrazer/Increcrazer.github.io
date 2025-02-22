@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Wang2005-公式推导, WYA">
-    <meta name="description" content="Wang X B. Beating the photon-number-splitting attack in practical quantum cryptography[J]. Physical review letters, 2005">
+    <meta name="keywords" content="Lim2014-公式推导, WYA">
+    <meta name="description" content="Lim C C W, Curty M, Walenta N, et al. Concise security bounds for practical decoy-state quantum key distribution[J]. Phy">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Wang2005-公式推导 | WYA</title>
+    <title>Lim2014-公式推导 | WYA</title>
     <link rel="icon" type="image/png" href="/medias/wyafavicon.png">
     
 
@@ -330,7 +330,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Wang2005-公式推导</h1>
+                    <h1 class="description center-align post-title">Lim2014-公式推导</h1>
                 </div>
             </div>
         </div>
@@ -379,7 +379,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2025-01-26
+                    2025-02-16
                 </div>
                 
 
@@ -388,14 +388,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -418,92 +418,96 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230503"><strong><em>Wang X B. Beating the photon-number-splitting attack in practical quantum cryptography[J]. Physical review letters, 2005, 94(23): 230503.</em></strong></a></p>
+                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.89.022307"><strong><em>Lim C C W, Curty M, Walenta N, et al. Concise security bounds for practical decoy-state quantum key distribution[J]. Physical Review A, 2014, 89(2): 022307.</em></strong></a></p>
 <p><strong>主要内容</strong>：</p>
 <ul>
-<li>提出诱骗态协议（1强度信号$\mu$ + 1强度诱骗$\mu^\prime$ + 1真空诱骗，$\mu^{\prime}&gt;\mu$）；</li>
-<li>得到了一个比<a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901"><strong><em>Hwang2003</em></strong></a>更紧凑的$\Delta$估值；</li>
-<li>对诱骗态协议首次进行有限码长分析。</li>
+<li>诱骗态分析继承<a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326"><strong><em>Ma2005</em></strong></a>；</li>
+<li>密钥率公式不再采用<a target="_blank" rel="noopener" href="https://arxiv.org/abs/quant-ph/0212066"><strong><em>GLLP</em></strong></a>技术路线算得的，而是将后处理步骤分解进行计算。两个公式在形式上等效，但后者利用安全参数$\varepsilon$，得到的密钥率更有意义；</li>
+<li>终结了诱骗态有限码长分析问题；</li>
+<li>详细描述诱骗态协议的每一步操作，对于完全不懂理论的工程师非常友好。</li>
 </ul>
 <hr>
-<h2 id="1-1"><a href="#1-1" class="headerlink" title="1 (1)"></a>1 (1)</h2><p><strong>命题</strong>：<br>如果$\eta&lt;(1-e^{-\mu}-\mu e^{-\mu})/\mu$，则Eve能通过PNS攻击获得Bob所有sifted key信息。</p>
-<p><strong>证明</strong>：<br>通过<a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901"><strong><em>Hwang2003</em></strong></a>$(1)$式密钥生成条件可直接导出。</p>
-<h2 id="2-5"><a href="#2-5" class="headerlink" title="2 (5)"></a>2 (5)</h2><p><strong>命题</strong>：<br>$(5)$式是$|0\rangle\langle0|$、$|1\rangle\langle1|$、$\rho_{c}$、$\rho_{d}$的凸组合</p>
-<p><strong>证明</strong>：<br>即要证明$d=1-e^{-\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}-c\frac{\mu^{\prime{2}}e^{-\mu^{\prime}}}{\mu^{2}e^{-\mu}}\geq0$.</p>
-<p>因为$P_{n}(\mu^{\prime})/P_2(\mu^{\prime})&gt;P_n(\mu)/P_2(\mu)$,</p>
-<p>所以：</p>
+<h2 id="1-A4、A5、A6"><a href="#1-A4、A5、A6" class="headerlink" title="1 (A4、A5、A6)"></a>1 (A4、A5、A6)</h2><p>不难发现：</p>
+<ul>
+<li>$p_{\mu}Q_{\mu}N=n_{\mu}$，其中$p_{\mu}$是Alice发送强度为${\mu}$的脉冲的概率，$N$是Alice发送的脉冲总数，$n_{\mu}$是Bob收到的脉冲中属于强度${\mu}$的脉冲的数量。</li>
+<li>$\tau_{n} Y_{n}N=s_{n}$，其中$\tau_{n}$是Alice发送光子数为$n$的脉冲的概率，$N$是Alice发送的脉冲总数，$s_{n}$是Bob收到的脉冲中属于光子数$n$的脉冲的数量。</li>
+<li>$p_{\mu}Q_{\mu}NE_{\mu}=m_{\mu}$，其中$p_{\mu}$是Alice发送强度为${\mu}$的脉冲的概率，$N$是Alice发送的脉冲总数，$m_{\mu}$是Bob收到的脉冲中属于强度${\mu}$但是出现比特错误的脉冲的数量。</li>
+<li>$\tau_{n} Y_{n}Ne_n=v_{n}$，其中$\tau_{n}$是Alice发送光子数为$n$的脉冲的概率，$N$是Alice发送的脉冲总数，$v_{n}$是Bob收到的脉冲中属于光子数$n$但是出现比特错误的脉冲的数量。</li>
+</ul>
+<p>所以可以直接把这几个式子带入<a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326"><strong><em>Ma2015</em></strong></a>替换进行计算。</p>
+<p>或者直接硬算也可以，以(A4)举例：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\frac{1-e^{-\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}}{c}-\frac{\mu^{\prime{2}}e^{-\mu^{\prime}}}{\mu^{2}e^{-\mu}} 
-&= \frac{1-e^{-\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}}{1-e^{-\mu}-\mu e^{-\mu}}-\frac{\mu^{\prime{2}}e^{-\mu^{\prime}}}{\mu^{2}e^{-\mu}}\\
-&= \frac{\sum_{n=2}^\infty P_n(\mu^{\prime})}{\sum_{n=2}^\infty P_n(\mu)}-\frac{ P_2(\mu^{\prime})}{ P_2(\mu)} \\
-&\geq \frac{\sum_{n=2}^\infty P_n(\mu) \frac{ P_2(\mu^{\prime})}{ P_2(\mu)}}{\sum_{n=2}^\infty P_n(\mu)}-\frac{ P_2(\mu^{\prime})}{ P_2(\mu)} \\
-&= 0
-\end{aligned}</script><h2 id="3-13"><a href="#3-13" class="headerlink" title="3 (13)"></a>3 (13)</h2><p>由$(11)$式可得：</p>
+&\frac{\mu_{2}e^{\mu_{3}}n_{\mathbf{X},\mu_{3}}^{*}}{p_{\mu_{3}}}-\frac{\mu_{3}e^{\mu_{2}}n_{\mathbf{X},\mu_{2}}^{*}}{p_{\mu_{2}}} \\
+&= \mu_{2}e^{\mu_{3}}\frac{\sum_{n=0}^{\infty}p_{\mu_{3}|n}s_{\mathrm{Х},n}}{p_{\mu_{3}}} - \mu_{3}e^{\mu_{2}}\frac{\sum_{n=0}^{\infty}p_{\mu_{2}|n}s_{\mathrm{Х},n}}{p_{\mu_{2}}} \\
+&= \mu_{2}e^{\mu_{3}}\sum_{n=0}^{\infty}\frac{p_{\mu_{3}|n}s_{\mathrm{Х},n}}{p_{\mu_{3}}} - \mu_{3}e^{\mu_{2}}\sum_{n=0}^{\infty}\frac{p_{\mu_{2}|n}s_{\mathrm{Х},n}}{p_{\mu_{2}}} \\
+&= \mu_{2}e^{\mu_{3}}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{e^{-\mu_{3}}\mu_{3}^n}{n!}s_{\mathrm{Х},n} - \mu_{3}e^{\mu_{2}}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{e^{-\mu_{2}}\mu_{2}^n}{n!}s_{\mathrm{Х},n} \\
+&= \mu_{2}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{\mu_{3}^n}{n!}s_{\mathrm{Х},n} - \mu_{3}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{\mu_{2}^n}{n!}s_{\mathrm{Х},n} \\
+&= \frac{(\mu_2-\mu_3)s_{\mathbf{X},0}}{\tau_0}-\mu_2\mu_3\sum_{n=2}^\infty\frac{(\mu_2^{n-1}-\mu_3^{n-1})s_{\mathbf{X},n}}{n!\tau_n}
+\end{aligned}</script><h2 id="2-B1"><a href="#2-B1" class="headerlink" title="2 (B1)"></a>2 (B1)</h2><ul>
+<li><p><strong>证明：</strong></p>
 <script type="math/tex; mode=display">
-s_{1}=\frac{S_{\mu}-e^{-\mu}s_{0}-cs_{c}}{\mu e^{-\mu}}</script><p>带入$(9)$可得：</p>
+  \begin{aligned}
+  H_{\mathrm{min}}^{\nu}(\mathbf{X}_{\mathrm{A}}|\mathbf{E}) & \geqslant H_{\mathrm{min}}^{\alpha_{1}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}\mathbf{E}\right) \\
+  & +H_{\mathrm{min}}^{\alpha_{3}+2\alpha_{4}+\alpha_{5}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}|\mathbf{E}\right)-2\log_{2}\frac{1}{\alpha_{2}}-1
+  \end{aligned}</script><p>  其中$\nu=2\alpha_1+\alpha_2+(\alpha_3+2\alpha_4+\alpha_5)\mathrm{~where~}\alpha_i&gt;0\text{ for all }i$.</p>
+<p><strong>解：</strong></p>
+<p>  根据<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6408179"><strong><em>Alexander2013</em></strong></a>的<em>Theorem 13</em>，</p>
 <script type="math/tex; mode=display">
-\begin{aligned}
-cs_{c}
-&\leq \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}(S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\mu^{\prime}e^{-\mu^{\prime}}s_{1}) \\
-&= \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}[S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\frac{\mu^{\prime}e^{-\mu^{\prime}}}{\mu e^{-\mu}}(S_{\mu}-e^{-\mu}s_{0}-cs_{c})]
-\end{aligned}</script><p>即：</p>
+  \begin{aligned}
+  H_{\min}^{\varepsilon+\varepsilon^{\prime}+2\varepsilon^{\prime\prime}}(AB|C)_{\rho}\geq H_{\min}^{\varepsilon^{\prime\prime}}(A|BC)_{\rho}+H_{\min}^{\varepsilon^{\prime}}(B|C)_{\rho}-f(\varepsilon)
+  \end{aligned}</script><script type="math/tex; mode=display">
+  \begin{aligned}
+  f:\varepsilon\mapsto\log\frac{1}{1-\sqrt{1-\varepsilon^2}}
+  \end{aligned}</script><p>  而当$\varepsilon$很小时，$\log(1/1-\sqrt{1-\varepsilon^{2}})$可以用$\log(2/\varepsilon^2)$替代，于是全部带入得证。</p>
+<p>  同理可得：</p>
 <script type="math/tex; mode=display">
-\begin{aligned}
-(1-\frac{\mu}{\mu^{\prime}})cs_{c}
-&\leq \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}[S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\frac{\mu^{\prime}e^{-\mu^{\prime}}}{\mu e^{-\mu}}(S_{\mu}-e^{-\mu}s_{0})] \\
-&= \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}S_{\mu^{\prime}}-\frac{\mu}{\mu^{\prime}}S_{\mu}+\frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}(\frac{\mu^{\prime}e^{-\mu^{\prime}}}{\mu e^{-\mu}}e^{-\mu}-e^{-\mu^{\prime}})s_0
-\end{aligned}</script><p>两边同乘$\frac{\mu^{\prime}}{\mu}$，得：</p>
+  \begin{aligned}
+  & H_{\min}^{\alpha_{3}+2\alpha_{4}+\alpha_{5}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}|\mathbf{E}\right) \\
+  & \geqslant H_{\min}^{\alpha_{4}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}|\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{E}\right)+H_{\min}^{\alpha_{\mathrm{s}}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}|\mathbf{E}\right)-2\log_{2}\frac{1}{\alpha_{3}}-1
+  \end{aligned}</script></li>
+<li><p><strong>证明：</strong></p>
 <script type="math/tex; mode=display">
-\begin{aligned}
-(\frac{\mu^{\prime}}{\mu}-1)cs_c
-&\leq \frac{\mu e^{-\mu}}{\mu^{\prime}e^{-\mu^{\prime}}}S_{\mu^{\prime}}-S_{\mu}+(e^{-\mu}-\frac{\mu e^{-\mu}}{\mu^{\prime}})s_0
-\end{aligned}</script><p>将之带入$(7)$式稍加整理即可得式$(13)$.</p>
-<h2 id="4-14"><a href="#4-14" class="headerlink" title="4 (14)"></a>4 (14)</h2><p><strong>命题</strong>：<br>假如$\eta\ll1$，则Bob端多光子成分占比是$1-e^{-\mu}$.</p>
-<p><strong>证明</strong>：($\eta\mu-0-\eta\mu e^{-\mu}$)/$\eta\mu=1-e^{-\mu}$</p>
-<h2 id="5-15"><a href="#5-15" class="headerlink" title="5 (15)"></a>5 (15)</h2><p>由$1-\Delta-\frac{s_0e^{-\mu}}{S_\mu}=\frac{s_1\mu e^{-\mu}}{S_\mu}$可得：</p>
+  \begin{aligned}
+  H_{\min}^{\alpha_1}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}\mathbf{E}\right)\geqslant s_{\mathrm{X},1}-H_{\max}^{\alpha_1}\left(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}}\right)
+  \end{aligned}</script><p><strong>解：</strong></p>
+<p> 根据熵不确定性关系，显然。值得注意的是，真空事件不包含任何关于Alice选择的比特值的信息，这是因为真空事件没有传输任何光子，因此Eve无法从中获取信息；另外，假设所有多光子都被Eve拦截，所以Eve知道所有多光子组分的信息。</p>
+</li>
+</ul>
+<h2 id="3-B2"><a href="#3-B2" class="headerlink" title="3 (B2)"></a>3 (B2)</h2><p><strong>证明：</strong></p>
 <script type="math/tex; mode=display">
-\begin{aligned}
-s_1=\frac{S_\mu}{\mu e^{-\mu}}(1-\Delta-\frac{s_0e^{-\mu}}{S_\mu})
-\end{aligned}</script><p>由$(8)$式可得：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\Delta^{\prime}
-&= \frac{c\frac{\mu^{\prime2}e^{-\mu^{\prime}}}{\mu^2e^{-\mu}}s_c+ds_d}{S_{\mu^{\prime}}} \\
-&= \frac{S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\mu^{\prime}e^{-\mu^{\prime}}s_{1}}{S_{\mu^{\prime}}} \\
-&= \frac{S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\mu^{\prime}e^{-\mu^{\prime}}\frac{S_\mu}{\mu e^{-\mu}}(1-\Delta-\frac{s_0e^{-\mu}}{S_\mu})}{S_{\mu^{\prime}}} \\
-&= 1-\frac{e^{-\mu^{\prime}}s_0}{s_{\mu^{\prime}}}-e^{\mu-\mu^{\prime}}\frac{S_\mu\mu^{\prime}}{S_{\mu^{\prime}}\mu}(1-\Delta-\frac{s_0e^{-\mu}}{S_\mu})
-\end{aligned}</script><h2 id="6-17-推导不符？"><a href="#6-17-推导不符？" class="headerlink" title="6 (17) 推导不符？"></a>6 (17) 推导不符？</h2><p>由$(16)$式得：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-c(1-r_c)s_c \leq\frac{\mu^2e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}} \times(S_{\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}(1-r_1)s_1-e^{-\mu^{\prime}}(1+r_0)s_0)
-\end{aligned}</script><p>即：</p>
+H_{\max}^{\alpha_1}(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}})\leqslant s_{\mathrm{X},1}h(c_{\mathrm{X},1}/s_{\mathrm{X},1})</script><p><strong>解：</strong></p>
+<p>根据经典最大熵的定义：$H_{\max}(X|Y)=\max_{y\in Y}\log|\mathrm{supp}P_{X|Y=y}|$，其中$\mathrm{supp}P_{X|Y=y}$是在给定$Y=y$的条件下随机变量$X$所可能取的所有值的集合，$\mathrm{supp}$代表支集，$|*|$代表集合个数，因此有：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-(1-r_c)\Delta 
-&\leq\frac{\mu^2e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}} \frac{S_{\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}(1-r_1)s_1-e^{-\mu^{\prime}}(1+r_0)s_0}{S_{\mu}} \\
-&= \frac{\mu^2e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}} \frac{S_\mu^{\prime}}{S_\mu}-\frac{\mu^2e^{-\mu}}{\mu^{\prime}}\frac{(1-r_1)s_1}{S_\mu}-\frac{\mu^2e^{-\mu}}{\mu^{\prime2}}\frac{(1+r_0)s_0}{S_\mu}
-\end{aligned}</script><p>两边同乘$\frac{\mu^{\prime2}}{\mu}e^{\mu}$，得：</p>
-<script type="math/tex; mode=display">
+H_{\max}^{\alpha_1}(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}})
+& \leqslant 
+H_{\max}(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}}) \\
+& \leqslant
+\log\sum_{w=0}^{\lfloor s_{\mathrm{X},1}(c_{\mathrm{X},1}/s_{\mathrm{X},1})\rfloor}
+\begin{pmatrix}
+s_{\mathrm{X},1} \\
+w
+\end{pmatrix} \\
+&\leqslant 
+ s_{\mathrm{X},1}h(c_{\mathrm{X},1}/s_{\mathrm{X},1})
+\end{aligned}</script><h2 id="4-B3"><a href="#4-B3" class="headerlink" title="4 (B3)"></a>4 (B3)</h2><script type="math/tex; mode=display">
 \begin{aligned}
-\frac{\mu^{\prime2}}{\mu}e^{\mu}(1-r_c)\Delta 
-&\leq \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu}-\mu \frac{(1+r_0)s_0}{S_\mu}
-\end{aligned}</script><p>所以：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\mu^{\prime}e^{\mu}\left[(1-r_c)\frac{\mu^{\prime}}{\mu}-1\right]\Delta
-&\leq 
-\mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu}-\mu \frac{(1+r_0)s_0}{S_\mu}-\mu^{\prime}e^{\mu}\Delta \\
-&= \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu} \\
-&-\mu \frac{(1+r_0)s_0}{S_\mu}-\mu^{\prime}e^{\mu}(1-\frac{s_0e^{-\mu}}{S_\mu}-\frac{s_1\mu e^{-\mu}}{S_\mu}) \\
-&= \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu} \\
-&-\mu \frac{(1+r_0)s_0}{S_\mu}-\mu^{\prime}e^{\mu}+\frac{\mu^{\prime}s_0}{S_\mu}+\frac{s_1\mu\mu^{\prime} }{S_\mu} \\
-&= \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}+\mu^{\prime}\mu \frac{r_1s_1}{S_\mu}-\mu\frac{r_0s_0}{S_\mu}+(\mu^{\prime}-\mu)\frac{s_0}{S_\mu}-\mu^{\prime}e^\mu
-\end{aligned}</script><h2 id="7-17-推导不符？"><a href="#7-17-推导不符？" class="headerlink" title="7 (17) 推导不符？"></a>7 (17) 推导不符？</h2><p><strong>命题</strong>：<br>Given $N_1 + N_2$ copies of state ρ, suppose the counting rate for $N_1$ randomly chosen states is $s_{ρ}$ and the counting rate for the remaining states is $s’_{ρ}$, the probability that $s_{ρ} - s’_{ρ} &gt; δ_{ρ}$ is less than exp(-$\frac{1}{4}\delta_{ρ}^{2}N_{0}/s_{ρ}$) and $N_{0} = Min(N_{1},N_{2}).$</p>
-<p><strong>证明</strong>：<br>设$N_1 + N_2$个ρ的平均计数率为$\hat{s}_{ρ}$，则有$N_1s_{ρ} + N_2s’_{ρ}=(N_1 + N_2)\hat{s}_{ρ}$，所以$s_{ρ} - s’_{ρ} &gt; δ_{ρ}$的概率即$s_{ρ} - \hat{s}_{ρ} &gt; \frac{N_2}{N_1+N_2}δ_{ρ}$的概率。由于$s_{ρ}$和$\hat{s}_{ρ}$都在$(0,1)$区间，所以直接带入$Hoeffding$ $inequality$得:</p>
-<script type="math/tex; mode=display">
-P[s_{ρ} - \hat{s}_{ρ} > \frac{N_2}{N_1+N_2}δ_{ρ}]
-\leq e^{-2\frac{(\frac{N_2}{N_1+N_2})^2N_1(N_1+N_2)}{N_2+1}}</script>
+\ell
+&=\left\lfloor H_{\min}^{\nu}(\mathbf{X}_{\mathrm{A}}|\mathbf{E}^{\prime})-2\log_{2}\frac{1}{2\overline{\nu}}\right\rfloor \\
+& \geqslant \left\lfloor H_{\min}^{\nu}(\mathbf{X}_{\mathrm{A}}|\mathbf{E})-\lambda_{\mathrm{EC}}-\log_{2}2/\varepsilon_{\mathrm{cor}} -2\log_{2}\frac{1}{2\overline{\nu}} \right\rfloor \\
+& \geqslant \lfloor s_{\mathrm{Х},0}-2\log_2\frac{1}{\alpha_3}-1 +  s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right] -2\log_2\frac{1}{\alpha_2}-1 \\
+&-\lambda_{\mathrm{EC}}-\log_{2}2/\varepsilon_{\mathrm{cor}} -2\log_{2}\frac{1}{2\overline{\nu}} \rfloor  \\
+&= \left\lfloor s_{\mathrm{Х},0}+  s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right] 
+-\lambda_{\mathrm{EC}}- \log_2[({\frac{1}{2\alpha_2\alpha_3\overline{\nu}})^2\frac{8}{\varepsilon_{\mathrm{cor}}}]
+} \right\rfloor \\
+&= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right]-\lambda_{\mathrm{EC}}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}\beta}\right\rfloor \\
+&= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}-s_{\mathbf{X},1}h(\phi_{\mathbf{X}}) -\lambda_{\mathrm{EC}}- \log_2\frac{1}{\varepsilon^6}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}}\right\rfloor \\
+&= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}-s_{\mathbf{X},1}h(\phi_{\mathbf{X}})
+-\lambda_{\mathrm{EC}}-6\log_2\frac{21}{\varepsilon_{\mathrm{sec}}}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}} \right\rfloor 
+\end{aligned}</script><h2 id="5-B4"><a href="#5-B4" class="headerlink" title="5 (B4)"></a>5 (B4)</h2><p>$10\varepsilon_1+2\varepsilon_2$来自于密钥率公式中<em>Hoeffding’s inequality</em>的使用次数，下面进行统计：<br>$\varepsilon_1$:<br>$\mathrm{s_{X,0}}$ 2次 + $\mathrm{s_{X,1}}$ 3次 + $\mathrm{s_{Z,0}}$ 2次 + $\mathrm{s_{Z,1}}$ 3次 = 10次</p>
+<p>$\varepsilon_2$:<br>$\mathrm{v_{Z,1}}$ 2次</p>
+
                 
             </div>
             <hr/>
@@ -529,7 +533,7 @@ P[s_{ρ} - \hat{s}_{ρ} > \frac{N_2}{N_1+N_2}δ_{ρ}]
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://increcrazer.github.io/2025/01/26/wang2005-gong-shi-tui-dao/">http://increcrazer.github.io/2025/01/26/wang2005-gong-shi-tui-dao/</a>
+                    <a href="http://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/">http://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -669,16 +673,17 @@ P[s_{ρ} - \hat{s}_{ρ} > \frac{N_2}{N_1+N_2}δ_{ρ}]
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2025/01/27/lo2005-jing-jian-ban/">
+                <a href="/2025/02/16/lim2014-gong-shi-tui-dao/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2025/01/28/6d3jQehzs5oNGmg.jpg" class="responsive-img" alt="Lo2005-精简版">
+                        <img src="https://s2.loli.net/2025/01/28/6d3jQehzs5oNGmg.jpg" class="responsive-img" alt="Lim2014-公式推导">
                         
-                        <span class="card-title">Lo2005-精简版</span>
+                        <span class="card-title">Lim2014-公式推导</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -688,9 +693,9 @@ P[s_{ρ} - \hat{s}_{ρ} > \frac{N_2}{N_1+N_2}δ_{ρ}]
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2025-01-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-02-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -703,6 +708,7 @@ P[s_{ρ} - \hat{s}_{ρ} > \frac{N_2}{N_1+N_2}δ_{ρ}]
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -721,12 +727,12 @@ P[s_{ρ} - \hat{s}_{ρ} > \frac{N_2}{N_1+N_2}δ_{ρ}]
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2025/01/20/hwang2003-jing-jian-ban/">
+                <a href="/2025/01/27/lo2005-jing-jian-ban/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2025/01/28/6d3jQehzs5oNGmg.jpg" class="responsive-img" alt="Hwang2003-精简版">
+                        <img src="https://s2.loli.net/2025/01/28/6d3jQehzs5oNGmg.jpg" class="responsive-img" alt="Lo2005-精简版">
                         
-                        <span class="card-title">Hwang2003-精简版</span>
+                        <span class="card-title">Lo2005-精简版</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -737,7 +743,7 @@ P[s_{ρ} - \hat{s}_{ρ} > \frac{N_2}{N_1+N_2}δ_{ρ}]
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-01-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-01-27
                             </span>
                         <span class="publish-author">
                             

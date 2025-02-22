@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-01-29T06:14:32.642Z</updated>
+  <updated>2025-02-22T14:04:01.658Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Lim2014-公式推导</title>
+    <link href="http://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/"/>
+    <id>http://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/</id>
+    <published>2025-02-16T14:19:10.342Z</published>
+    <updated>2025-02-22T14:04:01.658Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.89.022307&quot;&gt;&lt;strong&gt;&lt;em&gt;Lim C C W, Curty M, Walenta N, et al. Concise</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
+    
+    
+    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Lo2005-精简版</title>
     <link href="http://increcrazer.github.io/2025/01/27/lo2005-jing-jian-ban/"/>
     <id>http://increcrazer.github.io/2025/01/27/lo2005-jing-jian-ban/</id>
     <published>2025-01-27T14:49:51.377Z</published>
-    <updated>2025-01-29T06:14:32.642Z</updated>
+    <updated>2025-02-22T14:03:28.964Z</updated>
     
     
       
@@ -496,31 +521,6 @@
     
     
     <category term="drone, mini4K" scheme="http://increcrazer.github.io/tags/drone-mini4K/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Using Mathematica for Quantum Mechanics：one particle in one dimension</title>
-    <link href="http://increcrazer.github.io/2024/07/28/using-mathematica-for-quantum-mechanics-one-particle-in-one-dimension/"/>
-    <id>http://increcrazer.github.io/2024/07/28/using-mathematica-for-quantum-mechanics-one-particle-in-one-dimension/</id>
-    <published>2024-07-27T18:42:30.045Z</published>
-    <updated>2024-11-17T16:22:49.419Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;0-动机&quot;&gt;&lt;a href=&quot;#0-动机&quot; class=&quot;headerlink&quot; title=&quot;0 动机&quot;&gt;&lt;/a&gt;0</summary>
-        
-      
-    
-    
-    
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
-    
-    
-    <category term="mathematica, quantum mechanics" scheme="http://increcrazer.github.io/tags/mathematica-quantum-mechanics/"/>
     
   </entry>
   
