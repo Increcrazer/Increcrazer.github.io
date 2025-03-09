@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Project · JZ 存储器备忘录, WYA">
-    <meta name="description" content="0 动机Datasheet太多了，点开文件夹查找过于麻烦。作为记性不好又懒得一匹的包工头，不需要动脑写逻辑，只需要了解关键内容。因此摘录sheet要点并加上芯片架构层面的内容和思考，不包含时序和芯片自带功能（例如NAND、MRAM的ECC）">
+    <meta name="keywords" content="CAAC无人机执照应试考点, WYA">
+    <meta name="description" content="第一章
+微型0&amp;lt;m≤7kg，轻型7&amp;lt;m≤116kg，小型116&amp;lt;m≤5700kg，大型5700kg&amp;lt;m
+超近程15km以内，近程15~50km之间，短程50~200km之间，中程200~800km之间，远程大于800">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Project · JZ 存储器备忘录 | WYA</title>
+    <title>CAAC无人机执照应试考点 | WYA</title>
     <link rel="icon" type="image/png" href="/medias/wyafavicon.png">
     
 
@@ -325,12 +327,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2024/07/30/HjdX9cJB6b3a8Eq.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2024/07/28/khmgWQRvVCzpHZK.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Project · JZ 存储器备忘录</h1>
+                    <h1 class="description center-align post-title">CAAC无人机执照应试考点</h1>
                 </div>
             </div>
         </div>
@@ -354,8 +356,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/electronic-memory/">
-                                <span class="chip bg-color">electronic, memory</span>
+                            <a href="/tags/drone/">
+                                <span class="chip bg-color">drone</span>
                             </a>
                         
                     </div>
@@ -366,8 +368,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/science/" class="post-category">
-                                science
+                            <a href="/categories/toy/" class="post-category">
+                                toy
                             </a>
                         
                     </div>
@@ -379,7 +381,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-07-29
+                    2025-03-08
                 </div>
                 
 
@@ -388,14 +390,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    916
+                    7.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    24 分
                 </div>
                 
 
@@ -418,48 +420,184 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="0-动机"><a href="#0-动机" class="headerlink" title="0 动机"></a>0 动机</h2><p>Datasheet太多了，点开文件夹查找过于麻烦。作为记性不好又懒得一匹的包工头，不需要动脑写逻辑，只需要了解关键内容。因此摘录sheet要点并加上芯片架构层面的内容和思考，不包含时序和芯片自带功能（例如NAND、MRAM的ECC）的解读，作为一个快捷的备忘录。</p>
-<h2 id="1-DDR2"><a href="#1-DDR2" class="headerlink" title="1 DDR2"></a>1 DDR2</h2><ul>
-<li><p>型号：ISSI(芯成 · 美) IS43DR16128C<br>容量：2Gb = 128M$\times$16b = 8(banks)$\times$16M$\times$16b；<br>位宽：16b<br><img src="https://s2.loli.net/2024/07/29/VRjSW17Zmr9sGYg.png" alt=""><br>速率等ORDER INFO：<br><img src="https://s2.loli.net/2024/07/29/HA2tI3F4SPLQrNz.png" alt=""></p>
-</li>
-<li><p>特征参数<br><img src="https://s2.loli.net/2024/07/29/8ynSs1dVxYEO2jW.png" alt=""></p>
-</li>
-<li><p>架构<br><img src="https://s2.loli.net/2024/07/29/Jh42Vz1vXlWRQOr.png" alt=""></p>
-</li>
-<li><p>管脚<br><img src="https://s2.loli.net/2024/07/29/tmMiAjwrGXa3obW.png" alt=""><br><img src="https://s2.loli.net/2024/07/29/ohdg3EtqW29fGaD.png" alt=""><br>管脚特征：<br>没有读使能信号，读使能是通过拉高写使能。<br>DDR2不像NAND FLASH一样复用IO可能是因为要求高速。<br>DM掩码某些数据位，而DQS有效化某些数据时刻，作用不一样。</p>
-</li>
+                <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ul>
+<li>微型0&lt;m≤7kg，轻型7&lt;m≤116kg，小型116&lt;m≤5700kg，大型5700kg&lt;m</li>
+<li>超近程15km以内，近程15~50km之间，短程50~200km之间，中程200~800km之间，远程大于800km</li>
+<li>超低空0≤H&lt;100m,低空100≤H&lt;1000m,中空100O≤H&lt;7000m,高空7000≤H≤12000m,超高空12000m&lt;H</li>
+<li><strong>迎角</strong>是指飞机机头与飞行方向之间的夹角，临界迎角是指飞机在该迎角后失去升力的最大迎角</li>
+<li><strong>纵向安定性</strong>的前提是飞机是静稳定的，静稳定布局飞机重心在前，压力中心升力中心在中，气动中心焦点在后</li>
+<li>升降舵是控制飞行器俯仰运动的控制面</li>
+<li>副翼往那边转则往那边侧滑</li>
+<li>活塞发动机混合气过富油燃烧会导致电嘴积碳的问题，因为混合气过富油会使得燃烧不完全，产生大量的碳烟和油渣，这些油渣会沉积在电嘴上，导致电嘴积碳，影响发动机的正常工作</li>
+<li>无人机的控制是通过伺服执行机构来实现的，它可以控制舵面和发动机节风门的运动，从而实现无人机的控制</li>
+<li>活塞发动机的爆震是指燃烧不稳定，产生爆炸声音和振动的现象。爆震易发生在发动机处于小转速和大进气压力状态工作时，因为此时燃烧室内的混合气容易出现过度压缩和过早点火的情况，导致燃烧不稳定，从而引发爆震</li>
+<li><strong>形状阻力</strong>是由于飞行器在空气中运动时，空气流经飞行器表面所产生的阻力，与表面接触无关。<strong>黏性阻力</strong>是由于空气黏性作用在飞行器表面上产生的阻力，<strong>蒙皮摩擦阻力</strong>是由于飞行器表面材料的摩擦力产生的阻力</li>
+<li>从无人机飞行控制的角度来看，飞控计算机应具备姿态稳定与控制、导航与制导控制、自主飞行控制、自动起飞、着陆控制等功能</li>
+<li>无人机地面站系统是无人机的重要组成部分，其主要功能包括指挥调度、任务规划、操作控制、数据传输、显示记录等</li>
+<li>后退式襟翼是指襟翼向后伸出并与机翼后缘相连的一种设计，打开后能增加机翼的面积和弯曲度，从而提高飞机的升力系数。分裂式襟翼像一块薄板，紧贴于机翼后缘下表面并形成机翼的一部分，使用时放下（即向下旋转,没有增加面积）。简单式襟翼是指襟翼向下翻转的一种设计，没有增加面积</li>
+<li><strong>主操纵面</strong>：①副翼—滚转运动②升降舵—俯仰运动③方向舵—偏航运动；<strong>辅操纵面</strong>：①扰流板—减升增阻②襟翼—增升增阻③缝翼—增加最大迎角(最大升力系数)</li>
+<li>升阻比最大时是阻力最小时</li>
+<li>翼型的最大厚度与弦长的比值称为<strong>相对厚度</strong></li>
+<li>飞机的<strong>压力中心</strong>是指升力的着力点，也就是飞机在飞行中所受到的合力作用点。在飞行中，飞机的重心和压力中心应该尽量重合，这样才能保证飞机的稳定性和操纵性</li>
+<li>翼梢小翼是一种用于减少诱导阻力的装置，它能够改变翼尖处的气流流向，阻挡下翼面跑上来的高压拍到上翼面，减少气流的漩涡，从而减少诱导阻力</li>
+<li>汽化器回火现象是指汽化器内的燃油在进入汽缸前被加热蒸发，但在进入汽缸后又因为过度冷却而重新液化，导致燃油不能完全燃烧，影响发动机的正常工作。寒冷天气下，汽化器内的燃油很容易被冷却，因此在寒冷天气第一次起动时，汽化器式活塞发动机容易出现汽化器回火现象</li>
+<li>根据空气动力学的基本原理，阻力与速度的平方成正比</li>
+<li>根据升力公式，升力与迎角成正比，与空速的平方成正比</li>
+<li>飞机积冰是指在飞行过程中，飞机表面受到降雪、降雨、雾、露、云层等含水气体的影响，表面温度低于0℃时，水滴或水蒸气在飞机表面凝结成冰的现象。根据气象学的知识，当温度在-2℃至-10℃之间时，遭遇积冰的次数最多</li>
+<li>路面/荒地吸热散热更快，因此在路面和荒地上空很可能会发生上升气流</li>
 </ul>
-<h2 id="2-NAND-FLASH"><a href="#2-NAND-FLASH" class="headerlink" title="2 NAND FLASH"></a>2 NAND FLASH</h2><ul>
-<li><p>型号：MICRON(美光 · 美) MT29F128G08AMCABH2<br>容量：128Gb = 16384(块)$\times$128(页)$\times$8640B；<br>位宽：8b<br><img src="https://s2.loli.net/2024/07/29/xcMjmuVCUGFgHfk.png" alt=""></p>
-</li>
-<li><p>特征参数<br><img src="https://s2.loli.net/2024/07/29/ujJgxMwW1hY2RU7.png" alt=""><br>注意，NAND手册一般不会给出工作在同步模式下的时钟频率。</p>
-</li>
-<li><p>架构<br><img src="https://s2.loli.net/2024/07/29/8kyEAR1xzLZG6Ma.png" alt=""><br><img src="https://s2.loli.net/2024/07/29/lNm5boGgRK1fX6h.png" alt=""><br>MT29F128G08AMCABH2有4个LUN。</p>
-</li>
-<li><p>管脚<br><img src="https://s2.loli.net/2024/07/29/DoIMucBGz98Leth.png" alt=""><br>为什么这样分配管脚：<br><strong><em>比如命令锁存使能(Command Latch Enable,CLE)和地址锁存使能(Address Latch Enable，ALE)，那是因为，Nand Flash就8个I/O，而且是复用的，也就是，可以传数据，也可以传地址，也可以传命令，为了区分…</em></strong><br><strong><em>Nand flash支持一个叫做CE(chip enable) don’t-care的技术…由于某些外部应用的频率比较低，而Nand Flash内部操作速度比较快…节省功耗…</em></strong><br>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/340496845">智能座舱之存储篇第三篇—-NAND Flash 一眼就看明白了</a></p>
-</li>
-<li><p>LUN寻址规则<br><img src="https://s2.loli.net/2024/07/29/Fs5zOQhwPALX26W.png" alt=""></p>
-</li>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><ul>
+<li>雷暴的生存周期包括积云阶段、成熟阶段和消散阶段。在积云阶段，云体不断向上生长，形成积云；在成熟阶段，云体达到最高点，云顶呈现出银色或白色，云底则呈现出暗色，同时云中充满上升气流和下降气流；在消散阶段，云体开始逐渐消散，云中充满下降气流</li>
+<li>气团是指在一定时间和空间范围内，具有相对稳定的温度、湿度和压强等气象要素的空气团块</li>
+<li>锋面是指两种不同性质的气团（如温度、湿度等）相遇形成的交界面，通常伴随着天气的变化</li>
+<li>最小能见度是指在不同方向上能见度不同的情况下，其中最小的能见距离</li>
+<li>根据国际民航组织的规定，<strong>云量</strong>分为0-8级，其中0级表示无云，8级表示云满天</li>
+<li><strong>大气稳定度</strong>是指整层空气的稳定程度，是指空气垂直运动的趋势。而大气的气温垂直加速度运动是判定大气稳定度的主要依据。当大气的气温垂直加速度为正时，空气会上升，形成不稳定的大气层；当大气的气温垂直加速度为负时，空气会下沉，形成稳定的大气层</li>
+<li>逆温是指地面温度低于空气温度的现象，常常出现在夜间。当夜间温度降低时，地面的冷空气会向下流动，形成逆温层，使得空气中的水蒸气凝结成雾或烟幕</li>
+<li>对流层中的平均气温垂直递减率被称为<strong>大气温度递减率</strong>，通常用K/100m或℃/100m表示。对流层中的大气温度递减率约为0.65℃/100m</li>
+<li>标准大气是指在海平面上，温度为15℃,气压为1013.25hPA（或760mmHg）的大气状态（1毫巴等于100帕 (hPa)）</li>
+<li><strong>露点温度</strong>是指空气中的水蒸气达到饱和时，水蒸气聚集为露珠时的温度</li>
+<li>‌<strong>富油停车</strong>是指燃料与空气的混合比过高导致的停车现象。‌在这种情况下，燃料（通常是汽油或柴油）与空气的混合比例过高，导致燃烧室内混合气过浓，从而影响正常的燃烧过程，最终导致发动机熄火或停车</li>
+<li>天气预报可分为天气形势预报、气象要素预报、灾害性天气预报等。大风降温预报属于气象要素预报的范畴</li>
+<li>根据国际上的标准，烟雾的能见度定义为不足1km,而薄雾的能见度为1km~2km,霾的能见度为2km～5km</li>
+<li>机场标高是跑道着陆区内最高点距离平均海平面的垂直距离</li>
+<li>根据国际民航组织的规定，航路天气预报应该在起飞前1小时提供给机组</li>
+<li><strong>风向袋</strong>是一种用来指示风向和风速的装置，通常用于机场等场所。当风向袋吹平时，表示风速已经达到6-10米/秒</li>
+<li>飞机经过赤道时存在一定的危险性，尤其是在赤道附近的热带复合带，因为温度越高大气对流越明显</li>
+<li><strong>相对湿度</strong>是指空气中实际水汽压与该温度下饱和水汽压的比值，通常以百分数表示</li>
+<li>积冰的形状一般分为槽状冰、楔形冰和混合冰</li>
+<li><strong>气象学视程</strong>是指白炽灯发出色温为2700K的平行光束的光通量，在大气中削弱至初始指的5%所通过的路径长度。这是因为在大气中，光线会发生散射、吸收等现象，导致能见度降低，而气象学视程就是用来描述这种降低程度的指标</li>
+<li><strong>气团的变性</strong>是指气团在移动过程中，由于遇到不同的<strong>下垫面</strong>，气团的物理属性逐渐发生变化的过程。冷气团移到暖的地区，由于温度差异大，变性快；而暖气团移到冷的地区，温度差异小，变性慢</li>
+<li>大气系统热量的主要来源是吸收太阳辐射，而当太阳辐射通过大气层时，有约24%被大气直接吸收，其余的被反射、散射或穿透到地面</li>
+<li><strong>对流云</strong>是指在大气中形成的一种云层，常常伴随着雷暴天气。对流云中存在着强烈的上升气流和下沉气流，这些气流对无人机的飞行造成很大的影响，容易使无人机失去平衡，甚至被电击</li>
+<li><strong>风切变</strong>是指风速和/或风向在空间和时间上的突然变化。当飞机从逆风进入顺风时，所遇到的风切变称为顺风切变，逆风切变是指飞机从顺风进入逆风时所遇到的风切变</li>
+<li><strong>冷锋雷</strong>是指在冷锋过境时产生的雷暴天气。冷锋是指冷空气前沿，当冷空气迅速推进时，会将暖湿空气抬升形成对流，从而产生雷暴天气。夏季空气常呈暖湿不稳定状态，容易形成对流，因此冷锋雷在夏季最为常见</li>
+<li>根据冰的形态和特点，飞机积冰主要分为三大种：冰、雾凇、霜</li>
+<li><strong>空中交通管制单位</strong>为飞行中的民用航空器提供的空中交通服务包括飞行情报服务、空中交通管制服务等</li>
+<li><strong>空域管理</strong>是涉及国家安全和公共利益的重要事项，因此具体办法由国务院和中央军事委员会共同制定。民用航空局作为国家民用航空管理机构，负责执行和监督空域管理的具体实施</li>
+<li><strong>飞机过载</strong>和<strong>载荷因子</strong>是同一概念。载荷因子是指飞机所受的力与飞机自重的比值，也就是所承受的过载大小</li>
 </ul>
-<h2 id="3-QSPI-FLASH"><a href="#3-QSPI-FLASH" class="headerlink" title="3 QSPI FLASH"></a>3 QSPI FLASH</h2><ul>
-<li><p>型号：Infineon(原厂Cypress，2019年被Infineon收购 · 美) S25FL128S<br>容量：128Mb<br>位宽：4b<br><img src="https://s2.loli.net/2024/07/30/M1EioZbzukJIBsL.png" alt=""><br><strong>EHPLC（Enhanced High-Performance Low Command Mode）增强型高性能低命令模式</strong>：<br>功能：EHPLC 模式专注于在最低的命令开销下提供最高的数据传输速率。通过优化命令和数据传输过程，EHPLC 模式能够实现更高的性能，特别是在需要快速读取大量数据的应用中。<br>特点：EHPLC 模式可能会使用更高效的命令集和协议来减少延迟和增加吞吐量，从而提供比传统模式更高的性能。<br><strong>HPLC（High-Performance Low Command Mode）高性能低命令模式</strong>：<br>功能：HPLC 模式也致力于提高数据传输速率，但与 EHPLC 相比，其优化程度可能稍低。HPLC 仍然通过减少命令开销和提高数据传输效率来提供良好的性能。<br>特点：HPLC 模式通常在标准 QSPI 操作的基础上进行一些优化，使其适用于大多数高性能应用，但可能不如 EHPLC 那样极致优化。</p>
-</li>
-<li><p>特征参数<br>注意，这个手册block块=sector扇区<br><img src="https://s2.loli.net/2024/07/30/gMQRPDeht2Ak146.png" alt=""></p>
-</li>
-<li><p>架构<br><img src="https://s2.loli.net/2024/07/30/3FP1fSiHJnlteUG.png" alt=""><br>非常草率的架构图。。。<br><img src="https://s2.loli.net/2024/07/30/OARVLNiy12acW4g.png" alt=""></p>
-</li>
-<li><p>管脚<br><img src="https://s2.loli.net/2024/07/30/M5eVJZ9mFQrfE8z.png" alt=""><br>类似于NAND，QUAD模式4个IO复用指令、地址、数据，并且时分传递。</p>
-</li>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><ul>
+<li>运行人对民用无人驾驶航空器系统的维护负责</li>
+<li>活塞发动机在慢车状态下工作时间过长，易带来的主要危害是电嘴挂油积碳</li>
+<li>对无人机教员等级申请人的要求是必要的：在所申请的无人机上担任机长经历时间不少于100小时</li>
+<li>申请飞行计划通常应当于飞行前一日15时前向空中交通管制部门提出申请，并通知有关单位</li>
+<li>执行紧急救护、抢险救灾或者其它紧急任务，飞行计划申请最迟应在飞行前一小时提出</li>
+<li>在广阔水域上空进行各种渔业飞行的最低天气标准：云高不得低于200米,水平能见度不得小于3公里</li>
+<li>农业作业飞行的最低天气标准,平原地区是云高不低于150米,能见度不小于5公里</li>
+<li>丘陵、山区飞行的最低天气标准是云高不低于300米,能见度不小于5公里</li>
+<li>学生驾驶员在单飞之前必须在其飞行经历记录本上，有授权教员的签字，证明其在单飞日期之前90天内接受了所飞型号航空器的训练</li>
+<li>执行昼间专业任务的航空器，在山区进行作业飞行时，起飞时间最早不得早于日出前20分钟,降落不得晚于日落前15分钟</li>
+<li>执行昼间专业任务的航空器，在平原、丘陵地区进行作业飞行时，起飞时间最早不得早于日出前30分钟</li>
+<li>《中华人民共和国民用航空法》自1996年3月1日起施行</li>
+<li>无人机的注册所有者或运营人应对保持无人机有最新的适航证书和无人机注册证书负责</li>
+<li>飞机从尾部看灯光：左红右绿</li>
+<li>无识别标志的航空器因特殊情况需要飞行的必须经由中国人民解放军空军批准</li>
+<li>起落航线飞行开始一转弯和结束四转弯的高度一般不得低于100米</li>
+<li>民用无人驾驶航空器系统驾驶员合格证申请人必须在民用无人驾驶航空器系统上训练不少于44小时的飞行训练时间</li>
+<li>民用航空器的适航管理由民航局负责</li>
+<li>中华人民共和国境内的<strong>飞行管制</strong>，由中国人民解放军空军统一组织实施，各有关飞行管制部门按照各自的职责分工提供空中交通管制服务</li>
+<li>在中华人民共和国境内，按照飞行管制责任划分为飞行管制区、飞行管制分区、机场飞行管制区</li>
+<li>民用航空器必须具有民航局颁发的适航证方可飞行</li>
+<li>飞行人员未按中华人民共和国基本规则规定履行职责的，由有关部门依法给予行政处分或者纪律处分情节严重的，依法给予吊扣执照或合格证一至六个月的处罚，或者责令停飞一至三个月</li>
+<li>根据差分GPS基站发送的信息方式可将差分GPS定位分为三类，即：位置差分、伪距差分和相位差分</li>
+<li>任务规划由任务理解、环境评估、任务分配、航迹规划、航迹优化和航迹评价等组成</li>
+<li>任务分配提供可用的无人机资源和着陆点的显示，辅助操作人员进行载荷规划、通信规划和目标分配</li>
+<li>航线规划应具备的功能包括：标准飞行轨迹生成功能，常规的飞行航线生成、管理功能</li>
+<li>无人机任务规划需要实现的功能包括任务分配功能，航迹规划功能，仿真演示功能</li>
+<li>无人机任务规划是实现自主导航和飞行控制的有效途径，它在很大程度上决定了无人机执行任务的效率</li>
+<li>对于机长来说，巡航阶段操纵技术小时数，在模拟器实施正常飞行程序指挥，不少于2小时；在实物训练系统实施正常飞行程序指挥，不少于5小时</li>
 </ul>
-<h2 id="4-MRAM"><a href="#4-MRAM" class="headerlink" title="4 MRAM"></a>4 MRAM</h2><ul>
-<li><p>型号：EVERSPIN(埃弗斯平 · 美，只做MRAM的小公司，从随意的中文名就可以看出) MR5A16ACYS35<br>容量：32Mb；位宽：16b<br><img src="https://s2.loli.net/2024/07/29/kbTa9m7tzepWUBv.png" alt=""></p>
-</li>
-<li><p>特征参数<br><img src="https://s2.loli.net/2024/07/29/oVRBMi3vUqcyWJe.png" alt=""></p>
-</li>
-<li><p>架构<br><img src="https://s2.loli.net/2024/07/29/tOnjAXr8vdWDmVx.png" alt=""><br>架构图非常简单清晰。<br>“sense amps”（感应放大器）是用来检测和放大存储单元中的信号电压的电路。这些感应放大器的作用是读取MRAM单元的状态，即确定存储单元中存储的是0还是1。具体来说，MRAM的存储单元通过磁性材料的磁化方向来表示数据，而感应放大器则通过检测这些磁化方向造成的电压变化来读取数据。</p>
-</li>
-<li><p>管脚<br><img src="https://s2.loli.net/2024/07/29/TRfj4amweL7qxQg.png" alt=""><br>Output Enable和Write Enable相当于外部输入的读写使能信号。</p>
-</li>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><ul>
+<li>无人机<strong>适航证书</strong>是无人机合法飞行的必要条件，不可存放备查，应当随机携带并随飞机转让</li>
+<li>无人机飞行前，无人机飞行员应该按照随机《无人机飞行手册》指导飞行，即该台无人机的指导飞行手册；无人机制造商编写的《无人机所有者/信息手册》是为了向用户提供使用和维护无人机的相关信息，不属于需要局方批准的文件</li>
+<li>无人机飞行20小时或者更少就需要某种类型的预防性维护，至少50小时进行较小的维护</li>
+<li>飞行任务书是指飞行前，由飞行任务书签发人员向机长或飞行员下达的一份书面文件，它是飞行任务的重要组成部分。在飞行任务书中，应当明确飞行任务、起飞时间、航线、高度、允许机长飞行的最低气象条件以及其他有关事项</li>
+<li>无人机控制站飞行摇杆常用操作方式是<strong>姿态遥控</strong>。姿态遥控是指通过控制飞行器的姿态来实现飞行方向和高度的控制。<strong>舵面遥控</strong>极少使用。<strong>自主控制</strong>是指飞行器通过预设的飞行路线和程序自主飞行，不需要人工干预</li>
+<li>起落航线(五边航线)是由起飞、建立航线、着陆目测和着陆组成</li>
+<li>在飞行操作手姿态遥控模式下，操纵无人机下降时，如果速度过大，应该适当增加带杆量，减小下滑角，以控制下降速度，避免过快下降导致意外情况发生</li>
+<li>GPS是由美国构建的卫星导航系统，伽利略是由欧盟构建的卫星导航系统，而格洛纳斯则是由俄罗斯构建的卫星导航系统</li>
+<li>惯导系统是一种基于加速度计和陀螺仪的导航系统，其优点包括不受干扰、全天候、高精度等，但是惯导系统存在漂移问题</li>
+<li><strong>前庭觉</strong>是指人体通过内耳感知身体的平衡和方向感，而无人机操纵员在操纵无人机时无法感知自己身体的平衡和方向感</li>
+<li>油箱通气管的作用是让油箱内的空气流通，防止油箱内形成真空或过压，影响燃油汽化，从而影响发动机的正常工作。因此，在无人机使用中特别强调防止油箱通气管堵塞</li>
+<li>涡桨发动机的工作寿命受多种因素影响，但排气温度是其中最主要的因素之一。高排气温度会导致发动机叶轮和涡轮受热过度，从而缩短发动机寿命</li>
+<li>迎角是相对气流与机翼翼弦之间的夹角。在上升和下降阶段迎角都大于零，只是大角度时产生的升力大于重力，飞机上升，小角度时产生的升力小于重力，飞机下降</li>
+<li>固定翼常规无人机的主操纵面包括副翼、升降舵(或全动平尾和方向舵)，用于控制飞机的滚转、俯仰和偏航。常规固定翼无人机的飞行辅助操纵面包括缝翼、襟翼和调整片，其中缝翼和襟翼用于改变机翼的形状和面积，调整片用于改变机身的姿态</li>
+<li>多旋翼飞行器在地面风速达到4级时，应停止作业</li>
+<li>载重能力与电机功率和桨叶的大小有关。增加电机功率和桨叶直径和总距可以提高多旋翼飞行器的载重能力；只改大桨不增大电机会导致电机带不动</li>
+<li>前飞<strong>废阻力</strong>平衡是指在前进飞行时需要平衡前方空气的阻力</li>
+<li>多轴桨叶一般为不可变距桨，周期变距靠直升机倾斜盘完成，属于直升机操纵</li>
+<li>多旋翼飞行器的动力系统主要使用外转子电机，因为外转子电机具有高功率、高效率、高转速等优点，适合用于多旋翼飞行器的动力系统</li>
+<li>在<strong>巡航电流</strong>的3~5倍以上选电调，电调不是越大越好，超出部分用不上浪费，越大越重</li>
+<li>多旋翼飞行器使用的锂聚合物动力电池，其单体标称电压为3.7V。锂聚合物电池是目前无人机常用的电池类型之一，其具有高能量密度、轻量化、无记忆效应等优点，适合用于飞行器的动力系统</li>
+<li>多轴相对于传统直升机，结构更简单，控制更容易</li>
+</ul>
+<h2 id="第五章-多旋翼"><a href="#第五章-多旋翼" class="headerlink" title="第五章 多旋翼"></a>第五章 多旋翼</h2><ul>
+<li>多旋翼飞行器常用的螺旋桨剖面形状有对称型、凹凸型和S型等，但常用的是凹凸型，因为它具有较高的升力系数和较低的阻力系数，能够提高飞行器的飞行效率</li>
+<li>4轴飞行器的“×”模式和“+”模式是指飞行器四个电机的布局方式。在“×”模式下，每个运动方向均有两个电机，“+”模式下，每个运动方向仅一个电机，因此“×”模式的操纵性更好</li>
+<li>不论日本手、美国手，横向控制：左手方向舵，右手副翼；纵向控制：油门日右美左，升降舵日左美右</li>
+<li>无刷电机3根线，由三相电驱动，有刷电机2根线，由直流电驱动，故无刷电机是交流电机，无刷电调可以驱动无刷电机，而有刷电调则不能驱动无刷电机</li>
+<li>多旋翼飞行器需要通过飞控板来控制飞行，而飞控板上的角速率陀螺可以感知飞行器的姿态变化，从而进行相应的控制。一般来说，多旋翼飞行器的飞控板上会安装3个角速率陀螺和3个加速度计，分别对应飞行器的横滚、俯仰、偏航三个方向的加速度和角速度</li>
+<li>多轴螺旋桨的型号通常由两个数字组成，第一个数字表示螺旋桨的直径（单位为英寸）,第二个数字表示螺距（单位为英寸）。但是在国内，常常将直径和螺距的毫米数值直接组合成一个四位数作为型号</li>
+<li>正桨是指从多旋翼飞行器上方观察，该螺旋桨逆时针旋转（CCW）</li>
+<li>镍镉电池存在“记忆效应”,如果在没有充分放电的情况下进行大电流充电，会导致电池容量下降，甚至损坏电池。因此，镍镉电池在充电前需要进行充分放电</li>
+<li>持有人作弊三年内不得申请，申请人作弊一年内不得申请</li>
+<li><strong>融合空域</strong>是指与其他航空器共同使用的空域，<strong>隔离空域</strong>是指专供无人驾驶航空器使用的空域</li>
+<li>遇到特殊情况，民用航空器的机长，为保证民用航空器及其所载人员的安全，有权对民用航空器作出处置</li>
+<li>获准飞出或者飞入中华人民共和国领空的航空器，实施飞出或者飞入中华人民共和国领空的飞行和各飞行管制区间的飞行，必须经中国人民解放军空军批准</li>
+<li>直升机可以用1米至10米高度的飞行代替滑行</li>
+<li>机场的起落航线通常为左航线。因为飞机的主驾驶员坐在左侧，这样可以更好地观察起落道面。起落航线的飞行高度通常为300米至500米，这是为了避免与其他航线的飞机相撞</li>
+<li>航空器使用航路和航线时，需要经过负责该航路和航线的飞行管制部门的同意</li>
+<li>2007年8月1日是<strong>中国飞行基本规则</strong>的最新实施时间</li>
+<li>从对流层顶到50～55KM高度的一层称为平流层，对流层顶最高一般约为18km</li>
+<li>无人机操控员执照申请人，超视距不少于56小时飞行训练时间,视距内不少于44小时飞行训练时间</li>
+</ul>
+<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><ul>
+<li>单飞前没有教员组织的理论考试</li>
+<li>对流云由于云中存在对流容易带来低空风切变等影响起降的恶劣天气</li>
+<li>预计划分三类空域：管制、监视、报告</li>
+<li>计算无人机装载重量和重心的方法包括计算法、图表法和查表法</li>
+<li>在悬停状态下转向，多旋翼飞行器的横滚角为0,而在前飞状态下转向，为了保持平衡，需要有一定的横滚角</li>
+<li>无人机制造商编写的《无人机驾驶员操作手册》如果经过局方批准后，可以替代《无人机飞行手册》作为主要参考</li>
+<li>在山区飞行时，由于地形的复杂性和气流的不稳定性，乱流是一个非常重要的安全隐患。而在山谷中间，由于地形的限制，气流会被挤压和加速，从而形成强烈的乱流。因此，在山区飞行时应当特别注意山谷中间的乱流</li>
+<li>暖锋通常移动速度较慢，会产生差的能见度和下雨等降水现象；而冷锋则移动速度较快，会产生突发的阵风和紊流等现象</li>
+<li>两手前伸，右手的自然弯曲方向（即逆时针）与大多数无人机右前方旋翼旋转方向一致，左手同理</li>
+<li>四冲程汽油发动机需要燃料来提供能量，而燃料箱加注的就是汽油；滑油是用来润滑发动机内部零部件的，不是燃料；汽油与滑油的混合物也不是四冲程发动机所需要的燃料箱加注的内容，是二冲程需要的</li>
+<li>有对流云选对流，没有对流选积状。积状云是垂直发展的云，云底高度较低，云顶高度较高，容易造成飞行安全隐患，特别是在起降阶段。卷状云和层状云相对来说对飞行安全的影响较小</li>
+<li>2冲程发动机的燃油喷射系统和进气系统是一起工作的，通过进气系统将混合气体吸入燃烧室，然后点火系统点火使混合气体燃烧，产生动力驱动发动机工作，最后通过排气系统将废气排出</li>
+<li>《民用无人驾驶航空器实名制登记管理规定》第二条规定，本管理规定适用于在中华人民共和国境内最大起飞重量为250克以上（含250克）的民用无人机</li>
+<li>多旋翼类别带飞时间视距内不少于10小时,超视距不少于15小时,单飞时间均为不少于5小时</li>
+<li>八木天线是一种定向天线，它可以将信号集中在一个方向上，提高信号传输的距离和质量。鞭状天线和三叶草天线都是全向天线，信号会向各个方向发射</li>
+<li>根据《一般运行和飞行规则》第91343条规定，高空空域是指标准海平面气压6000米（不含）以上的空域</li>
+</ul>
+<h2 id="错题本"><a href="#错题本" class="headerlink" title="错题本"></a>错题本</h2><ul>
+<li>电调的作用不包括改变电流大小</li>
+<li>发动机燃油在进气口喷射</li>
+<li>全向天线的指向必须和通讯方向垂直，所以天线必须横向</li>
+<li>电动动力系统由动力电机、动力电源和调速系统组成</li>
+<li>无人机搭载任务设备重量主要受限于载重能力</li>
+<li>气团离开源地，性质将会发生变化</li>
+<li>海陆热力差异形成的热力环流是海陆风</li>
+<li>山谷风白天由山谷吹向山坡</li>
+<li>任务规划，出发点到目标的，最优或次优航迹</li>
+<li>《中华人民共和国民用航空法》自1996年3月1日起实施</li>
+<li>为修正偏流可以使用改变航向法</li>
+<li>飞行的组织和实施包括飞行预先准备、飞行直接准备、飞行实施和飞行讲评四个阶段</li>
+<li>起飞时间（陆上含义）指航空器开始起飞滑跑轮子转动的瞬间</li>
+<li>角速率传感器用于改善阻尼特性</li>
+<li>高空槽云系表现为逗点云系</li>
+<li>超音速经过收缩管道后速度降低、压强增大</li>
+<li>《一般运行和飞行规则》的颁布目的不包括为了维护国家领空主权</li>
+<li>流体的连续性方程只适用于理想流动</li>
+<li>迎角增大，压力中心前移动；迎角减小，压力中心后移</li>
+<li>具有纵向安定性的飞机，飞机重心位于压力中心前</li>
+<li>y方向上的过载是指飞机升力与飞机重力的比值</li>
+<li>任何单位或个人设计民用航空器，应向民航局申请型号合格证</li>
+<li>任务规划由…组成必包含环境评估</li>
+<li>任务规划需要实现的功能必包括仿真演示功能</li>
+<li>直升机中，平衡周期变距、克服挥舞的部件是电子陀螺仪</li>
+<li>干扰阻力是飞机各部件之间由于气流相互干扰而产生的一种额外阻力</li>
+<li><strong>推式尾桨</strong>效率高</li>
 </ul>
 
                 
@@ -487,7 +625,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://increcrazer.github.io/2024/07/29/project-jz-cun-chu-qi-bei-wang-lu/">http://increcrazer.github.io/2024/07/29/project-jz-cun-chu-qi-bei-wang-lu/</a>
+                    <a href="http://increcrazer.github.io/2025/03/08/wu-ren-ji-jia-kao-zhi-shi-dian/">http://increcrazer.github.io/2025/03/08/wu-ren-ji-jia-kao-zhi-shi-dian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -525,8 +663,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/electronic-memory/">
-                                    <span class="chip bg-color">electronic, memory</span>
+                                <a href="/tags/drone/">
+                                    <span class="chip bg-color">drone</span>
                                 </a>
                             
                         </div>
@@ -627,64 +765,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2024/07/30/die-ceng-zu-kang-han-yi/">
-                    <div class="card-image">
-                        
-                        <img src="https://s2.loli.net/2024/07/30/iVvdYMnCy63NIjp.jpg" class="responsive-img" alt="叠层阻抗含义">
-                        
-                        <span class="card-title">叠层阻抗含义</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-07-30
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/science/" class="post-category">
-                                    science
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/electronic-PCB/">
-                        <span class="chip bg-color">electronic, PCB</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2024/07/28/dji-mini4k-pai-zhao-mo-shi-ce-shi/">
+                <a href="/2025/03/08/wu-ren-ji-jia-kao-zhi-shi-dian/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/07/28/khmgWQRvVCzpHZK.jpg" class="responsive-img" alt="DJI mini4K拍照模式测试">
+                        <img src="https://s2.loli.net/2024/07/28/khmgWQRvVCzpHZK.jpg" class="responsive-img" alt="CAAC无人机执照应试考点">
                         
-                        <span class="card-title">DJI mini4K拍照模式测试</span>
+                        <span class="card-title">CAAC无人机执照应试考点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -695,7 +786,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-08
                             </span>
                         <span class="publish-author">
                             
@@ -709,11 +800,60 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/drone-mini4K/">
-                        <span class="chip bg-color">drone, mini4K</span>
+                    <a href="/tags/drone/">
+                        <span class="chip bg-color">drone</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/02/16/lim2014-gong-shi-tui-dao/">
+                    <div class="card-image">
+                        
+                        <img src="https://s2.loli.net/2025/01/28/6d3jQehzs5oNGmg.jpg" class="responsive-img" alt="Lim2014-公式推导">
+                        
+                        <span class="card-title">Lim2014-公式推导</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-02-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/note/" class="post-category">
+                                    note
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/QKD-decoy/">
+                        <span class="chip bg-color">QKD, decoy</span>
                     </a>
                     
                 </div>
