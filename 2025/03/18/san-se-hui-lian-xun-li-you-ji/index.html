@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Lim2014-公式推导, VIP">
-    <meta name="description" content="Lim C C W, Curty M, Walenta N, et al. Concise security bounds for practical decoy-state quantum key distribution[J]. Phy">
+    <meta name="keywords" content="《三色绘恋》巡礼游记, VIP">
+    <meta name="description" content="
+趁着公派汇报进行了一次心心念念的巡礼，虽然匆匆忙忙，但总算是了却了一桩五年之久的心愿。
+大约中午11点半的时间下火车，下午4点左右到公派目的地，扣除40分钟从江汉区到公司的车程，只留给我3个多小时的巡礼时间。不过好在故事场景都在方圆2km">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Lim2014-公式推导 | VIP</title>
+    <title>《三色绘恋》巡礼游记 | VIP</title>
     <link rel="icon" type="image/png" href="/medias/wyafavicon.png">
     
 
@@ -325,12 +327,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2025/01/28/6d3jQehzs5oNGmg.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2025/03/18/4geFiSDY3BxUyKR.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Lim2014-公式推导</h1>
+                    <h1 class="description center-align post-title">《三色绘恋》巡礼游记</h1>
                 </div>
             </div>
         </div>
@@ -356,8 +358,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/QKD-decoy/">
-                                <span class="chip bg-color">QKD, decoy</span>
+                            <a href="/tags/diary-travel/">
+                                <span class="chip bg-color">diary, travel</span>
                             </a>
                         
                     </div>
@@ -368,8 +370,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/note/" class="post-category">
-                                note
+                            <a href="/categories/vision/" class="post-category">
+                                vision
                             </a>
                         
                     </div>
@@ -381,7 +383,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2025-02-16
+                    2025-03-18
                 </div>
                 
 
@@ -390,14 +392,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    4 分
                 </div>
                 
 
@@ -420,95 +422,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.89.022307"><strong><em>Lim C C W, Curty M, Walenta N, et al. Concise security bounds for practical decoy-state quantum key distribution[J]. Physical Review A, 2014, 89(2): 022307.</em></strong></a></p>
-<p><strong>主要内容</strong>：</p>
-<ul>
-<li>诱骗态分析继承<a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326"><strong><em>Ma2005</em></strong></a>；</li>
-<li>密钥率公式不再采用<a target="_blank" rel="noopener" href="https://arxiv.org/abs/quant-ph/0212066"><strong><em>GLLP</em></strong></a>技术路线算得的，而是将后处理步骤分解进行计算。两个公式在形式上等效，但后者利用安全参数$\varepsilon$，得到的密钥率更有意义；</li>
-<li>终结了诱骗态有限码长分析问题；</li>
-<li>详细描述诱骗态协议的每一步操作，对于完全不懂理论的工程师非常友好。</li>
-</ul>
-<hr>
-<h2 id="1-A4、A5、A6"><a href="#1-A4、A5、A6" class="headerlink" title="1 (A4、A5、A6)"></a>1 (A4、A5、A6)</h2><p>不难发现：</p>
-<ul>
-<li>$p_{\mu}Q_{\mu}N=n_{\mu}$，其中$p_{\mu}$是Alice发送强度为${\mu}$的脉冲的概率，$N$是Alice发送的脉冲总数，$n_{\mu}$是Bob收到的脉冲中属于强度${\mu}$的脉冲的数量。</li>
-<li>$\tau_{n} Y_{n}N=s_{n}$，其中$\tau_{n}$是Alice发送光子数为$n$的脉冲的概率，$N$是Alice发送的脉冲总数，$s_{n}$是Bob收到的脉冲中属于光子数$n$的脉冲的数量。</li>
-<li>$p_{\mu}Q_{\mu}NE_{\mu}=m_{\mu}$，其中$p_{\mu}$是Alice发送强度为${\mu}$的脉冲的概率，$N$是Alice发送的脉冲总数，$m_{\mu}$是Bob收到的脉冲中属于强度${\mu}$但是出现比特错误的脉冲的数量。</li>
-<li>$\tau_{n} Y_{n}Ne_n=v_{n}$，其中$\tau_{n}$是Alice发送光子数为$n$的脉冲的概率，$N$是Alice发送的脉冲总数，$v_{n}$是Bob收到的脉冲中属于光子数$n$但是出现比特错误的脉冲的数量。</li>
-</ul>
-<p>所以可以直接把这几个式子带入<a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326"><strong><em>Ma2015</em></strong></a>替换进行计算。</p>
-<p>或者直接硬算也可以，以(A4)举例：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-&\frac{\mu_{2}e^{\mu_{3}}n_{\mathbf{X},\mu_{3}}^{*}}{p_{\mu_{3}}}-\frac{\mu_{3}e^{\mu_{2}}n_{\mathbf{X},\mu_{2}}^{*}}{p_{\mu_{2}}} \\
-&= \mu_{2}e^{\mu_{3}}\frac{\sum_{n=0}^{\infty}p_{\mu_{3}|n}s_{\mathrm{Х},n}}{p_{\mu_{3}}} - \mu_{3}e^{\mu_{2}}\frac{\sum_{n=0}^{\infty}p_{\mu_{2}|n}s_{\mathrm{Х},n}}{p_{\mu_{2}}} \\
-&= \mu_{2}e^{\mu_{3}}\sum_{n=0}^{\infty}\frac{p_{\mu_{3}|n}s_{\mathrm{Х},n}}{p_{\mu_{3}}} - \mu_{3}e^{\mu_{2}}\sum_{n=0}^{\infty}\frac{p_{\mu_{2}|n}s_{\mathrm{Х},n}}{p_{\mu_{2}}} \\
-&= \mu_{2}e^{\mu_{3}}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{e^{-\mu_{3}}\mu_{3}^n}{n!}s_{\mathrm{Х},n} - \mu_{3}e^{\mu_{2}}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{e^{-\mu_{2}}\mu_{2}^n}{n!}s_{\mathrm{Х},n} \\
-&= \mu_{2}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{\mu_{3}^n}{n!}s_{\mathrm{Х},n} - \mu_{3}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{\mu_{2}^n}{n!}s_{\mathrm{Х},n} \\
-&= \frac{(\mu_2-\mu_3)s_{\mathbf{X},0}}{\tau_0}-\mu_2\mu_3\sum_{n=2}^\infty\frac{(\mu_2^{n-1}-\mu_3^{n-1})s_{\mathbf{X},n}}{n!\tau_n}
-\end{aligned}</script><h2 id="2-B1"><a href="#2-B1" class="headerlink" title="2 (B1)"></a>2 (B1)</h2><ul>
-<li><p><strong>证明：</strong></p>
-<script type="math/tex; mode=display">
-  \begin{aligned}
-  H_{\mathrm{min}}^{\nu}(\mathbf{X}_{\mathrm{A}}|\mathbf{E}) & \geqslant H_{\mathrm{min}}^{\alpha_{1}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}\mathbf{E}\right) \\
-  & +H_{\mathrm{min}}^{\alpha_{3}+2\alpha_{4}+\alpha_{5}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}|\mathbf{E}\right)-2\log_{2}\frac{1}{\alpha_{2}}-1
-  \end{aligned}</script><p>  其中$\nu=2\alpha_1+\alpha_2+(\alpha_3+2\alpha_4+\alpha_5)\mathrm{~where~}\alpha_i&gt;0\text{ for all }i$.</p>
-<p><strong>解：</strong></p>
-<p>  根据<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6408179"><strong><em>Alexander2013</em></strong></a>的<em>Theorem 13</em>，</p>
-<script type="math/tex; mode=display">
-  \begin{aligned}
-  H_{\min}^{\varepsilon+\varepsilon^{\prime}+2\varepsilon^{\prime\prime}}(AB|C)_{\rho}\geq H_{\min}^{\varepsilon^{\prime\prime}}(A|BC)_{\rho}+H_{\min}^{\varepsilon^{\prime}}(B|C)_{\rho}-f(\varepsilon)
-  \end{aligned}</script><script type="math/tex; mode=display">
-  \begin{aligned}
-  f:\varepsilon\mapsto\log\frac{1}{1-\sqrt{1-\varepsilon^2}}
-  \end{aligned}</script><p>  而当$\varepsilon$很小时，$\log(1/1-\sqrt{1-\varepsilon^{2}})$可以用$\log(2/\varepsilon^2)$替代，于是全部带入得证。</p>
-<p>  同理可得：</p>
-<script type="math/tex; mode=display">
-  \begin{aligned}
-  & H_{\min}^{\alpha_{3}+2\alpha_{4}+\alpha_{5}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}|\mathbf{E}\right) \\
-  & \geqslant H_{\min}^{\alpha_{4}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}|\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{E}\right)+H_{\min}^{\alpha_{\mathrm{s}}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}|\mathbf{E}\right)-2\log_{2}\frac{1}{\alpha_{3}}-1
-  \end{aligned}</script></li>
-<li><p><strong>证明：</strong></p>
-<script type="math/tex; mode=display">
-  \begin{aligned}
-  H_{\min}^{\alpha_1}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}\mathbf{E}\right)\geqslant s_{\mathrm{X},1}-H_{\max}^{\alpha_1}\left(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}}\right)
-  \end{aligned}</script><p><strong>解：</strong></p>
-<p> 根据熵不确定性关系，显然。值得注意的是，真空事件不包含任何关于Alice选择的比特值的信息，这是因为真空事件没有传输任何光子，因此Eve无法从中获取信息；另外，假设所有多光子都被Eve拦截，所以Eve知道所有多光子组分的信息。</p>
-</li>
-</ul>
-<h2 id="3-B2"><a href="#3-B2" class="headerlink" title="3 (B2)"></a>3 (B2)</h2><p><strong>证明：</strong></p>
-<script type="math/tex; mode=display">
-H_{\max}^{\alpha_1}(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}})\leqslant s_{\mathrm{X},1}h(c_{\mathrm{X},1}/s_{\mathrm{X},1})</script><p><strong>解：</strong></p>
-<p>根据经典最大熵的定义：$H_{\max}(X|Y)=\max_{y\in Y}\log|\mathrm{supp}P_{X|Y=y}|$，其中$\mathrm{supp}P_{X|Y=y}$是在给定$Y=y$的条件下随机变量$X$所可能取的所有值的集合，$\mathrm{supp}$代表支集，$|*|$代表集合个数，因此有：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-H_{\max}^{\alpha_1}(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}})
-& \leqslant 
-H_{\max}(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}}) \\
-& \leqslant
-\log\sum_{w=0}^{\lfloor s_{\mathrm{X},1}(c_{\mathrm{X},1}/s_{\mathrm{X},1})\rfloor}
-\begin{pmatrix}
-s_{\mathrm{X},1} \\
-w
-\end{pmatrix} \\
-&\leqslant 
- s_{\mathrm{X},1}h(c_{\mathrm{X},1}/s_{\mathrm{X},1})
-\end{aligned}</script><h2 id="4-B3"><a href="#4-B3" class="headerlink" title="4 (B3)"></a>4 (B3)</h2><script type="math/tex; mode=display">
-\begin{aligned}
-\ell
-&=\left\lfloor H_{\min}^{\nu}(\mathbf{X}_{\mathrm{A}}|\mathbf{E}^{\prime})-2\log_{2}\frac{1}{2\overline{\nu}}\right\rfloor \\
-& \geqslant \left\lfloor H_{\min}^{\nu}(\mathbf{X}_{\mathrm{A}}|\mathbf{E})-\lambda_{\mathrm{EC}}-\log_{2}2/\varepsilon_{\mathrm{cor}} -2\log_{2}\frac{1}{2\overline{\nu}} \right\rfloor \\
-& \geqslant \lfloor s_{\mathrm{Х},0}-2\log_2\frac{1}{\alpha_3}-1 +  s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right] -2\log_2\frac{1}{\alpha_2}-1 \\
-&-\lambda_{\mathrm{EC}}-\log_{2}2/\varepsilon_{\mathrm{cor}} -2\log_{2}\frac{1}{2\overline{\nu}} \rfloor  \\
-&= \left\lfloor s_{\mathrm{Х},0}+  s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right] 
--\lambda_{\mathrm{EC}}- \log_2[({\frac{1}{2\alpha_2\alpha_3\overline{\nu}})^2\frac{8}{\varepsilon_{\mathrm{cor}}}]
-} \right\rfloor \\
-&= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right]-\lambda_{\mathrm{EC}}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}\beta}\right\rfloor \\
-&= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}-s_{\mathbf{X},1}h(\phi_{\mathbf{X}}) -\lambda_{\mathrm{EC}}- \log_2\frac{1}{\varepsilon^6}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}}\right\rfloor \\
-&= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}-s_{\mathbf{X},1}h(\phi_{\mathbf{X}})
--\lambda_{\mathrm{EC}}-6\log_2\frac{21}{\varepsilon_{\mathrm{sec}}}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}} \right\rfloor 
-\end{aligned}</script><h2 id="5-B4"><a href="#5-B4" class="headerlink" title="5 (B4)"></a>5 (B4)</h2><p>$10\varepsilon_1+2\varepsilon_2$来自于密钥率公式中<em>Hoeffding’s inequality</em>的使用次数，下面进行统计：<br>$\varepsilon_1$:<br>$\mathrm{s_{X,0}}$ 2次 + $\mathrm{s_{X,1}}$ 3次 + $\mathrm{s_{Z,0}}$ 2次 + $\mathrm{s_{Z,1}}$ 3次 = 10次</p>
-<p>$\varepsilon_2$:<br>$\mathrm{v_{Z,1}}$ 2次</p>
+                <hr>
+<p>趁着公派汇报进行了一次心心念念的巡礼，虽然匆匆忙忙，但总算是了却了一桩五年之久的心愿。</p>
+<p>大约中午11点半的时间下火车，下午4点左右到公派目的地，扣除40分钟从江汉区到公司的车程，只留给我3个多小时的巡礼时间。不过好在故事场景都在方圆2km之内（感谢山百合，感谢姐夫）。由于时间原因，我打算一路南下，所以我的行程和经典巡礼路线不太相同：<br><img src="https://s2.loli.net/2025/03/17/lY3GmkRJrLPQx7O.png" alt="我的行程"></p>
+<h2 id="第一站-师贰中！"><a href="#第一站-师贰中！" class="headerlink" title="第一站 师贰中！"></a>第一站 师贰中！</h2><p>从王家墩东站下车后，直奔师贰中看看主角的母校。不过刚下车我就大吃一惊，菓菓搬家了？五金建材咋搬家还改名了？招牌咋变蓝了？不过后来定了定神才发现自己是兴奋过头导致出现了幻觉…这算是路程中的一个小插曲了。<br><img src="https://s2.loli.net/2025/03/17/RP1SuZl2DGbq9h6.jpg" alt="真假菓菓家"></p>
+<p>一路上粉面管子极多，远处高大的建筑属实让人幻灭。和游戏里不太一样，两边的梧桐树光秃秃的，而且感觉路也拓宽了很多。缺少了青葱的活力氛围，干脆戴上耳机播放“橙色的小伞”，找点小菊的感觉，很快便踱步到师贰中。悲剧的是，师贰中连大门都给拆了（已经打过预防针了，所以不至于过于悲伤），不知道小菊和诚哥回到母校会作何感想…<br><img src="https://s2.loli.net/2025/03/17/kcz5pVYmOUrf8AC.jpg" alt="可怜的师贰中"></p>
+<p>然后走几十米就到了天天热干面。这是我在高铁上花了一个小时研究出来的午饭地点，原因是稻当劳太远而且据说也被拆了（悲，怎么麦麦也有倒闭的），只能另寻他家。找来找去只有天天热干面好评如潮，而且是家老店，想来小菊放学时应该去吃过。到了发现，生意果然好到爆表，居然要排队，好多都是附近的学生。无所谓了，能和小菊的校友一起吃饭也知足了，我边排边这样想着。在武汉朋友的建议下，我要了碗大份热干面，加牛肉鸡蛋，再来了一碗蛋酒。酒面端上来，武汉朋友鉴定为没毛病，味道的确没让人失望，这一顿属于是吃爽了。<br><img src="https://s2.loli.net/2025/03/17/534qmgHpA8bYsXT.jpg" alt="天天热干面"></p>
+<h2 id="第二站-文芷家！"><a href="#第二站-文芷家！" class="headerlink" title="第二站 文芷家！"></a>第二站 文芷家！</h2><p>沿着航空路走一小段，拐进电业路，便来到了非官方声明的文芷家。虽然作为小菊线的菊党，但是每当带入诚哥角色，想到出国的文芷总有一些伤感。虽然是大中午，但我总觉得应该切歌到“静谧之夜”了。<br><img src="https://s2.loli.net/2025/03/17/l4wdcoUyT71t5m2.jpg" alt="大概是文芷家吧"></p>
+<h2 id="第三站-小菊家！"><a href="#第三站-小菊家！" class="headerlink" title="第三站 小菊家！"></a>第三站 小菊家！</h2><p>文芷家有个公交站，坐704路一站便到了地质局，终于到小菊家了！<br><img src="https://s2.loli.net/2025/03/17/rSqklsn75OphGta.jpg" alt="气派的小区名"><br>小心翼翼地进入小区，满怀期待地走向路口…<br><img src="https://s2.loli.net/2025/03/17/xNytVAwIRWPbu62.jpg" alt=""><br>终于，朝圣之地！<br><img src="https://s2.loli.net/2025/03/17/YUrG3D4zO2msXHJ.jpg" alt=""><br>然后便是对着小菊照相（此处脑补小菊背着书包冲你微笑的样子）<br><img src="https://s2.loli.net/2025/03/17/7mCgyQEzn1kXoIK.jpg" alt=""><br>想来小菊上学的视角应该是这样吧：<br><img src="https://s2.loli.net/2025/03/17/1i7VOevkQXzj2ro.jpg" alt=""><br>小区很小，几步路就到头了。临走之时，去地矿副食买了两包QQ糖留恋。老板是个短头发面相慈善的大叔，我想问他可知不知道《三色绘恋》，有没有遇到过其它朝圣者，但是话到嘴边却如梗在喉。付款时候憋了半天才憋出一句：“您这家店开了许久了吧？”，老板笑着答道“是的，开了很久了”，笑中带有一丝深意，感觉老板是有点情怀在里面的。说实话，对那些坚持开到现在的老店的掌故，我是既佩服又感激的。哪一天连这些店都倒闭了，那我的回忆也就荡然无存了。<br><img src="https://s2.loli.net/2025/03/17/tl1rfpyMLIVY5ud.jpg" alt="副食店"><br>对了，小菊家对面就是菓菓家，已经拆的面目全非了，太惨了，就不放照片了。</p>
+<h2 id="第四站-六十八中"><a href="#第四站-六十八中" class="headerlink" title="第四站 六十八中"></a>第四站 六十八中</h2><p>哎，菓菓的学校也是面目全非了，喂猫的地方也没找到在哪。哎，物非人非啊…太多遗憾啊…<br><img src="https://s2.loli.net/2025/03/17/RWg7b2Lj1IZseu6.jpg" alt=""></p>
+<h2 id="第五站-中山公园！"><a href="#第五站-中山公园！" class="headerlink" title="第五站 中山公园！"></a>第五站 中山公园！</h2><p>从南门入园会和主角们的入园顺序相反，一开始会遇到一个挺精致的池塘。然后复行数十步，便是充满血泪故事的喷泉(到那边我已经胃疼了)：<br><img src="https://s2.loli.net/2025/03/17/MX5zpSCU3ycATkH.jpg" alt=""><br>总感觉喷泉被改了，我记得游戏里是栏杆是外扩的圆弧？<br><img src="https://s2.loli.net/2025/03/17/SXuUVqwD16Amgls.jpg" alt=""><br>喷泉向北走一段，便到了那座桥（其实南门有座桥也有点眼熟，是上面笔直而不是拱形的，但是只想着参照攻略拍了。后来发现那段桥也是游戏场景，懊悔啊…）：<br><img src="https://s2.loli.net/2025/03/17/m4bSNC6gj8zuPGJ.jpg" alt=""><br>然后便是巡礼周末主角们度过的欢乐时光啦（我记得还有个水上项目，什么激流突进的，但是转了一圈没有找到）：<br><img src="https://s2.loli.net/2025/03/17/QLR57fCYUw6xBTy.jpg" alt="小菊和诚哥玩的砰砰车"><br><img src="https://s2.loli.net/2025/03/17/PJmFxOg2aCnhN1I.jpg" alt="惊险刺激的过山车"><br><img src="https://s2.loli.net/2025/03/17/y6TDAukeWKmMLhI.jpg" alt="公园地标"><br><img src="https://s2.loli.net/2025/03/17/mZJSx35WdnKbvNU.jpg" alt="旋转木马"><br>原本我以为游乐场已经没有什么受众了，但是依然有许多年轻学生在里面玩。我记得有一群结伴的男生，其中一个说玩过山车吗，另一个说太刺激了不敢玩，不如碰碰车，然后另一个又说已经碰碰车玩了很多遍了没意思，不过他们仍然还是去玩碰碰车了。对话无聊但是还是挺有意思。游乐园里还有很多穿着光鲜靓丽的情侣以及带娃的年轻母亲们。不知道我又目睹了多少人的春春，多少人的童年。</p>
+<p>走累了，找了个地方坐下来享受了20分钟久违了的午后时光。<br><img src="https://s2.loli.net/2025/03/17/ambuHkE2U1GMcWZ.jpg" alt=""></p>
+<p>到了3点，必须得去当社畜了。叫了滴滴之后，蓦然回首，原来主角们进来的大门长这样：<br><img src="https://s2.loli.net/2025/03/17/sAiDSdXmfl6wxIa.jpg" alt=""></p>
+<p>至此，这次巡礼也算是圆满结束了。</p>
 
                 
             </div>
@@ -535,7 +461,7 @@ w
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/">http://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/</a>
+                    <a href="http://increcrazer.github.io/2025/03/18/san-se-hui-lian-xun-li-you-ji/">http://increcrazer.github.io/2025/03/18/san-se-hui-lian-xun-li-you-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,8 +499,8 @@ w
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/QKD-decoy/">
-                                    <span class="chip bg-color">QKD, decoy</span>
+                                <a href="/tags/diary-travel/">
+                                    <span class="chip bg-color">diary, travel</span>
                                 </a>
                             
                         </div>
@@ -675,9 +601,59 @@ w
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2025/03/18/san-se-hui-lian-xun-li-you-ji/">
+                    <div class="card-image">
+                        
+                        <img src="https://s2.loli.net/2025/03/18/4geFiSDY3BxUyKR.webp" class="responsive-img" alt="《三色绘恋》巡礼游记">
+                        
+                        <span class="card-title">《三色绘恋》巡礼游记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/vision/" class="post-category">
+                                    vision
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/diary-travel/">
+                        <span class="chip bg-color">diary, travel</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2025/03/08/wu-ren-ji-jia-kao-zhi-shi-dian/">
                     <div class="card-image">
@@ -694,9 +670,9 @@ w
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2025-03-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -714,54 +690,6 @@ w
                     
                     <a href="/tags/drone/">
                         <span class="chip bg-color">drone</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2025/01/27/lo2005-jing-jian-ban/">
-                    <div class="card-image">
-                        
-                        <img src="https://s2.loli.net/2025/01/28/6d3jQehzs5oNGmg.jpg" class="responsive-img" alt="Lo2005-精简版">
-                        
-                        <span class="card-title">Lo2005-精简版</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-01-27
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/note/" class="post-category">
-                                    note
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/QKD-decoy/">
-                        <span class="chip bg-color">QKD, decoy</span>
                     </a>
                     
                 </div>
