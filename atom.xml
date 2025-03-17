@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-03-17T16:01:35.954Z</updated>
+  <updated>2025-03-14T16:09:13.607Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>《三色绘恋》巡礼游记</title>
-    <link href="http://increcrazer.github.io/2025/03/17/san-se-hui-lian-xun-li-you-ji/"/>
-    <id>http://increcrazer.github.io/2025/03/17/san-se-hui-lian-xun-li-you-ji/</id>
-    <published>2025-03-17T12:48:12.674Z</published>
-    <updated>2025-03-17T16:01:35.954Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;趁着公派汇报进行了一次心心念念的巡礼，虽然匆匆忙忙，但总算是了却了一桩五年之久的心愿。&lt;/p&gt;
-&lt;p&gt;大约中午11点半的时间下火车，下午4点左右到公派目的地，扣除40分钟从江汉区到公司的车程，只留给我3个多小时的巡礼时间。不过好在故事场景都在方圆2km之内（感谢山百合，感谢</summary>
-        
-      
-    
-    
-    
-    <category term="vision" scheme="http://increcrazer.github.io/categories/vision/"/>
-    
-    
-    <category term="diary, travel" scheme="http://increcrazer.github.io/tags/diary-travel/"/>
-    
-  </entry>
   
   <entry>
     <title>CAAC无人机执照应试考点</title>
@@ -522,6 +496,31 @@
     
     
     <category term="electronic, PCB" scheme="http://increcrazer.github.io/tags/electronic-PCB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Project · JZ 存储器备忘录</title>
+    <link href="http://increcrazer.github.io/2024/07/29/project-jz-cun-chu-qi-bei-wang-lu/"/>
+    <id>http://increcrazer.github.io/2024/07/29/project-jz-cun-chu-qi-bei-wang-lu/</id>
+    <published>2024-07-29T12:10:32.756Z</published>
+    <updated>2024-11-03T15:28:36.161Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-动机&quot;&gt;&lt;a href=&quot;#0-动机&quot; class=&quot;headerlink&quot; title=&quot;0 动机&quot;&gt;&lt;/a&gt;0</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="electronic, memory" scheme="http://increcrazer.github.io/tags/electronic-memory/"/>
     
   </entry>
   
