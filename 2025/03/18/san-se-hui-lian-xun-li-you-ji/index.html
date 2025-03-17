@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Project · JZ 存储器备忘录, VIP">
-    <meta name="description" content="0 动机Datasheet太多了，点开文件夹查找过于麻烦。作为记性不好又懒得一匹的包工头，不需要动脑写逻辑，只需要了解关键内容。因此摘录sheet要点并加上芯片架构层面的内容和思考，不包含时序和芯片自带功能（例如NAND、MRAM的ECC）">
+    <meta name="keywords" content="《三色绘恋》巡礼游记, VIP">
+    <meta name="description" content="
+趁着公派汇报进行了一次心心念念的巡礼，虽然匆匆忙忙，但总算是了却了一桩五年之久的心愿。
+大约中午11点半的时间下火车，下午4点左右到公派目的地，扣除40分钟从江汉区到公司的车程，只留给我3个多小时的巡礼时间。不过好在故事场景都在方圆2km">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Project · JZ 存储器备忘录 | VIP</title>
+    <title>《三色绘恋》巡礼游记 | VIP</title>
     <link rel="icon" type="image/png" href="/medias/wyafavicon.png">
     
 
@@ -325,12 +327,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2024/07/30/HjdX9cJB6b3a8Eq.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2025/03/18/4geFiSDY3BxUyKR.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Project · JZ 存储器备忘录</h1>
+                    <h1 class="description center-align post-title">《三色绘恋》巡礼游记</h1>
                 </div>
             </div>
         </div>
@@ -355,8 +357,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/electronic-memory/">
-                                <span class="chip bg-color">electronic, memory</span>
+                            <a href="/tags/diary-travel/">
+                                <span class="chip bg-color">diary, travel</span>
                             </a>
                         
                     </div>
@@ -367,8 +369,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/science/" class="post-category">
-                                science
+                            <a href="/categories/vision/" class="post-category">
+                                vision
                             </a>
                         
                     </div>
@@ -380,7 +382,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-07-29
+                    2025-03-18
                 </div>
                 
 
@@ -389,14 +391,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    916
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -419,49 +421,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="0-动机"><a href="#0-动机" class="headerlink" title="0 动机"></a>0 动机</h2><p>Datasheet太多了，点开文件夹查找过于麻烦。作为记性不好又懒得一匹的包工头，不需要动脑写逻辑，只需要了解关键内容。因此摘录sheet要点并加上芯片架构层面的内容和思考，不包含时序和芯片自带功能（例如NAND、MRAM的ECC）的解读，作为一个快捷的备忘录。</p>
-<h2 id="1-DDR2"><a href="#1-DDR2" class="headerlink" title="1 DDR2"></a>1 DDR2</h2><ul>
-<li><p>型号：ISSI(芯成 · 美) IS43DR16128C<br>容量：2Gb = 128M$\times$16b = 8(banks)$\times$16M$\times$16b；<br>位宽：16b<br><img src="https://s2.loli.net/2024/07/29/VRjSW17Zmr9sGYg.png" alt=""><br>速率等ORDER INFO：<br><img src="https://s2.loli.net/2024/07/29/HA2tI3F4SPLQrNz.png" alt=""></p>
-</li>
-<li><p>特征参数<br><img src="https://s2.loli.net/2024/07/29/8ynSs1dVxYEO2jW.png" alt=""></p>
-</li>
-<li><p>架构<br><img src="https://s2.loli.net/2024/07/29/Jh42Vz1vXlWRQOr.png" alt=""></p>
-</li>
-<li><p>管脚<br><img src="https://s2.loli.net/2024/07/29/tmMiAjwrGXa3obW.png" alt=""><br><img src="https://s2.loli.net/2024/07/29/ohdg3EtqW29fGaD.png" alt=""><br>管脚特征：<br>没有读使能信号，读使能是通过拉高写使能。<br>DDR2不像NAND FLASH一样复用IO可能是因为要求高速。<br>DM掩码某些数据位，而DQS有效化某些数据时刻，作用不一样。</p>
-</li>
-</ul>
-<h2 id="2-NAND-FLASH"><a href="#2-NAND-FLASH" class="headerlink" title="2 NAND FLASH"></a>2 NAND FLASH</h2><ul>
-<li><p>型号：MICRON(美光 · 美) MT29F128G08AMCABH2<br>容量：128Gb = 16384(块)$\times$128(页)$\times$8640B；<br>位宽：8b<br><img src="https://s2.loli.net/2024/07/29/xcMjmuVCUGFgHfk.png" alt=""></p>
-</li>
-<li><p>特征参数<br><img src="https://s2.loli.net/2024/07/29/ujJgxMwW1hY2RU7.png" alt=""><br>注意，NAND手册一般不会给出工作在同步模式下的时钟频率。</p>
-</li>
-<li><p>架构<br><img src="https://s2.loli.net/2024/07/29/8kyEAR1xzLZG6Ma.png" alt=""><br><img src="https://s2.loli.net/2024/07/29/lNm5boGgRK1fX6h.png" alt=""><br>MT29F128G08AMCABH2有4个LUN。</p>
-</li>
-<li><p>管脚<br><img src="https://s2.loli.net/2024/07/29/DoIMucBGz98Leth.png" alt=""><br>为什么这样分配管脚：<br><strong><em>比如命令锁存使能(Command Latch Enable,CLE)和地址锁存使能(Address Latch Enable，ALE)，那是因为，Nand Flash就8个I/O，而且是复用的，也就是，可以传数据，也可以传地址，也可以传命令，为了区分…</em></strong><br><strong><em>Nand flash支持一个叫做CE(chip enable) don’t-care的技术…由于某些外部应用的频率比较低，而Nand Flash内部操作速度比较快…节省功耗…</em></strong><br>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/340496845">智能座舱之存储篇第三篇—-NAND Flash 一眼就看明白了</a></p>
-</li>
-<li><p>LUN寻址规则<br><img src="https://s2.loli.net/2024/07/29/Fs5zOQhwPALX26W.png" alt=""></p>
-</li>
-</ul>
-<h2 id="3-QSPI-FLASH"><a href="#3-QSPI-FLASH" class="headerlink" title="3 QSPI FLASH"></a>3 QSPI FLASH</h2><ul>
-<li><p>型号：Infineon(原厂Cypress，2019年被Infineon收购 · 美) S25FL128S<br>容量：128Mb<br>位宽：4b<br><img src="https://s2.loli.net/2024/07/30/M1EioZbzukJIBsL.png" alt=""><br><strong>EHPLC（Enhanced High-Performance Low Command Mode）增强型高性能低命令模式</strong>：<br>功能：EHPLC 模式专注于在最低的命令开销下提供最高的数据传输速率。通过优化命令和数据传输过程，EHPLC 模式能够实现更高的性能，特别是在需要快速读取大量数据的应用中。<br>特点：EHPLC 模式可能会使用更高效的命令集和协议来减少延迟和增加吞吐量，从而提供比传统模式更高的性能。<br><strong>HPLC（High-Performance Low Command Mode）高性能低命令模式</strong>：<br>功能：HPLC 模式也致力于提高数据传输速率，但与 EHPLC 相比，其优化程度可能稍低。HPLC 仍然通过减少命令开销和提高数据传输效率来提供良好的性能。<br>特点：HPLC 模式通常在标准 QSPI 操作的基础上进行一些优化，使其适用于大多数高性能应用，但可能不如 EHPLC 那样极致优化。</p>
-</li>
-<li><p>特征参数<br>注意，这个手册block块=sector扇区<br><img src="https://s2.loli.net/2024/07/30/gMQRPDeht2Ak146.png" alt=""></p>
-</li>
-<li><p>架构<br><img src="https://s2.loli.net/2024/07/30/3FP1fSiHJnlteUG.png" alt=""><br>非常草率的架构图。。。<br><img src="https://s2.loli.net/2024/07/30/OARVLNiy12acW4g.png" alt=""></p>
-</li>
-<li><p>管脚<br><img src="https://s2.loli.net/2024/07/30/M5eVJZ9mFQrfE8z.png" alt=""><br>类似于NAND，QUAD模式4个IO复用指令、地址、数据，并且时分传递。</p>
-</li>
-</ul>
-<h2 id="4-MRAM"><a href="#4-MRAM" class="headerlink" title="4 MRAM"></a>4 MRAM</h2><ul>
-<li><p>型号：EVERSPIN(埃弗斯平 · 美，只做MRAM的小公司，从随意的中文名就可以看出) MR5A16ACYS35<br>容量：32Mb；位宽：16b<br><img src="https://s2.loli.net/2024/07/29/kbTa9m7tzepWUBv.png" alt=""></p>
-</li>
-<li><p>特征参数<br><img src="https://s2.loli.net/2024/07/29/oVRBMi3vUqcyWJe.png" alt=""></p>
-</li>
-<li><p>架构<br><img src="https://s2.loli.net/2024/07/29/tOnjAXr8vdWDmVx.png" alt=""><br>架构图非常简单清晰。<br>“sense amps”（感应放大器）是用来检测和放大存储单元中的信号电压的电路。这些感应放大器的作用是读取MRAM单元的状态，即确定存储单元中存储的是0还是1。具体来说，MRAM的存储单元通过磁性材料的磁化方向来表示数据，而感应放大器则通过检测这些磁化方向造成的电压变化来读取数据。</p>
-</li>
-<li><p>管脚<br><img src="https://s2.loli.net/2024/07/29/TRfj4amweL7qxQg.png" alt=""><br>Output Enable和Write Enable相当于外部输入的读写使能信号。</p>
-</li>
-</ul>
+                <hr>
+<p>趁着公派汇报进行了一次心心念念的巡礼，虽然匆匆忙忙，但总算是了却了一桩五年之久的心愿。</p>
+<p>大约中午11点半的时间下火车，下午4点左右到公派目的地，扣除40分钟从江汉区到公司的车程，只留给我3个多小时的巡礼时间。不过好在故事场景都在方圆2km之内（感谢山百合，感谢姐夫）。由于时间原因，我打算一路南下，所以我的行程和经典巡礼路线不太相同：<br><img src="https://s2.loli.net/2025/03/17/lY3GmkRJrLPQx7O.png" alt="我的行程"></p>
+<h2 id="第一站-师贰中！"><a href="#第一站-师贰中！" class="headerlink" title="第一站 师贰中！"></a>第一站 师贰中！</h2><p>从王家墩东站下车后，直奔师贰中看看主角的母校。不过刚下车我就大吃一惊，菓菓搬家了？五金建材咋搬家还改名了？招牌咋变蓝了？不过后来定了定神才发现自己是兴奋过头导致出现了幻觉…这算是路程中的一个小插曲了。<br><img src="https://s2.loli.net/2025/03/17/RP1SuZl2DGbq9h6.jpg" alt="真假菓菓家"></p>
+<p>一路上粉面管子极多，远处高大的建筑属实让人幻灭。和游戏里不太一样，两边的梧桐树光秃秃的，而且感觉路也拓宽了很多。缺少了青葱的活力氛围，干脆戴上耳机播放“橙色的小伞”，找点小菊的感觉，很快便踱步到师贰中。悲剧的是，师贰中连大门都给拆了（已经打过预防针了，所以不至于过于悲伤），不知道小菊和诚哥回到母校会作何感想…<br><img src="https://s2.loli.net/2025/03/17/kcz5pVYmOUrf8AC.jpg" alt="可怜的师贰中"></p>
+<p>然后走几十米就到了天天热干面。这是我在高铁上花了一个小时研究出来的午饭地点，原因是稻当劳太远而且据说也被拆了（悲，怎么麦麦也有倒闭的），只能另寻他家。找来找去只有天天热干面好评如潮，而且是家老店，想来小菊放学时应该去吃过。到了发现，生意果然好到爆表，居然要排队，好多都是附近的学生。无所谓了，能和小菊的校友一起吃饭也知足了，我边排边这样想着。在武汉朋友的建议下，我要了碗大份热干面，加牛肉鸡蛋，再来了一碗蛋酒。酒面端上来，武汉朋友鉴定为没毛病，味道的确没让人失望，这一顿属于是吃爽了。<br><img src="https://s2.loli.net/2025/03/17/534qmgHpA8bYsXT.jpg" alt="天天热干面"></p>
+<h2 id="第二站-文芷家！"><a href="#第二站-文芷家！" class="headerlink" title="第二站 文芷家！"></a>第二站 文芷家！</h2><p>沿着航空路走一小段，拐进电业路，便来到了非官方声明的文芷家。虽然作为小菊线的菊党，但是每当带入诚哥角色，想到出国的文芷总有一些伤感。虽然是大中午，但我总觉得应该切歌到“静谧之夜”了。<br><img src="https://s2.loli.net/2025/03/17/l4wdcoUyT71t5m2.jpg" alt="大概是文芷家吧"></p>
+<h2 id="第三站-小菊家！"><a href="#第三站-小菊家！" class="headerlink" title="第三站 小菊家！"></a>第三站 小菊家！</h2><p>文芷家有个公交站，坐704路一站便到了地质局，终于到小菊家了！<br><img src="https://s2.loli.net/2025/03/17/rSqklsn75OphGta.jpg" alt="气派的小区名"><br>小心翼翼地进入小区，满怀期待地走向路口…<br><img src="https://s2.loli.net/2025/03/17/xNytVAwIRWPbu62.jpg" alt=""><br>终于，朝圣之地！<br><img src="https://s2.loli.net/2025/03/17/YUrG3D4zO2msXHJ.jpg" alt=""><br>然后便是对着小菊照相（此处脑补小菊背着书包冲你微笑的样子）<br><img src="https://s2.loli.net/2025/03/17/7mCgyQEzn1kXoIK.jpg" alt=""><br>想来小菊上学的视角应该是这样吧：<br><img src="https://s2.loli.net/2025/03/17/1i7VOevkQXzj2ro.jpg" alt=""><br>小区很小，几步路就到头了。临走之时，去地矿副食买了两包QQ糖留恋。老板是个短头发面相慈善的大叔，我想问他可知不知道《三色绘恋》，有没有遇到过其它朝圣者，但是话到嘴边却如梗在喉。付款时候憋了半天才憋出一句：“您这家店开了许久了吧？”，老板笑着答道“是的，开了很久了”，笑中带有一丝深意，感觉老板是有点情怀在里面的。说实话，对那些坚持开到现在的老店的掌故，我是既佩服又感激的。哪一天连这些店都倒闭了，那我的回忆也就荡然无存了。<br><img src="https://s2.loli.net/2025/03/17/tl1rfpyMLIVY5ud.jpg" alt="副食店"><br>对了，小菊家对面就是菓菓家，已经拆的面目全非了，太惨了，就不放照片了。</p>
+<h2 id="第四站-六十八中"><a href="#第四站-六十八中" class="headerlink" title="第四站 六十八中"></a>第四站 六十八中</h2><p>哎，菓菓的学校也是面目全非了，喂猫的地方也没找到在哪。哎，物非人非啊…太多遗憾啊…<br><img src="https://s2.loli.net/2025/03/17/RWg7b2Lj1IZseu6.jpg" alt=""></p>
+<h2 id="第五站-中山公园！"><a href="#第五站-中山公园！" class="headerlink" title="第五站 中山公园！"></a>第五站 中山公园！</h2><p>从南门入园会和主角们的入园顺序相反，一开始会遇到一个挺精致的池塘。然后复行数十步，便是充满血泪故事的喷泉(到那边我已经胃疼了)：<br><img src="https://s2.loli.net/2025/03/17/MX5zpSCU3ycATkH.jpg" alt=""><br>总感觉喷泉被改了，我记得游戏里是栏杆是外扩的圆弧？<br><img src="https://s2.loli.net/2025/03/17/SXuUVqwD16Amgls.jpg" alt=""><br>喷泉向北走一段，便到了那座桥（其实南门有座桥也有点眼熟，是上面笔直而不是拱形的，但是只想着参照攻略拍了。后来发现那段桥也是游戏场景，懊悔啊…）：<br><img src="https://s2.loli.net/2025/03/17/m4bSNC6gj8zuPGJ.jpg" alt=""><br>然后便是巡礼周末主角们度过的欢乐时光啦（我记得还有个水上项目，什么激流突进的，但是转了一圈没有找到）：<br><img src="https://s2.loli.net/2025/03/17/QLR57fCYUw6xBTy.jpg" alt="小菊和诚哥玩的砰砰车"><br><img src="https://s2.loli.net/2025/03/17/PJmFxOg2aCnhN1I.jpg" alt="惊险刺激的过山车"><br><img src="https://s2.loli.net/2025/03/17/y6TDAukeWKmMLhI.jpg" alt="公园地标"><br><img src="https://s2.loli.net/2025/03/17/mZJSx35WdnKbvNU.jpg" alt="旋转木马"><br>原本我以为游乐场已经没有什么受众了，但是依然有许多年轻学生在里面玩。我记得有一群结伴的男生，其中一个说玩过山车吗，另一个说太刺激了不敢玩，不如碰碰车，然后另一个又说已经碰碰车玩了很多遍了没意思，不过他们仍然还是去玩碰碰车了。对话无聊但是还是挺有意思。游乐园里还有很多穿着光鲜靓丽的情侣以及带娃的年轻母亲们。不知道我又目睹了多少人的春春，多少人的童年。</p>
+<p>走累了，找了个地方坐下来享受了20分钟久违了的午后时光。<br><img src="https://s2.loli.net/2025/03/17/ambuHkE2U1GMcWZ.jpg" alt=""></p>
+<p>到了3点，必须得去当社畜了。叫了滴滴之后，蓦然回首，原来主角们进来的大门长这样：<br><img src="https://s2.loli.net/2025/03/17/sAiDSdXmfl6wxIa.jpg" alt=""></p>
+<p>至此，这次巡礼也算是圆满结束了。</p>
 
                 
             </div>
@@ -488,7 +460,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://increcrazer.github.io/2024/07/29/project-jz-cun-chu-qi-bei-wang-lu/">http://increcrazer.github.io/2024/07/29/project-jz-cun-chu-qi-bei-wang-lu/</a>
+                    <a href="http://increcrazer.github.io/2025/03/18/san-se-hui-lian-xun-li-you-ji/">http://increcrazer.github.io/2025/03/18/san-se-hui-lian-xun-li-you-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -526,8 +498,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/electronic-memory/">
-                                    <span class="chip bg-color">electronic, memory</span>
+                                <a href="/tags/diary-travel/">
+                                    <span class="chip bg-color">diary, travel</span>
                                 </a>
                             
                         </div>
@@ -628,16 +600,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/07/30/die-ceng-zu-kang-han-yi/">
+                <a href="/2025/03/18/san-se-hui-lian-xun-li-you-ji/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/07/30/iVvdYMnCy63NIjp.jpg" class="responsive-img" alt="叠层阻抗含义">
+                        <img src="https://s2.loli.net/2025/03/18/4geFiSDY3BxUyKR.webp" class="responsive-img" alt="《三色绘恋》巡礼游记">
                         
-                        <span class="card-title">叠层阻抗含义</span>
+                        <span class="card-title">《三色绘恋》巡礼游记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -647,26 +620,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-07-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/science/" class="post-category">
-                                    science
+                            <a href="/categories/vision/" class="post-category">
+                                    vision
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/electronic-PCB/">
-                        <span class="chip bg-color">electronic, PCB</span>
+                    <a href="/tags/diary-travel/">
+                        <span class="chip bg-color">diary, travel</span>
                     </a>
                     
                 </div>
@@ -680,12 +654,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/07/28/dji-mini4k-pai-zhao-mo-shi-ce-shi/">
+                <a href="/2025/03/18/wu-ren-ji-jia-kao-zhi-shi-dian/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/07/28/khmgWQRvVCzpHZK.jpg" class="responsive-img" alt="DJI mini4K拍照模式测试">
+                        <img src="https://s2.loli.net/2024/07/28/khmgWQRvVCzpHZK.jpg" class="responsive-img" alt="CAAC无人机执照应试考点">
                         
-                        <span class="card-title">DJI mini4K拍照模式测试</span>
+                        <span class="card-title">CAAC无人机执照应试考点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -696,7 +670,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-18
                             </span>
                         <span class="publish-author">
                             
@@ -713,8 +687,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/drone-mini4K/">
-                        <span class="chip bg-color">drone, mini4K</span>
+                    <a href="/tags/drone/">
+                        <span class="chip bg-color">drone</span>
                     </a>
                     
                 </div>
