@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-03-19T08:22:31.307Z</updated>
+  <updated>2025-03-20T17:33:35.766Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>江城游记2</title>
+    <link href="http://increcrazer.github.io/2025/03/19/jiang-cheng-you-ji-2/"/>
+    <id>http://increcrazer.github.io/2025/03/19/jiang-cheng-you-ji-2/</id>
+    <published>2025-03-19T08:23:25.038Z</published>
+    <updated>2025-03-20T17:33:35.766Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;昨天去武汉大学赏樱，樱花没怎么看到，路倒是走了不少，就单纯记录一下，表示到此一游过。&lt;br&gt;&lt;img src=&quot;https://s2.loli.net/2025/03/21/uaZXOPg9AL7Syj5.png&quot; alt=&quot;游览路线&quot;&gt;&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="vision" scheme="http://increcrazer.github.io/categories/vision/"/>
+    
+    
+    <category term="diary, travel" scheme="http://increcrazer.github.io/tags/diary-travel/"/>
+    
+  </entry>
   
   <entry>
     <title>《三色绘恋》巡礼游记</title>
@@ -497,31 +522,6 @@
     
     
     <category term="apparatus, polarization" scheme="http://increcrazer.github.io/tags/apparatus-polarization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>叠层阻抗含义</title>
-    <link href="http://increcrazer.github.io/2024/07/30/die-ceng-zu-kang-han-yi/"/>
-    <id>http://increcrazer.github.io/2024/07/30/die-ceng-zu-kang-han-yi/</id>
-    <published>2024-07-30T13:10:49.062Z</published>
-    <updated>2024-11-17T14:53:40.393Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这是一张14层的叠层阻抗表，黄色标注了1-4层的三阶盲埋：&lt;br&gt;&lt;img src=&quot;https://s2.loli.net/2024/07/30/D9UOSApXMT4EBdj.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;strong&gt;注：FR4图中写错，FR4 = Fire</summary>
-        
-      
-    
-    
-    
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
-    
-    
-    <category term="electronic, PCB" scheme="http://increcrazer.github.io/tags/electronic-PCB/"/>
     
   </entry>
   
