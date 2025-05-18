@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-03-20T17:55:18.684Z</updated>
+  <updated>2025-05-18T13:28:00.653Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阻抗匹配计算工具</title>
+    <link href="http://increcrazer.github.io/2025/05/18/zu-kang-pi-pei-ji-suan-gong-ju/"/>
+    <id>http://increcrazer.github.io/2025/05/18/zu-kang-pi-pei-ji-suan-gong-ju/</id>
+    <published>2025-05-18T09:17:12.287Z</published>
+    <updated>2025-05-18T13:28:00.653Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-终端阻抗失配&quot;&gt;&lt;a href=&quot;#1-终端阻抗失配&quot; class=&quot;headerlink&quot; title=&quot;1 终端阻抗失配&quot;&gt;&lt;/a&gt;1 终端阻抗失配&lt;/h2&gt;&lt;p&gt;反射系数$&#92;Gamma$作用于$z=l$处的入射电压波。&lt;/p&gt;
+&lt;script</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="electronic, PCB" scheme="http://increcrazer.github.io/tags/electronic-PCB/"/>
+    
+  </entry>
   
   <entry>
     <title>江城游记2</title>
@@ -496,32 +522,6 @@
     
     
     <category term="diary, landscape" scheme="http://increcrazer.github.io/tags/diary-landscape/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Thorlabs PAX1000不准直会发生的现象及原因探寻</title>
-    <link href="http://increcrazer.github.io/2024/08/21/thorlabs-pax1000-bu-zhun-zhi-hui-fa-sheng-de-xian-xiang-ji-yuan-yin-tan-xun/"/>
-    <id>http://increcrazer.github.io/2024/08/21/thorlabs-pax1000-bu-zhun-zhi-hui-fa-sheng-de-xian-xiang-ji-yuan-yin-tan-xun/</id>
-    <published>2024-08-21T11:43:58.729Z</published>
-    <updated>2024-11-17T13:58:06.772Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;0-现象&quot;&gt;&lt;a href=&quot;#0-现象&quot; class=&quot;headerlink&quot; title=&quot;0 现象&quot;&gt;&lt;/a&gt;0 现象&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;前几天使用matlab</summary>
-        
-      
-    
-    
-    
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
-    
-    
-    <category term="apparatus, polarization" scheme="http://increcrazer.github.io/tags/apparatus-polarization/"/>
     
   </entry>
   
