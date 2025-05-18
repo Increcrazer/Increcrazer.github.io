@@ -404,14 +404,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -796,7 +796,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<h2 id="4-四分之一波长阻抗变换器"><a href="#4-四分之一波长阻抗变换器" class="headerlink" title="4 四分之一波长阻抗变换器"></a>4 四分之一波长阻抗变换器</h2><p>Quarter-Wave Transformer（四分之一波长阻抗变换器）是一种利用传输线的阻抗变换特性，在特定频率下实现阻抗匹配的无源器件。其核心原理是通过一段长度为$λ/4$（信号波长的1/4）的传输线，将负载阻抗$Z_L$转换为目标阻抗$Z_{in}$，从而消除反射，可以通过上一节的计算器进行验证。<br><img src="https://s2.loli.net/2025/05/18/iPwAkEsyxmhfHjN.png" alt=""></p>
+<h2 id="4-四分之一波长阻抗变换器"><a href="#4-四分之一波长阻抗变换器" class="headerlink" title="4 四分之一波长阻抗变换器"></a>4 四分之一波长阻抗变换器</h2><p>Quarter-Wave Transformer（四分之一波长阻抗变换器）是一种利用传输线的阻抗变换特性，在特定频率下实现阻抗匹配的无源器件。其核心原理是通过一段长度为$λ/4$（信号波长的1/4）的传输线，将负载阻抗$Z_L$转换为目标阻抗$Z_{in}$，从而消除反射。</p>
+<p>这里四分之一波长变压器不是消除所有反射，而是通过干涉设计，让输入端“看起来没有反射”，即$Z_0$到$Z_1$产生的反射波与终端的反射波相互抵消，但是终端仍然受反射影响，这可以通过上一节的计算器进行验证。</p>
+<p>到这里是不是有疑问，那这个阻抗变换器有个蛋用！确实，这个设计的主要目的是让输入端看起来无反射，实现最大功率传输。另外，由于$Z_1$比$Z_0$更接近$Z_L$，所以终端反射也有所降低。</p>
+<p>到这里，敏锐如我立马想到能不能搞多级四分之一波长变压器来逐步减小反射，GPT给出肯定答案，你发明了<strong>多级阻抗匹配网络</strong>！<br><img src="https://s2.loli.net/2025/05/18/iPwAkEsyxmhfHjN.png" alt=""></p>
 <h2 id="5-终端开路或短路时传输线上的电压波电流波情况"><a href="#5-终端开路或短路时传输线上的电压波电流波情况" class="headerlink" title="5 终端开路或短路时传输线上的电压波电流波情况"></a>5 终端开路或短路时传输线上的电压波电流波情况</h2><p>可以发现传输线上的电压幅度不是固定的，但是终端上的电压幅度总是为0（短路）或2（断路）。<br><img src="https://s2.loli.net/2025/05/18/RNBdFbUKju8L4QT.gif" alt=""><br>此处感谢Deepseek生成的代码。计算入射波和反射波的叠加时将反射处看成0坐标点，可以减少计算量。<br></p><pre class="language-matlab" data-language="matlab"><code class="language-matlab">% 传输线电压和电流波动画 - 短路和开路情况
 clear; close all; clc;
 
@@ -1381,7 +1384,7 @@ end
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.2k</span>
+                        class="white-color">29.4k</span>
             
             
             
