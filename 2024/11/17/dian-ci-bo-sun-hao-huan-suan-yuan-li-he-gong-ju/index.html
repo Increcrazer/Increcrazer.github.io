@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="损耗换算工具, VIP">
-    <meta name="description" content="1 公式
-\beta=\frac{2\pi(n+i\kappa)}\lambda
-E=E_0e^{i\beta L}=E_0e^{i\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}">
+    <meta name="keywords" content="电磁波损耗换算原理和工具, VIP">
+    <meta name="description" content="1 电磁波在介质中的损耗电磁波在介质中传播时会受到多种损耗，主要包括欧姆损耗（电磁波产生电流发生）、介电损耗（也叫极化损耗，介质中的偶极子在交变电场作用下发生极化弛豫，导致能量耗散，如高频下的水分子极化）、磁损耗（磁性介质中磁矩的弛豫或涡流">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,7 +28,7 @@ E=E_0e^{i\beta L}=E_0e^{i\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}"
 </script>
 
 
-    <title>损耗换算工具 | VIP</title>
+    <title>电磁波损耗换算原理和工具 | VIP</title>
     <link rel="icon" type="image/png" href="/medias/wyafavicon.png">
     
 
@@ -343,7 +341,7 @@ E=E_0e^{i\beta L}=E_0e^{i\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}"
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">损耗换算工具</h1>
+                    <h1 class="description center-align post-title">电磁波损耗换算原理和工具</h1>
                 </div>
             </div>
         </div>
@@ -402,14 +400,14 @@ E=E_0e^{i\beta L}=E_0e^{i\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}"
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    525
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -432,18 +430,127 @@ E=E_0e^{i\beta L}=E_0e^{i\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}"
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-公式"><a href="#1-公式" class="headerlink" title="1 公式"></a>1 公式</h2><script type="math/tex; mode=display">
-\beta=\frac{2\pi(n+i\kappa)}\lambda</script><script type="math/tex; mode=display">
-E=E_0e^{i\beta L}=E_0e^{i\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>Define $\alpha[dB/cm]$:</p>
+                <h2 id="1-电磁波在介质中的损耗"><a href="#1-电磁波在介质中的损耗" class="headerlink" title="1 电磁波在介质中的损耗"></a>1 电磁波在介质中的损耗</h2><p>电磁波在介质中传播时会受到多种损耗，主要包括<strong>欧姆损耗（电磁波产生电流发生）、介电损耗（也叫极化损耗，介质中的偶极子在交变电场作用下发生极化弛豫，导致能量耗散，如高频下的水分子极化）、磁损耗（磁性介质中磁矩的弛豫或涡流效应导致能量耗散，如铁氧体材料）和辐射损耗等</strong>。这些损耗在电磁波传播的数学模型中通常通过复介电常数、复磁导率以及传播常数来体现。对于半导体来说，可以通过掺杂使之$\sigma$发生变化，因此这里主要讨论欧姆损耗。</p>
+<p>假设时谐电磁场，麦克斯韦方程组可简化为：</p>
 <script type="math/tex; mode=display">
-\eta=10^{-\frac{100\alpha}{10}L}</script><p>Solve $\alpha(\kappa)[dB/cm]$:</p>
+\nabla\times\mathbf{E}=-j\omega\mu\mathbf{H},\quad\nabla\times\mathbf{H}=\sigma\mathbf{E}+j\omega\epsilon\mathbf{E}</script><p>合并可得：</p>
+<script type="math/tex; mode=display">
+\nabla^2\mathbf{E}+\omega^2\mu\epsilon\left(1+\frac{\sigma}{j\omega\epsilon}\right)\mathbf{E}=0</script><p>因此引入复介电损耗：</p>
+<script type="math/tex; mode=display">
+\tilde{\epsilon}=\epsilon^{\prime}-j\epsilon^{\prime\prime}=\epsilon-j\frac{\sigma}{\omega}=\epsilon_0\epsilon_r-j\frac{\sigma}{\omega}</script><p>并用损耗正切角描述损耗相较储能的大小：</p>
+<script type="math/tex; mode=display">
+\tan\delta=\frac{\epsilon^{\prime\prime}}{\epsilon^{\prime}}=\frac{\sigma}{\omega\epsilon}</script><div id="loss-tangent-calculator">
+  <h3>损耗正切角 (tan δ) 计算器</h3>
+  <table border="1" class="loss-tangent-table">
+    <thead>
+      <tr>
+        <th>角频率 ω (rad/s)</th>
+        <th>介电常数 ε (F/m)</th>
+        <th>电导率 σ (S/m)</th>
+        <th>tan δ</th>
+        <th>δ (rad)</th>
+        <th>δ (°)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="number" id="omega1" min="0" value="1e6" step="1e3"></td>
+        <td><input type="number" id="epsilon1" min="0" value="8.854e-12" step="1e-12"></td>
+        <td><input type="number" id="sigma1" min="0" value="0.01" step="0.001"></td>
+        <td class="tan-delta-result" id="tan-delta-res1"></td>
+        <td class="delta-rad-result" id="delta-rad-res1"></td>
+        <td class="delta-deg-result" id="delta-deg-res1"></td>
+      </tr>
+      <tr>
+        <td><input type="number" id="omega2" min="0" value="1e9" step="1e6"></td>
+        <td><input type="number" id="epsilon2" min="0" value="5e-11" step="1e-12"></td>
+        <td><input type="number" id="sigma2" min="0" value="0.1" step="0.01"></td>
+        <td class="tan-delta-result" id="tan-delta-res2"></td>
+        <td class="delta-rad-result" id="delta-rad-res2"></td>
+        <td class="delta-deg-result" id="delta-deg-res2"></td>
+      </tr>
+      <tr>
+        <td><input type="number" id="omega3" min="0" value="2e10" step="1e8"></td>
+        <td><input type="number" id="epsilon3" min="0" value="2e-11" step="1e-12"></td>
+        <td><input type="number" id="sigma3" min="0" value="1.0" step="0.1"></td>
+        <td class="tan-delta-result" id="tan-delta-res3"></td>
+        <td class="delta-rad-result" id="delta-rad-res3"></td>
+        <td class="delta-deg-result" id="delta-deg-res3"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+const lossTangentCalculator = {
+  calculate() {
+    const rows = document.querySelectorAll('#loss-tangent-calculator tbody tr');
+
+    rows.forEach((row, index) => {
+      try {
+        const i = index + 1;
+        const omega = parseFloat(document.getElementById(`omega${i}`).value);
+        const epsilon = parseFloat(document.getElementById(`epsilon${i}`).value);
+        const sigma = parseFloat(document.getElementById(`sigma${i}`).value);
+
+        if (isNaN(omega) || isNaN(epsilon) || isNaN(sigma) || omega <= 0 || epsilon <= 0) {
+          this.clearRow(i);
+          return;
+        }
+
+        // 计算 tan δ = σ / (ωε)
+        const tanDelta = sigma / (omega * epsilon);
+        const deltaRad = Math.atan(tanDelta); // δ = arctan(tan δ)
+        const deltaDeg = deltaRad * (180 / Math.PI); // 弧度转角度
+
+        // 更新结果
+        document.getElementById(`tan-delta-res${i}`).textContent = tanDelta.toExponential(4);
+        document.getElementById(`delta-rad-res${i}`).textContent = deltaRad.toFixed(6);
+        document.getElementById(`delta-deg-res${i}`).textContent = deltaDeg.toFixed(2);
+
+      } catch (e) {
+        this.clearRow(i);
+        console.error(`计算第${i}行时出错:`, e);
+      }
+    });
+  },
+
+  clearRow(i) {
+    document.getElementById(`tan-delta-res${i}`).textContent = 'N/A';
+    document.getElementById(`delta-rad-res${i}`).textContent = 'N/A';
+    document.getElementById(`delta-deg-res${i}`).textContent = 'N/A';
+  },
+
+  init() {
+    const inputs = document.querySelectorAll('#loss-tangent-calculator input');
+    inputs.forEach(input => {
+      input.addEventListener('input', () => this.calculate());
+    });
+    this.calculate(); // 初始计算
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  lossTangentCalculator.init();
+});
+</script>
+
+
+<h2 id="2-各种传播损耗参数的换算"><a href="#2-各种传播损耗参数的换算" class="headerlink" title="2 各种传播损耗参数的换算"></a>2 各种传播损耗参数的换算</h2><p>对于沿$z$轴正向传输电磁波$E=E_0e^{-\gamma z}$，其传播常数为：</p>
+<script type="math/tex; mode=display">
+\gamma=jk=j\omega\sqrt{\mu(\epsilon^{\prime}-j\epsilon^{\prime\prime})}
+=j\frac{2\pi}\lambda(n-j \kappa)</script><p>其中$\alpha$代表衰减，于是</p>
+<script type="math/tex; mode=display">
+E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定义 $\alpha[dB/cm]$:</p>
+<script type="math/tex; mode=display">
+\eta=10^{-\frac{100\alpha}{10}L}</script><p>解出 $\alpha(\kappa)[dB/cm]$:</p>
 <script type="math/tex; mode=display">
 10^{-\frac{100\alpha}{10}L}=e^{-\frac{4\pi}\lambda \kappa L}</script><script type="math/tex; mode=display">
-\alpha = \frac{0.2}{ln(10)}\frac{2\pi}{\lambda}\kappa</script><p>Define $\alpha’[1/m]$:</p>
+\alpha = \frac{0.2}{ln(10)}\frac{2\pi}{\lambda}\kappa</script><p>定义 $\alpha’[1/m]$:</p>
 <script type="math/tex; mode=display">
-\eta=e^{-\alpha'L}</script><p>Solve $\alpha’(\alpha)[dB/cm]$:</p>
+\eta=e^{-\alpha'L}</script><p>解出 $\alpha’(\alpha)[dB/cm]$:</p>
 <script type="math/tex; mode=display">
-\alpha'=10 \alpha ln(10)</script><h2 id="2-转换器"><a href="#2-转换器" class="headerlink" title="2 转换器"></a>2 转换器</h2><p>
+\alpha'=10 \alpha ln(10)</script><p>
   <title>参数转换器</title>
   <style>
     .table-container {
@@ -479,8 +586,9 @@ E=E_0e^{i\beta L}=E_0e^{i\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}<
 </p>
 
   <div class="table-container">
+    <h3>损耗参数换算工具</h3>
     <div class="table-title"></div>
-    <table id="conversionTable" class="display">
+    <table border="1" id="conversionTable" class="display">
       <thead>
         <tr>
           <th>λ(nm)</th>
@@ -623,7 +731,7 @@ E=E_0e^{i\beta L}=E_0e^{i\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://increcrazer.github.io/2024/11/17/sun-hao-huan-suan-gong-ju/">http://increcrazer.github.io/2024/11/17/sun-hao-huan-suan-gong-ju/</a>
+                    <a href="http://increcrazer.github.io/2024/11/17/dian-ci-bo-sun-hao-huan-suan-yuan-li-he-gong-ju/">http://increcrazer.github.io/2024/11/17/dian-ci-bo-sun-hao-huan-suan-yuan-li-he-gong-ju/</a>
                 </span>
             </div>
             <div class="reprint__notice">
