@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-05-26T01:56:16.176Z</updated>
+  <updated>2025-07-09T16:03:26.393Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -17,27 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>xxx</title>
-    <link href="http://increcrazer.github.io/2025/05/26/xin-jian-wen-ben-wen-dang/"/>
-    <id>http://increcrazer.github.io/2025/05/26/xin-jian-wen-ben-wen-dang/</id>
+    <title>一种超高效的IQ调制器工作点调节算法</title>
+    <link href="http://increcrazer.github.io/2025/06/15/yi-chong-chao-gao-xiao-de-iq-diao-zhi-qi-gong-zuo-dian-diao-jie-suan-fa/"/>
+    <id>http://increcrazer.github.io/2025/06/15/yi-chong-chao-gao-xiao-de-iq-diao-zhi-qi-gong-zuo-dian-diao-jie-suan-fa/</id>
+    <published>2025-06-15T04:21:25.045Z</published>
+    <updated>2025-07-09T16:03:26.393Z</updated>
+    
+    
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="modulator" scheme="http://increcrazer.github.io/tags/modulator/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>行波调制器上电压 公式摘录</title>
+    <link href="http://increcrazer.github.io/2025/05/26/xing-bo-diao-zhi-qi-shang-dian-ya-gong-shi-zhai-lu/"/>
+    <id>http://increcrazer.github.io/2025/05/26/xing-bo-diao-zhi-qi-shang-dian-ya-gong-shi-zhai-lu/</id>
     <published>2025-05-25T16:52:59.899Z</published>
-    <updated>2025-05-26T01:56:16.176Z</updated>
+    <updated>2025-07-09T16:03:53.114Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2025/05/26/Yboq8tTX14yBfHV.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://s2.loli.net/2025/05/26/xlA3wE6rv87qCyO.png&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/document/1070563/&quot;&gt;Traveling Wave Optical Modulator Usinga Directional Coupler</summary>
         
       
     
     
     
-    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
     
     
-    <category term="tool, convert" scheme="http://increcrazer.github.io/tags/tool-convert/"/>
+    <category term="modulator" scheme="http://increcrazer.github.io/tags/modulator/"/>
     
   </entry>
   
@@ -496,32 +515,6 @@
     
     
     <category term="tool, QKD" scheme="http://increcrazer.github.io/tags/tool-QKD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>角度弧度换算工具</title>
-    <link href="http://increcrazer.github.io/2024/09/16/jiao-du-hu-du-huan-suan-gong-ju/"/>
-    <id>http://increcrazer.github.io/2024/09/16/jiao-du-hu-du-huan-suan-gong-ju/</id>
-    <published>2024-09-16T07:54:57.050Z</published>
-    <updated>2024-11-17T14:53:02.667Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;角度⇔弧度转换器&quot;&gt;&lt;a href=&quot;#角度⇔弧度转换器&quot; class=&quot;headerlink&quot; title=&quot;角度⇔弧度转换器&quot;&gt;&lt;/a&gt;角度⇔弧度转换器&lt;/h2&gt;&lt;div class=&quot;table-container&quot;&gt;
-    &lt;div</summary>
-        
-      
-    
-    
-    
-    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
-    
-    
-    <category term="tool, convert" scheme="http://increcrazer.github.io/tags/tool-convert/"/>
     
   </entry>
   
