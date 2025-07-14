@@ -478,7 +478,7 @@
                         <div class="summary block-with-text">
                             
                                 
-  79f2e4c391842f89c9f6c3a86a1921bcb0f9fb6a9f0c28dd2a5975ed2825fb10972fea2a6f4c2c76c9aa5dbbea47bbb0d562de2fca0ed94366a7c
+  79f2e4c391842f89c9f6c3a86a1921bcce52132496ddaa496ea861092e11f94e7240a8d3db1397daa2e140829509f6544bef4ce23a388fe5cd337
                             
                         </div>
                         <div class="publish-info">
@@ -1333,6 +1333,22 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
