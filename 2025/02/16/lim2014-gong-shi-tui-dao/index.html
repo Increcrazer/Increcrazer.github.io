@@ -400,14 +400,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    8 分
                 </div>
                 
 
@@ -519,25 +519,46 @@ w
 -\lambda_{\mathrm{EC}}-6\log_2\frac{21}{\varepsilon_{\mathrm{sec}}}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}} \right\rfloor 
 \end{aligned}</script><h2 id="5-B4"><a href="#5-B4" class="headerlink" title="5 (B4)"></a>5 (B4)</h2><p>$10\varepsilon_1+2\varepsilon_2$来自于密钥率公式中<em>Hoeffding’s inequality</em>的使用次数，下面进行统计：<br>$\varepsilon_1$:<br>$\mathrm{s_{X,0}}$ 2次 + $\mathrm{s_{X,1}}$ 3次 + $\mathrm{s_{Z,0}}$ 2次 + $\mathrm{s_{Z,1}}$ 3次 = 10次</p>
 <p>$\varepsilon_2$:<br>$\mathrm{v_{Z,1}}$ 2次</p>
-<h2 id="6-错误率和探测率"><a href="#6-错误率和探测率" class="headerlink" title="6 错误率和探测率"></a>6 错误率和探测率</h2><h3 id="6-1-探测器不设置死时间"><a href="#6-1-探测器不设置死时间" class="headerlink" title="6.1 探测器不设置死时间"></a>6.1 探测器不设置死时间</h3><p>这对应于本文的公式：</p>
-<p><img src="https://s2.loli.net/2025/07/19/3GEKCfHiFPqcIAL.png" alt=""></p>
-<p><strong>错误率中的$p_{dc}$项解释：</strong></p>
-<p><img src="https://s2.loli.net/2025/07/19/4grAWqImfFlMCD2.png" alt=""></p>
-<p>探测窗口中暗计数事件一共有四种情况：D1和D2都无、仅D1发生、仅D2发生、D1和D2都发生，这些事件发生的概率分别是$1-p_{dc}^2$、$p_{dc}(1-p_{dc})$、$(1-p_{dc})p_{dc}$、$p_{dc}^2$（这里的$p_{dc}$是指单个探测器中的一个时间窗口内发生暗计数事件的概率），因此暗计数事件贡献的错误率为$0.5(1-p_{dc})p_{dc}+0.5p_{dc}^2=0.5p_{dc}$.</p>
-<p>所以推测文章里的$p_{dc}$应该是在一个时间窗口内发生暗计数事件的概率。</p>
-<p><strong>$D_{k}$的解释：</strong></p>
-<p>空白计数对应这样的情况：光子未到达探测器且在时间窗口中两探测器都未发生暗计数事件。这个情况发生的概率是$(1-p_{dc})^2\exp(-\eta_{\mathrm{sys}}k)\approx(1-2p_{dc})\exp(-\eta_{\mathrm{sys}}k)$.</p>
-<p><strong>$R_{k}$的解释：</strong></p>
-<p>某个时间窗口的计数也可能来自于后脉冲。</p>
-<h3 id="6-2-探测器设置死时间"><a href="#6-2-探测器设置死时间" class="headerlink" title="6.2 探测器设置死时间"></a>6.2 探测器设置死时间</h3><p>这对应于<a target="_blank" rel="noopener" href="https://pubs.aip.org/aip/apl/article-abstract/112/17/171104/312107/Finite-key-analysis-for-the-1-decoy-state-QKD">Rusca2018</a>的公式：</p>
-<p><img src="https://s2.loli.net/2025/07/19/DoRCg8YbqVkzEy1.png" alt=""></p>
-<p><strong>探测率的解释：</strong></p>
-<p><img src="https://s2.loli.net/2025/07/19/D1XHQLUkazNIrYx.png" alt=""></p>
-<p><strong>$c_{dt}$的解释：</strong></p>
-<p>$c_{dt}=加了死时间的计数(P_{\mathbb{Z},det}\times R)/没加死时间的计数(P_{\mathbb{Z},det,tot}\times R)$</p>
-<p>因为：$加了死时间的计数+由于死时间而忽略的计数=没加死时间的计数,$</p>
-<p>所以：$P_{\mathbb{Z},det}\times R + (P_{\mathbb{Z},det}\times R\times t_{DT})\times R\times P_{\mathbb{Z},det,tot} = P_{\mathbb{Z},det,tot}\times R,$<br>求解可得$c_{dt}=1/(1+P_{\mathbb{Z},det,tot}\times R\times t_{DT})$.</p>
+<!-- ## 6 错误率和探测率
+### 6.1 探测器不设置死时间
+这对应于本文的公式：
 
+![](https://s2.loli.net/2025/07/19/3GEKCfHiFPqcIAL.png)
+
+**错误率中的$p_{dc}$项解释：**
+
+![](https://s2.loli.net/2025/07/19/4grAWqImfFlMCD2.png)
+
+探测窗口中暗计数事件一共有四种情况：D1和D2都无、仅D1发生、仅D2发生、D1和D2都发生，这些事件发生的概率分别是$1-p_{dc}^2$、$p_{dc}(1-p_{dc})$、$(1-p_{dc})p_{dc}$、$p_{dc}^2$（这里的$p_{dc}$是指单个探测器中的一个时间窗口内发生暗计数事件的概率），因此暗计数事件贡献的错误率为$0.5(1-p_{dc})p_{dc}+0.5p_{dc}^2=0.5p_{dc}$.
+
+所以推测文章里的$p_{dc}$应该是在一个时间窗口内发生暗计数事件的概率。
+
+**$D_{k}$的解释：**
+
+空白计数对应这样的情况：光子未到达探测器且在时间窗口中两探测器都未发生暗计数事件。这个情况发生的概率是$(1-p_{dc})^2\exp(-\eta_{\mathrm{sys}}k)\approx(1-2p_{dc})\exp(-\eta_{\mathrm{sys}}k)$.
+
+
+**$R_{k}$的解释：**
+
+某个时间窗口的计数也可能来自于后脉冲。
+
+### 6.2 探测器设置死时间
+这对应于[Rusca2018](https://pubs.aip.org/aip/apl/article-abstract/112/17/171104/312107/Finite-key-analysis-for-the-1-decoy-state-QKD)的公式：
+
+![](https://s2.loli.net/2025/07/19/DoRCg8YbqVkzEy1.png)
+
+**探测率的解释：**
+
+![](https://s2.loli.net/2025/07/19/D1XHQLUkazNIrYx.png)
+
+**$c_{dt}$的解释：**
+
+$c_{dt}=加了死时间的计数(P_{\mathbb{Z},det}\times R)/没加死时间的计数(P_{\mathbb{Z},det,tot}\times R)$
+
+因为：$加了死时间的计数+由于死时间而忽略的计数=没加死时间的计数,$
+
+所以：$P_{\mathbb{Z},det}\times R + (P_{\mathbb{Z},det}\times R\times t_{DT})\times R\times P_{\mathbb{Z},det,tot} = P_{\mathbb{Z},det,tot}\times R,$
+求解可得$c_{dt}=1/(1+P_{\mathbb{Z},det,tot}\times R\times t_{DT})$. -->
                 
             </div>
             <hr/>
@@ -1033,7 +1054,7 @@ w
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">30.1k</span>
+                        class="white-color">29.6k</span>
             
             
             
