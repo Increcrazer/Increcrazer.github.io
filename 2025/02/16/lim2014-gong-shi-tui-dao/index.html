@@ -523,8 +523,7 @@ w
 <p><img src="https://s2.loli.net/2025/07/19/3GEKCfHiFPqcIAL.png" alt=""></p>
 <p><strong>错误率中的$p_{dc}$项解释：</strong></p>
 <p><img src="https://s2.loli.net/2025/07/19/4grAWqImfFlMCD2.png" alt=""></p>
-<p>探测窗口中暗计数事件一共有四种情况：D1和D2都无、仅D1发生、仅D2发生、D1和D2都发生，这些事件发生的概率分别是$1-p_{dc}^2$、$p_{dc}(1-p_{dc})$、$(1-p_{dc})p_{dc}$、$p_{dc}^2$（这里的$p_{dc}$是指单个探测器中的一个时间窗口内发生暗计数事件的概率），因此暗计数事件贡献的错误率为$0.5(1-p_{dc})p_{dc}+0.5p_{dc}^2=0.5p_{dc}$.</p>
-<p>所以推测文章里的$p_{dc}$应该是在一个时间窗口内发生暗计数事件的概率。</p>
+<p>探测窗口中暗计数事件一共有四种情况：D1和D2都无、仅D1发生、仅D2发生、D1和D2都发生，这些事件发生的概率分别是$(1-p_{dc})^2$、$p_{dc}(1-p_{dc})$、$(1-p_{dc})p_{dc}$、$p_{dc}^2$（这里的$p_{dc}$是指单个探测器中的一个时间窗口内发生暗计数事件的概率），因此暗计数事件贡献的错误率为$(1-p_{dc})p_{dc}+0.5p_{dc}^2≈p_{dc}$.</p>
 <p><strong>$D_{k}$的解释：</strong></p>
 <p>空白计数对应这样的情况：光子未到达探测器且在时间窗口中两探测器都未发生暗计数事件。这个情况发生的概率是$(1-p_{dc})^2\exp(-\eta_{\mathrm{sys}}k)\approx(1-2p_{dc})\exp(-\eta_{\mathrm{sys}}k)$.</p>
 <p><strong>$R_{k}$的解释：</strong></p>
@@ -537,6 +536,8 @@ w
 <p>$c_{dt}=加了死时间的计数(P_{\mathbb{Z},det}\times R)/没加死时间的计数(P_{\mathbb{Z},det,tot}\times R)$</p>
 <p>因为：$加了死时间的计数+由于死时间而忽略的计数=没加死时间的计数,$</p>
 <p>所以：$P_{\mathbb{Z},det}\times R + (P_{\mathbb{Z},det}\times R\times t_{DT})\times R\times P_{\mathbb{Z},det,tot} = P_{\mathbb{Z},det,tot}\times R,$<br>求解可得$c_{dt}=1/(1+P_{\mathbb{Z},det,tot}\times R\times t_{DT})$.</p>
+<p><strong>$P_{DC}/2$的解释：</strong></p>
+<p>这里的$P_{DC}$应该是在时间窗口发生暗计数事件的概率，暗含了两个探测器。</p>
 
                 
             </div>
