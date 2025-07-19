@@ -526,7 +526,7 @@ w
 <p>探测窗口中暗计数事件一共有四种情况：D1和D2都无、仅D1发生、仅D2发生、D1和D2都发生，这些事件发生的概率分别是$1-p_{dc}^2$、$p_{dc}(1-p_{dc})$、$(1-p_{dc})p_{dc}$、$p_{dc}^2$（这里的$p_{dc}$是指单个探测器中的一个时间窗口内发生暗计数事件的概率），因此暗计数事件贡献的错误率为$0.5(1-p_{dc})p_{dc}+0.5p_{dc}^2=0.5p_{dc}$.</p>
 <p>所以推测文章里的$p_{dc}$应该是在一个时间窗口内发生暗计数事件的概率。</p>
 <p><strong>$D_{k}$的解释：</strong></p>
-<p>空白计数对应这样的情况：光子未到达探测器且在时间窗口中两探测器都未发生暗计数事件。这个情况发生的概率是$(1-p_{dc})^2\exp(-\eta_{\mathrm{sys}}k)≈(1-2p_{dc})\exp(-\eta_{\mathrm{sys}}k)$.</p>
+<p>空白计数对应这样的情况：光子未到达探测器且在时间窗口中两探测器都未发生暗计数事件。这个情况发生的概率是$(1-p_{dc})^2\exp(-\eta_{\mathrm{sys}}k)\approx(1-2p_{dc})\exp(-\eta_{\mathrm{sys}}k)$.</p>
 <p><strong>$R_{k}$的解释：</strong></p>
 <p>某个时间窗口的计数也可能来自于后脉冲。</p>
 <h3 id="6-2-探测器设置死时间"><a href="#6-2-探测器设置死时间" class="headerlink" title="6.2 探测器设置死时间"></a>6.2 探测器设置死时间</h3><p>这对应于<a target="_blank" rel="noopener" href="https://pubs.aip.org/aip/apl/article-abstract/112/17/171104/312107/Finite-key-analysis-for-the-1-decoy-state-QKD">Rusca2018</a>的公式：</p>
