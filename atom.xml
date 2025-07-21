@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-07-19T12:12:34.253Z</updated>
+  <updated>2025-07-21T06:48:54.765Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>光芯片数据备忘</title>
+    <link href="http://increcrazer.github.io/2025/07/21/guang-xin-pian-shu-ju-bei-wang/"/>
+    <id>http://increcrazer.github.io/2025/07/21/guang-xin-pian-shu-ju-bei-wang/</id>
+    <published>2025-07-21T03:35:14.485Z</published>
+    <updated>2025-07-21T06:48:54.765Z</updated>
+    
+    
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="photonic" scheme="http://increcrazer.github.io/tags/photonic/"/>
+    
+  </entry>
   
   <entry>
     <title>Sixto2022-公式推导</title>
@@ -488,32 +507,6 @@
     
     
     <category term="apparatus, datasheet" scheme="http://increcrazer.github.io/tags/apparatus-datasheet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对频率啁啾的定量理解</title>
-    <link href="http://increcrazer.github.io/2024/09/21/dui-pin-lu-zhou-jiu-de-ding-liang-li-jie/"/>
-    <id>http://increcrazer.github.io/2024/09/21/dui-pin-lu-zhou-jiu-de-ding-liang-li-jie/</id>
-    <published>2024-09-21T03:22:34.792Z</published>
-    <updated>2024-11-17T14:54:35.478Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;0-简介&quot;&gt;&lt;a href=&quot;#0-简介&quot; class=&quot;headerlink&quot; title=&quot;0 简介&quot;&gt;&lt;/a&gt;0 简介&lt;/h2&gt;&lt;p&gt;众所周知，在信号路径某点上，信号的时域波形表达式如下:&lt;/p&gt;
-&lt;script type=&quot;math/tex;</summary>
-        
-      
-    
-    
-    
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
-    
-    
-    <category term="optics, signal" scheme="http://increcrazer.github.io/tags/optics-signal/"/>
     
   </entry>
   
