@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-07-21T12:07:46.501Z</updated>
+  <updated>2025-07-23T07:11:12.354Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SIP数据备忘</title>
+    <link href="http://increcrazer.github.io/2025/07/23/sip-shu-ju-bei-wang/"/>
+    <id>http://increcrazer.github.io/2025/07/23/sip-shu-ju-bei-wang/</id>
+    <published>2025-07-23T07:06:08.512Z</published>
+    <updated>2025-07-23T07:11:12.354Z</updated>
+    
+    
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="photonic" scheme="http://increcrazer.github.io/tags/photonic/"/>
+    
+  </entry>
   
   <entry>
     <title>光芯片数据备忘</title>
@@ -482,31 +501,6 @@
     
     
     <category term="tool, convert" scheme="http://increcrazer.github.io/tags/tool-convert/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>New Focus 1544光电探测器 手册摘录</title>
-    <link href="http://increcrazer.github.io/2024/10/27/new-focus-1544-guang-dian-tan-ce-qi-shou-ce-zhai-lu/"/>
-    <id>http://increcrazer.github.io/2024/10/27/new-focus-1544-guang-dian-tan-ce-qi-shou-ce-zhai-lu/</id>
-    <published>2024-10-27T14:19:28.827Z</published>
-    <updated>2024-11-03T15:28:22.557Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-光纤带宽计算公式&quot;&gt;&lt;a href=&quot;#1-光纤带宽计算公式&quot; class=&quot;headerlink&quot; title=&quot;1 光纤带宽计算公式&quot;&gt;&lt;/a&gt;1 光纤带宽计算公式&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
-    
-    
-    <category term="apparatus, datasheet" scheme="http://increcrazer.github.io/tags/apparatus-datasheet/"/>
     
   </entry>
   
