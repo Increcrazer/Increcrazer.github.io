@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-07-23T08:17:03.964Z</updated>
+  <updated>2025-08-15T17:58:40.864Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>波分复用光纤QKD的退化机制</title>
+    <link href="http://increcrazer.github.io/2025/08/16/bo-fen-fu-yong-guang-xian-qkd-de-tui-hua-ji-zhi/"/>
+    <id>http://increcrazer.github.io/2025/08/16/bo-fen-fu-yong-guang-xian-qkd-de-tui-hua-ji-zhi/</id>
+    <published>2025-08-15T16:51:06.692Z</published>
+    <updated>2025-08-15T17:58:40.864Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-拉曼散射&quot;&gt;&lt;a href=&quot;#1-拉曼散射&quot; class=&quot;headerlink&quot; title=&quot;1 拉曼散射&quot;&gt;&lt;/a&gt;1 拉曼散射&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;定义：拉曼散射是光子与光纤中振动模式（光学声子，optical</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
+    
+    
+    <category term="QKD, fiber" scheme="http://increcrazer.github.io/tags/QKD-fiber/"/>
+    
+  </entry>
   
   <entry>
     <title>SIP数据备忘</title>
@@ -476,31 +502,6 @@
     
     
     <category term="tool, photonics" scheme="http://increcrazer.github.io/tags/tool-photonics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>电磁波损耗换算原理和工具</title>
-    <link href="http://increcrazer.github.io/2024/11/17/dian-ci-bo-sun-hao-huan-suan-yuan-li-he-gong-ju/"/>
-    <id>http://increcrazer.github.io/2024/11/17/dian-ci-bo-sun-hao-huan-suan-yuan-li-he-gong-ju/</id>
-    <published>2024-11-17T14:52:23.543Z</published>
-    <updated>2025-05-25T05:08:54.136Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-电磁波在介质中的损耗&quot;&gt;&lt;a href=&quot;#1-电磁波在介质中的损耗&quot; class=&quot;headerlink&quot; title=&quot;1 电磁波在介质中的损耗&quot;&gt;&lt;/a&gt;1</summary>
-        
-      
-    
-    
-    
-    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
-    
-    
-    <category term="tool, convert" scheme="http://increcrazer.github.io/tags/tool-convert/"/>
     
   </entry>
   
