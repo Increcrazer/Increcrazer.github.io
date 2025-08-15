@@ -73,11 +73,22 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
 </head>
 
+<!-- KaTeX 支持 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  });">
+</script> -->
 
 <body>
     <header class="navbar-fixed">
@@ -430,96 +441,126 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.89.022307"><strong><em>Lim C C W, Curty M, Walenta N, et al. Concise security bounds for practical decoy-state quantum key distribution[J]. Physical Review A, 2014, 89(2): 022307.</em></strong></a></p>
+                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.89.022307"><em><strong>Lim C C W, Curty M, Walenta N, et al. Concise security bounds for practical decoy-state quantum key distribution[J]. Physical Review A, 2014, 89(2): 022307.</strong></em></a></p>
 <p><strong>主要内容</strong>：</p>
 <ul>
-<li>诱骗态分析继承<a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326"><strong><em>Ma2005</em></strong></a>；</li>
-<li>密钥率公式不再采用<a target="_blank" rel="noopener" href="https://arxiv.org/abs/quant-ph/0212066"><strong><em>GLLP</em></strong></a>技术路线算得的，而是将后处理步骤分解进行计算。两个公式在形式上等效，但后者利用安全参数$\varepsilon$，得到的密钥率更有意义；</li>
+<li>诱骗态分析继承<a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326"><em><strong>Ma2005</strong></em></a>；</li>
+<li>密钥率公式不再采用<a target="_blank" rel="noopener" href="https://arxiv.org/abs/quant-ph/0212066"><em><strong>GLLP</strong></em></a>技术路线算得的，而是将后处理步骤分解进行计算。两个公式在形式上等效，但后者利用安全参数$\varepsilon$，得到的密钥率更有意义；</li>
 <li>终结了诱骗态有限码长分析问题；</li>
 <li>详细描述诱骗态协议的每一步操作，对于完全不懂理论的工程师非常友好。</li>
 </ul>
 <hr>
-<h2 id="1-A4、A5、A6"><a href="#1-A4、A5、A6" class="headerlink" title="1 (A4、A5、A6)"></a>1 (A4、A5、A6)</h2><p>不难发现：</p>
+<h2 id="1-A4、A5、A6">1 (A4、A5、A6)</h2>
+<p>不难发现：</p>
 <ul>
 <li>$p_{\mu}Q_{\mu}N=n_{\mu}$，其中$p_{\mu}$是Alice发送强度为${\mu}$的脉冲的概率，$N$是Alice发送的脉冲总数，$n_{\mu}$是Bob收到的脉冲中属于强度${\mu}$的脉冲的数量。</li>
 <li>$\tau_{n} Y_{n}N=s_{n}$，其中$\tau_{n}$是Alice发送光子数为$n$的脉冲的概率，$N$是Alice发送的脉冲总数，$s_{n}$是Bob收到的脉冲中属于光子数$n$的脉冲的数量。</li>
 <li>$p_{\mu}Q_{\mu}NE_{\mu}=m_{\mu}$，其中$p_{\mu}$是Alice发送强度为${\mu}$的脉冲的概率，$N$是Alice发送的脉冲总数，$m_{\mu}$是Bob收到的脉冲中属于强度${\mu}$但是出现比特错误的脉冲的数量。</li>
 <li>$\tau_{n} Y_{n}Ne_n=v_{n}$，其中$\tau_{n}$是Alice发送光子数为$n$的脉冲的概率，$N$是Alice发送的脉冲总数，$v_{n}$是Bob收到的脉冲中属于光子数$n$但是出现比特错误的脉冲的数量。</li>
 </ul>
-<p>所以可以直接把这几个式子带入<a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326"><strong><em>Ma2015</em></strong></a>替换进行计算。</p>
-<p>或者直接硬算也可以，以(A4)举例：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-&\frac{\mu_{2}e^{\mu_{3}}n_{\mathbf{X},\mu_{3}}^{*}}{p_{\mu_{3}}}-\frac{\mu_{3}e^{\mu_{2}}n_{\mathbf{X},\mu_{2}}^{*}}{p_{\mu_{2}}} \\
-&= \mu_{2}e^{\mu_{3}}\frac{\sum_{n=0}^{\infty}p_{\mu_{3}|n}s_{\mathrm{Х},n}}{p_{\mu_{3}}} - \mu_{3}e^{\mu_{2}}\frac{\sum_{n=0}^{\infty}p_{\mu_{2}|n}s_{\mathrm{Х},n}}{p_{\mu_{2}}} \\
-&= \mu_{2}e^{\mu_{3}}\sum_{n=0}^{\infty}\frac{p_{\mu_{3}|n}s_{\mathrm{Х},n}}{p_{\mu_{3}}} - \mu_{3}e^{\mu_{2}}\sum_{n=0}^{\infty}\frac{p_{\mu_{2}|n}s_{\mathrm{Х},n}}{p_{\mu_{2}}} \\
-&= \mu_{2}e^{\mu_{3}}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{e^{-\mu_{3}}\mu_{3}^n}{n!}s_{\mathrm{Х},n} - \mu_{3}e^{\mu_{2}}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{e^{-\mu_{2}}\mu_{2}^n}{n!}s_{\mathrm{Х},n} \\
-&= \mu_{2}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{\mu_{3}^n}{n!}s_{\mathrm{Х},n} - \mu_{3}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{\mu_{2}^n}{n!}s_{\mathrm{Х},n} \\
-&= \frac{(\mu_2-\mu_3)s_{\mathbf{X},0}}{\tau_0}-\mu_2\mu_3\sum_{n=2}^\infty\frac{(\mu_2^{n-1}-\mu_3^{n-1})s_{\mathbf{X},n}}{n!\tau_n}
-\end{aligned}</script><h2 id="2-B1"><a href="#2-B1" class="headerlink" title="2 (B1)"></a>2 (B1)</h2><ul>
-<li><p><strong>证明：</strong></p>
-<script type="math/tex; mode=display">
-  \begin{aligned}
-  H_{\mathrm{min}}^{\nu}(\mathbf{X}_{\mathrm{A}}|\mathbf{E}) & \geqslant H_{\mathrm{min}}^{\alpha_{1}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}\mathbf{E}\right) \\
-  & +H_{\mathrm{min}}^{\alpha_{3}+2\alpha_{4}+\alpha_{5}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}|\mathbf{E}\right)-2\log_{2}\frac{1}{\alpha_{2}}-1
-  \end{aligned}</script><p>  其中$\nu=2\alpha_1+\alpha_2+(\alpha_3+2\alpha_4+\alpha_5)\mathrm{~where~}\alpha_i&gt;0\text{ for all }i$.</p>
+<p>所以可以直接把这几个式子带入<a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326"><em><strong>Ma2015</strong></em></a>替换进行计算。</p>
+<p>或者直接硬算也可以，以(A4)举例：<br>
+$$<br>
+\begin{aligned}<br>
+&amp;\frac{\mu_{2}e^{\mu_{3}}n_{\mathbf{X},\mu_{3}}^{<em>}}{p_{\mu_{3}}}-\frac{\mu_{3}e^{\mu_{2}}n_{\mathbf{X},\mu_{2}}^{</em>}}{p_{\mu_{2}}} \<br>
+&amp;= \mu_{2}e^{\mu_{3}}\frac{\sum_{n=0}^{\infty}p_{\mu_{3}|n}s_{\mathrm{Х},n}}{p_{\mu_{3}}} - \mu_{3}e^{\mu_{2}}\frac{\sum_{n=0}^{\infty}p_{\mu_{2}|n}s_{\mathrm{Х},n}}{p_{\mu_{2}}} \<br>
+&amp;= \mu_{2}e^{\mu_{3}}\sum_{n=0}^{\infty}\frac{p_{\mu_{3}|n}s_{\mathrm{Х},n}}{p_{\mu_{3}}} - \mu_{3}e^{\mu_{2}}\sum_{n=0}^{\infty}\frac{p_{\mu_{2}|n}s_{\mathrm{Х},n}}{p_{\mu_{2}}} \<br>
+&amp;= \mu_{2}e^{\mu_{3}}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{e^{-\mu_{3}}\mu_{3}^n}{n!}s_{\mathrm{Х},n} - \mu_{3}e^{\mu_{2}}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{e^{-\mu_{2}}\mu_{2}^n}{n!}s_{\mathrm{Х},n} \<br>
+&amp;= \mu_{2}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{\mu_{3}^n}{n!}s_{\mathrm{Х},n} - \mu_{3}\sum_{n=0}^{\infty}\frac{1}{\tau_n}\frac{\mu_{2}^n}{n!}s_{\mathrm{Х},n} \<br>
+&amp;= \frac{(\mu_2-\mu_3)s_{\mathbf{X},0}}{\tau_0}-\mu_2\mu_3\sum_{n=2}^\infty\frac{(\mu_2^{n-1}-\mu_3^{n-1})s_{\mathbf{X},n}}{n!\tau_n}<br>
+\end{aligned}<br>
+$$</p>
+<h2 id="2-B1">2 (B1)</h2>
+<ul>
+<li>
+<p><strong>证明：</strong><br>
+$$<br>
+\begin{aligned}<br>
+H_{\mathrm{min}}^{\nu}(\mathbf{X}<em>{\mathrm{A}}|\mathbf{E}) &amp; \geqslant H</em>{\mathrm{min}}^{\alpha_{1}}\left(\mathbf{X}<em>{\mathrm{A}}^{\mathrm{s}}|\mathbf{X}</em>{\mathrm{A}}^{\mathrm{v}}\mathbf{X}<em>{\mathrm{A}}^{\mathrm{m}}\mathbf{E}\right) \<br>
+&amp; +H</em>{\mathrm{min}}^{\alpha_{3}+2\alpha_{4}+\alpha_{5}}\left(\mathbf{X}<em>{\mathrm{A}}^{\mathrm{v}}\mathbf{X}</em>{\mathrm{A}}^{\mathrm{m}}|\mathbf{E}\right)-2\log_{2}\frac{1}{\alpha_{2}}-1<br>
+\end{aligned}<br>
+$$<br>
+其中$\nu=2\alpha_1+\alpha_2+(\alpha_3+2\alpha_4+\alpha_5)\mathrm{~where~}\alpha_i&gt;0\text{ for all }i$.</p>
 <p><strong>解：</strong></p>
-<p>  根据<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6408179"><strong><em>Alexander2013</em></strong></a>的<em>Theorem 13</em>，</p>
-<script type="math/tex; mode=display">
-  \begin{aligned}
-  H_{\min}^{\varepsilon+\varepsilon^{\prime}+2\varepsilon^{\prime\prime}}(AB|C)_{\rho}\geq H_{\min}^{\varepsilon^{\prime\prime}}(A|BC)_{\rho}+H_{\min}^{\varepsilon^{\prime}}(B|C)_{\rho}-f(\varepsilon)
-  \end{aligned}</script><script type="math/tex; mode=display">
-  \begin{aligned}
-  f:\varepsilon\mapsto\log\frac{1}{1-\sqrt{1-\varepsilon^2}}
-  \end{aligned}</script><p>  而当$\varepsilon$很小时，$\log(1/1-\sqrt{1-\varepsilon^{2}})$可以用$\log(2/\varepsilon^2)$替代，于是全部带入得证。</p>
-<p>  同理可得：</p>
-<script type="math/tex; mode=display">
-  \begin{aligned}
-  & H_{\min}^{\alpha_{3}+2\alpha_{4}+\alpha_{5}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}|\mathbf{E}\right) \\
-  & \geqslant H_{\min}^{\alpha_{4}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}|\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{E}\right)+H_{\min}^{\alpha_{\mathrm{s}}}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}|\mathbf{E}\right)-2\log_{2}\frac{1}{\alpha_{3}}-1
-  \end{aligned}</script></li>
-<li><p><strong>证明：</strong></p>
-<script type="math/tex; mode=display">
-  \begin{aligned}
-  H_{\min}^{\alpha_1}\left(\mathbf{X}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{X}_{\mathrm{A}}^{\mathrm{v}}\mathbf{X}_{\mathrm{A}}^{\mathrm{m}}\mathbf{E}\right)\geqslant s_{\mathrm{X},1}-H_{\max}^{\alpha_1}\left(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}}\right)
-  \end{aligned}</script><p><strong>解：</strong></p>
-<p> 根据熵不确定性关系，显然。值得注意的是，真空事件不包含任何关于Alice选择的比特值的信息，这是因为真空事件没有传输任何光子，因此Eve无法从中获取信息；另外，假设所有多光子都被Eve拦截，所以Eve知道所有多光子组分的信息。</p>
+<p>根据<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6408179"><em><strong>Alexander2013</strong></em></a>的<em>Theorem 13</em>，<br>
+$$<br>
+\begin{aligned}<br>
+H_{\min}^{\varepsilon+\varepsilon^{\prime}+2\varepsilon^{\prime\prime}}(AB|C)<em>{\rho}\geq H</em>{\min}^{\varepsilon^{\prime\prime}}(A|BC)<em>{\rho}+H</em>{\min}^{\varepsilon^{\prime}}(B|C)_{\rho}-f(\varepsilon)<br>
+\end{aligned}<br>
+$$</p>
+<p>$$<br>
+\begin{aligned}<br>
+f:\varepsilon\mapsto\log\frac{1}{1-\sqrt{1-\varepsilon^2}}<br>
+\end{aligned}<br>
+$$<br>
+而当$\varepsilon$很小时，$\log(1/1-\sqrt{1-\varepsilon^{2}})$可以用$\log(2/\varepsilon^2)$替代，于是全部带入得证。</p>
+<p>同理可得：<br>
+$$<br>
+\begin{aligned}<br>
+&amp; H_{\min}^{\alpha_{3}+2\alpha_{4}+\alpha_{5}}\left(\mathbf{X}<em>{\mathrm{A}}^{\mathrm{v}}\mathbf{X}</em>{\mathrm{A}}^{\mathrm{m}}|\mathbf{E}\right) \<br>
+&amp; \geqslant H_{\min}^{\alpha_{4}}\left(\mathbf{X}<em>{\mathrm{A}}^{\mathrm{m}}|\mathbf{X}</em>{\mathrm{A}}^{\mathrm{v}}\mathbf{E}\right)+H_{\min}^{\alpha_{\mathrm{s}}}\left(\mathbf{X}<em>{\mathrm{A}}^{\mathrm{v}}|\mathbf{E}\right)-2\log</em>{2}\frac{1}{\alpha_{3}}-1<br>
+\end{aligned}<br>
+$$</p>
+</li>
+<li>
+<p><strong>证明：</strong><br>
+$$<br>
+\begin{aligned}<br>
+H_{\min}^{\alpha_1}\left(\mathbf{X}<em>{\mathrm{A}}^{\mathrm{s}}|\mathbf{X}</em>{\mathrm{A}}^{\mathrm{v}}\mathbf{X}<em>{\mathrm{A}}^{\mathrm{m}}\mathbf{E}\right)\geqslant s</em>{\mathrm{X},1}-H_{\max}^{\alpha_1}\left(\mathbf{Z}<em>{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}</em>{\mathrm{B}}^{\mathrm{s}}\right)<br>
+\end{aligned}<br>
+$$</p>
+<p><strong>解：</strong></p>
+<p>根据熵不确定性关系，显然。值得注意的是，真空事件不包含任何关于Alice选择的比特值的信息，这是因为真空事件没有传输任何光子，因此Eve无法从中获取信息；另外，假设所有多光子都被Eve拦截，所以Eve知道所有多光子组分的信息。</p>
 </li>
 </ul>
-<h2 id="3-B2"><a href="#3-B2" class="headerlink" title="3 (B2)"></a>3 (B2)</h2><p><strong>证明：</strong></p>
-<script type="math/tex; mode=display">
-H_{\max}^{\alpha_1}(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}})\leqslant s_{\mathrm{X},1}h(c_{\mathrm{X},1}/s_{\mathrm{X},1})</script><p><strong>解：</strong></p>
-<p>根据经典最大熵的定义：$H_{\max}(X|Y)=\max_{y\in Y}\log|\mathrm{supp}P_{X|Y=y}|$，其中$\mathrm{supp}P_{X|Y=y}$是在给定$Y=y$的条件下随机变量$X$所可能取的所有值的集合，$\mathrm{supp}$代表支集，$|*|$代表集合个数，因此有：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-H_{\max}^{\alpha_1}(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}})
-& \leqslant 
-H_{\max}(\mathbf{Z}_{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}_{\mathrm{B}}^{\mathrm{s}}) \\
-& \leqslant
-\log\sum_{w=0}^{\lfloor s_{\mathrm{X},1}(c_{\mathrm{X},1}/s_{\mathrm{X},1})\rfloor}
-\begin{pmatrix}
-s_{\mathrm{X},1} \\
-w
-\end{pmatrix} \\
-&\leqslant 
- s_{\mathrm{X},1}h(c_{\mathrm{X},1}/s_{\mathrm{X},1})
-\end{aligned}</script><h2 id="4-B3"><a href="#4-B3" class="headerlink" title="4 (B3)"></a>4 (B3)</h2><script type="math/tex; mode=display">
-\begin{aligned}
-\ell
-&=\left\lfloor H_{\min}^{\nu}(\mathbf{X}_{\mathrm{A}}|\mathbf{E}^{\prime})-2\log_{2}\frac{1}{2\overline{\nu}}\right\rfloor \\
-& \geqslant \left\lfloor H_{\min}^{\nu}(\mathbf{X}_{\mathrm{A}}|\mathbf{E})-\lambda_{\mathrm{EC}}-\log_{2}2/\varepsilon_{\mathrm{cor}} -2\log_{2}\frac{1}{2\overline{\nu}} \right\rfloor \\
-& \geqslant \lfloor s_{\mathrm{Х},0}-2\log_2\frac{1}{\alpha_3}-1 +  s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right] -2\log_2\frac{1}{\alpha_2}-1 \\
-&-\lambda_{\mathrm{EC}}-\log_{2}2/\varepsilon_{\mathrm{cor}} -2\log_{2}\frac{1}{2\overline{\nu}} \rfloor  \\
-&= \left\lfloor s_{\mathrm{Х},0}+  s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right] 
--\lambda_{\mathrm{EC}}- \log_2[({\frac{1}{2\alpha_2\alpha_3\overline{\nu}})^2\frac{8}{\varepsilon_{\mathrm{cor}}}]
-} \right\rfloor \\
-&= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right]-\lambda_{\mathrm{EC}}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}\beta}\right\rfloor \\
-&= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}-s_{\mathbf{X},1}h(\phi_{\mathbf{X}}) -\lambda_{\mathrm{EC}}- \log_2\frac{1}{\varepsilon^6}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}}\right\rfloor \\
-&= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}-s_{\mathbf{X},1}h(\phi_{\mathbf{X}})
--\lambda_{\mathrm{EC}}-6\log_2\frac{21}{\varepsilon_{\mathrm{sec}}}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}} \right\rfloor 
-\end{aligned}</script><h2 id="5-B4"><a href="#5-B4" class="headerlink" title="5 (B4)"></a>5 (B4)</h2><p>$10\varepsilon_1+2\varepsilon_2$来自于密钥率公式中<em>Hoeffding’s inequality</em>的使用次数，下面进行统计：<br>$\varepsilon_1$:<br>$\mathrm{s_{X,0}}$ 2次 + $\mathrm{s_{X,1}}$ 3次 + $\mathrm{s_{Z,0}}$ 2次 + $\mathrm{s_{Z,1}}$ 3次 = 10次</p>
-<p>$\varepsilon_2$:<br>$\mathrm{v_{Z,1}}$ 2次</p>
-<h2 id="6-错误率和探测率"><a href="#6-错误率和探测率" class="headerlink" title="6 错误率和探测率"></a>6 错误率和探测率</h2><h3 id="6-1-探测器不设置死时间"><a href="#6-1-探测器不设置死时间" class="headerlink" title="6.1 探测器不设置死时间"></a>6.1 探测器不设置死时间</h3><p>这对应于本文的公式：</p>
+<h2 id="3-B2">3 (B2)</h2>
+<p><strong>证明：</strong><br>
+$$<br>
+H_{\max}^{\alpha_1}(\mathbf{Z}<em>{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}</em>{\mathrm{B}}^{\mathrm{s}})\leqslant s_{\mathrm{X},1}h(c_{\mathrm{X},1}/s_{\mathrm{X},1})<br>
+$$</p>
+<p><strong>解：</strong></p>
+<p>根据经典最大熵的定义：$H_{\max}(X|Y)=\max_{y\in Y}\log|\mathrm{supp}P_{X|Y=y}|$，其中$\mathrm{supp}P_{X|Y=y}$是在给定$Y=y$的条件下随机变量$X$所可能取的所有值的集合，$\mathrm{supp}$代表支集，$|*|$代表集合个数，因此有：<br>
+$$<br>
+\begin{aligned}<br>
+H_{\max}^{\alpha_1}(\mathbf{Z}<em>{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}</em>{\mathrm{B}}^{\mathrm{s}})<br>
+&amp; \leqslant<br>
+H_{\max}(\mathbf{Z}<em>{\mathrm{A}}^{\mathrm{s}}|\mathbf{Z}</em>{\mathrm{B}}^{\mathrm{s}}) \<br>
+&amp; \leqslant<br>
+\log\sum_{w=0}^{\lfloor s_{\mathrm{X},1}(c_{\mathrm{X},1}/s_{\mathrm{X},1})\rfloor}<br>
+\begin{pmatrix}<br>
+s_{\mathrm{X},1} \<br>
+w<br>
+\end{pmatrix} \<br>
+&amp;\leqslant<br>
+s_{\mathrm{X},1}h(c_{\mathrm{X},1}/s_{\mathrm{X},1})<br>
+\end{aligned}<br>
+$$</p>
+<h2 id="4-B3">4 (B3)</h2>
+<p>$$<br>
+\begin{aligned}<br>
+\ell<br>
+&amp;=\left\lfloor H_{\min}^{\nu}(\mathbf{X}<em>{\mathrm{A}}|\mathbf{E}^{\prime})-2\log</em>{2}\frac{1}{2\overline{\nu}}\right\rfloor \<br>
+&amp; \geqslant \left\lfloor H_{\min}^{\nu}(\mathbf{X}<em>{\mathrm{A}}|\mathbf{E})-\lambda</em>{\mathrm{EC}}-\log_{2}2/\varepsilon_{\mathrm{cor}} -2\log_{2}\frac{1}{2\overline{\nu}} \right\rfloor \<br>
+&amp; \geqslant \lfloor s_{\mathrm{Х},0}-2\log_2\frac{1}{\alpha_3}-1 +  s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right] -2\log_2\frac{1}{\alpha_2}-1 \<br>
+&amp;-\lambda_{\mathrm{EC}}-\log_{2}2/\varepsilon_{\mathrm{cor}} -2\log_{2}\frac{1}{2\overline{\nu}} \rfloor  \<br>
+&amp;= \left\lfloor s_{\mathrm{Х},0}+  s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right]<br>
+-\lambda_{\mathrm{EC}}- \log_2[({\frac{1}{2\alpha_2\alpha_3\overline{\nu}})^2\frac{8}{\varepsilon_{\mathrm{cor}}}]<br>
+} \right\rfloor \<br>
+&amp;= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}\left[1-h\left(\frac{c_{\mathbf{X},1}}{s_{\mathbf{X},1}}\right)\right]-\lambda_{\mathrm{EC}}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}\beta}\right\rfloor \<br>
+&amp;= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}-s_{\mathbf{X},1}h(\phi_{\mathbf{X}}) -\lambda_{\mathrm{EC}}- \log_2\frac{1}{\varepsilon^6}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}}\right\rfloor \<br>
+&amp;= \left\lfloor s_{\mathbf{X},0}+s_{\mathbf{X},1}-s_{\mathbf{X},1}h(\phi_{\mathbf{X}})<br>
+-\lambda_{\mathrm{EC}}-6\log_2\frac{21}{\varepsilon_{\mathrm{sec}}}-\log_2\frac{2}{\varepsilon_{\mathrm{cor}}} \right\rfloor<br>
+\end{aligned}<br>
+$$</p>
+<h2 id="5-B4">5 (B4)</h2>
+<p>$10\varepsilon_1+2\varepsilon_2$来自于密钥率公式中<em>Hoeffding’s inequality</em>的使用次数，下面进行统计：<br>
+$\varepsilon_1$:<br>
+$\mathrm{s_{X,0}}$ 2次 + $\mathrm{s_{X,1}}$ 3次 + $\mathrm{s_{Z,0}}$ 2次 + $\mathrm{s_{Z,1}}$ 3次 = 10次</p>
+<p>$\varepsilon_2$:<br>
+$\mathrm{v_{Z,1}}$ 2次</p>
+<h2 id="6-错误率和探测率">6 错误率和探测率</h2>
+<h3 id="6-1-探测器不设置死时间">6.1 探测器不设置死时间</h3>
+<p>这对应于本文的公式：</p>
 <p><img src="https://s2.loli.net/2025/07/19/3GEKCfHiFPqcIAL.png" alt=""></p>
 <p><strong>错误率中的$p_{dc}$项解释：</strong></p>
 <p><img src="https://s2.loli.net/2025/07/19/4grAWqImfFlMCD2.png" alt=""></p>
@@ -528,18 +569,22 @@ w
 <p>空白计数对应这样的情况：光子未到达探测器且在时间窗口中两探测器都未发生暗计数事件。这个情况发生的概率是$(1-p_{dc})^2\exp(-\eta_{\mathrm{sys}}k)\approx(1-2p_{dc})\exp(-\eta_{\mathrm{sys}}k)$.</p>
 <p><strong>$R_{k}$的解释：</strong></p>
 <p>某个时间窗口的计数也可能来自于后脉冲。</p>
-<h3 id="6-2-探测器设置死时间"><a href="#6-2-探测器设置死时间" class="headerlink" title="6.2 探测器设置死时间"></a>6.2 探测器设置死时间</h3><p>这对应于<a target="_blank" rel="noopener" href="https://pubs.aip.org/aip/apl/article-abstract/112/17/171104/312107/Finite-key-analysis-for-the-1-decoy-state-QKD">Rusca2018</a>的公式：</p>
+<h3 id="6-2-探测器设置死时间">6.2 探测器设置死时间</h3>
+<p>这对应于<a target="_blank" rel="noopener" href="https://pubs.aip.org/aip/apl/article-abstract/112/17/171104/312107/Finite-key-analysis-for-the-1-decoy-state-QKD">Rusca2018</a>的公式：</p>
 <p><img src="https://s2.loli.net/2025/07/19/DoRCg8YbqVkzEy1.png" alt=""></p>
 <p><strong>探测率的解释：</strong></p>
 <p><img src="https://s2.loli.net/2025/07/19/D1XHQLUkazNIrYx.png" alt=""></p>
 <p><strong>$c_{dt}$的解释：</strong></p>
 <p>$c_{dt}=加了死时间的计数(P_{\mathbb{Z},det}\times R)/没加死时间的计数(P_{\mathbb{Z},det,tot}\times R)$</p>
 <p>因为：$加了死时间的计数+由于死时间而忽略的计数=没加死时间的计数,$</p>
-<p>所以：$P_{\mathbb{Z},det}\times R + (P_{\mathbb{Z},det}\times R\times t_{DT})\times R\times P_{\mathbb{Z},det,tot} = P_{\mathbb{Z},det,tot}\times R,$<br>求解可得$c_{dt}=1/(1+P_{\mathbb{Z},det,tot}\times R\times t_{DT})$.</p>
+<p>所以：$P_{\mathbb{Z},det}\times R + (P_{\mathbb{Z},det}\times R\times t_{DT})\times R\times P_{\mathbb{Z},det,tot} = P_{\mathbb{Z},det,tot}\times R,$<br>
+求解可得$c_{dt}=1/(1+P_{\mathbb{Z},det,tot}\times R\times t_{DT})$.</p>
 <p><strong>$P_{DC}/2$的解释：</strong></p>
 <p>这里的$P_{DC}$应该是在时间窗口发生暗计数事件的概率，暗含了两个探测器。</p>
-<h2 id="附：代码实现"><a href="#附：代码实现" class="headerlink" title="附：代码实现"></a>附：代码实现</h2><p><a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprotocol/Decoy_Lim2014_corefunc.m">Decoy_Lim2014_corefunc</a>为核心代码，<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprotocol/test_Decoy_Lim2014_corefunc.m">test_Decoy_Lim2014_corefunc</a>为验证代码。</p>
-<p>使用参数和论文相同，$\mu = [0.6,0.1,0.0002]$，$P_\mu = [0.5,0.25,0.25]$，渐近密钥率如下，和论文结果大致一致（没优化诱骗态参数）：<br><img src="https://s2.loli.net/2025/07/20/mXEnl3NhxFa5QcY.jpg" alt=""></p>
+<h2 id="附：代码实现">附：代码实现</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprotocol/Decoy_Lim2014_corefunc.m">Decoy_Lim2014_corefunc</a>为核心代码，<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprotocol/test_Decoy_Lim2014_corefunc.m">test_Decoy_Lim2014_corefunc</a>为验证代码。</p>
+<p>使用参数和论文相同，$\mu = [0.6,0.1,0.0002]$，$P_\mu = [0.5,0.25,0.25]$，渐近密钥率如下，和论文结果大致一致（没优化诱骗态参数）：<br>
+<img src="https://s2.loli.net/2025/07/20/mXEnl3NhxFa5QcY.jpg" alt=""></p>
 
                 
             </div>
@@ -1036,7 +1081,7 @@ w
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31k</span>
+                        class="white-color">31.8k</span>
             
             
             

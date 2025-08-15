@@ -73,11 +73,22 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
 </head>
 
+<!-- KaTeX 支持 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  });">
+</script> -->
 
 <body>
     <header class="navbar-fixed">
@@ -400,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    805
+                    820
                 </div>
                 
 
@@ -430,7 +441,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901"><strong><em>Hwang W Y. Quantum key distribution with high loss: toward global secure communication[J]. Physical review letters, 2003, 91(5): 057901.</em></strong></a></p>
+                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901"><em><strong>Hwang W Y. Quantum key distribution with high loss: toward global secure communication[J]. Physical review letters, 2003, 91(5): 057901.</strong></em></a></p>
 <p><strong>主要内容</strong>：</p>
 <ul>
 <li>提出诱骗态协议（1强度信号$\mu$ + 1强度诱骗$\mu^\prime$；$\mu&lt;1$，$\mu^\prime\geq1$）；</li>
@@ -439,8 +450,11 @@
 </ul>
 <hr>
 <ul>
-<li>注：原文中$Y$表示Gain $Q$,$y$表示Yield $Y$。虽然不常规，但本文沿用该标记。</li>
-<li><p>先看一个例子。现在有两种光子数统计分布的光源：</p>
+<li>
+<p>注：原文中$Y$表示Gain $Q$,$y$表示Yield $Y$。虽然不常规，但本文沿用该标记。</p>
+</li>
+<li>
+<p>先看一个例子。现在有两种光子数统计分布的光源：</p>
 <ul>
 <li>I光源（作为信号光）的脉冲有90%的概率发送单光子，有10%的概率发送多光子；</li>
 <li>II光源（作为诱骗光）有10%的概率发送单光子，有90%的概率发送多光子；</li>
@@ -448,42 +462,65 @@
 </ul>
 <p>然后Eve对它们进行PNS攻击：先对每个脉冲进行光子数测量，如果是单光子则丢弃，如果是多光子则扣掉一个留给自己，剩下的发给Bob。可想而知Bob的探测事件大部分将由II光源提供(即$Y_{II}^m&gt;Y_{I}^m$,$m$表多光子成分)，而这可以通过Alice和Bob后处理过程中强度比对得知，于是Alice和Bob能发现Eve进行了PNS攻击。这是诱骗态协议的核心思想。</p>
 </li>
-<li><p>如果Eve不想让Bob大部分探测事件由II光源提供，那么需要$Y_{I}^m$越大越好。写出它们的表达<br>式：</p>
-<script type="math/tex; mode=display">
-Y_{I}^m=\sum_{n=2}^\infty P_n^{I}(\mu)y_n</script><script type="math/tex; mode=display">
-Y_{II}^m=\sum_{n=2}^\infty P_n^{II}(\mu)y_n</script><script type="math/tex; mode=display">
-Y_{II}=\sum_{n=1}^\infty P_n^{II}(\mu)y_n</script><p>很容易得出不等式：</p>
-<script type="math/tex; mode=display">
-Y_{I}^m=\frac{Y_{I}^m}{Y_{II}^m}Y_{II}^m\leqslant\frac{Y_{I}^m}{Y_{II}^m}Y_{II}=MAX(Y_{I}^m)</script><p>这个$MAX(Y_{I}^m)$也即Alice和Bob估计出的被标记信号数的上限，即他们可以估计得到$\Delta \leq MAX(Y_{I}^m)/Y_S$.(<a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230503"><strong><em>Wang2005</em></strong></a>)</p>
+<li>
+<p>如果Eve不想让Bob大部分探测事件由II光源提供，那么需要$Y_{I}^m$越大越好。写出它们的表达<br>
+式：<br>
+$$<br>
+Y_{I}^m=\sum_{n=2}^\infty P_n^{I}(\mu)y_n<br>
+$$<br>
+$$<br>
+Y_{II}^m=\sum_{n=2}^\infty P_n^{II}(\mu)y_n<br>
+$$<br>
+$$<br>
+Y_{II}=\sum_{n=1}^\infty P_n^{II}(\mu)y_n<br>
+$$<br>
+很容易得出不等式：<br>
+$$<br>
+Y_{I}^m=\frac{Y_{I}^m}{Y_{II}^m}Y_{II}^m\leqslant\frac{Y_{I}^m}{Y_{II}^m}Y_{II}=MAX(Y_{I}^m)<br>
+$$<br>
+这个$MAX(Y_{I}^m)$也即Alice和Bob估计出的被标记信号数的上限，即他们可以估计得到$\Delta \leq MAX(Y_{I}^m)/Y_S$.(<a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230503"><em><strong>Wang2005</strong></em></a>)</p>
 <p>如果I和II光源都是相干态，那么推导可得Eve具有一种最歹毒的攻击策略，即原文式$(8)$，于是Alice和Bob可以由此估计出$MAX(Y_{I}^m)$。</p>
 </li>
-<li>为了成码，必须满足Bob端接收事件数大于被Eve攻击的事件数。如果全用信号态成码，那么需要：<script type="math/tex; mode=display">
-Y_{S} \geqslant MAX(Y_{I}^m)=\frac{Y_{I}^m}{Y_{II}^m}Y_{II}</script></li>
-<li><p>原文(14)式的推导：</p>
-<p>因为：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-P_n^{S}(\mu)=\frac{k}{n!}=ke^{1}*e^{-1}\frac{1^n}{n!}=keP_n^{C}(1)
-\end{aligned}</script><p>所以：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\frac{Y_{I}^m}{Y_{II}^m}
-&= \frac{\sum_{n=2}^\infty  P_n^{S}(\mu)y_n}{\sum_{n=2}^\infty  P_n^{C}(\mu')y_n} \\
-&= \frac{ek\sum_{n=2}^\infty  P_n^{C}(1)y_n}{\sum_{n=2}^\infty  P_n^{C}(\mu')y_n} \\
-& \leqslant ek\frac{P_2^C(1)}{P_2^C(\mu^{\prime})} \\
-&= k\frac{1}{2P_2^C(\mu^{\prime})}
-\end{aligned}</script><p>又由于：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\sum_{i=2}^\infty p_i=k\sum_{i=2}^\infty 1/i!=k(e-1)=\epsilon
-\end{aligned}</script><p>得到：$k=\epsilon/(e-1)$；</p>
-<p>所以：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\frac{Y_{I}^m}{Y_{II}^m}
-& \leqslant \frac{\epsilon}{2(e-1)P_2^{C}(\mu')}
-& <\frac{\epsilon}{P_2^C(\mu^{\prime})}
-\end{aligned}</script></li>
+<li>
+<p>为了成码，必须满足Bob端接收事件数大于被Eve攻击的事件数。如果全用信号态成码，那么需要：<br>
+$$<br>
+Y_{S} \geqslant MAX(Y_{I}^m)=\frac{Y_{I}^m}{Y_{II}^m}Y_{II}<br>
+$$</p>
+</li>
+<li>
+<p>原文(14)式的推导：</p>
+<p>因为：<br>
+$$<br>
+\begin{aligned}<br>
+P_n^{S}(\mu)=\frac{k}{n!}=ke^{1}*e^{-1}\frac{1^n}{n!}=keP_n^{C}(1)<br>
+\end{aligned}<br>
+$$<br>
+所以：<br>
+$$<br>
+\begin{aligned}<br>
+\frac{Y_{I}^m}{Y_{II}^m}<br>
+&amp;= \frac{\sum_{n=2}^\infty  P_n^{S}(\mu)y_n}{\sum_{n=2}^\infty  P_n^{C}(\mu’)y_n} \<br>
+&amp;= \frac{ek\sum_{n=2}^\infty  P_n^{C}(1)y_n}{\sum_{n=2}^\infty  P_n^{C}(\mu’)y_n} \<br>
+&amp; \leqslant ek\frac{P_2^C(1)}{P_2^C(\mu^{\prime})} \<br>
+&amp;= k\frac{1}{2P_2^C(\mu^{\prime})}<br>
+\end{aligned}<br>
+$$<br>
+又由于：<br>
+$$<br>
+\begin{aligned}<br>
+\sum_{i=2}^\infty p_i=k\sum_{i=2}^\infty 1/i!=k(e-1)=\epsilon<br>
+\end{aligned}<br>
+$$<br>
+得到：$k=\epsilon/(e-1)$；</p>
+<p>所以：<br>
+$$<br>
+\begin{aligned}<br>
+\frac{Y_{I}^m}{Y_{II}^m}<br>
+&amp; \leqslant \frac{\epsilon}{2(e-1)P_2^{C}(\mu’)}<br>
+&amp; &lt;\frac{\epsilon}{P_2^C(\mu^{\prime})}<br>
+\end{aligned}<br>
+$$</p>
+</li>
 </ul>
 
                 
@@ -981,7 +1018,7 @@ P_n^{S}(\mu)=\frac{k}{n!}=ke^{1}*e^{-1}\frac{1^n}{n!}=keP_n^{C}(1)
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31k</span>
+                        class="white-color">31.8k</span>
             
             
             

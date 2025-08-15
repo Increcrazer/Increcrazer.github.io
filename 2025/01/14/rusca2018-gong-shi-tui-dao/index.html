@@ -73,11 +73,22 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
 </head>
 
+<!-- KaTeX 支持 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  });">
+</script> -->
 
 <body>
     <header class="navbar-fixed">
@@ -400,14 +411,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    946
+                    980
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -430,7 +441,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.052336"><strong><em>Rusca D, Boaron A, Curty M, et al. Security proof for a simplified Bennett-Brassard 1984 quantum-key-distribution protocol[J]. Physical Review A, 2018, 98(5): 052336.</em></strong></a></p>
+                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.052336"><em><strong>Rusca D, Boaron A, Curty M, et al. Security proof for a simplified Bennett-Brassard 1984 quantum-key-distribution protocol[J]. Physical Review A, 2018, 98(5): 052336.</strong></em></a></p>
 <p><strong>主要内容</strong>：</p>
 <ul>
 <li>提出了三态协议，并将三态协议用于时间相位编码；</li>
@@ -439,126 +450,183 @@
 <li>对这种高效的时间编码方案进行常规的单诱骗态协议有限码长分析。</li>
 </ul>
 <hr>
-<h2 id="1-1-→-2"><a href="#1-1-→-2" class="headerlink" title="1 (1)→(2)"></a>1 (1)→(2)</h2><ul>
-<li><p>本质思想是发三态时，Alice只能发送$+$，Bob端只能检测$-$，所以得去掉(1)中的$p(+|+)$、$p(-|-)$、$p(+|-)$这几项。</p>
+<h2 id="1-1-→-2">1 (1)→(2)</h2>
+<ul>
+<li>
+<p>本质思想是发三态时，Alice只能发送$+$，Bob端只能检测$-$，所以得去掉(1)中的$p(+|+)$、$p(-|-)$、$p(+|-)$这几项。</p>
 </li>
-<li><p>对于(2)式的推导，我们先计算几项找找规律：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-p(0|0)
-&=|\langle 0|\mathcal{U}_{AE}|0\rangle|\phi\rangle|^{2} \\
-&=\left\langle\phi_0^0\right|\phi_0^0\rangle \\
-\end{aligned}</script><script type="math/tex; mode=display">
-\begin{aligned}
-p(1|0)
-&=|\langle 1|\mathcal{U}_{AE}|0\rangle|\phi\rangle|^{2} \\
-&=\left\langle\phi_0^1\right|\phi_0^1\rangle \\
-\end{aligned}</script></li>
-<li><p>于是可以引入写法</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-p(0|0) 
-&= \left\langle\phi_0^0\right|\phi_0^0\rangle \\
-&= \left\langle00\right|00\rangle
-\end{aligned}</script><p>且不难发现：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-p(i|j) = \left\langle ij\right|ij\rangle,(i,j=0,1,+,-)
-\end{aligned}</script></li>
-<li><p>对$i,j=+,-$的情况用$Z$基进行展开，可以得到：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-p(+|+) 
-&= \left\langle ++\right|++\rangle \\
-&= 1/4 (\langle00|+\langle00|+\langle00|+\langle00|)(|00\rangle+|01\rangle+|10\rangle+|11\rangle)\\
-&= 1/4 \langle ...|*|00\rangle+|01\rangle+|10\rangle+|11\rangle
-\end{aligned}</script><p>最后一步仅仅是使用了作者习惯的标记，这个标记可以帮助我们发现算式结构的相似性：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-|++\rangle 
-&= 1/2(|0\rangle+|1\rangle)(|0\rangle+|1\rangle)
-&= 1/2(|00\rangle+|01\rangle+|10\rangle+|11\rangle)
-\end{aligned}</script></li>
-<li><p>利用这个规律，不难直接得到：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-p(-|+) 
-&= \left\langle -+\right|-+\rangle \\
-&= 1/4 \langle ...|*|00\rangle+|01\rangle-|10\rangle-|11\rangle
-\end{aligned}</script><script type="math/tex; mode=display">
-\begin{aligned}
-p(-|-) 
-&= \left\langle --\right|--\rangle \\
-&= 1/4 \langle ...|*|00\rangle-|01\rangle-|10\rangle+|11\rangle
-\end{aligned}</script><script type="math/tex; mode=display">
-\begin{aligned}
-p(+|-) 
-&= \left\langle +-\right|+-\rangle \\
-&= 1/4 \langle ...|*|00\rangle-|01\rangle+|10\rangle-|11\rangle
-\end{aligned}</script><p>于是可得：</p>
-<script type="math/tex; mode=display">
-\sum_{i,j=+,-}p(i|j)=\sum_{i,j=0,1}p(i|j)</script></li>
-<li><p>另外，我们也能直接得到：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-p(0|±) 
-&= \left\langle 0±\right|0±\rangle \\
-&= 1/2 \langle ...|*|00\rangle±|01\rangle
-\end{aligned}</script><script type="math/tex; mode=display">
-\begin{aligned}
-p(1|±) 
-&= \left\langle 1±\right|1±\rangle \\
-&= 1/2 \langle ...|*|10\rangle±|11\rangle
-\end{aligned}</script><script type="math/tex; mode=display">
-\begin{aligned} 
-p(±|0) 
-&= \left\langle ±0\right|±0\rangle \\
-&= 1/2 \langle ...|*|00\rangle±|10\rangle
-\end{aligned}</script><script type="math/tex; mode=display">
-\begin{aligned}
-p(±|1) 
-&= \left\langle ±1\right|±1\rangle \\
-&= 1/2 \langle ...|*|01\rangle±|01\rangle
-\end{aligned}</script></li>
-<li><p>下面我们再看(1)式，它可以化简为：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-e_x
-&= \frac{p(-|+)+p(+|-)}{\sum_{i,j=0,1}p(i|j)} \\
-&= \frac{p(-|+)}{\sum_{i,j=0,1}p(i|j)} +\frac{p(+|-)}{\sum_{i,j=0,1}p(i|j)} \\
-&= \frac{p(-|+)}{\sum_{i,j=0,1}p(i|j)} +\frac{\sum_{i,j=0,1}p(i|j)-p(-|+)-p(+|+)-p(-|-)}{\sum_{i,j=0,1}p(i|j)} \\
-&= \frac{p(-|+)}{\sum_{i,j=0,1}p(i|j)} +1+\frac{p(-|+)-(2p(-|+)+p(+|+)+p(-|-))}{\sum_{i,j=0,1}p(i|j)}
-\end{aligned}</script><p>又由于：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-p(-|+)+p(+|+)
-&= 1/4 \langle ...|*|00\rangle+|01\rangle-|10\rangle-|11\rangle \\
-&+ 1/4 \langle ...|*|00\rangle+|01\rangle+|10\rangle+|11\rangle \\
-&= p(0|+)+p(1|+)
-\end{aligned}</script><script type="math/tex; mode=display">
-\begin{aligned}
-p(-|+)+p(-|-)
-&= 1/4 \langle ...|*|00\rangle+|01\rangle-|10\rangle-|11\rangle \\
-&+ 1/4 \langle ...|*|00\rangle-|01\rangle-|10\rangle+|11\rangle \\
-&= p(-|0)+p(-|1)
-\end{aligned}</script><p>所以：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}\
-e_{x} & =\frac{p(-|+)}{\sum_{i,j=0,1}p(i|j)} + 1+\frac{p(-|+)-\sum_{i=0,1}\left[p(-|i)+p(i|+)\right]}{\sum_{i,j=0,1}p(i|j)}
-\end{aligned}</script></li>
-<li><p>推导到这里就结束了，但是和(2)式相差一个max函数。个人感觉这个max函数是考虑了实际情况中可能会出现max函数里面小于0。</p>
+<li>
+<p>对于(2)式的推导，我们先计算几项找找规律：<br>
+$$<br>
+\begin{aligned}<br>
+p(0|0)<br>
+&amp;=|\langle 0|\mathcal{U}_{AE}|0\rangle|\phi\rangle|^{2} \<br>
+&amp;=\left\langle\phi_0^0\right|\phi_0^0\rangle \<br>
+\end{aligned}<br>
+$$</p>
+<p>$$<br>
+\begin{aligned}<br>
+p(1|0)<br>
+&amp;=|\langle 1|\mathcal{U}_{AE}|0\rangle|\phi\rangle|^{2} \<br>
+&amp;=\left\langle\phi_0^1\right|\phi_0^1\rangle \<br>
+\end{aligned}<br>
+$$</p>
+</li>
+<li>
+<p>于是可以引入写法<br>
+$$<br>
+\begin{aligned}<br>
+p(0|0)<br>
+&amp;= \left\langle\phi_0^0\right|\phi_0^0\rangle \<br>
+&amp;= \left\langle00\right|00\rangle<br>
+\end{aligned}<br>
+$$<br>
+且不难发现：<br>
+$$<br>
+\begin{aligned}<br>
+p(i|j) = \left\langle ij\right|ij\rangle,(i,j=0,1,+,-)<br>
+\end{aligned}<br>
+$$</p>
+</li>
+<li>
+<p>对$i,j=+,-$的情况用$Z$基进行展开，可以得到：<br>
+$$<br>
+\begin{aligned}<br>
+p(+|+)<br>
+&amp;= \left\langle ++\right|++\rangle \<br>
+&amp;= 1/4 (\langle00|+\langle00|+\langle00|+\langle00|)(|00\rangle+|01\rangle+|10\rangle+|11\rangle)\<br>
+&amp;= 1/4 \langle …|*|00\rangle+|01\rangle+|10\rangle+|11\rangle<br>
+\end{aligned}<br>
+$$<br>
+最后一步仅仅是使用了作者习惯的标记，这个标记可以帮助我们发现算式结构的相似性：<br>
+$$<br>
+\begin{aligned}<br>
+|++\rangle<br>
+&amp;= 1/2(|0\rangle+|1\rangle)(|0\rangle+|1\rangle)<br>
+&amp;= 1/2(|00\rangle+|01\rangle+|10\rangle+|11\rangle)<br>
+\end{aligned}<br>
+$$</p>
+</li>
+<li>
+<p>利用这个规律，不难直接得到：<br>
+$$<br>
+\begin{aligned}<br>
+p(-|+)<br>
+&amp;= \left\langle -+\right|-+\rangle \<br>
+&amp;= 1/4 \langle …|*|00\rangle+|01\rangle-|10\rangle-|11\rangle<br>
+\end{aligned}<br>
+$$</p>
+<p>$$<br>
+\begin{aligned}<br>
+p(-|-)<br>
+&amp;= \left\langle –\right|–\rangle \<br>
+&amp;= 1/4 \langle …|*|00\rangle-|01\rangle-|10\rangle+|11\rangle<br>
+\end{aligned}<br>
+$$</p>
+<p>$$<br>
+\begin{aligned}<br>
+p(+|-)<br>
+&amp;= \left\langle ±\right|±\rangle \<br>
+&amp;= 1/4 \langle …|*|00\rangle-|01\rangle+|10\rangle-|11\rangle<br>
+\end{aligned}<br>
+$$</p>
+<p>于是可得：<br>
+$$<br>
+\sum_{i,j=+,-}p(i|j)=\sum_{i,j=0,1}p(i|j)<br>
+$$</p>
+</li>
+<li>
+<p>另外，我们也能直接得到：<br>
+$$<br>
+\begin{aligned}<br>
+p(0|±)<br>
+&amp;= \left\langle 0±\right|0±\rangle \<br>
+&amp;= 1/2 \langle …|*|00\rangle±|01\rangle<br>
+\end{aligned}<br>
+$$</p>
+<p>$$<br>
+\begin{aligned}<br>
+p(1|±)<br>
+&amp;= \left\langle 1±\right|1±\rangle \<br>
+&amp;= 1/2 \langle …|*|10\rangle±|11\rangle<br>
+\end{aligned}<br>
+$$</p>
+<p>$$<br>
+\begin{aligned}<br>
+p(±|0)<br>
+&amp;= \left\langle ±0\right|±0\rangle \<br>
+&amp;= 1/2 \langle …|*|00\rangle±|10\rangle<br>
+\end{aligned}<br>
+$$</p>
+<p>$$<br>
+\begin{aligned}<br>
+p(±|1)<br>
+&amp;= \left\langle ±1\right|±1\rangle \<br>
+&amp;= 1/2 \langle …|*|01\rangle±|01\rangle<br>
+\end{aligned}<br>
+$$</p>
+</li>
+<li>
+<p>下面我们再看(1)式，它可以化简为：<br>
+$$<br>
+\begin{aligned}<br>
+e_x<br>
+&amp;= \frac{p(-|+)+p(+|-)}{\sum_{i,j=0,1}p(i|j)} \<br>
+&amp;= \frac{p(-|+)}{\sum_{i,j=0,1}p(i|j)} +\frac{p(+|-)}{\sum_{i,j=0,1}p(i|j)} \<br>
+&amp;= \frac{p(-|+)}{\sum_{i,j=0,1}p(i|j)} +\frac{\sum_{i,j=0,1}p(i|j)-p(-|+)-p(+|+)-p(-|-)}{\sum_{i,j=0,1}p(i|j)} \<br>
+&amp;= \frac{p(-|+)}{\sum_{i,j=0,1}p(i|j)} +1+\frac{p(-|+)-(2p(-|+)+p(+|+)+p(-|-))}{\sum_{i,j=0,1}p(i|j)}<br>
+\end{aligned}<br>
+$$</p>
+<p>又由于：<br>
+$$<br>
+\begin{aligned}<br>
+p(-|+)+p(+|+)<br>
+&amp;= 1/4 \langle …|<em>|00\rangle+|01\rangle-|10\rangle-|11\rangle \<br>
+&amp;+ 1/4 \langle …|</em>|00\rangle+|01\rangle+|10\rangle+|11\rangle \<br>
+&amp;= p(0|+)+p(1|+)<br>
+\end{aligned}<br>
+$$</p>
+<p>$$<br>
+\begin{aligned}<br>
+p(-|+)+p(-|-)<br>
+&amp;= 1/4 \langle …|<em>|00\rangle+|01\rangle-|10\rangle-|11\rangle \<br>
+&amp;+ 1/4 \langle …|</em>|00\rangle-|01\rangle-|10\rangle+|11\rangle \<br>
+&amp;= p(-|0)+p(-|1)<br>
+\end{aligned}<br>
+$$</p>
+<p>所以：<br>
+$$<br>
+\begin{aligned}<br>
+e_{x} &amp; =\frac{p(-|+)}{\sum_{i,j=0,1}p(i|j)} + 1+\frac{p(-|+)-\sum_{i=0,1}\left[p(-|i)+p(i|+)\right]}{\sum_{i,j=0,1}p(i|j)}<br>
+\end{aligned}<br>
+$$</p>
+</li>
+<li>
+<p>推导到这里就结束了，但是和(2)式相差一个max函数。个人感觉这个max函数是考虑了实际情况中可能会出现max函数里面小于0。</p>
 </li>
 </ul>
-<h2 id="2-2-→-7"><a href="#2-2-→-7" class="headerlink" title="2 (2)→(7)"></a>2 (2)→(7)</h2><ul>
-<li><p>这里给出一般步骤，往(2)中带入就完事，举例说明，比如：</p>
-<script type="math/tex; mode=display">
-p(0|0)= 2*p(t_0|0)</script><p>因为这里Bob仅用$t_0$时间仓作为判别依据。<br>不难得到所有的表达式：</p>
-<script type="math/tex; mode=display">
-p(1|01+)= 2*p(t_2|01+)</script><script type="math/tex; mode=display">
-p(0|01+)= 2*p(t_0|01+)</script><script type="math/tex; mode=display">
-p(-|01+)= p(t_1|01+)</script></li>
+<h2 id="2-2-→-7">2 (2)→(7)</h2>
+<ul>
+<li>
+<p>这里给出一般步骤，往(2)中带入就完事，举例说明，比如：<br>
+$$<br>
+p(0|0)= 2<em>p(t_0|0)<br>
+$$<br>
+因为这里Bob仅用$t_0$时间仓作为判别依据。<br>
+不难得到所有的表达式：<br>
+$$<br>
+p(1|01+)= 2</em>p(t_2|01+)<br>
+$$</p>
+<p>$$<br>
+p(0|01+)= 2*p(t_0|01+)<br>
+$$</p>
+<p>$$<br>
+p(-|01+)= p(t_1|01+)<br>
+$$</p>
+</li>
 </ul>
-<h2 id="3-7-→-11"><a href="#3-7-→-11" class="headerlink" title="3 (7)→(11)"></a>3 (7)→(11)</h2><ul>
+<h2 id="3-7-→-11">3 (7)→(11)</h2>
+<ul>
 <li>本质上是将原本$t_{side}$的判别用连续的一对相同量子态的$e$的判别替代</li>
 </ul>
 
@@ -1057,7 +1125,7 @@ p(-|01+)= p(t_1|01+)</script></li>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31k</span>
+                        class="white-color">31.8k</span>
             
             
             

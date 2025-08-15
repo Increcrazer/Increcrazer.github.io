@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="电磁波损耗换算原理和工具, VIP">
-    <meta name="description" content="1 电磁波在介质中的损耗电磁波在介质中传播时会受到多种损耗，主要包括欧姆损耗（电磁波产生电流发生）、介电损耗（也叫极化损耗，介质中的偶极子在交变电场作用下发生极化弛豫，导致能量耗散，如高频下的水分子极化）、磁损耗（磁性介质中磁矩的弛豫或涡流">
+    <meta name="description" content="1 电磁波在介质中的损耗
+电磁波在介质中传播时会受到多种损耗，主要包括欧姆损耗（电磁波产生电流发生）、介电损耗（也叫极化损耗，介质中的偶极子在交变电场作用下发生极化弛豫，导致能量耗散，如高频下的水分子极化）、磁损耗（磁性介质中磁矩的弛豫或涡">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -73,11 +74,22 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
 </head>
 
+<!-- KaTeX 支持 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  });">
+</script> -->
 
 <body>
     <header class="navbar-fixed">
@@ -430,16 +442,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-电磁波在介质中的损耗"><a href="#1-电磁波在介质中的损耗" class="headerlink" title="1 电磁波在介质中的损耗"></a>1 电磁波在介质中的损耗</h2><p>电磁波在介质中传播时会受到多种损耗，主要包括<strong>欧姆损耗（电磁波产生电流发生）、介电损耗（也叫极化损耗，介质中的偶极子在交变电场作用下发生极化弛豫，导致能量耗散，如高频下的水分子极化）、磁损耗（磁性介质中磁矩的弛豫或涡流效应导致能量耗散，如铁氧体材料）和辐射损耗等</strong>。这些损耗在电磁波传播的数学模型中通常通过复介电常数、复磁导率以及传播常数来体现。对于半导体来说，可以通过掺杂使之$\sigma$发生变化，因此这里主要讨论欧姆损耗。</p>
-<p>假设时谐电磁场，麦克斯韦方程组可简化为：</p>
-<script type="math/tex; mode=display">
-\nabla\times\mathbf{E}=-j\omega\mu\mathbf{H},\quad\nabla\times\mathbf{H}=\sigma\mathbf{E}+j\omega\epsilon\mathbf{E}</script><p>合并可得：</p>
-<script type="math/tex; mode=display">
-\nabla^2\mathbf{E}+\omega^2\mu\epsilon\left(1+\frac{\sigma}{j\omega\epsilon}\right)\mathbf{E}=0</script><p>因此引入复介电损耗：</p>
-<script type="math/tex; mode=display">
-\tilde{\epsilon}=\epsilon^{\prime}-j\epsilon^{\prime\prime}=\epsilon-j\frac{\sigma}{\omega}=\epsilon_0\epsilon_r-j\frac{\sigma}{\omega}</script><p>并用损耗正切角描述损耗相较储能的大小：</p>
-<script type="math/tex; mode=display">
-\tan\delta=\frac{\epsilon^{\prime\prime}}{\epsilon^{\prime}}=\frac{\sigma}{\omega\epsilon}</script><div id="loss-tangent-calculator">
+                <h2 id="1-电磁波在介质中的损耗">1 电磁波在介质中的损耗</h2>
+<p>电磁波在介质中传播时会受到多种损耗，主要包括<strong>欧姆损耗（电磁波产生电流发生）、介电损耗（也叫极化损耗，介质中的偶极子在交变电场作用下发生极化弛豫，导致能量耗散，如高频下的水分子极化）、磁损耗（磁性介质中磁矩的弛豫或涡流效应导致能量耗散，如铁氧体材料）和辐射损耗等</strong>。这些损耗在电磁波传播的数学模型中通常通过复介电常数、复磁导率以及传播常数来体现。对于半导体来说，可以通过掺杂使之$\sigma$发生变化，因此这里主要讨论欧姆损耗。</p>
+<p>假设时谐电磁场，麦克斯韦方程组可简化为：<br>
+$$<br>
+\nabla\times\mathbf{E}=-j\omega\mu\mathbf{H},\quad\nabla\times\mathbf{H}=\sigma\mathbf{E}+j\omega\epsilon\mathbf{E}<br>
+$$<br>
+合并可得：<br>
+$$<br>
+\nabla^2\mathbf{E}+\omega^2\mu\epsilon\left(1+\frac{\sigma}{j\omega\epsilon}\right)\mathbf{E}=0<br>
+$$<br>
+因此引入复介电损耗：<br>
+$$<br>
+\tilde{\epsilon}=\epsilon^{\prime}-j\epsilon^{\prime\prime}=\epsilon-j\frac{\sigma}{\omega}=\epsilon_0\epsilon_r-j\frac{\sigma}{\omega}<br>
+$$<br>
+并用损耗正切角描述损耗相较储能的大小：<br>
+$$<br>
+\tan\delta=\frac{\epsilon^{\prime\prime}}{\epsilon^{\prime}}=\frac{\sigma}{\omega\epsilon}<br>
+$$</p>
+<div id="loss-tangent-calculator">
   <h3>损耗正切角 (tan δ) 计算器</h3>
   <table border="1" class="loss-tangent-table">
     <thead>
@@ -480,34 +501,33 @@
     </tbody>
   </table>
 </div>
-
 <script>
 const lossTangentCalculator = {
   calculate() {
     const rows = document.querySelectorAll('#loss-tangent-calculator tbody tr');
-
+    
     rows.forEach((row, index) => {
       try {
         const i = index + 1;
         const omega = parseFloat(document.getElementById(`omega${i}`).value);
         const epsilon = parseFloat(document.getElementById(`epsilon${i}`).value);
         const sigma = parseFloat(document.getElementById(`sigma${i}`).value);
-
+        
         if (isNaN(omega) || isNaN(epsilon) || isNaN(sigma) || omega <= 0 || epsilon <= 0) {
           this.clearRow(i);
           return;
         }
-
+        
         // 计算 tan δ = σ / (ωε)
         const tanDelta = sigma / (omega * epsilon);
         const deltaRad = Math.atan(tanDelta); // δ = arctan(tan δ)
         const deltaDeg = deltaRad * (180 / Math.PI); // 弧度转角度
-
+        
         // 更新结果
         document.getElementById(`tan-delta-res${i}`).textContent = tanDelta.toExponential(4);
         document.getElementById(`delta-rad-res${i}`).textContent = deltaRad.toFixed(6);
         document.getElementById(`delta-deg-res${i}`).textContent = deltaDeg.toFixed(2);
-
+        
       } catch (e) {
         this.clearRow(i);
         console.error(`计算第${i}行时出错:`, e);
@@ -534,23 +554,36 @@ document.addEventListener('DOMContentLoaded', () => {
   lossTangentCalculator.init();
 });
 </script>
+<h2 id="2-各种传播损耗参数的换算">2 各种传播损耗参数的换算</h2>
+<p>对于沿$z$轴正向传输电磁波$E=E_0e^{-\gamma z}$，其传播常数为：<br>
+$$<br>
+\gamma=jk=j\omega\sqrt{\mu(\epsilon^{\prime}-j\epsilon^{\prime\prime})}<br>
+=j\frac{2\pi}\lambda(n-j \kappa)<br>
+$$<br>
+其中$\alpha$代表衰减，于是<br>
+$$<br>
+E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}<br>
+$$</p>
+<p>定义 $\alpha[dB/cm]$:<br>
+$$<br>
+\eta=10^{-\frac{100\alpha}{10}L}<br>
+$$</p>
+<p>解出 $\alpha(\kappa)[dB/cm]$:<br>
+$$<br>
+10^{-\frac{100\alpha}{10}L}=e^{-\frac{4\pi}\lambda \kappa L}<br>
+$$<br>
+$$<br>
+\alpha = \frac{0.2}{ln(10)}\frac{2\pi}{\lambda}\kappa<br>
+$$</p>
+<p>定义 $\alpha’[1/m]$:<br>
+$$<br>
+\eta=e^{-\alpha’L}<br>
+$$</p>
+<p>解出 $\alpha’(\alpha)[dB/cm]$:<br>
+$$<br>
+\alpha’=10 \alpha ln(10)<br>
+$$</p>
 
-
-<h2 id="2-各种传播损耗参数的换算"><a href="#2-各种传播损耗参数的换算" class="headerlink" title="2 各种传播损耗参数的换算"></a>2 各种传播损耗参数的换算</h2><p>对于沿$z$轴正向传输电磁波$E=E_0e^{-\gamma z}$，其传播常数为：</p>
-<script type="math/tex; mode=display">
-\gamma=jk=j\omega\sqrt{\mu(\epsilon^{\prime}-j\epsilon^{\prime\prime})}
-=j\frac{2\pi}\lambda(n-j \kappa)</script><p>其中$\alpha$代表衰减，于是</p>
-<script type="math/tex; mode=display">
-E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定义 $\alpha[dB/cm]$:</p>
-<script type="math/tex; mode=display">
-\eta=10^{-\frac{100\alpha}{10}L}</script><p>解出 $\alpha(\kappa)[dB/cm]$:</p>
-<script type="math/tex; mode=display">
-10^{-\frac{100\alpha}{10}L}=e^{-\frac{4\pi}\lambda \kappa L}</script><script type="math/tex; mode=display">
-\alpha = \frac{0.2}{ln(10)}\frac{2\pi}{\lambda}\kappa</script><p>定义 $\alpha’[1/m]$:</p>
-<script type="math/tex; mode=display">
-\eta=e^{-\alpha'L}</script><p>解出 $\alpha’(\alpha)[dB/cm]$:</p>
-<script type="math/tex; mode=display">
-\alpha'=10 \alpha ln(10)</script><p>
   <title>参数转换器</title>
   <style>
     .table-container {
@@ -583,7 +616,7 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
       border-radius: 4px;
     }
   </style>
-</p>
+
 
   <div class="table-container">
     <h3>损耗参数换算工具</h3>
@@ -631,9 +664,6 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
       </tbody>
     </table>
   </div>
-
-
-
   <script>
     $(document).ready(function () {
       const ln10 = Math.log(10);
@@ -701,9 +731,6 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
       });
     });
   </script>
-
-
-
 
 
                 
@@ -1201,7 +1228,7 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31k</span>
+                        class="white-color">31.8k</span>
             
             
             

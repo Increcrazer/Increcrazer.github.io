@@ -6,12 +6,15 @@
     <meta charset="utf-8">
     <meta name="keywords" content="两种统计分布, VIP">
     <meta name="description" content="1 高斯分布
-定义  
 
-  \begin{aligned}
-  y
-  &amp;=y_0+\frac{A}{w\sqrt{\pi/2}}e^{-2\frac{(x-x_c)^2}{w^2}}\\
-  &amp;=y_0+\frac{A}{\sigma\">
+
+定义
+
+$$
+\begin{aligned}
+y
+&amp;amp;=y_0+\frac{A}{w\sqrt{\pi/2}}e^{-2\frac{(x-x_c)^2}{w^2}}\
+&amp;amp;=y_0+\frac{A}{\sigm">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -79,11 +82,22 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
 </head>
 
+<!-- KaTeX 支持 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  });">
+</script> -->
 
 <body>
     <header class="navbar-fixed">
@@ -406,14 +420,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    293
+                    480
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -436,31 +450,46 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-高斯分布"><a href="#1-高斯分布" class="headerlink" title="1 高斯分布"></a>1 高斯分布</h2><ul>
-<li><p>定义<br>  <img src="https://s2.loli.net/2024/12/29/Y268SLQPHKnDbsR.png" alt=""></p>
-<script type="math/tex; mode=display">
-  \begin{aligned}
-  y
-  &=y_0+\frac{A}{w\sqrt{\pi/2}}e^{-2\frac{(x-x_c)^2}{w^2}}\\
-  &=y_0+\frac{A}{\sigma\sqrt{2\pi}}e^{-\frac{(x-x_c)^2}{2\sigma^2}}
-  \end{aligned}</script><script type="math/tex; mode=display">
-  w=2\sigma</script><script type="math/tex; mode=display">
-  \mathrm{FWHM}=2\sqrt{2\ln2}\sigma\approx2.355\sigma</script></li>
-<li><p>方差的线性可加性</p>
-<p>  如果</p>
-<script type="math/tex; mode=display">
-  \begin{array}
-  {l}X\sim N(\mu_X,\sigma_X^2) \\
-  \\
-  Y\sim N(\mu_Y,\sigma_Y^2) \\
-  \\
-  Z=X+Y,
-  \end{array}</script><p>  则</p>
-<script type="math/tex; mode=display">
-  Z \sim N\left(\mu_{X}+\mu_{Y}, \sigma_{X}^{2}+\sigma_{Y}^{2}\right)</script><p> 下面这个工具计算同一个高斯分布中，以$x_c$为中心的宽度$w_2$内积分与宽度$w_1$内积分之比。可以验证所谓$n\sigma$原则：</p>
-<p> $\sigma$原则：数值分布在$(\mu-\sigma,\mu+\sigma)$中的概率为0.6826；</p>
-<p> $2\sigma$原则：数值分布在$(\mu-2\sigma,\mu+2\sigma)$中的概率为0.9544；</p>
-<p> $3\sigma$原则：数值分布在$(\mu-3\sigma,\mu+3\sigma)$中的概率为0.9974；<br> <img src="https://s2.loli.net/2024/12/29/SwoMYuNfeO4TJCQ.png" alt=""></p>
+                <h2 id="1-高斯分布">1 高斯分布</h2>
+<ul>
+<li>
+<p>定义<br>
+<img src="https://s2.loli.net/2024/12/29/Y268SLQPHKnDbsR.png" alt=""><br>
+$$<br>
+\begin{aligned}<br>
+y<br>
+&amp;=y_0+\frac{A}{w\sqrt{\pi/2}}e^{-2\frac{(x-x_c)^2}{w^2}}\<br>
+&amp;=y_0+\frac{A}{\sigma\sqrt{2\pi}}e^{-\frac{(x-x_c)^2}{2\sigma^2}}<br>
+\end{aligned}<br>
+$$</p>
+<p>$$<br>
+w=2\sigma<br>
+$$</p>
+<p>$$<br>
+\mathrm{FWHM}=2\sqrt{2\ln2}\sigma\approx2.355\sigma<br>
+$$</p>
+</li>
+<li>
+<p>方差的线性可加性</p>
+<p>如果<br>
+$$<br>
+\begin{array}<br>
+{l}X\sim N(\mu_X,\sigma_X^2) \<br>
+\<br>
+Y\sim N(\mu_Y,\sigma_Y^2) \<br>
+\<br>
+Z=X+Y,<br>
+\end{array}<br>
+$$<br>
+则<br>
+$$<br>
+Z \sim N\left(\mu_{X}+\mu_{Y}, \sigma_{X}^{2}+\sigma_{Y}^{2}\right)<br>
+$$</p>
+<p>下面这个工具计算同一个高斯分布中，以$x_c$为中心的宽度$w_2$内积分与宽度$w_1$内积分之比。可以验证所谓$n\sigma$原则：</p>
+<p>$\sigma$原则：数值分布在$(\mu-\sigma,\mu+\sigma)$中的概率为0.6826；</p>
+<p>$2\sigma$原则：数值分布在$(\mu-2\sigma,\mu+2\sigma)$中的概率为0.9544；</p>
+<p>$3\sigma$原则：数值分布在$(\mu-3\sigma,\mu+3\sigma)$中的概率为0.9974；<br>
+<img src="https://s2.loli.net/2024/12/29/SwoMYuNfeO4TJCQ.png" alt=""></p>
  <table border="1">
   <tbody><tr>
     <th>标准差 (σ)</th>
@@ -468,7 +497,6 @@
     <th>宽度 w2 </th>
     <th>积分比 (w2 / w1)</th>
   </tr>
-
   <!-- 第一行 -->
   <tr>
     <td><input id="sigma_1" type="number" value="1" min="0" step="0.1" oninput="calculateRow(1)"></td>
@@ -476,7 +504,6 @@
     <td><input id="w2_1" type="number" value="2" min="0" step="0.1" oninput="calculateRow(1)"></td>
     <td id="result_1">-</td>
   </tr>
-
   <!-- 第二行 -->
   <tr>
     <td><input id="sigma_2" type="number" value="2" min="0" step="0.1" oninput="calculateRow(2)"></td>
@@ -484,7 +511,6 @@
     <td><input id="w2_2" type="number" value="3" min="0" step="0.1" oninput="calculateRow(2)"></td>
     <td id="result_2">-</td>
   </tr>
-
   <!-- 第三行 -->
   <tr>
     <td><input id="sigma_3" type="number" value="1.5" min="0" step="0.1" oninput="calculateRow(3)"></td>
@@ -492,7 +518,6 @@
     <td><input id="w2_3" type="number" value="1.5" min="0" step="0.1" oninput="calculateRow(3)"></td>
     <td id="result_3">-</td>
   </tr>
-
   <!-- 第四行 -->
   <tr>
     <td><input id="sigma_4" type="number" value="0.8" min="0" step="0.1" oninput="calculateRow(4)"></td>
@@ -500,7 +525,6 @@
     <td><input id="w2_4" type="number" value="4" min="0" step="0.1" oninput="calculateRow(4)"></td>
     <td id="result_4">-</td>
   </tr>
-
   <!-- 第五行 -->
   <tr>
     <td><input id="sigma_5" type="number" value="2.5" min="0" step="0.1" oninput="calculateRow(5)"></td>
@@ -509,64 +533,61 @@
     <td id="result_5">-</td>
   </tr>
 </tbody></table>
-
 <script>
 // 高斯函数 (标准正态分布)
 function gaussian(x, sigma) {
   return (1 / (sigma * Math.sqrt(2 * Math.PI))) * Math.exp(-0.5 * Math.pow(x / sigma, 2));
 }
-
-// 数值积分 (使用梯形法则)
-function integrateGaussian(sigma, w) {
-  const steps = 10000; // 积分步数
-  const dx = (1 * w) / steps; // 步长
-  let sum = 0;
-
-  for (let i = 0; i <= steps; i++) {
-    let x = -w/2 + i * dx;
-    let weight = (i === 0 || i === steps) ? 0.5 : 1; // 梯形法则加权
-    sum += weight * gaussian(x, sigma);
-  }
-
-  return sum * dx;
-}
-
-// 计算积分比
-function calculateRow(row) {
-  // 获取输入值
-  var sigma = parseFloat(document.getElementById('sigma_' + row).value); // 标准差
-  var w1 = parseFloat(document.getElementById('w1_' + row).value); // 宽度 w1
-  var w2 = parseFloat(document.getElementById('w2_' + row).value); // 宽度 w2
-
-  // 计算积分
-  var integralW1 = integrateGaussian(sigma, w1);
-  var integralW2 = integrateGaussian(sigma, w2);
-
-  // 计算积分比
-  var ratio = integralW2 / integralW1;
-
-  // 显示结果
-  document.getElementById('result_' + row).innerText = ratio.toFixed(3);
-}
-
-window.onload = calculateRow(1);
-window.onload = calculateRow(2);
-window.onload = calculateRow(3);
-window.onload = calculateRow(4);
-window.onload = calculateRow(5);
-</script>
-
+<p>// 数值积分 (使用梯形法则)<br>
+function integrateGaussian(sigma, w) {<br>
+const steps = 10000; // 积分步数<br>
+const dx = (1 * w) / steps; // 步长<br>
+let sum = 0;</p>
+<p>for (let i = 0; i &lt;= steps; i++) {<br>
+let x = -w/2 + i * dx;<br>
+let weight = (i === 0 || i === steps) ? 0.5 : 1; // 梯形法则加权<br>
+sum += weight * gaussian(x, sigma);<br>
+}</p>
+<p>return sum * dx;<br>
+}</p>
+<p>// 计算积分比<br>
+function calculateRow(row) {<br>
+// 获取输入值<br>
+var sigma = parseFloat(document.getElementById(‘sigma_’ + row).value); // 标准差<br>
+var w1 = parseFloat(document.getElementById(‘w1_’ + row).value); // 宽度 w1<br>
+var w2 = parseFloat(document.getElementById(‘w2_’ + row).value); // 宽度 w2</p>
+<p>// 计算积分<br>
+var integralW1 = integrateGaussian(sigma, w1);<br>
+var integralW2 = integrateGaussian(sigma, w2);</p>
+<p>// 计算积分比<br>
+var ratio = integralW2 / integralW1;</p>
+<p>// 显示结果<br>
+document.getElementById(‘result_’ + row).innerText = ratio.toFixed(3);<br>
+}</p>
+<p>window.onload = calculateRow(1);<br>
+window.onload = calculateRow(2);<br>
+window.onload = calculateRow(3);<br>
+window.onload = calculateRow(4);<br>
+window.onload = calculateRow(5);<br>
+</script><p></p>
 </li>
 </ul>
-<h2 id="2-洛伦兹分布"><a href="#2-洛伦兹分布" class="headerlink" title="2 洛伦兹分布"></a>2 洛伦兹分布</h2><ul>
-<li><p>定义<br><img src="https://s2.loli.net/2024/12/29/mVv8jpqKHX6LzyI.png" alt=""></p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-y
-&=y_{0}+\frac{2 A}{\pi} \frac{w}{4\left(x-x_{c}\right)^{2}+w^{2}}\\
-&=y_{0}+\frac{A}{\pi}\left[\frac{\gamma}{(x-x_{c})^{2}+\gamma^{2}}\right]
-\end{aligned}</script><script type="math/tex; mode=display">
-\mathrm{FWHM}=w=2\gamma</script></li>
+<h2 id="2-洛伦兹分布">2 洛伦兹分布</h2>
+<ul>
+<li>
+<p>定义<br>
+<img src="https://s2.loli.net/2024/12/29/mVv8jpqKHX6LzyI.png" alt=""><br>
+$$<br>
+\begin{aligned}<br>
+y<br>
+&amp;=y_{0}+\frac{2 A}{\pi} \frac{w}{4\left(x-x_{c}\right)^{2}+w^{2}}\<br>
+&amp;=y_{0}+\frac{A}{\pi}\left[\frac{\gamma}{(x-x_{c})^{2}+\gamma^{2}}\right]<br>
+\end{aligned}<br>
+$$</p>
+<p>$$<br>
+\mathrm{FWHM}=w=2\gamma<br>
+$$</p>
+</li>
 </ul>
 
                 
@@ -1064,7 +1085,7 @@ y
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31k</span>
+                        class="white-color">31.8k</span>
             
             
             

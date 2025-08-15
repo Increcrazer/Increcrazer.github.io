@@ -6,9 +6,11 @@
     <meta charset="utf-8">
     <meta name="keywords" content="波分复用光纤QKD的退化机制, VIP">
     <meta name="description" content="1 拉曼散射
+
 定义：拉曼散射是光子与光纤中振动模式（光学声子，optical phonons）的非弹性相互作用，导致光子波长改变。
+
 斯托克斯散射（Stokes）：光子波长变长（能量降低，对应声子激发）。
-反斯托克斯散射（anti-Stoke">
+反斯托克斯散射（anti-Sto">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -76,11 +78,22 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
 </head>
 
+<!-- KaTeX 支持 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  });">
+</script> -->
 
 <body>
     <header class="navbar-fixed">
@@ -433,52 +446,66 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-拉曼散射"><a href="#1-拉曼散射" class="headerlink" title="1 拉曼散射"></a>1 拉曼散射</h2><ul>
-<li>定义：拉曼散射是光子与光纤中振动模式（光学声子，optical phonons）的非弹性相互作用，导致光子波长改变。<ul>
+                <h2 id="1-拉曼散射">1 拉曼散射</h2>
+<ul>
+<li>定义：拉曼散射是光子与光纤中振动模式（光学声子，optical phonons）的非弹性相互作用，导致光子波长改变。
+<ul>
 <li>斯托克斯散射（Stokes）：光子波长变长（能量降低，对应声子激发）。</li>
 <li>反斯托克斯散射（anti-Stokes）：光子波长变短（能量升高，对应声子去激发）。</li>
 </ul>
 </li>
-<li>与布里渊散射的区别：<ul>
+<li>与布里渊散射的区别：
+<ul>
 <li>布里渊散射（Brillouin scattering）由声学声子（acoustic phonons）引起，频率偏移较小（背向散射偏移约10 GHz），对相邻信道影响小。</li>
 <li>拉曼散射由光学声子引起，频率偏移可达13 THz（各向同性偏移，对应1550 nm波长偏移100 nm），覆盖整个C波段。</li>
 </ul>
 </li>
-<li>有效拉曼散射截面$\rho(\lambda)$：<ul>
+<li>有效拉曼散射截面$\rho(\lambda)$：
+<ul>
 <li>是一个归一化参数，用于描述光纤中拉曼散射的强度与效率。它表示单位光纤长度、单位光谱带宽内，入射光功率转换为拉曼散射光的比例，同时考虑了光纤对散射光的捕获能力。<img src="https://s2.loli.net/2025/08/14/6HeDVp4czv3jtI2.png" alt=""></li>
 <li>通过有效拉曼散射截面我们可以计算一段频率区间内的拉曼散射功率：<img src="https://s2.loli.net/2025/08/14/wzOWQs2v6SPnoY1.png" alt="">推导如下：<img src="https://s2.loli.net/2025/08/14/yGxizeja4U8cmQg.png" alt=""></li>
 </ul>
 </li>
-<li>波分复用QKD中的拉曼散射是由经典光的自发拉曼散射产生的，这边量子光功率设置为0，所以S转换为自发拉曼散射功率，它与光纤出口经典光功率和光纤长度有关。如果光纤进口光功率恒定，那么在约23km处会产生拉曼散射功率极大值。<br>  <img src="https://s2.loli.net/2025/08/16/O2JdGQ1lvjxsrXD.png" alt=""></li>
-<li>输出端恒定功率经典光产生的拉曼散射功率如下，代码见<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprocess/Raman%20Scattering.m">Raman Scattering.m</a>：<br>  <img src="https://s2.loli.net/2025/08/16/lWnvuJRrLG52VsX.png" alt=""></li>
+<li>波分复用QKD中的拉曼散射是由经典光的自发拉曼散射产生的，这边量子光功率设置为0，所以S转换为自发拉曼散射功率，它与光纤出口经典光功率和光纤长度有关。如果光纤进口光功率恒定，那么在约23km处会产生拉曼散射功率极大值。<br>
+<img src="https://s2.loli.net/2025/08/16/O2JdGQ1lvjxsrXD.png" alt=""></li>
+<li>输出端恒定功率经典光产生的拉曼散射功率如下，代码见<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprocess/Raman%20Scattering.m">Raman Scattering.m</a>：<br>
+<img src="https://s2.loli.net/2025/08/16/lWnvuJRrLG52VsX.png" alt=""></li>
 </ul>
-<h2 id="2-四波混频（FWM）"><a href="#2-四波混频（FWM）" class="headerlink" title="2 四波混频（FWM）"></a>2 四波混频（FWM）</h2><ul>
-<li>定义：FWM 是光纤中由三阶非线性极化率$\chi^{(3)}$介导的非线性效应，多个泵浦光频率相互作用生成新的频率分量。<ul>
+<h2 id="2-四波混频（FWM）">2 四波混频（FWM）</h2>
+<ul>
+<li>定义：FWM 是光纤中由三阶非线性极化率$\chi^{(3)}$介导的非线性效应，多个泵浦光频率相互作用生成新的频率分量。
+<ul>
 <li>能量守恒：$f_{ijk}=f_i+f_j-f_k$.</li>
 <li>与拉曼散射的区别：FWM 不涉及声子能量交换（无光子-声子相互作用），完全由非线性光学效应驱动。</li>
 </ul>
 </li>
-<li>分类：<ul>
-<li>自发FWM<ul>
+<li>分类：
+<ul>
+<li>自发FWM
+<ul>
 <li>单频率泵浦，过程由量子涨落触发，类似自发参量下转换(SPDC)。$2f_p=f_s+f_i$.</li>
 <li>通常较弱（需相位匹配），在QKD中可忽略（对应于单向协商的情况）。</li>
 </ul>
 </li>
-<li>简并FWM<ul>
+<li>简并FWM
+<ul>
 <li>双频率泵浦，生成对称边带：$f_+=2f_1-f_2, f_-=2f_2-f_1$.简并因子D=3.</li>
 <li>在零色散波长附近易发生，可能干扰相邻信道。</li>
 </ul>
 </li>
-<li>非简并 FWM<ul>
+<li>非简并 FWM
+<ul>
 <li>三频率泵浦，简并因子D=6.</li>
 <li>常见于密集波分复用（DWDM）系统，可能产生大量混频产物。</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>数学模型<br>  <img src="https://s2.loli.net/2025/08/14/wMsUBG7JuKd4TZ6.png" alt=""></li>
+<li>数学模型<br>
+<img src="https://s2.loli.net/2025/08/14/wMsUBG7JuKd4TZ6.png" alt=""></li>
 </ul>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1367-2630/12/6/063027">Quantum key distribution and 1 Gbps data encryption over a single fibre</a></p>
+<h2 id="参考资料">参考资料</h2>
+<p><a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1367-2630/12/6/063027">Quantum key distribution and 1 Gbps data encryption over a single fibre</a></p>
 <p><a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1367-2630/11/4/045012">Dense wavelength multiplexing of 1550 nm QKD with strong classical channels in reconfigurable networking environments</a></p>
 
                 
@@ -978,7 +1005,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31k</span>
+                        class="white-color">31.8k</span>
             
             
             

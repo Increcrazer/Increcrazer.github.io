@@ -7,10 +7,17 @@
     <meta name="keywords" content="微腔参数计算工具, VIP">
     <meta name="description" content="
 1 公式
+$$
 k^{2}+r^{2}=1
+$$
+$$
 a^{2}=\exp(-\alpha L)
+$$
+$$
 \mathrm{FSR(length)}=\frac{\lambda^{2}}{n_{g} L}
-\mathrm{FSR(freq)}=\frac{c}{n">
+$$
+$$
+\mathrm{">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -78,11 +85,22 @@ a^{2}=\exp(-\alpha L)
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
 </head>
 
+<!-- KaTeX 支持 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  });">
+</script> -->
 
 <body>
     <header class="navbar-fixed">
@@ -436,36 +454,68 @@ a^{2}=\exp(-\alpha L)
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><img src="https://s2.loli.net/2024/12/03/MRpbCKg2SDXBk5N.png" alt=""></p>
-<h2 id="1-公式"><a href="#1-公式" class="headerlink" title="1 公式"></a>1 公式</h2><script type="math/tex; mode=display">
-k^{2}+r^{2}=1</script><script type="math/tex; mode=display">
-a^{2}=\exp(-\alpha L)</script><script type="math/tex; mode=display">
-\mathrm{FSR(length)}=\frac{\lambda^{2}}{n_{g} L}</script><script type="math/tex; mode=display">
-\mathrm{FSR(freq)}=\frac{c}{n_{g} L}</script><script type="math/tex; mode=display">
-n_{g}=n_{\mathrm{eff}}-\lambda \frac{d n_{\mathrm{eff}}}{d \lambda}</script><script type="math/tex; mode=display">
-n_{g}=n_{\mathrm{eff}}+\omega \frac{d n_{\mathrm{eff}}}{d \omega}</script><script type="math/tex; mode=display">
-\mathrm { Finess }=\frac{\mathrm{FSR}}{\mathrm{FWHM}}</script><script type="math/tex; mode=display">
-\mathrm { Q-factor }=\frac{\mathrm{\lambda_{res}}}{\mathrm{FWHM}}</script><ul>
-<li>All-pass<script type="math/tex; mode=display">
-\mathrm { Q-factor }=\frac{\pi n_{g} L \sqrt{r a}}{\lambda_{\mathrm{res}}(1-r a)}</script></li>
+<h2 id="1-公式">1 公式</h2>
+<p>$$<br>
+k^{2}+r^{2}=1<br>
+$$</p>
+<p>$$<br>
+a^{2}=\exp(-\alpha L)<br>
+$$</p>
+<p>$$<br>
+\mathrm{FSR(length)}=\frac{\lambda^{2}}{n_{g} L}<br>
+$$</p>
+<p>$$<br>
+\mathrm{FSR(freq)}=\frac{c}{n_{g} L}<br>
+$$</p>
+<p>$$<br>
+n_{g}=n_{\mathrm{eff}}-\lambda \frac{d n_{\mathrm{eff}}}{d \lambda}<br>
+$$</p>
+<p>$$<br>
+n_{g}=n_{\mathrm{eff}}+\omega \frac{d n_{\mathrm{eff}}}{d \omega}<br>
+$$</p>
+<p>$$<br>
+\mathrm { Finess }=\frac{\mathrm{FSR}}{\mathrm{FWHM}}<br>
+$$</p>
+<p>$$<br>
+\mathrm { Q-factor }=\frac{\mathrm{\lambda_{res}}}{\mathrm{FWHM}}<br>
+$$</p>
+<ul>
+<li>All-pass<br>
+$$<br>
+\mathrm { Q-factor }=\frac{\pi n_{g} L \sqrt{r a}}{\lambda_{\mathrm{res}}(1-r a)}<br>
+$$</li>
 </ul>
-<script type="math/tex; mode=display">
-\mathrm { Finess }=\frac{\pi \sqrt{r a}}{1-r a}</script><p>当$\alpha$和$k$很小时，</p>
-<script type="math/tex; mode=display">
-\sqrt{r a}=\sqrt{1-k^2}\sqrt{a}
-\\≈(1-0.5k^2)\exp(-0.5\alpha L)
-\\≈\exp(-0.5k^2)\exp(-0.5\alpha L)
-\\=\exp(-0.5k^2-0.5\alpha L)</script><p>设$\alpha_{tot}=0.5k^2+0.5\alpha L$，则</p>
-<script type="math/tex; mode=display">
-\sqrt{r a}=\exp(-\alpha_{tot})</script><script type="math/tex; mode=display">
-\mathrm { Finess }=\frac{\pi \sqrt{r a}}{1-r a}
-\\=\frac{\pi}{\frac{1}{\sqrt{r a}}-\sqrt{r a}}
-\\=\frac{\pi}{\exp(\alpha_{tot})-\exp(-\alpha_{tot})}
-\\≈\frac{\pi}{2\alpha_{tot}}</script><ul>
-<li>Add-drop<script type="math/tex; mode=display">
-\text { Q-factor }=\frac{\pi n_{g} L \sqrt{r_{1} r_{2} a}}{\lambda_{\text {res }}\left(1-r_{1} r_{2} a\right)}</script></li>
+<p>$$<br>
+\mathrm { Finess }=\frac{\pi \sqrt{r a}}{1-r a}<br>
+$$<br>
+当$\alpha$和$k$很小时，<br>
+$$<br>
+\sqrt{r a}=\sqrt{1-k^2}\sqrt{a}<br>
+\≈(1-0.5k^2)\exp(-0.5\alpha L)<br>
+\≈\exp(-0.5k^2)\exp(-0.5\alpha L)<br>
+\=\exp(-0.5k^2-0.5\alpha L)<br>
+$$<br>
+设$\alpha_{tot}=0.5k^2+0.5\alpha L$，则<br>
+$$<br>
+\sqrt{r a}=\exp(-\alpha_{tot})<br>
+$$</p>
+<p>$$<br>
+\mathrm { Finess }=\frac{\pi \sqrt{r a}}{1-r a}<br>
+\=\frac{\pi}{\frac{1}{\sqrt{r a}}-\sqrt{r a}}<br>
+\=\frac{\pi}{\exp(\alpha_{tot})-\exp(-\alpha_{tot})}<br>
+\≈\frac{\pi}{2\alpha_{tot}}<br>
+$$</p>
+<ul>
+<li>Add-drop<br>
+$$<br>
+\text { Q-factor }=\frac{\pi n_{g} L \sqrt{r_{1} r_{2} a}}{\lambda_{\text {res }}\left(1-r_{1} r_{2} a\right)}<br>
+$$</li>
 </ul>
-<script type="math/tex; mode=display">
-\text { Finess }=\frac{\pi \sqrt{r_{1} r_{2} a}}{1-r_{1} r_{2} a}</script><h2 id="2-转换器"><a href="#2-转换器" class="headerlink" title="2 转换器"></a>2 转换器</h2><div>
+<p>$$<br>
+\text { Finess }=\frac{\pi \sqrt{r_{1} r_{2} a}}{1-r_{1} r_{2} a}<br>
+$$</p>
+<h2 id="2-转换器">2 转换器</h2>
+<div>
   <h3>FSR 计算器</h3>
   <table border="1">
     <thead>
@@ -516,7 +566,6 @@ n_{g}=n_{\mathrm{eff}}+\omega \frac{d n_{\mathrm{eff}}}{d \omega}</script><scrip
     </tbody>
   </table>
 </div>
-
 <script>
 function calculateFSR() {
     for (let i = 1; i <= 5; i++) {
@@ -542,7 +591,6 @@ function calculateFSR() {
 // 页面加载时自动计算初始值
 window.onload = calculateFSR();
 </script>
-
 <div>
   <h3>Q因子 计算器</h3>
   <table border="1">
@@ -612,7 +660,6 @@ window.onload = calculateFSR();
     </tbody>
   </table>
 </div>
-
   <script>
   function calculateQ(row) {
     // 获取输入值
@@ -641,10 +688,6 @@ window.onload = calculateFSR();
   window.onload = calculateQ(4);
   window.onload = calculateQ(5);
   </script>
-
-
-
-
 
                 
             </div>
@@ -1141,7 +1184,7 @@ window.onload = calculateFSR();
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31k</span>
+                        class="white-color">31.8k</span>
             
             
             

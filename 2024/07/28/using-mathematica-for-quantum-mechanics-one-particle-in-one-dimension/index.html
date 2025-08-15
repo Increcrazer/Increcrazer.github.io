@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Using Mathematica for Quantum Mechanics：one particle in one dimension, VIP">
-    <meta name="description" content="0 动机追求静态网页支持在线mathematica是个错误的方向，直接将笔记上传至mathematica云端就行。但是mathematica的排版一直很难用，就算调用matex包，mathematica依然对latex语言支持很差劲。经过尝">
+    <meta name="description" content="0 动机
+追求静态网页支持在线mathematica是个错误的方向，直接将笔记上传至mathematica云端就行。但是mathematica的排版一直很难用，就算调用matex包，mathematica依然对latex语言支持很差劲。经过">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -73,11 +74,22 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
 </head>
 
+<!-- KaTeX 支持 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  });">
+</script> -->
 
 <body>
     <header class="navbar-fixed">
@@ -430,16 +442,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="0-动机"><a href="#0-动机" class="headerlink" title="0 动机"></a>0 动机</h2><p>追求静态网页支持在线mathematica是个错误的方向，直接将笔记上传至mathematica云端就行。但是mathematica的排版一直很难用，就算调用matex包，mathematica依然对latex语言支持很差劲。经过尝试，意外发现它对MathML脚本支持比较完善。另外，将枯燥的standardform转换为traditionalform可以将代码语言转换成公式语言，一定程度上能增加代码可读性。</p>
+                <h2 id="0-动机">0 动机</h2>
+<p>追求静态网页支持在线mathematica是个错误的方向，直接将笔记上传至mathematica云端就行。但是mathematica的排版一直很难用，就算调用matex包，mathematica依然对latex语言支持很差劲。经过尝试，意外发现它对MathML脚本支持比较完善。另外，将枯燥的standardform转换为traditionalform可以将代码语言转换成公式语言，一定程度上能增加代码可读性。</p>
 <p>然而，一些mathematica的动态或静态图片结果不会加载在云端，需要在云端运行或者下载到本地运行，这就比较麻烦。</p>
 <p><strong>因此，主页放上要点和结论性的图片，同时附上mathematica笔记本链接，会是一个不错的结合。</strong></p>
 <p><a target="_blank" rel="noopener" href="https://www.wolframcloud.com/env/wya1759991046/Published/Use%20mathematica%20for%20QM%204.1.1_4.1.6.nb">mathematica笔记本链接</a></p>
-<h2 id="1-要点"><a href="#1-要点" class="headerlink" title="1 要点"></a>1 要点</h2><ul>
+<h2 id="1-要点">1 要点</h2>
+<ul>
 <li>finite-resolution position basis(FRPS/PS)本质上是对Dirac basis的采样</li>
 <li>PS是离散的，和momentum basis(MS)的关系为：基系数互为DST-1变换(type-1 discrete sine transform)</li>
 <li>有一些算符用MS展开简单，另一些用PS展开简单，例如动能算符用MS展开简单，势能算符用PS展开简单。求得一种展开，另一种展开通过DST-1变换就行了。</li>
 </ul>
-<h2 id="2-视觉知识"><a href="#2-视觉知识" class="headerlink" title="2 视觉知识"></a>2 视觉知识</h2><ul>
+<h2 id="2-视觉知识">2 视觉知识</h2>
+<ul>
 <li>MB的归一正交性验证</li>
 </ul>
 <p><img src="https://s2.loli.net/2024/07/28/X2Pc3BZMUw4mohe.png" alt=""></p>
@@ -458,7 +473,7 @@
 <ul>
 <li>$\hat{\mathcal{x}}$在PB展开</li>
 </ul>
-<p><img src="https://s2.loli.net/2024/07/28/LvRpePJoAmKzCiH.png" alt=""> </p>
+<p><img src="https://s2.loli.net/2024/07/28/LvRpePJoAmKzCiH.png" alt=""></p>
 <ul>
 <li>$\hat{\mathcal{T}}$在MB展开</li>
 </ul>
@@ -971,7 +986,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31k</span>
+                        class="white-color">31.8k</span>
             
             
             

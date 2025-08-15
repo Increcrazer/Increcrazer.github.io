@@ -5,11 +5,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="阻抗匹配计算工具, VIP">
-    <meta name="description" content="1 终端阻抗失配反射系数$\Gamma$作用于$z=l$处的入射电压波。
-
-\Gamma=\frac{Z_L-Z_o}{Z_L+Z_o}驻波比（standing wave ratio）和回损都是体现反射的指标。
-
-\mathrm{SWR}=">
+    <meta name="description" content="1 终端阻抗失配
+反射系数$\Gamma$作用于$z=l$处的入射电压波。
+$$
+\Gamma=\frac{Z_L-Z_o}{Z_L+Z_o}
+$$
+驻波比（standing wave ratio）和回损都是体现反射的指标。
+$$
+\mat">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -77,11 +80,22 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="VIP" type="application/atom+xml">
 </head>
 
+<!-- KaTeX 支持 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  });">
+</script> -->
 
 <body>
     <header class="navbar-fixed">
@@ -434,12 +448,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-终端阻抗失配"><a href="#1-终端阻抗失配" class="headerlink" title="1 终端阻抗失配"></a>1 终端阻抗失配</h2><p>反射系数$\Gamma$作用于$z=l$处的入射电压波。</p>
-<script type="math/tex; mode=display">
-\Gamma=\frac{Z_L-Z_o}{Z_L+Z_o}</script><p>驻波比（standing wave ratio）和回损都是体现反射的指标。</p>
-<script type="math/tex; mode=display">
-\mathrm{SWR}=\frac{1+|\Gamma|}{1-|\Gamma|}</script><script type="math/tex; mode=display">
-\mathrm{RL}=-20\log_{10}|\Gamma|</script><p><img src="https://s2.loli.net/2025/05/18/lI7PEsxu2UoznTm.png" alt=""></p>
+                <h2 id="1-终端阻抗失配">1 终端阻抗失配</h2>
+<p>反射系数$\Gamma$作用于$z=l$处的入射电压波。<br>
+$$<br>
+\Gamma=\frac{Z_L-Z_o}{Z_L+Z_o}<br>
+$$<br>
+驻波比（standing wave ratio）和回损都是体现反射的指标。<br>
+$$<br>
+\mathrm{SWR}=\frac{1+|\Gamma|}{1-|\Gamma|}<br>
+$$</p>
+<p>$$<br>
+\mathrm{RL}=-20\log_{10}|\Gamma|<br>
+$$</p>
+<p><img src="https://s2.loli.net/2025/05/18/lI7PEsxu2UoznTm.png" alt=""></p>
 <div>
   <h3>反射系数计算器</h3>
   <table border="1">
@@ -481,13 +502,12 @@
     </tbody>
   </table>
 </div>
-
 <script>
 // 解析复数字符串为实部和虚部
 function parseComplex(str) {
   str = str.replace(/\s+/g, ''); // 去除所有空格
   const match = str.match(/^([+-]?\d*\.?\d*)([+-]\d*\.?\d*)j$/);
-
+  
   if (match) {
     const real = match[1] ? parseFloat(match[1]) : 0;
     const imag = parseFloat(match[2]);
@@ -508,22 +528,22 @@ class Complex {
     this.real = real;
     this.imag = imag;
   }
-
+  
   add(c) {
     return new Complex(this.real + c.real, this.imag + c.imag);
   }
-
+  
   subtract(c) {
     return new Complex(this.real - c.real, this.imag - c.imag);
   }
-
+  
   multiply(c) {
     return new Complex(
       this.real * c.real - this.imag * c.imag,
       this.real * c.imag + this.imag * c.real
     );
   }
-
+  
   divide(c) {
     const denominator = c.real * c.real + c.imag * c.imag;
     return new Complex(
@@ -531,11 +551,11 @@ class Complex {
       (this.imag * c.real - this.real * c.imag) / denominator
     );
   }
-
+  
   magnitude() {
     return Math.sqrt(this.real * this.real + this.imag * this.imag);
   }
-
+  
   toString() {
     if (this.imag === 0) return this.real.toFixed(4);
     if (this.real === 0) return this.imag.toFixed(4) + 'j';
@@ -568,23 +588,23 @@ function calculateReflection() {
     try {
       const z0Str = document.getElementById('z0' + i).value;
       const zlStr = document.getElementById('zl' + i).value;
-
+      
       const z0 = parseComplex(z0Str);
       const zl = parseComplex(zlStr);
-
+      
       const Z0 = new Complex(z0.real, z0.imag);
       const ZL = new Complex(zl.real, zl.imag);
-
+      
       // 计算反射系数Γ
       const Gamma = calculateReflectionCoefficient(ZL, Z0);
       const gammaAbs = Gamma.magnitude();
-
+      
       // 计算驻波比
       const swr = calculateSWR(gammaAbs);
-
+      
       // 计算回波损耗
       const returnLoss = calculateReturnLoss(gammaAbs);
-
+      
       // 更新显示
       document.getElementById('gamma' + i).innerHTML = Gamma.toString().replace('j', 'j');
       document.getElementById('gamma_abs' + i).innerText = gammaAbs.toFixed(4);
@@ -608,12 +628,18 @@ function clearRow(i) {
 // 页面加载时自动计算初始值
 window.onload = calculateReflection();
 </script>
-
-<h2 id="2-传输线特征阻抗失配"><a href="#2-传输线特征阻抗失配" class="headerlink" title="2 传输线特征阻抗失配"></a>2 传输线特征阻抗失配</h2><p><img src="https://s2.loli.net/2025/05/18/2j5nd84oCAktmSI.png" alt=""><br>这是功率守恒的，容易证明下式成立：</p>
-<script type="math/tex; mode=display">
-\frac{(V_1^+)^2}{Z_1}=\frac{(\Gamma_1V_1^+)^2}{Z_1}+\frac{(\tau_1V_1^+)^2}{Z_o}</script><h2 id="3-输入阻抗"><a href="#3-输入阻抗" class="headerlink" title="3 输入阻抗"></a>3 输入阻抗</h2><p>把一段传输线和负载当作一个整体，作为输入阻抗。需要注意，当$Z_L≠Z_0$时，实际在$z=-l$处不会产生反射，而是在$Z_L$处产生反射。输入阻抗只是把后面的电路看成了黑盒子。</p>
-<script type="math/tex; mode=display">
-Z_{in}=Z_0\frac{Z_L+jZ_0\tan(\beta\ell)}{Z_0+jZ_L\tan(\beta\ell)}</script><p><img src="https://s2.loli.net/2025/05/18/Q5leGL8dZW3vsE2.png" alt=""></p>
+<h2 id="2-传输线特征阻抗失配">2 传输线特征阻抗失配</h2>
+<p><img src="https://s2.loli.net/2025/05/18/2j5nd84oCAktmSI.png" alt=""><br>
+这是功率守恒的，容易证明下式成立：<br>
+$$<br>
+\frac{(V_1^+)^2}{Z_1}=\frac{(\Gamma_1V_1^+)^2}{Z_1}+\frac{(\tau_1V_1^+)^2}{Z_o}<br>
+$$</p>
+<h2 id="3-输入阻抗">3 输入阻抗</h2>
+<p>把一段传输线和负载当作一个整体，作为输入阻抗。需要注意，当$Z_L≠Z_0$时，实际在$z=-l$处不会产生反射，而是在$Z_L$处产生反射。输入阻抗只是把后面的电路看成了黑盒子。<br>
+$$<br>
+Z_{in}=Z_0\frac{Z_L+jZ_0\tan(\beta\ell)}{Z_0+jZ_L\tan(\beta\ell)}<br>
+$$<br>
+<img src="https://s2.loli.net/2025/05/18/Q5leGL8dZW3vsE2.png" alt=""></p>
 <div id="zin-calculator">
   <h3>Zin 计算器</h3>
   <table border="1" class="zin-table">
@@ -663,7 +689,6 @@ Z_{in}=Z_0\frac{Z_L+jZ_0\tan(\beta\ell)}{Z_0+jZ_L\tan(\beta\ell)}</script><p><im
     </tbody>
   </table>
 </div>
-
 <script>
 // Zin计算器专用命名空间
 const zinCalculator = {
@@ -671,7 +696,7 @@ const zinCalculator = {
   parseComplex(str) {
     str = str.replace(/\s+/g, '');
     const match = str.match(/^([+-]?\d*\.?\d*)([+-]\d*\.?\d*)j$/);
-
+    
     if (match) {
       return {
         real: match[1] ? parseFloat(match[1]) : 0,
@@ -689,17 +714,17 @@ const zinCalculator = {
       this.real = real;
       this.imag = imag;
     }
-
+    
     add(c) { return new zinCalculator.Complex(this.real + c.real, this.imag + c.imag); }
     subtract(c) { return new zinCalculator.Complex(this.real - c.real, this.imag - c.imag); }
-
+    
     multiply(c) {
       return new zinCalculator.Complex(
         this.real * c.real - this.imag * c.imag,
         this.real * c.imag + this.imag * c.real
       );
     }
-
+    
     divide(c) {
       const d = c.real * c.real + c.imag * c.imag;
       return new zinCalculator.Complex(
@@ -707,9 +732,9 @@ const zinCalculator = {
         (this.imag * c.real - this.real * c.imag) / d
       );
     }
-
+    
     magnitude() { return Math.sqrt(this.real * this.real + this.imag * this.imag); }
-
+    
     toString() {
       if (this.imag === 0) return this.real.toFixed(2);
       if (this.real === 0) return this.imag.toFixed(2) + 'j';
@@ -727,7 +752,7 @@ const zinCalculator = {
   // 主计算函数
   calculate() {
     const rows = document.querySelectorAll('#zin-calculator tbody tr');
-
+    
     rows.forEach((row, index) => {
       try {
         const i = index + 1;
@@ -735,17 +760,17 @@ const zinCalculator = {
         const zl = this.parseComplex(document.getElementById(`zin-zl${i}`).value);
         const beta = parseFloat(document.getElementById(`zin-beta${i}`).value);
         const length = parseFloat(document.getElementById(`zin-length${i}`).value);
-
+        
         if (isNaN(beta) || isNaN(length) || beta <= 0 || length <= 0) {
           this.clearRow(i);
           return;
         }
-
+        
         const Z0 = new this.Complex(z0.real, z0.imag);  // 变量顺序与输入框一致
         const ZL = new this.Complex(zl.real, zl.imag);
         const betaL = beta * length;
         const tanBetaL = Math.tan(betaL);
-
+        
         // 计算Zin (公式保持不变)
         const num = new this.Complex(
           ZL.real - Z0.imag * tanBetaL,
@@ -756,16 +781,16 @@ const zinCalculator = {
           Z0.imag + ZL.real * tanBetaL
         );
         const Zin = Z0.multiply(num).divide(den);
-
+        
         // 计算反射系数
         const Gamma = this.calculateGamma(Zin, Z0);
-
+        
         // 更新结果
         document.getElementById(`zin-res${i}`).textContent = Zin.toString();
         document.getElementById(`zin-abs-res${i}`).textContent = Zin.magnitude().toFixed(2);
         document.getElementById(`zin-gamma-res${i}`).innerHTML = Gamma.toString().replace('j', 'j');
         document.getElementById(`zin-gamma-abs-res${i}`).textContent = Gamma.magnitude().toFixed(4);
-
+        
       } catch (e) {
         this.clearRow(index + 1);
         console.error(`计算第${index + 1}行时出错:`, e);
@@ -796,12 +821,16 @@ document.addEventListener('DOMContentLoaded', () => {
   zinCalculator.init();
 });
 </script>
-
-<h2 id="4-四分之一波长阻抗变换器"><a href="#4-四分之一波长阻抗变换器" class="headerlink" title="4 四分之一波长阻抗变换器"></a>4 四分之一波长阻抗变换器</h2><p>Quarter-Wave Transformer（四分之一波长阻抗变换器）是一种利用传输线的阻抗变换特性，在特定频率下实现阻抗匹配的无源器件。其核心原理是通过一段长度为$λ/4$（信号波长的1/4）的传输线，将负载阻抗$Z_L$转换为目标阻抗$Z_{in}$，从而消除反射。</p>
+<h2 id="4-四分之一波长阻抗变换器">4 四分之一波长阻抗变换器</h2>
+<p>Quarter-Wave Transformer（四分之一波长阻抗变换器）是一种利用传输线的阻抗变换特性，在特定频率下实现阻抗匹配的无源器件。其核心原理是通过一段长度为$λ/4$（信号波长的1/4）的传输线，将负载阻抗$Z_L$转换为目标阻抗$Z_{in}$，从而消除反射。</p>
 <p>这里四分之一波长变压器不是消除所有反射，而是通过干涉设计，让输入端“看起来没有反射”，即$Z_0$到$Z_1$产生的反射波与终端的反射波相互抵消，但是终端仍然受反射影响，这可以通过上一节的计算器进行验证。</p>
 <p>到这里是不是有疑问，那这个阻抗变换器有个蛋用！确实，这个设计的主要目的是让输入端看起来无反射，实现最大功率传输。另外，由于$Z_1$比$Z_0$更接近$Z_L$，所以终端反射也有所降低。</p>
-<p>到这里，敏锐如我立马想到能不能搞多级四分之一波长变换器来逐步减小反射，GPT给出肯定答案，你发明了<strong>多级阻抗匹配网络</strong>！<br><img src="https://s2.loli.net/2025/05/18/iPwAkEsyxmhfHjN.png" alt=""></p>
-<h2 id="5-终端开路或短路时传输线上的电压波电流波情况"><a href="#5-终端开路或短路时传输线上的电压波电流波情况" class="headerlink" title="5 终端开路或短路时传输线上的电压波电流波情况"></a>5 终端开路或短路时传输线上的电压波电流波情况</h2><p>可以发现传输线上的电压幅度不是固定的，但是终端上的电压幅度总是为0（短路）或2（断路）。<br><img src="https://s2.loli.net/2025/05/18/RNBdFbUKju8L4QT.gif" alt=""><br>此处感谢Deepseek生成的代码：<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/Transmissionline/open_short.m">open_short.m</a>。计算入射波和反射波的叠加时将反射处看成0坐标点，可以减少计算量。</p>
+<p>到这里，敏锐如我立马想到能不能搞多级四分之一波长变换器来逐步减小反射，GPT给出肯定答案，你发明了<strong>多级阻抗匹配网络</strong>！<br>
+<img src="https://s2.loli.net/2025/05/18/iPwAkEsyxmhfHjN.png" alt=""></p>
+<h2 id="5-终端开路或短路时传输线上的电压波电流波情况">5 终端开路或短路时传输线上的电压波电流波情况</h2>
+<p>可以发现传输线上的电压幅度不是固定的，但是终端上的电压幅度总是为0（短路）或2（断路）。<br>
+<img src="https://s2.loli.net/2025/05/18/RNBdFbUKju8L4QT.gif" alt=""><br>
+此处感谢Deepseek生成的代码：<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/Transmissionline/open_short.m">open_short.m</a>。计算入射波和反射波的叠加时将反射处看成0坐标点，可以减少计算量。</p>
 
                 
             </div>
@@ -1298,7 +1327,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31k</span>
+                        class="white-color">31.8k</span>
             
             
             
