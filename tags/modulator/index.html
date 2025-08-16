@@ -445,20 +445,20 @@
                 </a>
                 
                 
-                <a href="/tags/photonic/" title="photonic: 2">
+                <a href="/tags/QKD-timebin/" title="QKD, timebin: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="photonic" style="background-color: #FEF9E7;">photonic
-                        <span class="tag-length">2</span>
+                            data-tagname="QKD, timebin" style="background-color: #FEF9E7;">QKD, timebin
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/QKD-timebin/" title="QKD, timebin: 1">
+                <a href="/tags/photonic/" title="photonic: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="QKD, timebin" style="background-color: #F8F9F9;">QKD, timebin
-                        <span class="tag-length">1</span>
+                            data-tagname="photonic" style="background-color: #F8F9F9;">photonic
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -499,10 +499,19 @@
                 </a>
                 
                 
+                <a href="/tags/electronic-PCB/" title="electronic, PCB: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="electronic, PCB" style="background-color: #F8C471;">electronic, PCB
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/optics-signal/" title="optics, signal: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="optics, signal" style="background-color: #F8C471;">optics, signal
+                            data-tagname="optics, signal" style="background-color: #F9E79F;">optics, signal
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -511,26 +520,8 @@
                 <a href="/tags/tool-photonics/" title="tool, photonics: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="tool, photonics" style="background-color: #F9E79F;">tool, photonics
+                            data-tagname="tool, photonics" style="background-color: #FFF;">tool, photonics
                         <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/electronic-PCB/" title="electronic, PCB: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="electronic, PCB" style="background-color: #F8F9F9;">electronic, PCB
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/diary-travel/" title="diary, travel: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="diary, travel" style="background-color: #FFF;">diary, travel
-                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -544,11 +535,11 @@
                 </a>
                 
                 
-                <a href="/tags/QKD-fiber/" title="QKD, fiber: 1">
+                <a href="/tags/diary-travel/" title="diary, travel: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="QKD, fiber" style="background-color: #F9E79F;">QKD, fiber
-                        <span class="tag-length">1</span>
+                            data-tagname="diary, travel" style="background-color: #FFF;">diary, travel
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -562,10 +553,19 @@
                 </a>
                 
                 
-                <a href="/tags/photonics-tool/" title="photonics, tool: 1">
+                <a href="/tags/tool-convert/" title="tool, convert: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="photonics, tool" style="background-color: #82E0AA;">photonics, tool
+                            data-tagname="tool, convert" style="background-color: #82E0AA;">tool, convert
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/QKD-fiber/" title="QKD, fiber: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="QKD, fiber" style="background-color: #F9E79F;">QKD, fiber
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -580,11 +580,11 @@
                 </a>
                 
                 
-                <a href="/tags/tool-convert/" title="tool, convert: 2">
+                <a href="/tags/photonics-tool/" title="photonics, tool: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="tool, convert" style="background-color: #82E0AA;">tool, convert
-                        <span class="tag-length">2</span>
+                            data-tagname="photonics, tool" style="background-color: #82E0AA;">photonics, tool
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -1020,6 +1020,22 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
