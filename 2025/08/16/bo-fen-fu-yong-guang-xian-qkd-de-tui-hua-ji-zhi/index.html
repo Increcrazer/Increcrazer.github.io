@@ -414,7 +414,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    705
+                    801
                 </div>
                 
 
@@ -461,7 +461,7 @@
 </ul>
 </li>
 <li>波分复用QKD中的拉曼散射是由经典光的自发拉曼散射产生的，这边量子光功率设置为0，所以S转换为自发拉曼散射功率，它与光纤出口经典光功率和光纤长度有关。如果光纤进口光功率恒定，那么在约23km处会产生拉曼散射功率极大值。<br>  <img src="https://s2.loli.net/2025/08/16/O2JdGQ1lvjxsrXD.png" alt=""></li>
-<li>输出端经典光恒定功率为-26dBm，SPD探测效率80%时，产生的拉曼散射功率如下，代码见<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprocess/Raman%20Scattering.m">Raman Scattering.m</a>：<br>  <img src="https://s2.loli.net/2025/08/16/hU2NRrGczpofBQi.png" alt=""></li>
+<li>输出端单频(1550 nm)经典光恒定功率为-26dBm，SPD探测效率80%时，且量子光接收端使用30pm半高宽滤波器滤波时，产生的拉曼散射功率随光纤长度变化如下，代码见<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprocess/Raman%20Scattering.m">Raman Scattering.m</a>：<br>  <img src="https://s2.loli.net/2025/08/17/1RgFYeSIXkQLxdw.png" alt=""></li>
 </ul>
 <h2 id="2-四波混频（FWM）"><a href="#2-四波混频（FWM）" class="headerlink" title="2 四波混频（FWM）"></a>2 四波混频（FWM）</h2><ul>
 <li>定义：FWM 是光纤中由三阶非线性极化率$\chi^{(3)}$介导的非线性效应，多个泵浦光频率相互作用生成新的频率分量。<ul>
@@ -488,9 +488,11 @@
 </ul>
 </li>
 <li>数学模型<br>  <img src="https://s2.loli.net/2025/08/14/wMsUBG7JuKd4TZ6.png" alt=""></li>
+<li>四波混频的强度与信道间距以及光纤长度有关，光纤越长，FWM噪声越低。图中所示是存两个经典光和一个量子光等间距波长选择的情况，所以必然会在量子光波长处产生FWM噪声，这可以通过合适的波长设计避开。<br>  <img src="https://s2.loli.net/2025/08/17/LEGBu4FjVhqYpwI.png" alt=""></li>
 </ul>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1367-2630/12/6/063027">Quantum key distribution and 1 Gbps data encryption over a single fibre</a></p>
-<p><a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1367-2630/11/4/045012">Dense wavelength multiplexing of 1550 nm QKD with strong classical channels in reconfigurable networking environments</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1367-2630/12/6/063027">Eraerds2010</a></p>
+<p><a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1367-2630/11/4/045012">Peters2009</a></p>
+<p><strong>参数对比：</strong><br><img src="https://s2.loli.net/2025/08/17/D9SvgX3PucZylYG.png" alt=""></p>
 
                 
             </div>
@@ -989,7 +991,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31k</span>
+                        class="white-color">31.1k</span>
             
             
             
@@ -1262,22 +1264,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
