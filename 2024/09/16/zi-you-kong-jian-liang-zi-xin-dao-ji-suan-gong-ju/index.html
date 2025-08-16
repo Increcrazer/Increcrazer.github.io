@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="keywords" content="自由空间量子信道计算工具, VIP">
     <meta name="description" content="功率单位转换器
-
   功率单位转换器
      
         
@@ -15,7 +14,7 @@
                 功率 (dBm)
             
         
-   ">
+    ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -421,14 +420,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    912
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    4 分
                 </div>
                 
 
@@ -451,8 +450,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="功率单位转换器">功率单位转换器</h2>
-<div class="conversion-table">
+                <h2 id="功率单位转换器"><a href="#功率单位转换器" class="headerlink" title="功率单位转换器"></a>功率单位转换器</h2><div class="conversion-table">
   <div class="table-title">功率单位转换器</div>
      <table id="powerconverter" class="display">
         <thead>
@@ -469,6 +467,7 @@
         </tbody>
     </table>
 </div>
+
 <script>
   // Conversion from Watt to dBm
   function convertToDbm() {
@@ -511,6 +510,8 @@
     addInputListeners(); // Add event listeners for real-time conversion
   });
 </script>
+
+
 <div class="conversion-table">
   <div class="table-title">透射率单位转换器</div>
      <table id="powerconverter" class="display">
@@ -528,6 +529,7 @@
         </tbody>
     </table>
 </div>
+
 <script>
   // Conversion from Watt to dBm
   function transconvertToDbm() {
@@ -570,9 +572,9 @@
     transaddInputListeners(); // Add event listeners for real-time conversion
   });
 </script>
+
 <hr>
-<h2 id="光源功率计算器">光源功率计算器</h2>
-<div class="table-container">
+<h2 id="光源功率计算器"><a href="#光源功率计算器" class="headerlink" title="光源功率计算器"></a>光源功率计算器</h2><div class="table-container">
     <div class="table-title">光源功率计算器</div>
     <table id="powerCalculationTable" class="display">
         <thead>
@@ -637,12 +639,13 @@
         </tbody>
     </table>
 </div>
+
 <script>
 function calculateSinglePhotonEnergy() {
     var wavelength = parseFloat(document.getElementById('wavelength').value);
     var SinglePhotonEnergy = 6.62607015 * 1e-34 * 299792458/(wavelength*1e-9);
     var scientificNotation = SinglePhotonEnergy.toExponential(10);
-    
+
     var photonfrequency  = 299792458/(wavelength * 1e-9)/1e12;
     document.getElementById('photonEnergy').innerText = scientificNotation;
     document.getElementById('photonfrequency').innerText = photonfrequency.toFixed(4);
@@ -683,7 +686,7 @@ function calculateSourcePower() {
     // 计算光源功率
     var sourcePower = frequency * 1e6 * photonEnergy * averagePhotonPulse * 1e9;  // 转换为nW
     var sourcePowerdBm = 10 * Math.log10(sourcePower * 1e-9 * 1e3);  // 转换为dBm
-       
+
     document.getElementById('sourcePower').innerText = sourcePower.toFixed(6);
     document.getElementById('sourcePowerdBm').innerText = sourcePowerdBm.toFixed(4);
 }
@@ -701,73 +704,74 @@ document.getElementById('frequency').addEventListener('input', calculateSourcePo
 // 初始化计算
 calculateSourcePower();
 </script>
+
 <hr>
-<h2 id="空间损耗-AB镜间损耗计算器">空间损耗/AB镜间损耗计算器</h2>
-<div class="table-container">
-&nbsp; &nbsp; <div class="table-title">空间损耗/AB镜间损耗计算器</div>
-&nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; <table id="lossCalculationTable" class="display"><thead><tr><th>参数</th><th>值</th></tr></thead><tbody><tr><td>发散角 (urad)</td><td><input type="number" id="divergenceAngle" value="35" min="0" max="100000" step="1"></td></tr><tr><td>通信距离 (km)</td><td><input type="number" id="distance" value="30" min="0"></td></tr><tr><td>发送口径 (m)</td><td><input type="number" id="transmitterDiameter" value="0.1" step="0.02"></td></tr><tr><td>接收口径 (m)</td><td><input type="number" id="receiverDiameter" value="0.28" step="0.02"></td></tr><tr id="spaceLossRow"><td>空间损耗</td><td id="spaceLoss">0.0711</td></tr><tr><td>大气损耗</td><td><input type="number" id="atmosphericLoss" value="0.25" min="0" max="1" step="0.05"></td></tr><tr id="ABLossRow"><td>A镜-B镜损耗</td><td id="ABLoss">0.0178</td></tr><tr id="ABLossdBRow"><td>A镜-B镜损耗（dB）</td><td id="ABLossdB">0.0178</td></tr></tbody></table>
+<h2 id="空间损耗-AB镜间损耗计算器"><a href="#空间损耗-AB镜间损耗计算器" class="headerlink" title="空间损耗/AB镜间损耗计算器"></a>空间损耗/AB镜间损耗计算器</h2><div class="table-container">
+    <div class="table-title">空间损耗/AB镜间损耗计算器</div>
+    <table id="lossCalculationTable" class="display">
+        <thead>
+            <tr>
+                <th>参数</th>
+                <th>值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>发散角 (urad)</td>
+                <td><input type="number" id="divergenceAngle" value="35" min="0" max="100000" step="1"></td>
+            </tr>
+            <tr>
+                <td>通信距离 (km)</td>
+                <td><input type="number" id="distance" value="30" min="0"></td>
+            </tr>
+            <tr>
+                <td>发送口径 (m)</td>
+                <td><input type="number" id="transmitterDiameter" value="0.1" step="0.02"></td>
+            </tr>
+            <tr>
+                <td>接收口径 (m)</td>
+                <td><input type="number" id="receiverDiameter" value="0.28" step="0.02"></td>
+            </tr>
+            <tr id="spaceLossRow">
+                <td>空间损耗</td>
+                <td id="spaceLoss">0.0711</td>
+            </tr>
+            <tr>
+                <td>大气损耗</td>
+                <td><input type="number" id="atmosphericLoss" value="0.25" min="0" max="1" step="0.05"></td>
+            </tr>
+            <tr id="ABLossRow">
+                <td>A镜-B镜损耗</td>
+                <td id="ABLoss">0.0178</td>
+            </tr>
+            <tr id="ABLossdBRow">
+                <td>A镜-B镜损耗（dB）</td>
+                <td id="ABLossdB">0.0178</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
+
 <script>
 function calculateSpaceLoss() {
-    // 获取用户输入的值
-    var divergenceAngle = parseFloat(document.getElementById('divergenceAngle').value);
-    var distance = parseFloat(document.getElementById('distance').value);
+    // 获取用户输入的值
+    var divergenceAngle = parseFloat(document.getElementById('divergenceAngle').value);
+    var distance = parseFloat(document.getElementById('distance').value);
     var transmitterDiameter = parseFloat(document.getElementById('transmitterDiameter').value);
-    var receiverDiameter = parseFloat(document.getElementById('receiverDiameter').value);
+    var receiverDiameter = parseFloat(document.getElementById('receiverDiameter').value);
     var atmosphericLoss = parseFloat(document.getElementById('atmosphericLoss').value);
 
-        // 验证发散角是否在 0 到 1 的范围内
-    if (atmosphericLoss < 0 || atmosphericLoss > 1) {
-        alert("大气损耗必须在 0 和 1 之间");
-        return;
-    }
+        // 验证发散角是否在 0 到 1 的范围内
+    if (atmosphericLoss < 0 || atmosphericLoss > 1) {
+        alert("大气损耗必须在 0 和 1 之间");
+        return;
+    }
 
-    // 验证输入是否为有效数字
-    if (!isNaN(divergenceAngle) && !isNaN(distance) && !isNaN(receiverDiameter) && !isNaN(atmosphericLoss)) {
-        // 计算空间损耗的公式
+    // 验证输入是否为有效数字
+    if (!isNaN(divergenceAngle) && !isNaN(distance) && !isNaN(receiverDiameter) && !isNaN(atmosphericLoss)) {
+        // 计算空间损耗的公式
         if (receiverDiameter <= transmitterDiameter + 2 * divergenceAngle * distance / 1000){
-            var spaceLoss = Math.pow((receiverDiameter / (transmitterDiameter + 2 * divergenceAngle * distance / 1000)), 2);
+            var spaceLoss = Math.pow((receiverDiameter / (transmitterDiameter + 2 * divergenceAngle * distance / 1000)), 2);
         }
         else {
             var spaceLoss = 1;
@@ -776,15 +780,15 @@ function calculateSpaceLoss() {
         var ABLoss = spaceLoss * atmosphericLoss;
         var ABLossdB = 10 * Math.log10(ABLoss);
 
-        // 显示结果
-        document.getElementById('spaceLoss').innerText = spaceLoss.toFixed(4);
+        // 显示结果
+        document.getElementById('spaceLoss').innerText = spaceLoss.toFixed(4);
         document.getElementById('ABLoss').innerText = ABLoss.toFixed(4);
         document.getElementById('ABLossdB').innerText = ABLossdB.toFixed(4);
-    } else {
-        document.getElementById('spaceLoss').innerText = 'N/A';
+    } else {
+        document.getElementById('spaceLoss').innerText = 'N/A';
         document.getElementById('ABLoss').innerText = 'N/A';
         document.getElementById('ABLossdB').innerText = 'N/A';
-    }
+    }
 
 }
 
@@ -796,9 +800,10 @@ document.getElementById('atmosphericLoss').addEventListener('input', calculateSp
 
 calculateSpaceLoss();
 </script>
+
+
 <hr>
-<h2 id="B-后光路效率计算器">B 后光路效率计算器</h2>
-<div class="table-container">
+<h2 id="B-后光路效率计算器"><a href="#B-后光路效率计算器" class="headerlink" title="B 后光路效率计算器"></a>B 后光路效率计算器</h2><div class="table-container">
     <div class="table-title">B 后光路效率计算器</div>
     <table id="efficiencyTable" class="display">
         <thead>
@@ -839,6 +844,7 @@ calculateSpaceLoss();
         </tbody>
     </table>
 </div>
+
 <script>
 function calculateTotalEfficiency() {
     // 获取用户输入的效率值
@@ -851,11 +857,11 @@ function calculateTotalEfficiency() {
     // 验证输入是否为有效数字
     if (!isNaN(efficiency1) && !isNaN(efficiency2) && !isNaN(efficiency3) &&
         !isNaN(efficiency4) && !isNaN(efficiency5)) {
-        
+
         // 计算 B 后光路总效率
         var totalEfficiency = efficiency1 * efficiency2 * efficiency3 * efficiency4 * efficiency5;
         var totalEfficiencydB = 10 * Math.log10(totalEfficiency);
-        
+
         // 显示结果
         document.getElementById('totalEfficiency').innerText = totalEfficiency.toFixed(4);
         document.getElementById('totalEfficiencydB').innerText = totalEfficiencydB.toFixed(2);
@@ -876,9 +882,9 @@ document.getElementById('efficiency5').addEventListener('input', calculateTotalE
 // 初始化计算
 calculateTotalEfficiency();
 </script>
+
 <hr>
-<h2 id="B-QBER计算器">B QBER计算器</h2>
-<div class="table-container">
+<h2 id="B-QBER计算器"><a href="#B-QBER计算器" class="headerlink" title="B QBER计算器"></a>B QBER计算器</h2><div class="table-container">
     <div class="table-title">B QBER计算器</div>
     <table id="eventTable" class="display">
         <thead>
@@ -935,6 +941,7 @@ calculateTotalEfficiency();
         </tbody>
     </table>
 </div>
+
 <script>
 function calculateQBER() {
     // 获取用户输入的效率值
@@ -949,13 +956,13 @@ function calculateQBER() {
     // 验证输入是否为有效数字
     if (!isNaN(frequency1) && !isNaN(avgPhotonCount) && !isNaN(signalRatio1) && !isNaN(totalLoss) && !isNaN(detnoise) && !isNaN(envirnoise) &&
         !isNaN(PBER)) {
-        
+
         // 计算 B 后光路总效率
         var eventCount = frequency1 * 1e6 * signalRatio1 * (1 - Math.exp(-totalLoss*avgPhotonCount));
         var totalnoise = detnoise + envirnoise;
         var noiseBER = totalnoise/4/(totalnoise/2 + eventCount);
         var QBER = (totalnoise/4 + PBER * eventCount)/(totalnoise/2 + eventCount);
-        
+
         // 显示结果
         document.getElementById('eventCount').innerText = eventCount.toFixed(0);
         document.getElementById('totalnoise').innerText = totalnoise.toFixed(0);
@@ -983,17 +990,18 @@ document.getElementById('PBER').addEventListener('input', calculateQBER);
 // 初始化计算
 calculateQBER();
 </script>
+
 <style>
 .table-container {
-    padding: 20px;
+    padding: 20px;
     margin: 0 auto; /* 表格容器居中 */
     text-align: left; /* 让内容居中 */
 }
 
 .table-title {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
 }
 table {
     table-layout: fixed; /* 固定表格布局 */
@@ -1003,10 +1011,10 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    width: 65%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    width: 65%;
 }
 #photonEnergyRow, #decoy2RatioRow, #averagePhotonPulseRow, #photonfrequencyRow,
 #sourcePowerRow, #sourcePowerdBmRow, 
@@ -1017,7 +1025,8 @@ th, td {
     background-color: skyblue;
 }
 </style>
-<p><strong>注：此处总误码率计算方法为</strong></p>
+
+<p><strong>注：此处总误码率计算方法为</strong> </p>
 <p>假设重频为$f$，环境噪声（总暗计数）每秒计数为$N_d$，则单通道暗计数率为$N_d/(4f)=p_d$（假设时间窗口连续），由<a target="_blank" rel="noopener" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.89.022307">Lim2014</a>可知，这也是每个时间窗口暗计数导致的误码率，因此Bob端由暗计数导致的误码数为每秒$N_df/(4f)=N_d/4$个。再考虑暗计数响应事件，这里需要注意：B端由暗计数带来的click事件数目并非为$N_d$，而是$[2p_d(1-p_d)+p_d^2]f≈N_d/2$。所以B每秒探测事件数为$N_{B,tot}=N_B+N_d/2$.（$N_B$是Bob每秒接收的信号态数目）。严格来说，探测事件有可能是信号态接收和暗计数响应同时造成的，但是在大损耗情况下可以不考虑。另外，由于态不完美导致的B端误码个数为$e_{mis}N_B$个，所以总误码率为$(e_{mis}N_B+N_d/4)/N_{B,tot}$.</p>
 
                 
@@ -1515,7 +1524,7 @@ th, td {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.8k</span>
+                        class="white-color">31k</span>
             
             
             
@@ -1787,23 +1796,6 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 

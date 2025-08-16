@@ -5,13 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="DJI mini4K拍照模式测试, VIP">
-    <meta name="description" content="动机
-主要是天气不错，但是出去骑车又很热，于是闲着没事玩玩mini4K几种照相模式，而且台风格美过境后风力不错，目测偶尔有六级以上，所以作死测试一下其抗风能力。
+    <meta name="description" content="动机主要是天气不错，但是出去骑车又很热，于是闲着没事玩玩mini4K几种照相模式，而且台风格美过境后风力不错，目测偶尔有六级以上，所以作死测试一下其抗风能力。
 
 全景
 
-使用这个7年前就断更的开源插件hexo-tag-panoview：
-">
+使用这个7年前就断更的开源插件hexo-tag-panoview：$ ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -447,19 +445,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="动机">动机</h2>
-<p>主要是天气不错，但是出去骑车又很热，于是闲着没事玩玩mini4K几种照相模式，而且台风格美过境后风力不错，目测偶尔有六级以上，所以作死测试一下其抗风能力。</p>
+                <h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p>主要是天气不错，但是出去骑车又很热，于是闲着没事玩玩mini4K几种照相模式，而且台风格美过境后风力不错，目测偶尔有六级以上，所以作死测试一下其抗风能力。</p>
 <ul>
 <li>全景</li>
 </ul>
-<p>使用这个7年前就断更的开源插件hexo-tag-panoview：</p>
-<pre class="language-javascript" data-language="javascript"><code class="language-javascript">$ npm install hexo<span class="token operator">-</span>tag<span class="token operator">-</span>panoview <span class="token operator">--</span>save</code></pre>
+<p>使用这个7年前就断更的开源插件hexo-tag-panoview：<br></p><pre class="language-javascript" data-language="javascript"><code class="language-javascript">$ npm install hexo<span class="token operator">-</span>tag<span class="token operator">-</span>panoview <span class="token operator">--</span>save</code></pre><p></p>
 <pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">{</span><span class="token operator">%</span> panoview <span class="token string">"https://s2.loli.net/2024/07/28/QkJsBRyWpc3ECH8.jpg"</span> <span class="token number">400</span> <span class="token number">790</span> <span class="token operator">%</span><span class="token punctuation">}</span>
 <span class="token comment">//400 是指全景的高度；</span>
 <span class="token comment">//790 是指全景的宽度。</span>
 <span class="token punctuation">{</span><span class="token operator">%</span> endpanoview <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
-<p>得到图片：</p>
-<div id="panoview2078" style="margin: 0 auto"></div>
+<p>得到图片：<br></p><div id="panoview4849" style="margin: 0 auto"></div>
 <script src="https://unpkg.com/three@0.88.0/build/three.min.js"></script>
 
 <script>
@@ -473,7 +468,7 @@
     animate();
     function init() {
         var container, mesh;
-        container = document.getElementById('panoview2078');
+        container = document.getElementById('panoview4849');
         var width = container.style.width;
         camera = new THREE.PerspectiveCamera(75, 2, 1, 1000);
         camera.target = new THREE.Vector3(0, 0, 0);
@@ -555,9 +550,8 @@
         renderer.render(scene, camera);
     }
 
-</script>
-<p>对比无全景效果，效果居然还不错：<br>
-<img src="https://s2.loli.net/2024/07/28/QkJsBRyWpc3ECH8.jpg" alt=""></p>
+</script><p></p>
+<p>对比无全景效果，效果居然还不错：<br><img src="https://s2.loli.net/2024/07/28/QkJsBRyWpc3ECH8.jpg" alt=""></p>
 <ul>
 <li>180°</li>
 </ul>
@@ -566,9 +560,8 @@
 <li>广角</li>
 </ul>
 <p><img src="https://s2.loli.net/2024/07/28/R72NqPUspjJzlEA.jpg" alt=""></p>
-<h2 id="结论">结论</h2>
-<ul>
-<li>mini4K 1/2.3’'小尺寸CMOS应对广角及以上照片的拍摄方法是分时定位拍摄算法合成</li>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><ul>
+<li>mini4K 1/2.3’’小尺寸CMOS应对广角及以上照片的拍摄方法是分时定位拍摄算法合成</li>
 <li>mini4K抗6级风问题不大</li>
 </ul>
 
@@ -1067,7 +1060,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.8k</span>
+                        class="white-color">31k</span>
             
             
             
@@ -1339,23 +1332,6 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 

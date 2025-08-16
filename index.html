@@ -591,9 +591,7 @@
                 <p class="post-description">
                     
                         0 现象
-
-
-前几天使用matlab visa库控制PAX1000测试光芯片偏振调制时，发现偏振输出会在邦加球上两条调制曲线之间无规律横跳：
+前几天使用matlab visa库控制PAX1000测试光芯片偏振调制时，发现偏振输出会在邦加球上两条调制曲线之间无规律横跳：固定
                     
                 </p>
                 <a href="/2024/08/21/thorlabs-pax1000-bu-zhun-zhi-hui-fa-sheng-de-xian-xiang-ji-yuan-yin-tan-xun/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
@@ -621,10 +619,9 @@
                 </a>
                 <p class="post-description">
                     
-                        0 简介
-众所周知，在信号路径某点上，信号的时域波形表达式如下:
-$$
-E_k(t)=\sqrt{I_k(t-t_k)}\exp{2\pi 
+                        0 简介众所周知，在信号路径某点上，信号的时域波形表达式如下:
+
+E_k(t)=\sqrt{I_k(t-t_k)}\exp\{2\pi i[
                     
                 </p>
                 <a href="/2024/09/21/dui-pin-lu-zhou-jiu-de-ding-liang-li-jie/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
@@ -668,11 +665,9 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp{2\pi
                         <div class="summary block-with-text">
                             
                                 1 拉曼散射
-
 定义：拉曼散射是光子与光纤中振动模式（光学声子，optical phonons）的非弹性相互作用，导致光子波长改变。
-
 斯托克斯散射（Stokes）：光子波长变长（能量降低，对应声子激发）。
-反斯托克斯散射（anti-Sto
+反斯托克斯散射（anti-Stoke
                             
                         </div>
                         <div class="publish-info">
@@ -914,8 +909,7 @@ E_k(t)=\sqrt{I_k(t-t_k)}\exp{2\pi
                             
                                 Traveling Wave Optical Modulator Usinga Directional Coupler LiNb03Waveguide:
 
-
-High-throughput GaAs PIN electrooptic mod
+High-throughput GaAs PIN electrooptic modu
                             
                         </div>
                         <div class="publish-info">
@@ -963,14 +957,11 @@ High-throughput GaAs PIN electrooptic mod
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                1 终端阻抗失配
-反射系数$\Gamma$作用于$z=l$处的入射电压波。
-$$
-\Gamma=\frac{Z_L-Z_o}{Z_L+Z_o}
-$$
-驻波比（standing wave ratio）和回损都是体现反射的指标。
-$$
-\mat
+                                1 终端阻抗失配反射系数$\Gamma$作用于$z=l$处的入射电压波。
+
+\Gamma=\frac{Z_L-Z_o}{Z_L+Z_o}驻波比（standing wave ratio）和回损都是体现反射的指标。
+
+\mathrm{SWR}=
                             
                         </div>
                         <div class="publish-info">
@@ -1018,10 +1009,7 @@ $$
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                昨天去武汉大学赏樱，樱花没怎么看到，路倒是走了不少，就单纯记录一下，表示到此一游过。
-
-
-该点位摆了个小关卡，安置了几位志愿者女生守着，只不过她们有点不讲武德，说樱花大道也要提前预约，不然只能今天预约了明天再来。还好我有过类似经历和化解经验
+                                昨天去武汉大学赏樱，樱花没怎么看到，路倒是走了不少，就单纯记录一下，表示到此一游过。该点位摆了个小关卡，安置了几位志愿者女生守着，只不过她们有点不讲武德，说樱花大道也要提前预约，不然只能今天预约了明天再来。还好我有过类似经历和化解经验，不慌
                             
                         </div>
                         <div class="publish-info">
@@ -1119,9 +1107,8 @@ $$
                         <div class="summary block-with-text">
                             
                                 第一章
-
 微型0&lt;m≤7kg，轻型7&lt;m≤116kg，小型116&lt;m≤5700kg，大型5700kg&lt;m
-超近程15km以内，近程15~50km之间，短程50~200km之间，中程200~800km之间，远程大于80
+超近程15km以内，近程15~50km之间，短程50~200km之间，中程200~800km之间，远程大于800
                             
                         </div>
                         <div class="publish-info">
@@ -1356,7 +1343,7 @@ $$
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.8k</span>
+                        class="white-color">31k</span>
             
             
             
@@ -1628,23 +1615,6 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 

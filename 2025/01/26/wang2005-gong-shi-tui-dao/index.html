@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.2k
                 </div>
                 
 
@@ -441,130 +441,92 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230503"><em><strong>Wang X B. Beating the photon-number-splitting attack in practical quantum cryptography[J]. Physical review letters, 2005, 94(23): 230503.</strong></em></a></p>
+                <p><a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230503"><strong><em>Wang X B. Beating the photon-number-splitting attack in practical quantum cryptography[J]. Physical review letters, 2005, 94(23): 230503.</em></strong></a></p>
 <p><strong>主要内容</strong>：</p>
 <ul>
 <li>提出诱骗态协议（1强度信号$\mu$ + 1强度诱骗$\mu^\prime$ + 1真空诱骗，$\mu^{\prime}&gt;\mu$）；</li>
-<li>得到了一个比<a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901"><em><strong>Hwang2003</strong></em></a>更紧凑的$\Delta$估值；</li>
+<li>得到了一个比<a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901"><strong><em>Hwang2003</em></strong></a>更紧凑的$\Delta$估值；</li>
 <li>对诱骗态协议首次进行有限码长分析。</li>
 </ul>
 <hr>
-<h2 id="1-1">1 (1)</h2>
-<p><strong>命题</strong>：<br>
-如果$\eta&lt;(1-e^{-\mu}-\mu e^{-\mu})/\mu$，则Eve能通过PNS攻击获得Bob所有sifted key信息。</p>
-<p><strong>证明</strong>：<br>
-通过<a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901"><em><strong>Hwang2003</strong></em></a>$(1)$式密钥生成条件可直接导出。</p>
-<h2 id="2-5">2 (5)</h2>
-<p><strong>命题</strong>：<br>
-$(5)$式是$|0\rangle\langle0|$、$|1\rangle\langle1|$、$\rho_{c}$、$\rho_{d}$的凸组合</p>
-<p><strong>证明</strong>：<br>
-即要证明$d=1-e^{-\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}-c\frac{\mu^{\prime{2}}e^{-\mu^{\prime}}}{\mu^{2}e^{-\mu}}\geq0$.</p>
+<h2 id="1-1"><a href="#1-1" class="headerlink" title="1 (1)"></a>1 (1)</h2><p><strong>命题</strong>：<br>如果$\eta&lt;(1-e^{-\mu}-\mu e^{-\mu})/\mu$，则Eve能通过PNS攻击获得Bob所有sifted key信息。</p>
+<p><strong>证明</strong>：<br>通过<a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901"><strong><em>Hwang2003</em></strong></a>$(1)$式密钥生成条件可直接导出。</p>
+<h2 id="2-5"><a href="#2-5" class="headerlink" title="2 (5)"></a>2 (5)</h2><p><strong>命题</strong>：<br>$(5)$式是$|0\rangle\langle0|$、$|1\rangle\langle1|$、$\rho_{c}$、$\rho_{d}$的凸组合</p>
+<p><strong>证明</strong>：<br>即要证明$d=1-e^{-\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}-c\frac{\mu^{\prime{2}}e^{-\mu^{\prime}}}{\mu^{2}e^{-\mu}}\geq0$.</p>
 <p>因为$P_{n}(\mu^{\prime})/P_2(\mu^{\prime})&gt;P_n(\mu)/P_2(\mu)$,</p>
-<p>所以：<br>
-$$<br>
-\begin{aligned}<br>
-\frac{1-e^{-\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}}{c}-\frac{\mu^{\prime{2}}e^{-\mu^{\prime}}}{\mu^{2}e^{-\mu}}<br>
-&amp;= \frac{1-e^{-\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}}{1-e^{-\mu}-\mu e^{-\mu}}-\frac{\mu^{\prime{2}}e^{-\mu^{\prime}}}{\mu^{2}e^{-\mu}}\<br>
-&amp;= \frac{\sum_{n=2}^\infty P_n(\mu^{\prime})}{\sum_{n=2}^\infty P_n(\mu)}-\frac{ P_2(\mu^{\prime})}{ P_2(\mu)} \<br>
-&amp;\geq \frac{\sum_{n=2}^\infty P_n(\mu) \frac{ P_2(\mu^{\prime})}{ P_2(\mu)}}{\sum_{n=2}^\infty P_n(\mu)}-\frac{ P_2(\mu^{\prime})}{ P_2(\mu)} \<br>
-&amp;= 0<br>
-\end{aligned}<br>
-$$</p>
-<h2 id="3-13">3 (13)</h2>
-<p>由$(11)$式可得：<br>
-$$<br>
-s_{1}=\frac{S_{\mu}-e^{-\mu}s_{0}-cs_{c}}{\mu e^{-\mu}}<br>
-$$</p>
-<p>带入$(9)$可得：<br>
-$$<br>
-\begin{aligned}<br>
-cs_{c}<br>
-&amp;\leq \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}(S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\mu^{\prime}e^{-\mu^{\prime}}s_{1}) \<br>
-&amp;= \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}[S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\frac{\mu^{\prime}e^{-\mu^{\prime}}}{\mu e^{-\mu}}(S_{\mu}-e^{-\mu}s_{0}-cs_{c})]<br>
-\end{aligned}<br>
-$$<br>
-即：<br>
-$$<br>
-\begin{aligned}<br>
-(1-\frac{\mu}{\mu^{\prime}})cs_{c}<br>
-&amp;\leq \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}[S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\frac{\mu^{\prime}e^{-\mu^{\prime}}}{\mu e^{-\mu}}(S_{\mu}-e^{-\mu}s_{0})] \<br>
-&amp;= \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}S_{\mu^{\prime}}-\frac{\mu}{\mu^{\prime}}S_{\mu}+\frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}(\frac{\mu^{\prime}e^{-\mu^{\prime}}}{\mu e^{-\mu}}e^{-\mu}-e^{-\mu^{\prime}})s_0<br>
-\end{aligned}<br>
-$$<br>
-两边同乘$\frac{\mu^{\prime}}{\mu}$，得：<br>
-$$<br>
-\begin{aligned}<br>
-(\frac{\mu^{\prime}}{\mu}-1)cs_c<br>
-&amp;\leq \frac{\mu e^{-\mu}}{\mu^{\prime}e^{-\mu^{\prime}}}S_{\mu^{\prime}}-S_{\mu}+(e^{-\mu}-\frac{\mu e^{-\mu}}{\mu^{\prime}})s_0<br>
-\end{aligned}<br>
-$$<br>
-将之带入$(7)$式稍加整理即可得式$(13)$.</p>
-<h2 id="4-14">4 (14)</h2>
-<p><strong>命题</strong>：<br>
-假如$\eta\ll1$，则Bob端多光子成分占比是$1-e^{-\mu}$.</p>
+<p>所以：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{1-e^{-\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}}{c}-\frac{\mu^{\prime{2}}e^{-\mu^{\prime}}}{\mu^{2}e^{-\mu}} 
+&= \frac{1-e^{-\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}}{1-e^{-\mu}-\mu e^{-\mu}}-\frac{\mu^{\prime{2}}e^{-\mu^{\prime}}}{\mu^{2}e^{-\mu}}\\
+&= \frac{\sum_{n=2}^\infty P_n(\mu^{\prime})}{\sum_{n=2}^\infty P_n(\mu)}-\frac{ P_2(\mu^{\prime})}{ P_2(\mu)} \\
+&\geq \frac{\sum_{n=2}^\infty P_n(\mu) \frac{ P_2(\mu^{\prime})}{ P_2(\mu)}}{\sum_{n=2}^\infty P_n(\mu)}-\frac{ P_2(\mu^{\prime})}{ P_2(\mu)} \\
+&= 0
+\end{aligned}</script><h2 id="3-13"><a href="#3-13" class="headerlink" title="3 (13)"></a>3 (13)</h2><p>由$(11)$式可得：</p>
+<script type="math/tex; mode=display">
+s_{1}=\frac{S_{\mu}-e^{-\mu}s_{0}-cs_{c}}{\mu e^{-\mu}}</script><p>带入$(9)$可得：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+cs_{c}
+&\leq \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}(S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\mu^{\prime}e^{-\mu^{\prime}}s_{1}) \\
+&= \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}[S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\frac{\mu^{\prime}e^{-\mu^{\prime}}}{\mu e^{-\mu}}(S_{\mu}-e^{-\mu}s_{0}-cs_{c})]
+\end{aligned}</script><p>即：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+(1-\frac{\mu}{\mu^{\prime}})cs_{c}
+&\leq \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}[S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\frac{\mu^{\prime}e^{-\mu^{\prime}}}{\mu e^{-\mu}}(S_{\mu}-e^{-\mu}s_{0})] \\
+&= \frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}S_{\mu^{\prime}}-\frac{\mu}{\mu^{\prime}}S_{\mu}+\frac{\mu^{2}e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}}(\frac{\mu^{\prime}e^{-\mu^{\prime}}}{\mu e^{-\mu}}e^{-\mu}-e^{-\mu^{\prime}})s_0
+\end{aligned}</script><p>两边同乘$\frac{\mu^{\prime}}{\mu}$，得：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+(\frac{\mu^{\prime}}{\mu}-1)cs_c
+&\leq \frac{\mu e^{-\mu}}{\mu^{\prime}e^{-\mu^{\prime}}}S_{\mu^{\prime}}-S_{\mu}+(e^{-\mu}-\frac{\mu e^{-\mu}}{\mu^{\prime}})s_0
+\end{aligned}</script><p>将之带入$(7)$式稍加整理即可得式$(13)$.</p>
+<h2 id="4-14"><a href="#4-14" class="headerlink" title="4 (14)"></a>4 (14)</h2><p><strong>命题</strong>：<br>假如$\eta\ll1$，则Bob端多光子成分占比是$1-e^{-\mu}$.</p>
 <p><strong>证明</strong>：($\eta\mu-0-\eta\mu e^{-\mu}$)/$\eta\mu=1-e^{-\mu}$</p>
-<h2 id="5-15">5 (15)</h2>
-<p>由$1-\Delta-\frac{s_0e^{-\mu}}{S_\mu}=\frac{s_1\mu e^{-\mu}}{S_\mu}$可得：<br>
-$$<br>
-\begin{aligned}<br>
-s_1=\frac{S_\mu}{\mu e^{-\mu}}(1-\Delta-\frac{s_0e^{-\mu}}{S_\mu})<br>
-\end{aligned}<br>
-$$</p>
-<p>由$(8)$式可得：<br>
-$$<br>
-\begin{aligned}<br>
-\Delta^{\prime}<br>
-&amp;= \frac{c\frac{\mu^{\prime2}e^{-\mu^{\prime}}}{\mu^2e^{-\mu}}s_c+ds_d}{S_{\mu^{\prime}}} \<br>
-&amp;= \frac{S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\mu^{\prime}e^{-\mu^{\prime}}s_{1}}{S_{\mu^{\prime}}} \<br>
-&amp;= \frac{S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\mu^{\prime}e^{-\mu^{\prime}}\frac{S_\mu}{\mu e^{-\mu}}(1-\Delta-\frac{s_0e^{-\mu}}{S_\mu})}{S_{\mu^{\prime}}} \<br>
-&amp;= 1-\frac{e^{-\mu^{\prime}}s_0}{s_{\mu^{\prime}}}-e^{\mu-\mu^{\prime}}\frac{S_\mu\mu^{\prime}}{S_{\mu^{\prime}}\mu}(1-\Delta-\frac{s_0e^{-\mu}}{S_\mu})<br>
-\end{aligned}<br>
-$$</p>
-<h2 id="6-17-推导不符？">6 (17) 推导不符？</h2>
-<p>由$(16)$式得：<br>
-$$<br>
-\begin{aligned}<br>
-c(1-r_c)s_c \leq\frac{\mu^2e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}} \times(S_{\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}(1-r_1)s_1-e^{-\mu^{\prime}}(1+r_0)s_0)<br>
-\end{aligned}<br>
-$$</p>
-<p>即：<br>
-$$<br>
-\begin{aligned}<br>
-(1-r_c)\Delta<br>
-&amp;\leq\frac{\mu^2e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}} \frac{S_{\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}(1-r_1)s_1-e^{-\mu^{\prime}}(1+r_0)s_0}{S_{\mu}} \<br>
-&amp;= \frac{\mu^2e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}} \frac{S_\mu^{\prime}}{S_\mu}-\frac{\mu^2e^{-\mu}}{\mu^{\prime}}\frac{(1-r_1)s_1}{S_\mu}-\frac{\mu^2e^{-\mu}}{\mu^{\prime2}}\frac{(1+r_0)s_0}{S_\mu}<br>
-\end{aligned}<br>
-$$</p>
-<p>两边同乘$\frac{\mu^{\prime2}}{\mu}e^{\mu}$，得：<br>
-$$<br>
-\begin{aligned}<br>
-\frac{\mu^{\prime2}}{\mu}e^{\mu}(1-r_c)\Delta<br>
-&amp;\leq \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu}-\mu \frac{(1+r_0)s_0}{S_\mu}<br>
-\end{aligned}<br>
-$$<br>
-所以：<br>
-$$<br>
-\begin{aligned}<br>
-\mu^{\prime}e^{\mu}\left[(1-r_c)\frac{\mu^{\prime}}{\mu}-1\right]\Delta<br>
-&amp;\leq<br>
-\mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu}-\mu \frac{(1+r_0)s_0}{S_\mu}-\mu^{\prime}e^{\mu}\Delta \<br>
-&amp;= \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu} \<br>
-&amp;-\mu \frac{(1+r_0)s_0}{S_\mu}-\mu^{\prime}e^{\mu}(1-\frac{s_0e^{-\mu}}{S_\mu}-\frac{s_1\mu e^{-\mu}}{S_\mu}) \<br>
-&amp;= \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu} \<br>
-&amp;-\mu \frac{(1+r_0)s_0}{S_\mu}-\mu^{\prime}e^{\mu}+\frac{\mu^{\prime}s_0}{S_\mu}+\frac{s_1\mu\mu^{\prime} }{S_\mu} \<br>
-&amp;= \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}+\mu^{\prime}\mu \frac{r_1s_1}{S_\mu}-\mu\frac{r_0s_0}{S_\mu}+(\mu^{\prime}-\mu)\frac{s_0}{S_\mu}-\mu^{\prime}e^\mu<br>
-\end{aligned}<br>
-$$</p>
-<h2 id="7-17-推导不符？">7 (17) 推导不符？</h2>
-<p><strong>命题</strong>：<br>
-Given $N_1 + N_2$ copies of state ρ, suppose the counting rate for $N_1$ randomly chosen states is $s_{ρ}$ and the counting rate for the remaining states is $s’<em>{ρ}$, the probability that $s</em>{ρ} - s’<em>{ρ} &gt; δ</em>{ρ}$ is less than exp(-$\frac{1}{4}\delta_{ρ}^{2}N_{0}/s_{ρ}$) and $N_{0} = Min(N_{1},N_{2}).$</p>
-<p><strong>证明</strong>：<br>
-设$N_1 + N_2$个ρ的平均计数率为$\hat{s}<em>{ρ}$，则有$N_1s</em>{ρ} + N_2s’<em>{ρ}=(N_1 + N_2)\hat{s}</em>{ρ}$，所以$s_{ρ} - s’<em>{ρ} &gt; δ</em>{ρ}$的概率即$s_{ρ} - \hat{s}<em>{ρ} &gt; \frac{N_2}{N_1+N_2}δ</em>{ρ}$的概率。由于$s_{ρ}$和$\hat{s}<em>{ρ}$都在$(0,1)$区间，所以直接带入$Hoeffding$ $inequality$得:<br>
-$$<br>
-P[s</em>{ρ} - \hat{s}<em>{ρ} &gt; \frac{N_2}{N_1+N_2}δ</em>{ρ}]<br>
-\leq e^{-2\frac{(\frac{N_2}{N_1+N_2})^2N_1(N_1+N_2)}{N_2+1}}<br>
-$$</p>
-
+<h2 id="5-15"><a href="#5-15" class="headerlink" title="5 (15)"></a>5 (15)</h2><p>由$1-\Delta-\frac{s_0e^{-\mu}}{S_\mu}=\frac{s_1\mu e^{-\mu}}{S_\mu}$可得：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+s_1=\frac{S_\mu}{\mu e^{-\mu}}(1-\Delta-\frac{s_0e^{-\mu}}{S_\mu})
+\end{aligned}</script><p>由$(8)$式可得：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\Delta^{\prime}
+&= \frac{c\frac{\mu^{\prime2}e^{-\mu^{\prime}}}{\mu^2e^{-\mu}}s_c+ds_d}{S_{\mu^{\prime}}} \\
+&= \frac{S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\mu^{\prime}e^{-\mu^{\prime}}s_{1}}{S_{\mu^{\prime}}} \\
+&= \frac{S_{\mu^{\prime}}-e^{-\mu^{\prime}}s_{0}-\mu^{\prime}e^{-\mu^{\prime}}\frac{S_\mu}{\mu e^{-\mu}}(1-\Delta-\frac{s_0e^{-\mu}}{S_\mu})}{S_{\mu^{\prime}}} \\
+&= 1-\frac{e^{-\mu^{\prime}}s_0}{s_{\mu^{\prime}}}-e^{\mu-\mu^{\prime}}\frac{S_\mu\mu^{\prime}}{S_{\mu^{\prime}}\mu}(1-\Delta-\frac{s_0e^{-\mu}}{S_\mu})
+\end{aligned}</script><h2 id="6-17-推导不符？"><a href="#6-17-推导不符？" class="headerlink" title="6 (17) 推导不符？"></a>6 (17) 推导不符？</h2><p>由$(16)$式得：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+c(1-r_c)s_c \leq\frac{\mu^2e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}} \times(S_{\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}(1-r_1)s_1-e^{-\mu^{\prime}}(1+r_0)s_0)
+\end{aligned}</script><p>即：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+(1-r_c)\Delta 
+&\leq\frac{\mu^2e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}} \frac{S_{\mu^{\prime}}-\mu^{\prime}e^{-\mu^{\prime}}(1-r_1)s_1-e^{-\mu^{\prime}}(1+r_0)s_0}{S_{\mu}} \\
+&= \frac{\mu^2e^{-\mu}}{\mu^{\prime2}e^{-\mu^{\prime}}} \frac{S_\mu^{\prime}}{S_\mu}-\frac{\mu^2e^{-\mu}}{\mu^{\prime}}\frac{(1-r_1)s_1}{S_\mu}-\frac{\mu^2e^{-\mu}}{\mu^{\prime2}}\frac{(1+r_0)s_0}{S_\mu}
+\end{aligned}</script><p>两边同乘$\frac{\mu^{\prime2}}{\mu}e^{\mu}$，得：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{\mu^{\prime2}}{\mu}e^{\mu}(1-r_c)\Delta 
+&\leq \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu}-\mu \frac{(1+r_0)s_0}{S_\mu}
+\end{aligned}</script><p>所以：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\mu^{\prime}e^{\mu}\left[(1-r_c)\frac{\mu^{\prime}}{\mu}-1\right]\Delta
+&\leq 
+\mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu}-\mu \frac{(1+r_0)s_0}{S_\mu}-\mu^{\prime}e^{\mu}\Delta \\
+&= \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu} \\
+&-\mu \frac{(1+r_0)s_0}{S_\mu}-\mu^{\prime}e^{\mu}(1-\frac{s_0e^{-\mu}}{S_\mu}-\frac{s_1\mu e^{-\mu}}{S_\mu}) \\
+&= \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}-\mu^{\prime}\mu\frac{(1-r_1)s_1}{S_\mu} \\
+&-\mu \frac{(1+r_0)s_0}{S_\mu}-\mu^{\prime}e^{\mu}+\frac{\mu^{\prime}s_0}{S_\mu}+\frac{s_1\mu\mu^{\prime} }{S_\mu} \\
+&= \mu e^{\mu^{\prime}} \frac{S_\mu^{\prime}}{S_\mu}+\mu^{\prime}\mu \frac{r_1s_1}{S_\mu}-\mu\frac{r_0s_0}{S_\mu}+(\mu^{\prime}-\mu)\frac{s_0}{S_\mu}-\mu^{\prime}e^\mu
+\end{aligned}</script><h2 id="7-17-推导不符？"><a href="#7-17-推导不符？" class="headerlink" title="7 (17) 推导不符？"></a>7 (17) 推导不符？</h2><p><strong>命题</strong>：<br>Given $N_1 + N_2$ copies of state ρ, suppose the counting rate for $N_1$ randomly chosen states is $s_{ρ}$ and the counting rate for the remaining states is $s’_{ρ}$, the probability that $s_{ρ} - s’_{ρ} &gt; δ_{ρ}$ is less than exp(-$\frac{1}{4}\delta_{ρ}^{2}N_{0}/s_{ρ}$) and $N_{0} = Min(N_{1},N_{2}).$</p>
+<p><strong>证明</strong>：<br>设$N_1 + N_2$个ρ的平均计数率为$\hat{s}_{ρ}$，则有$N_1s_{ρ} + N_2s’_{ρ}=(N_1 + N_2)\hat{s}_{ρ}$，所以$s_{ρ} - s’_{ρ} &gt; δ_{ρ}$的概率即$s_{ρ} - \hat{s}_{ρ} &gt; \frac{N_2}{N_1+N_2}δ_{ρ}$的概率。由于$s_{ρ}$和$\hat{s}_{ρ}$都在$(0,1)$区间，所以直接带入$Hoeffding$ $inequality$得:</p>
+<script type="math/tex; mode=display">
+P[s_{ρ} - \hat{s}_{ρ} > \frac{N_2}{N_1+N_2}δ_{ρ}]
+\leq e^{-2\frac{(\frac{N_2}{N_1+N_2})^2N_1(N_1+N_2)}{N_2+1}}</script>
                 
             </div>
             <hr/>
@@ -1060,7 +1022,7 @@ $$</p>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.8k</span>
+                        class="white-color">31k</span>
             
             
             
@@ -1332,23 +1294,6 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 

@@ -28,8 +28,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-拉曼散射&quot;&gt;1 拉曼散射&lt;/h2&gt;
-&lt;ul&gt;
+    <summary type="html">&lt;h2 id=&quot;1-拉曼散射&quot;&gt;&lt;a href=&quot;#1-拉曼散射&quot; class=&quot;headerlink&quot; title=&quot;1 拉曼散射&quot;&gt;&lt;/a&gt;1 拉曼散射&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;定义：拉曼散射是光子与光纤中振动模式（光学声子，optical</summary>
         
       
@@ -93,7 +92,7 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.18.044069&quot;&gt;&lt;em&gt;&lt;strong&gt;Sixto X, Zapatero V, Curty M.</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.18.044069&quot;&gt;&lt;strong&gt;&lt;em&gt;Sixto X, Zapatero V, Curty M.</summary>
         
       
     
@@ -162,12 +161,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-终端阻抗失配&quot;&gt;1 终端阻抗失配&lt;/h2&gt;
-&lt;p&gt;反射系数$&#92;Gamma$作用于$z=l$处的入射电压波。&lt;br&gt;
-$$&lt;br&gt;
-&#92;Gamma=&#92;frac{Z_L-Z_o}{Z_L+Z_o}&lt;br&gt;
-$$&lt;br&gt;
-驻波比（standing wave</summary>
+    <summary type="html">&lt;h2 id=&quot;1-终端阻抗失配&quot;&gt;&lt;a href=&quot;#1-终端阻抗失配&quot; class=&quot;headerlink&quot; title=&quot;1 终端阻抗失配&quot;&gt;&lt;/a&gt;1 终端阻抗失配&lt;/h2&gt;&lt;p&gt;反射系数$&#92;Gamma$作用于$z=l$处的入射电压波。&lt;/p&gt;
+&lt;script</summary>
         
       
     
@@ -192,9 +187,7 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;p&gt;昨天去武汉大学赏樱，樱花没怎么看到，路倒是走了不少，就单纯记录一下，表示到此一游过。&lt;br&gt;
-&lt;img src=&quot;https://s2.loli.net/2025/03/21/POr9WEDszac2dRH.png&quot; alt=&quot;游览路线&quot;&gt;&lt;br&gt;
-&lt;img</summary>
+    <summary type="html">&lt;p&gt;昨天去武汉大学赏樱，樱花没怎么看到，路倒是走了不少，就单纯记录一下，表示到此一游过。&lt;br&gt;&lt;img src=&quot;https://s2.loli.net/2025/03/21/POr9WEDszac2dRH.png&quot; alt=&quot;游览路线&quot;&gt;&lt;br&gt;&lt;img</summary>
         
       
     
@@ -245,7 +238,7 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;h2</summary>
+    <summary type="html">&lt;h2 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -270,7 +263,7 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.89.022307&quot;&gt;&lt;em&gt;&lt;strong&gt;Lim C C W, Curty M, Walenta N, et al. Concise</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.89.022307&quot;&gt;&lt;strong&gt;&lt;em&gt;Lim C C W, Curty M, Walenta N, et al. Concise</summary>
         
       
     
@@ -295,7 +288,7 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230504&quot;&gt;&lt;em&gt;&lt;strong&gt;Lo H K, Ma X, Chen K. Decoy state quantum key</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230504&quot;&gt;&lt;strong&gt;&lt;em&gt;Lo H K, Ma X, Chen K. Decoy state quantum key</summary>
         
       
     
@@ -320,7 +313,7 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230503&quot;&gt;&lt;em&gt;&lt;strong&gt;Wang X B. Beating the photon-number-splitting</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.94.230503&quot;&gt;&lt;strong&gt;&lt;em&gt;Wang X B. Beating the photon-number-splitting</summary>
         
       
     
@@ -345,7 +338,7 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901&quot;&gt;&lt;em&gt;&lt;strong&gt;Hwang W Y. Quantum key distribution with high</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.057901&quot;&gt;&lt;strong&gt;&lt;em&gt;Hwang W Y. Quantum key distribution with high</summary>
         
       
     
@@ -370,7 +363,7 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326&quot;&gt;&lt;em&gt;&lt;strong&gt;Ma X, Qi B, Zhao Y, et al. Practical decoy state</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.72.012326&quot;&gt;&lt;strong&gt;&lt;em&gt;Ma X, Qi B, Zhao Y, et al. Practical decoy state</summary>
         
       
     
@@ -395,7 +388,7 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.052336&quot;&gt;&lt;em&gt;&lt;strong&gt;Rusca D, Boaron A, Curty M, et al. Security proof</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.052336&quot;&gt;&lt;strong&gt;&lt;em&gt;Rusca D, Boaron A, Curty M, et al. Security proof</summary>
         
       
     
@@ -420,11 +413,8 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-高斯分布&quot;&gt;1 高斯分布&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;定义&lt;br&gt;
-&lt;img src=&quot;https://s2.loli.net/2024/12/29/Y268SLQPHKnDbsR.png&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;1-高斯分布&quot;&gt;&lt;a href=&quot;#1-高斯分布&quot; class=&quot;headerlink&quot; title=&quot;1 高斯分布&quot;&gt;&lt;/a&gt;1 高斯分布&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;定义&lt;br&gt;  &lt;img</summary>
         
       
     
@@ -449,12 +439,7 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;h2 id=&quot;说明-20250112&quot;&gt;说明(20250112)&lt;/h2&gt;
-&lt;p&gt;近两个月被A股折磨得不成人样，也许会长期断更。&lt;/p&gt;
-&lt;p&gt;更新之时，或悟道，或销户。&lt;/p&gt;
-&lt;p&gt;人生中大有比股市更有意义的事情。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;h2 id=&quot;说明-20250112&quot;&gt;&lt;a href=&quot;#说明-20250112&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -479,7 +464,9 @@ $$&lt;br&gt;
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-线性效应&quot;&gt;1</summary>
+    <summary type="html">&lt;h2 id=&quot;1-线性效应&quot;&gt;&lt;a href=&quot;#1-线性效应&quot; class=&quot;headerlink&quot; title=&quot;1 线性效应&quot;&gt;&lt;/a&gt;1 线性效应&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;对$n(&#92;omega)$在$&#92;omega_0$处展开&lt;/p&gt;
+&lt;script</summary>
         
       
     
@@ -505,7 +492,7 @@ $$&lt;br&gt;
         
         
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/12/03/MRpbCKg2SDXBk5N.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;1-公式&quot;&gt;1</summary>
+&lt;h2 id=&quot;1-公式&quot;&gt;&lt;a href=&quot;#1-公式&quot; class=&quot;headerlink&quot; title=&quot;1</summary>
         
       
     

@@ -5,8 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Project · JZ 存储器备忘录, VIP">
-    <meta name="description" content="0 动机
-Datasheet太多了，点开文件夹查找过于麻烦。作为记性不好又懒得一匹的包工头，不需要动脑写逻辑，只需要了解关键内容。因此摘录sheet要点并加上芯片架构层面的内容和思考，不包含时序和芯片自带功能（例如NAND、MRAM的ECC">
+    <meta name="description" content="0 动机Datasheet太多了，点开文件夹查找过于麻烦。作为记性不好又懒得一匹的包工头，不需要动脑写逻辑，只需要了解关键内容。因此摘录sheet要点并加上芯片架构层面的内容和思考，不包含时序和芯片自带功能（例如NAND、MRAM的ECC）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -412,7 +411,7 @@ Datasheet太多了，点开文件夹查找过于麻烦。作为记性不好又�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    918
+                    916
                 </div>
                 
 
@@ -442,120 +441,47 @@ Datasheet太多了，点开文件夹查找过于麻烦。作为记性不好又�
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="0-动机">0 动机</h2>
-<p>Datasheet太多了，点开文件夹查找过于麻烦。作为记性不好又懒得一匹的包工头，不需要动脑写逻辑，只需要了解关键内容。因此摘录sheet要点并加上芯片架构层面的内容和思考，不包含时序和芯片自带功能（例如NAND、MRAM的ECC）的解读，作为一个快捷的备忘录。</p>
-<h2 id="1-DDR2">1 DDR2</h2>
-<ul>
-<li>
-<p>型号：ISSI(芯成 · 美) IS43DR16128C<br>
-容量：2Gb = 128M$\times$16b = 8(banks)$\times$16M$\times$16b；<br>
-位宽：16b<br>
-<img src="https://s2.loli.net/2024/07/29/VRjSW17Zmr9sGYg.png" alt=""><br>
-速率等ORDER INFO：<br>
-<img src="https://s2.loli.net/2024/07/29/HA2tI3F4SPLQrNz.png" alt=""></p>
+                <h2 id="0-动机"><a href="#0-动机" class="headerlink" title="0 动机"></a>0 动机</h2><p>Datasheet太多了，点开文件夹查找过于麻烦。作为记性不好又懒得一匹的包工头，不需要动脑写逻辑，只需要了解关键内容。因此摘录sheet要点并加上芯片架构层面的内容和思考，不包含时序和芯片自带功能（例如NAND、MRAM的ECC）的解读，作为一个快捷的备忘录。</p>
+<h2 id="1-DDR2"><a href="#1-DDR2" class="headerlink" title="1 DDR2"></a>1 DDR2</h2><ul>
+<li><p>型号：ISSI(芯成 · 美) IS43DR16128C<br>容量：2Gb = 128M$\times$16b = 8(banks)$\times$16M$\times$16b；<br>位宽：16b<br><img src="https://s2.loli.net/2024/07/29/VRjSW17Zmr9sGYg.png" alt=""><br>速率等ORDER INFO：<br><img src="https://s2.loli.net/2024/07/29/HA2tI3F4SPLQrNz.png" alt=""></p>
 </li>
-<li>
-<p>特征参数<br>
-<img src="https://s2.loli.net/2024/07/29/8ynSs1dVxYEO2jW.png" alt=""></p>
+<li><p>特征参数<br><img src="https://s2.loli.net/2024/07/29/8ynSs1dVxYEO2jW.png" alt=""></p>
 </li>
-<li>
-<p>架构<br>
-<img src="https://s2.loli.net/2024/07/29/Jh42Vz1vXlWRQOr.png" alt=""></p>
+<li><p>架构<br><img src="https://s2.loli.net/2024/07/29/Jh42Vz1vXlWRQOr.png" alt=""></p>
 </li>
-<li>
-<p>管脚<br>
-<img src="https://s2.loli.net/2024/07/29/tmMiAjwrGXa3obW.png" alt=""><br>
-<img src="https://s2.loli.net/2024/07/29/ohdg3EtqW29fGaD.png" alt=""><br>
-管脚特征：<br>
-没有读使能信号，读使能是通过拉高写使能。<br>
-DDR2不像NAND FLASH一样复用IO可能是因为要求高速。<br>
-DM掩码某些数据位，而DQS有效化某些数据时刻，作用不一样。</p>
+<li><p>管脚<br><img src="https://s2.loli.net/2024/07/29/tmMiAjwrGXa3obW.png" alt=""><br><img src="https://s2.loli.net/2024/07/29/ohdg3EtqW29fGaD.png" alt=""><br>管脚特征：<br>没有读使能信号，读使能是通过拉高写使能。<br>DDR2不像NAND FLASH一样复用IO可能是因为要求高速。<br>DM掩码某些数据位，而DQS有效化某些数据时刻，作用不一样。</p>
 </li>
 </ul>
-<h2 id="2-NAND-FLASH">2 NAND FLASH</h2>
-<ul>
-<li>
-<p>型号：MICRON(美光 · 美) MT29F128G08AMCABH2<br>
-容量：128Gb = 16384(块)$\times$128(页)$\times$8640B；<br>
-位宽：8b<br>
-<img src="https://s2.loli.net/2024/07/29/xcMjmuVCUGFgHfk.png" alt=""></p>
+<h2 id="2-NAND-FLASH"><a href="#2-NAND-FLASH" class="headerlink" title="2 NAND FLASH"></a>2 NAND FLASH</h2><ul>
+<li><p>型号：MICRON(美光 · 美) MT29F128G08AMCABH2<br>容量：128Gb = 16384(块)$\times$128(页)$\times$8640B；<br>位宽：8b<br><img src="https://s2.loli.net/2024/07/29/xcMjmuVCUGFgHfk.png" alt=""></p>
 </li>
-<li>
-<p>特征参数<br>
-<img src="https://s2.loli.net/2024/07/29/ujJgxMwW1hY2RU7.png" alt=""><br>
-注意，NAND手册一般不会给出工作在同步模式下的时钟频率。</p>
+<li><p>特征参数<br><img src="https://s2.loli.net/2024/07/29/ujJgxMwW1hY2RU7.png" alt=""><br>注意，NAND手册一般不会给出工作在同步模式下的时钟频率。</p>
 </li>
-<li>
-<p>架构<br>
-<img src="https://s2.loli.net/2024/07/29/8kyEAR1xzLZG6Ma.png" alt=""><br>
-<img src="https://s2.loli.net/2024/07/29/lNm5boGgRK1fX6h.png" alt=""><br>
-MT29F128G08AMCABH2有4个LUN。</p>
+<li><p>架构<br><img src="https://s2.loli.net/2024/07/29/8kyEAR1xzLZG6Ma.png" alt=""><br><img src="https://s2.loli.net/2024/07/29/lNm5boGgRK1fX6h.png" alt=""><br>MT29F128G08AMCABH2有4个LUN。</p>
 </li>
-<li>
-<p>管脚<br>
-<img src="https://s2.loli.net/2024/07/29/DoIMucBGz98Leth.png" alt=""><br>
-为什么这样分配管脚：<br>
-<em><strong>比如命令锁存使能(Command Latch Enable,CLE)和地址锁存使能(Address Latch Enable，ALE)，那是因为，Nand Flash就8个I/O，而且是复用的，也就是，可以传数据，也可以传地址，也可以传命令，为了区分…</strong></em><br>
-<em><strong>Nand flash支持一个叫做CE(chip enable) don’t-care的技术…由于某些外部应用的频率比较低，而Nand Flash内部操作速度比较快…节省功耗…</strong></em><br>
-参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/340496845">智能座舱之存储篇第三篇—NAND Flash 一眼就看明白了</a></p>
+<li><p>管脚<br><img src="https://s2.loli.net/2024/07/29/DoIMucBGz98Leth.png" alt=""><br>为什么这样分配管脚：<br><strong><em>比如命令锁存使能(Command Latch Enable,CLE)和地址锁存使能(Address Latch Enable，ALE)，那是因为，Nand Flash就8个I/O，而且是复用的，也就是，可以传数据，也可以传地址，也可以传命令，为了区分…</em></strong><br><strong><em>Nand flash支持一个叫做CE(chip enable) don’t-care的技术…由于某些外部应用的频率比较低，而Nand Flash内部操作速度比较快…节省功耗…</em></strong><br>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/340496845">智能座舱之存储篇第三篇—-NAND Flash 一眼就看明白了</a></p>
 </li>
-<li>
-<p>LUN寻址规则<br>
-<img src="https://s2.loli.net/2024/07/29/Fs5zOQhwPALX26W.png" alt=""></p>
+<li><p>LUN寻址规则<br><img src="https://s2.loli.net/2024/07/29/Fs5zOQhwPALX26W.png" alt=""></p>
 </li>
 </ul>
-<h2 id="3-QSPI-FLASH">3 QSPI FLASH</h2>
-<ul>
-<li>
-<p>型号：Infineon(原厂Cypress，2019年被Infineon收购 · 美) S25FL128S<br>
-容量：128Mb<br>
-位宽：4b<br>
-<img src="https://s2.loli.net/2024/07/30/M1EioZbzukJIBsL.png" alt=""><br>
-<strong>EHPLC（Enhanced High-Performance Low Command Mode）增强型高性能低命令模式</strong>：<br>
-功能：EHPLC 模式专注于在最低的命令开销下提供最高的数据传输速率。通过优化命令和数据传输过程，EHPLC 模式能够实现更高的性能，特别是在需要快速读取大量数据的应用中。<br>
-特点：EHPLC 模式可能会使用更高效的命令集和协议来减少延迟和增加吞吐量，从而提供比传统模式更高的性能。<br>
-<strong>HPLC（High-Performance Low Command Mode）高性能低命令模式</strong>：<br>
-功能：HPLC 模式也致力于提高数据传输速率，但与 EHPLC 相比，其优化程度可能稍低。HPLC 仍然通过减少命令开销和提高数据传输效率来提供良好的性能。<br>
-特点：HPLC 模式通常在标准 QSPI 操作的基础上进行一些优化，使其适用于大多数高性能应用，但可能不如 EHPLC 那样极致优化。</p>
+<h2 id="3-QSPI-FLASH"><a href="#3-QSPI-FLASH" class="headerlink" title="3 QSPI FLASH"></a>3 QSPI FLASH</h2><ul>
+<li><p>型号：Infineon(原厂Cypress，2019年被Infineon收购 · 美) S25FL128S<br>容量：128Mb<br>位宽：4b<br><img src="https://s2.loli.net/2024/07/30/M1EioZbzukJIBsL.png" alt=""><br><strong>EHPLC（Enhanced High-Performance Low Command Mode）增强型高性能低命令模式</strong>：<br>功能：EHPLC 模式专注于在最低的命令开销下提供最高的数据传输速率。通过优化命令和数据传输过程，EHPLC 模式能够实现更高的性能，特别是在需要快速读取大量数据的应用中。<br>特点：EHPLC 模式可能会使用更高效的命令集和协议来减少延迟和增加吞吐量，从而提供比传统模式更高的性能。<br><strong>HPLC（High-Performance Low Command Mode）高性能低命令模式</strong>：<br>功能：HPLC 模式也致力于提高数据传输速率，但与 EHPLC 相比，其优化程度可能稍低。HPLC 仍然通过减少命令开销和提高数据传输效率来提供良好的性能。<br>特点：HPLC 模式通常在标准 QSPI 操作的基础上进行一些优化，使其适用于大多数高性能应用，但可能不如 EHPLC 那样极致优化。</p>
 </li>
-<li>
-<p>特征参数<br>
-注意，这个手册block块=sector扇区<br>
-<img src="https://s2.loli.net/2024/07/30/gMQRPDeht2Ak146.png" alt=""></p>
+<li><p>特征参数<br>注意，这个手册block块=sector扇区<br><img src="https://s2.loli.net/2024/07/30/gMQRPDeht2Ak146.png" alt=""></p>
 </li>
-<li>
-<p>架构<br>
-<img src="https://s2.loli.net/2024/07/30/3FP1fSiHJnlteUG.png" alt=""><br>
-非常草率的架构图。。。<br>
-<img src="https://s2.loli.net/2024/07/30/OARVLNiy12acW4g.png" alt=""></p>
+<li><p>架构<br><img src="https://s2.loli.net/2024/07/30/3FP1fSiHJnlteUG.png" alt=""><br>非常草率的架构图。。。<br><img src="https://s2.loli.net/2024/07/30/OARVLNiy12acW4g.png" alt=""></p>
 </li>
-<li>
-<p>管脚<br>
-<img src="https://s2.loli.net/2024/07/30/M5eVJZ9mFQrfE8z.png" alt=""><br>
-类似于NAND，QUAD模式4个IO复用指令、地址、数据，并且时分传递。</p>
+<li><p>管脚<br><img src="https://s2.loli.net/2024/07/30/M5eVJZ9mFQrfE8z.png" alt=""><br>类似于NAND，QUAD模式4个IO复用指令、地址、数据，并且时分传递。</p>
 </li>
 </ul>
-<h2 id="4-MRAM">4 MRAM</h2>
-<ul>
-<li>
-<p>型号：EVERSPIN(埃弗斯平 · 美，只做MRAM的小公司，从随意的中文名就可以看出) MR5A16ACYS35<br>
-容量：32Mb；位宽：16b<br>
-<img src="https://s2.loli.net/2024/07/29/kbTa9m7tzepWUBv.png" alt=""></p>
+<h2 id="4-MRAM"><a href="#4-MRAM" class="headerlink" title="4 MRAM"></a>4 MRAM</h2><ul>
+<li><p>型号：EVERSPIN(埃弗斯平 · 美，只做MRAM的小公司，从随意的中文名就可以看出) MR5A16ACYS35<br>容量：32Mb；位宽：16b<br><img src="https://s2.loli.net/2024/07/29/kbTa9m7tzepWUBv.png" alt=""></p>
 </li>
-<li>
-<p>特征参数<br>
-<img src="https://s2.loli.net/2024/07/29/oVRBMi3vUqcyWJe.png" alt=""></p>
+<li><p>特征参数<br><img src="https://s2.loli.net/2024/07/29/oVRBMi3vUqcyWJe.png" alt=""></p>
 </li>
-<li>
-<p>架构<br>
-<img src="https://s2.loli.net/2024/07/29/tOnjAXr8vdWDmVx.png" alt=""><br>
-架构图非常简单清晰。<br>
-“sense amps”（感应放大器）是用来检测和放大存储单元中的信号电压的电路。这些感应放大器的作用是读取MRAM单元的状态，即确定存储单元中存储的是0还是1。具体来说，MRAM的存储单元通过磁性材料的磁化方向来表示数据，而感应放大器则通过检测这些磁化方向造成的电压变化来读取数据。</p>
+<li><p>架构<br><img src="https://s2.loli.net/2024/07/29/tOnjAXr8vdWDmVx.png" alt=""><br>架构图非常简单清晰。<br>“sense amps”（感应放大器）是用来检测和放大存储单元中的信号电压的电路。这些感应放大器的作用是读取MRAM单元的状态，即确定存储单元中存储的是0还是1。具体来说，MRAM的存储单元通过磁性材料的磁化方向来表示数据，而感应放大器则通过检测这些磁化方向造成的电压变化来读取数据。</p>
 </li>
-<li>
-<p>管脚<br>
-<img src="https://s2.loli.net/2024/07/29/TRfj4amweL7qxQg.png" alt=""><br>
-Output Enable和Write Enable相当于外部输入的读写使能信号。</p>
+<li><p>管脚<br><img src="https://s2.loli.net/2024/07/29/TRfj4amweL7qxQg.png" alt=""><br>Output Enable和Write Enable相当于外部输入的读写使能信号。</p>
 </li>
 </ul>
 
@@ -1054,7 +980,7 @@ Output Enable和Write Enable相当于外部输入的读写使能信号。</p>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.8k</span>
+                        class="white-color">31k</span>
             
             
             
@@ -1326,23 +1252,6 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 

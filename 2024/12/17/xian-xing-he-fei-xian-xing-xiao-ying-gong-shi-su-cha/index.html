@@ -6,11 +6,9 @@
     <meta charset="utf-8">
     <meta name="keywords" content="线性和非线性效应公式速查, VIP">
     <meta name="description" content="1 线性效应
-
-
 对$n(\omega)$在$\omega_0$处展开
-$$
-n(\omega)=n(\omega)=n_0+n_1(\omega-\omega_0)+\frac{1}{2!}n_2(\omega-\omega_0)^2+\">
+
+n(\omega)=n(\omega)=n_0+n_1(\omega-\omega_0)+\frac{1}{2!}n_2(\omega-\omega_0)^2+\frac">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -446,174 +444,104 @@ n(\omega)=n(\omega)=n_0+n_1(\omega-\omega_0)+\frac{1}{2!}n_2(\omega-\omega_0)^2+
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-线性效应">1 线性效应</h2>
-<ul>
-<li>
-<p>对$n(\omega)$在$\omega_0$处展开<br>
-$$<br>
-n(\omega)=n(\omega)=n_0+n_1(\omega-\omega_0)+\frac{1}{2!}n_2(\omega-\omega_0)^2+\frac{1}{3!}n_3(\omega-\omega_0)^3+\cdots<br>
-$$<br>
-$$<br>
-n_i=(\frac{d^in}{d\omega^i})_{\omega=\omega_0}<br>
-$$<br>
-<em><strong>注：这里采用笔者的书写习惯，$n_2$并非kerr系数。表示非线性均用大写$N$.</strong></em></p>
+                <h2 id="1-线性效应"><a href="#1-线性效应" class="headerlink" title="1 线性效应"></a>1 线性效应</h2><ul>
+<li><p>对$n(\omega)$在$\omega_0$处展开</p>
+<script type="math/tex; mode=display">
+n(\omega)=n(\omega)=n_0+n_1(\omega-\omega_0)+\frac{1}{2!}n_2(\omega-\omega_0)^2+\frac{1}{3!}n_3(\omega-\omega_0)^3+\cdots</script><script type="math/tex; mode=display">
+n_i=(\frac{d^in}{d\omega^i})_{\omega=\omega_0}</script><p><strong><em>注：这里采用笔者的书写习惯，$n_2$并非kerr系数。表示非线性均用大写$N$.</em></strong></p>
 </li>
-<li>
-<p>对$\beta(\omega)$在$\omega_0$处展开<br>
-$$<br>
-\beta(\omega)=n(\omega)\frac{\omega}{c}=\beta_0+\beta_1(\omega-\omega_0)+\frac{1}{2!}\beta_2(\omega-\omega_0)^2+\frac{1}{3!}\beta_3(\omega-\omega_0)^3+\cdots<br>
-$$</p>
-<p>$$<br>
-\beta_i=(\frac{d^i\beta}{d\omega^i})<em>{\omega=\omega_0}=(\omega n_i+in</em>{i-1})/c<br>
-$$</p>
-<p>其中一次项和二次项需要关注，它们分别称作<strong>一阶色散/群延迟</strong>和<strong>二阶色散</strong><br>
-$$<br>
-\beta_1=(\omega n_1+n)/c=1/v_g<br>
-$$</p>
-<p>$$<br>
-\beta_2=(\omega n_2+2n_1)/c<br>
-$$</p>
+<li><p>对$\beta(\omega)$在$\omega_0$处展开</p>
+<script type="math/tex; mode=display">
+\beta(\omega)=n(\omega)\frac{\omega}{c}=\beta_0+\beta_1(\omega-\omega_0)+\frac{1}{2!}\beta_2(\omega-\omega_0)^2+\frac{1}{3!}\beta_3(\omega-\omega_0)^3+\cdots</script><script type="math/tex; mode=display">
+\beta_i=(\frac{d^i\beta}{d\omega^i})_{\omega=\omega_0}=(\omega n_i+in_{i-1})/c</script><p>其中一次项和二次项需要关注，它们分别称作<strong>一阶色散/群延迟</strong>和<strong>二阶色散</strong></p>
+<script type="math/tex; mode=display">
+\beta_1=(\omega n_1+n)/c=1/v_g</script><script type="math/tex; mode=display">
+\beta_2=(\omega n_2+2n_1)/c</script></li>
+<li><p>对$\omega({\mu})$在$\mu=0处$展开，$\omega({\mu})$代表周期性频谱的谐振角频率</p>
+<script type="math/tex; mode=display">
+\omega(\mu)=\omega_{0}+D_{1} \mu+\frac{D_{2}}{2!} \mu^{2}+\frac{D_{3}}{3!} \mu^{3}+\ldots \quad(\mu=\ldots-3,-2,-1,0,1,2,3 \ldots)</script><script type="math/tex; mode=display">
+D_i=(\frac{d^i\omega}{d\mu^i})_{\omega=\omega_0}</script><p>由于$m$和$\mu$是同一个物理量，所以$n(\omega)\cdot\omega\cdot L/c=2\pi m$两边分别对$m$求导可得$D_i$.<br>其中一次项和二次项需要关注，它们分别称作<strong>一阶色散系数/FSR</strong>和<strong>二阶群速度色散系(2-order GVD)</strong>：</p>
+<script type="math/tex; mode=display">
+D_1=\frac{2\pi}{\beta_1L}=2\pi\frac{v_g}{L}=FSR(rad/s)</script><script type="math/tex; mode=display">
+D_2=-\frac{\beta_2D_1^2}{\beta_1}(rad/s)</script></li>
+<li><p>色散参量</p>
+<script type="math/tex; mode=display">
+D=\frac{d\beta_1}{d\lambda}=\frac{d}{d\omega}\left(\frac{d\beta}{d\omega}\right)\cdot\frac{d\omega}{d\lambda}=\beta_2\cdot\frac{d\omega}{d\lambda}</script><script type="math/tex; mode=display">
+\frac{d\omega}{d\lambda}=-\frac{2\pi c}{\lambda^2}</script><script type="math/tex; mode=display">
+D=-\beta_2\cdot\frac{2\pi c}{\lambda^2}(s/m^2)</script><p>其单位一般为ps/nm/km，描述光纤或波导中波长引起的脉冲展宽。该物理量和$D_2$不同，后者代表FSR随模序的变化。</p>
 </li>
-<li>
-<p>对$\omega({\mu})$在$\mu=0处$展开，$\omega({\mu})$代表周期性频谱的谐振角频率<br>
-$$<br>
-\omega(\mu)=\omega_{0}+D_{1} \mu+\frac{D_{2}}{2!} \mu^{2}+\frac{D_{3}}{3!} \mu^{3}+\ldots \quad(\mu=\ldots-3,-2,-1,0,1,2,3 \ldots)<br>
-$$</p>
-<p>$$<br>
-D_i=(\frac{d^i\omega}{d\mu^i})_{\omega=\omega_0}<br>
-$$<br>
-由于$m$和$\mu$是同一个物理量，所以$n(\omega)\cdot\omega\cdot L/c=2\pi m$两边分别对$m$求导可得$D_i$.<br>
-其中一次项和二次项需要关注，它们分别称作<strong>一阶色散系数/FSR</strong>和<strong>二阶群速度色散系(2-order GVD)</strong>：<br>
-$$<br>
-D_1=\frac{2\pi}{\beta_1L}=2\pi\frac{v_g}{L}=FSR(rad/s)<br>
-$$</p>
-<p>$$<br>
-D_2=-\frac{\beta_2D_1^2}{\beta_1}(rad/s)<br>
-$$</p>
-</li>
-<li>
-<p>色散参量<br>
-$$<br>
-D=\frac{d\beta_1}{d\lambda}=\frac{d}{d\omega}\left(\frac{d\beta}{d\omega}\right)\cdot\frac{d\omega}{d\lambda}=\beta_2\cdot\frac{d\omega}{d\lambda}<br>
-$$</p>
-<p>$$<br>
-\frac{d\omega}{d\lambda}=-\frac{2\pi c}{\lambda^2}<br>
-$$</p>
-<p>$$<br>
-D=-\beta_2\cdot\frac{2\pi c}{\lambda^2}(s/m^2)<br>
-$$<br>
-其单位一般为ps/nm/km，描述光纤或波导中波长引起的脉冲展宽。该物理量和$D_2$不同，后者代表FSR随模序的变化。</p>
-</li>
-<li>
-<p>正常色散和反常色散<br>
-正常色散：$\beta_2&gt;0,D&lt;0,D_2&lt;0$,低频快</p>
+<li><p>正常色散和反常色散<br>正常色散：$\beta_2&gt;0,D&lt;0,D_2&lt;0$,低频快</p>
 <p>反常色散：$\beta_2&lt;0,D&gt;0,D_2&gt;0$,高频快</p>
 </li>
 </ul>
-<h2 id="2-非线性效应">2 非线性效应</h2>
+<h2 id="2-非线性效应"><a href="#2-非线性效应" class="headerlink" title="2 非线性效应"></a>2 非线性效应</h2><ul>
+<li><p>3阶非线性(Kerr)</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\vec{P} 
+&= \vec{P}^{(1)} + \vec{P}^{(2)} + \vec{P}^{(3)} + \cdots \\
+&= \boldsymbol{\varepsilon}_0\left(\boldsymbol{\chi}^{(1)} \cdot \vec{E} 
+    + \boldsymbol{\chi}^{(2)} {:} \vec{E} \vec{E} 
+    + \boldsymbol{\chi}^{(3)} {:} \vec{E} \vec{E} \vec{E} 
+    + \cdots\right),
+\end{aligned}</script><p>:表示高阶张量乘积。每个维度上的极化强度为：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+P_i
+&= {P_i}^{(1)}+{P_i}^{(2)}+{P_i}^{(3)} \\
+&= \boldsymbol{\varepsilon}_0\left(\sum_{j}\chi_{ij}^{(1)}E_{1j}+\sum_{jk}\chi_{ijk}^{(2)}E_{1j}E_{2k}+\sum_{jkl}\chi_{ijkl}^{(3)}E_{1j}E_{2k}E_{3l}+\cdots\right),(i,j,k...\in\{x,y,z\})
+\end{aligned}</script><p>假设所有电场同一个方向极化，且我们只考虑该方向上的极化强度（因为我们的目的是求出该方向上的折射率，只有该方向上的折射率会影响电场），所以极化强度可退化为标量形式：</p>
+<script type="math/tex; mode=display">
+P(\boldsymbol{r},t)=\epsilon_0\left(\chi^{(1)}E(\boldsymbol{r},t)+\chi^{(2)}E^2(\boldsymbol{r},t)+\chi^{(3)}E^3(\boldsymbol{r},t)+\ldots\right)</script><p>再着重考虑Kerr效应：</p>
+<script type="math/tex; mode=display">
+P^{(3)}(\boldsymbol{r},t)=\epsilon_{0}\chi^{(3)}\left(E_{1}(\boldsymbol{r})e^{i\omega_{1}t}+E_{2}(\boldsymbol{r})e^{i\omega_{2}t}+E_{3}(\boldsymbol{r})e^{i\omega_{3}t}+\mathrm{c.c.}\right)^{3}</script><p>去掉44项中相消的项，得到：</p>
+<script type="math/tex; mode=display">
+P^{(3)}(\boldsymbol{r},t)=\epsilon_0\chi^{(3)}\left(E(\boldsymbol{r})\cos\omega t\right)^3=\frac{1}{4}\epsilon_0\chi^{(3)}E^3(\boldsymbol{r})\cos3\omega t+\frac{3}{4}\epsilon_0\chi^{(3)}E^3(\boldsymbol{r})\cos\omega t</script><p>我们只需要三次项，因为一次项归于泵浦被滤除。于是可得：</p>
+<script type="math/tex; mode=display">
+P^{(3)}(\boldsymbol{r},t)=\frac{3}{4}\epsilon_0\chi^{(3)}E^3(\boldsymbol{r})\cos\omega t=\epsilon_0\epsilon_{NL}E(\boldsymbol{r},t)</script><script type="math/tex; mode=display">
+\epsilon_{NL}=\frac{3}{4}\chi^{(3)}|E(\boldsymbol{r},t)|^2</script><script type="math/tex; mode=display">
+\begin{aligned}
+n^{\prime}
+&=\left(1+\chi^{(1)}+\epsilon_{NL}\right)^{1/2}\\
+&\approx n+\frac{\epsilon_{NL}}{2n}\\
+&=n+N_2I\\
+&=n+(3\chi^{(3)}/4n^2\epsilon_0c)*(n\epsilon_0c|E|^2/2)
+\end{aligned}</script><p>另外定义$\gamma$:</p>
+<script type="math/tex; mode=display">
+\gamma=\frac{\omega_0N_2}{cA_\mathrm{eff}}</script></li>
+<li><p>Kerr腔体光学</p>
 <ul>
-<li>
-<p>3阶非线性(Kerr)<br>
-$$<br>
-\begin{aligned}<br>
-\vec{P}<br>
-&amp;= \vec{P}^{(1)} + \vec{P}^{(2)} + \vec{P}^{(3)} + \cdots \<br>
-&amp;= \boldsymbol{\varepsilon}<em>0\left(\boldsymbol{\chi}^{(1)} \cdot \vec{E}<br>
-+ \boldsymbol{\chi}^{(2)} {:} \vec{E} \vec{E}<br>
-+ \boldsymbol{\chi}^{(3)} {:} \vec{E} \vec{E} \vec{E}<br>
-+ \cdots\right),<br>
-\end{aligned}<br>
-$$<br>
-:表示高阶张量乘积。每个维度上的极化强度为：<br>
-$$<br>
-\begin{aligned}<br>
-P_i<br>
-&amp;= {P_i}^{(1)}+{P_i}^{(2)}+{P_i}^{(3)} \<br>
-&amp;= \boldsymbol{\varepsilon}<em>0\left(\sum</em>{j}\chi</em>{ij}^{(1)}E_{1j}+\sum_{jk}\chi_{ijk}^{(2)}E_{1j}E_{2k}+\sum_{jkl}\chi_{ijkl}^{(3)}E_{1j}E_{2k}E_{3l}+\cdots\right),(i,j,k…\in{x,y,z})<br>
-\end{aligned}<br>
-$$</p>
-<p>假设所有电场同一个方向极化，且我们只考虑该方向上的极化强度（因为我们的目的是求出该方向上的折射率，只有该方向上的折射率会影响电场），所以极化强度可退化为标量形式：<br>
-$$<br>
-P(\boldsymbol{r},t)=\epsilon_0\left(\chi^{(1)}E(\boldsymbol{r},t)+\chi^{(2)}E^2(\boldsymbol{r},t)+\chi^{(3)}E^3(\boldsymbol{r},t)+\ldots\right)<br>
-$$</p>
-<p>再着重考虑Kerr效应：<br>
-$$<br>
-P^{(3)}(\boldsymbol{r},t)=\epsilon_{0}\chi^{(3)}\left(E_{1}(\boldsymbol{r})e^{i\omega_{1}t}+E_{2}(\boldsymbol{r})e^{i\omega_{2}t}+E_{3}(\boldsymbol{r})e^{i\omega_{3}t}+\mathrm{c.c.}\right)^{3}<br>
-$$</p>
-<p>去掉44项中相消的项，得到：<br>
-$$<br>
-P^{(3)}(\boldsymbol{r},t)=\epsilon_0\chi^{(3)}\left(E(\boldsymbol{r})\cos\omega t\right)^3=\frac{1}{4}\epsilon_0\chi^{(3)}E^3(\boldsymbol{r})\cos3\omega t+\frac{3}{4}\epsilon_0\chi^{(3)}E^3(\boldsymbol{r})\cos\omega t<br>
-$$</p>
-<p>我们只需要三次项，因为一次项归于泵浦被滤除。于是可得：<br>
-$$<br>
-P^{(3)}(\boldsymbol{r},t)=\frac{3}{4}\epsilon_0\chi^{(3)}E^3(\boldsymbol{r})\cos\omega t=\epsilon_0\epsilon_{NL}E(\boldsymbol{r},t)<br>
-$$</p>
-<p>$$<br>
-\epsilon_{NL}=\frac{3}{4}\chi^{(3)}|E(\boldsymbol{r},t)|^2<br>
-$$</p>
-<p>$$<br>
-\begin{aligned}<br>
-n^{\prime}<br>
-&amp;=\left(1+\chi^{(1)}+\epsilon_{NL}\right)^{1/2}\<br>
-&amp;\approx n+\frac{\epsilon_{NL}}{2n}\<br>
-&amp;=n+N_2I\<br>
-&amp;=n+(3\chi^{(3)}/4n^2\epsilon_0c)*(n\epsilon_0c|E|^2/2)<br>
-\end{aligned}<br>
-$$</p>
-<p>另外定义$\gamma$:<br>
-$$<br>
-\gamma=\frac{\omega_0N_2}{cA_\mathrm{eff}}<br>
-$$</p>
-</li>
-<li>
-<p>Kerr腔体光学</p>
+<li><p>Ikeda Map</p>
 <ul>
-<li>
-<p>Ikeda Map</p>
-<ul>
-<li>
-<p>未归一化<br>
-$$<br>
-\begin{aligned}<br>
-\frac{\partial A}{\partial z}<br>
-&amp;=-\frac{\alpha_{i}}{2}A-i\frac{\beta_{2}}{2}\frac{\partial^{2}A}{\partial t^{2}}+i\gamma|A|^{2}A,\<br>
-A^{m+1}(0,t)<br>
-&amp;=\sqrt{1-\theta}e^{-i\delta}A^{m}(L,t)+\sqrt{\theta}A_{\mathrm{in}}<br>
-\end{aligned}<br>
-$$</p>
-</li>
-<li>
-<p>归一化<br>
-$$<br>
-\begin{aligned}<br>
-\frac{\partial\psi^{m}}{\partial\xi}<br>
-&amp;=-\frac{\alpha}{2}\psi^m-is\frac{\partial^2\psi^m}{\partial\tau^2}+i|\psi^m|^2\psi^m,\<br>
-\psi^{m+1}(0,\tau)<br>
-&amp;=\sqrt{1-\alpha}e^{-i\delta}\psi^{m}(1,\tau)+\sqrt{\alpha}\psi_{\mathrm{in}}.<br>
-\end{aligned}<br>
-$$</p>
-</li>
+<li><p>未归一化</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{\partial A}{\partial z}
+&=-\frac{\alpha_{i}}{2}A-i\frac{\beta_{2}}{2}\frac{\partial^{2}A}{\partial t^{2}}+i\gamma|A|^{2}A,\\
+A^{m+1}(0,t)
+&=\sqrt{1-\theta}e^{-i\delta}A^{m}(L,t)+\sqrt{\theta}A_{\mathrm{in}}
+\end{aligned}</script></li>
+<li><p>归一化</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{\partial\psi^{m}}{\partial\xi}
+&=-\frac{\alpha}{2}\psi^m-is\frac{\partial^2\psi^m}{\partial\tau^2}+i|\psi^m|^2\psi^m,\\
+\psi^{m+1}(0,\tau)
+&=\sqrt{1-\alpha}e^{-i\delta}\psi^{m}(1,\tau)+\sqrt{\alpha}\psi_{\mathrm{in}}.
+\end{aligned}</script></li>
 </ul>
 </li>
-<li>
-<p>LLE(本质是Ikeda Map精简版，适用于慢变光场，减小计算量)</p>
+<li><p>LLE(本质是Ikeda Map精简版，适用于慢变光场，减小计算量)</p>
 <ul>
-<li>归一化<br>
-$$<br>
-\frac{\partial\psi}{\partial\eta}=-\left(\alpha+i\delta\right)\psi-is\frac{\partial^{2}\psi}{\partial\tau^{2}}+i{\left|\psi\right|}^{2}\psi+\sqrt{\alpha}\psi_{\mathrm{in}}<br>
-$$</li>
+<li>归一化<script type="math/tex; mode=display">
+\frac{\partial\psi}{\partial\eta}=-\left(\alpha+i\delta\right)\psi-is\frac{\partial^{2}\psi}{\partial\tau^{2}}+i{\left|\psi\right|}^{2}\psi+\sqrt{\alpha}\psi_{\mathrm{in}}</script></li>
 </ul>
 </li>
-<li>
-<p>归一化系数等参数<br>
-$$<br>
-\xi=\frac{z}{z_0},\quad\tau=\frac{t}{t_0},\quad\psi=\frac{A}{A_0},\quad\psi_{in}=\frac{A_{in}}{A_0}<br>
-$$</p>
-</li>
+<li><p>归一化系数等参数</p>
+<script type="math/tex; mode=display">
+\xi=\frac{z}{z_0},\quad\tau=\frac{t}{t_0},\quad\psi=\frac{A}{A_0},\quad\psi_{in}=\frac{A_{in}}{A_0}</script><script type="math/tex; mode=display">
+z_0=L,\quad t_0=\sqrt{\frac{|\beta_2|L}{2}},\quad A_0=\sqrt{\frac{1}{L\gamma}}</script></li>
 </ul>
-<p>$$<br>
-z_0=L,\quad t_0=\sqrt{\frac{|\beta_2|L}{2}},\quad A_0=\sqrt{\frac{1}{L\gamma}}<br>
-$$</p>
 </li>
 </ul>
 <script>
@@ -648,6 +576,7 @@ $$</p>
     }
   };
 </script>
+
 <table border="1">
   <tbody><tr>
     <th>真空λ (nm)</th>
@@ -733,6 +662,7 @@ $$</p>
     <td id="A0_5">-</td>
   </tr>
 </tbody></table>
+
 
                 
             </div>
@@ -1229,7 +1159,7 @@ $$</p>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.8k</span>
+                        class="white-color">31k</span>
             
             
             
@@ -1501,23 +1431,6 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 
