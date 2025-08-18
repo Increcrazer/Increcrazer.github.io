@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.2k
                 </div>
                 
 
@@ -549,8 +549,9 @@ w
 <p>所以：$P_{\mathbb{Z},det}\times R + (P_{\mathbb{Z},det}\times R\times t_{DT})\times R\times P_{\mathbb{Z},det,tot} = P_{\mathbb{Z},det,tot}\times R,$<br>求解可得$c_{dt}=1/(1+P_{\mathbb{Z},det,tot}\times R\times t_{DT})$.</p>
 <p><strong>$P_{DC}/2$的解释：</strong></p>
 <p>这里的$P_{DC}$应该是在时间窗口发生暗计数事件的概率，暗含了两个探测器。</p>
-<h2 id="附：代码实现"><a href="#附：代码实现" class="headerlink" title="附：代码实现"></a>附：代码实现</h2><p><a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprotocol/Decoy_Lim2014_corefunc.m">Decoy_Lim2014_corefunc</a>为核心代码，<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprotocol/test_Decoy_Lim2014_corefunc.m">test_Decoy_Lim2014_corefunc</a>为验证代码。</p>
+<h2 id="附：代码实现"><a href="#附：代码实现" class="headerlink" title="附：代码实现"></a>附：代码实现</h2><h3 id="未优化"><a href="#未优化" class="headerlink" title="未优化"></a>未优化</h3><p><a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprotocol/Decoy_Lim2014_corefunc.m">Decoy_Lim2014_corefunc.m</a>为核心代码，<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprotocol/test_Decoy_Lim2014_corefunc.m">test_Decoy_Lim2014_corefunc.m</a>为验证代码。</p>
 <p>使用参数和论文相同，$\mu = [0.6,0.1,0.0002]$，$P_\mu = [0.5,0.25,0.25]$，渐近密钥率如下，和论文结果大致一致（没优化诱骗态参数）：<br><img src="https://s2.loli.net/2025/07/20/mXEnl3NhxFa5QcY.jpg" alt=""></p>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>使用该代码进行优化：<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/QKDprotocol/optimize_Lim2014_corefunc.m">optimize_Lim2014_corefunc.m</a>，采用<a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/full/10.1155/2022/9717591">Li2019</a>的算法：<br><img src="https://s2.loli.net/2025/08/18/DdfYtV8GeSoTXMq.png" alt=""><br>优化后的参数为：<img src="https://s2.loli.net/2025/08/18/mfT8tAe2Lwc7RPn.png" alt=""><br>不优化参数的情况为[0.6 0.1 0.0002 0.5 0.25 0.25]：<img src="https://s2.loli.net/2025/08/18/vZfuNDoA71cWGlr.png" alt=""></p>
 
                 
             </div>
