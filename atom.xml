@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-08-16T17:36:11.722Z</updated>
+  <updated>2025-09-06T12:25:55.091Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>江城游记之华科培训</title>
+    <link href="http://increcrazer.github.io/2025/09/04/jiang-cheng-you-ji-zhi-hua-ke-pei-xun/"/>
+    <id>http://increcrazer.github.io/2025/09/04/jiang-cheng-you-ji-zhi-hua-ke-pei-xun/</id>
+    <published>2025-09-04T14:07:49.161Z</published>
+    <updated>2025-09-06T12:25:55.091Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;时隔6月，由于报名了“光模块设计实践班”培训，我再一次来到江城，这一次的休闲安排主要是游华科。&lt;/p&gt;
+&lt;h2 id=&quot;8月31日&quot;&gt;&lt;a href=&quot;#8月31日&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vision" scheme="http://increcrazer.github.io/categories/vision/"/>
+    
+    
+    <category term="diary, travel" scheme="http://increcrazer.github.io/tags/diary-travel/"/>
+    
+  </entry>
   
   <entry>
     <title>波分复用光纤QKD的退化机制</title>
@@ -476,32 +502,6 @@
     
     
     <category term="photonics, tool" scheme="http://increcrazer.github.io/tags/photonics-tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微腔参数计算工具</title>
-    <link href="http://increcrazer.github.io/2024/12/03/wei-qiang-can-shu-ji-suan-gong-ju/"/>
-    <id>http://increcrazer.github.io/2024/12/03/wei-qiang-can-shu-ji-suan-gong-ju/</id>
-    <published>2024-12-03T11:08:12.258Z</published>
-    <updated>2024-12-29T04:49:06.877Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/12/03/MRpbCKg2SDXBk5N.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;1-公式&quot;&gt;&lt;a href=&quot;#1-公式&quot; class=&quot;headerlink&quot; title=&quot;1</summary>
-        
-      
-    
-    
-    
-    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
-    
-    
-    <category term="tool, photonics" scheme="http://increcrazer.github.io/tags/tool-photonics/"/>
     
   </entry>
   
