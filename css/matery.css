@@ -241,7 +241,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #264658 0%, #6b4e72 100%);
+    background-image: linear-gradient(to right, #c24141 0%, #3560d4 100%);
 }
 
 .text-color {
@@ -1908,7 +1908,7 @@ p.search-result-summary{
 }
 
 .top-scroll .btn-floating {
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
+    background: linear-gradient(to bottom right, #ce4e32 0%, #c7305b 100%);
     width: 48px;
     height: 48px;
 }
