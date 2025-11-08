@@ -598,11 +598,13 @@ function clearRow(i) {
 window.onload = calculateReflection();
 </script>
 
-<h2 id="2-传输线特征阻抗失配"><a href="#2-传输线特征阻抗失配" class="headerlink" title="2 传输线特征阻抗失配"></a>2 传输线特征阻抗失配</h2><p><img src="https://s2.loli.net/2025/05/18/2j5nd84oCAktmSI.png" alt=""><br>这是功率守恒的，容易证明下式成立：</p>
+<h2 id="2-传输线特征阻抗失配"><a href="#2-传输线特征阻抗失配" class="headerlink" title="2 传输线特征阻抗失配"></a>2 传输线特征阻抗失配</h2><p><img src="https://s2.loli.net/2025/05/18/2j5nd84oCAktmSI.png" alt=""></p>
+<p>这是功率守恒的，容易证明下式成立：</p>
 <script type="math/tex; mode=display">
 \frac{(V_1^+)^2}{Z_1}=\frac{(\Gamma_1V_1^+)^2}{Z_1}+\frac{(\tau_1V_1^+)^2}{Z_o}</script><h2 id="3-输入阻抗"><a href="#3-输入阻抗" class="headerlink" title="3 输入阻抗"></a>3 输入阻抗</h2><p>把一段传输线和负载当作一个整体，作为输入阻抗。需要注意，当$Z_L≠Z_0$时，实际在$z=-l$处不会产生反射，而是在$Z_L$处产生反射。输入阻抗只是把后面的电路看成了黑盒子。</p>
 <script type="math/tex; mode=display">
 Z_{in}=Z_0\frac{Z_L+jZ_0\tan(\beta\ell)}{Z_0+jZ_L\tan(\beta\ell)}</script><p><img src="https://s2.loli.net/2025/05/18/Q5leGL8dZW3vsE2.png" alt=""></p>
+<p>这里需要注意，平时我们用万用表测量接负载的同轴线，其实测的是直流时的输入阻抗，此时$\beta=0$.所以我们测量到的值总是负载阻抗。</p>
 <div id="zin-calculator">
   <h3>Zin 计算器</h3>
   <table border="1" class="zin-table">
@@ -1560,22 +1562,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
