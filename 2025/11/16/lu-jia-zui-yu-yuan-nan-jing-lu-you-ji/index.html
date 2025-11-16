@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="电磁波损耗换算原理和工具, 老王Hub">
-    <meta name="description" content="1 电磁波在介质中的损耗电磁波在介质中传播时会受到多种损耗，主要包括欧姆损耗（电磁波产生电流发生）、介电损耗（也叫极化损耗，介质中的偶极子在交变电场作用下发生极化弛豫，导致能量耗散，如高频下的水分子极化）、磁损耗（磁性介质中磁矩的弛豫或涡流">
+    <meta name="keywords" content="陆家嘴、豫园、南京路游记, 老王Hub">
+    <meta name="description" content="凛冬将至，父母周六开车来上海送温暖，回去时发现天色已晚导致视线不好，于是临时决定住一天，重温一下2014年的上海之旅。
+11月15日在胖子餐馆旁的一家山东羊汤馆子就餐完，以及订好住宿之后，我们从酒店步行前往万达地铁站，乘坐地铁到陆家嘴欣赏夜">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +29,7 @@
 </script>
 
 
-    <title>电磁波损耗换算原理和工具 | 老王Hub</title>
+    <title>陆家嘴、豫园、南京路游记 | 老王Hub</title>
     <link rel="icon" type="image/png" href="/medias/wyafavicon.png">
     
 
@@ -325,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2024/09/16/Fuwlm2vojInzMhx.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2025/11/16/qWBGd1PtEpxMbJa.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">电磁波损耗换算原理和工具</h1>
+                    <h1 class="description center-align post-title">陆家嘴、豫园、南京路游记</h1>
                 </div>
             </div>
         </div>
@@ -355,8 +356,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/tool-convert/">
-                                <span class="chip bg-color">tool, convert</span>
+                            <a href="/tags/diary-travel/">
+                                <span class="chip bg-color">diary, travel</span>
                             </a>
                         
                     </div>
@@ -367,8 +368,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/tool/" class="post-category">
-                                tool
+                            <a href="/categories/vision/" class="post-category">
+                                vision
                             </a>
                         
                     </div>
@@ -380,7 +381,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-11-17
+                    2025-11-16
                 </div>
                 
 
@@ -389,14 +390,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    4 分
                 </div>
                 
 
@@ -419,281 +420,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-电磁波在介质中的损耗"><a href="#1-电磁波在介质中的损耗" class="headerlink" title="1 电磁波在介质中的损耗"></a>1 电磁波在介质中的损耗</h2><p>电磁波在介质中传播时会受到多种损耗，主要包括<strong>欧姆损耗（电磁波产生电流发生）、介电损耗（也叫极化损耗，介质中的偶极子在交变电场作用下发生极化弛豫，导致能量耗散，如高频下的水分子极化）、磁损耗（磁性介质中磁矩的弛豫或涡流效应导致能量耗散，如铁氧体材料）和辐射损耗等</strong>。这些损耗在电磁波传播的数学模型中通常通过复介电常数、复磁导率以及传播常数来体现。对于半导体来说，可以通过掺杂使之$\sigma$发生变化，因此这里主要讨论欧姆损耗。</p>
-<p>假设时谐电磁场，麦克斯韦方程组可简化为：</p>
-<script type="math/tex; mode=display">
-\nabla\times\mathbf{E}=-j\omega\mu\mathbf{H},\quad\nabla\times\mathbf{H}=\sigma\mathbf{E}+j\omega\epsilon\mathbf{E}</script><p>合并可得：</p>
-<script type="math/tex; mode=display">
-\nabla^2\mathbf{E}+\omega^2\mu\epsilon\left(1+\frac{\sigma}{j\omega\epsilon}\right)\mathbf{E}=0</script><p>因此引入复介电损耗：</p>
-<script type="math/tex; mode=display">
-\tilde{\epsilon}=\epsilon^{\prime}-j\epsilon^{\prime\prime}=\epsilon-j\frac{\sigma}{\omega}=\epsilon_0\epsilon_r-j\frac{\sigma}{\omega}</script><p>并用损耗正切角描述损耗相较储能的大小：</p>
-<script type="math/tex; mode=display">
-\tan\delta=\frac{\epsilon^{\prime\prime}}{\epsilon^{\prime}}=\frac{\sigma}{\omega\epsilon}</script><div id="loss-tangent-calculator">
-  <h3>损耗正切角 (tan δ) 计算器</h3>
-  <table border="1" class="loss-tangent-table">
-    <thead>
-      <tr>
-        <th>角频率 ω (rad/s)</th>
-        <th>介电常数 ε (F/m)</th>
-        <th>电导率 σ (S/m)</th>
-        <th>tan δ</th>
-        <th>δ (rad)</th>
-        <th>δ (°)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><input type="number" id="omega1" min="0" value="1e6" step="1e3"></td>
-        <td><input type="number" id="epsilon1" min="0" value="8.854e-12" step="1e-12"></td>
-        <td><input type="number" id="sigma1" min="0" value="0.01" step="0.001"></td>
-        <td class="tan-delta-result" id="tan-delta-res1"></td>
-        <td class="delta-rad-result" id="delta-rad-res1"></td>
-        <td class="delta-deg-result" id="delta-deg-res1"></td>
-      </tr>
-      <tr>
-        <td><input type="number" id="omega2" min="0" value="1e9" step="1e6"></td>
-        <td><input type="number" id="epsilon2" min="0" value="5e-11" step="1e-12"></td>
-        <td><input type="number" id="sigma2" min="0" value="0.1" step="0.01"></td>
-        <td class="tan-delta-result" id="tan-delta-res2"></td>
-        <td class="delta-rad-result" id="delta-rad-res2"></td>
-        <td class="delta-deg-result" id="delta-deg-res2"></td>
-      </tr>
-      <tr>
-        <td><input type="number" id="omega3" min="0" value="2e10" step="1e8"></td>
-        <td><input type="number" id="epsilon3" min="0" value="2e-11" step="1e-12"></td>
-        <td><input type="number" id="sigma3" min="0" value="1.0" step="0.1"></td>
-        <td class="tan-delta-result" id="tan-delta-res3"></td>
-        <td class="delta-rad-result" id="delta-rad-res3"></td>
-        <td class="delta-deg-result" id="delta-deg-res3"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<script>
-const lossTangentCalculator = {
-  calculate() {
-    const rows = document.querySelectorAll('#loss-tangent-calculator tbody tr');
-
-    rows.forEach((row, index) => {
-      try {
-        const i = index + 1;
-        const omega = parseFloat(document.getElementById(`omega${i}`).value);
-        const epsilon = parseFloat(document.getElementById(`epsilon${i}`).value);
-        const sigma = parseFloat(document.getElementById(`sigma${i}`).value);
-
-        if (isNaN(omega) || isNaN(epsilon) || isNaN(sigma) || omega <= 0 || epsilon <= 0) {
-          this.clearRow(i);
-          return;
-        }
-
-        // 计算 tan δ = σ / (ωε)
-        const tanDelta = sigma / (omega * epsilon);
-        const deltaRad = Math.atan(tanDelta); // δ = arctan(tan δ)
-        const deltaDeg = deltaRad * (180 / Math.PI); // 弧度转角度
-
-        // 更新结果
-        document.getElementById(`tan-delta-res${i}`).textContent = tanDelta.toExponential(4);
-        document.getElementById(`delta-rad-res${i}`).textContent = deltaRad.toFixed(6);
-        document.getElementById(`delta-deg-res${i}`).textContent = deltaDeg.toFixed(2);
-
-      } catch (e) {
-        this.clearRow(i);
-        console.error(`计算第${i}行时出错:`, e);
-      }
-    });
-  },
-
-  clearRow(i) {
-    document.getElementById(`tan-delta-res${i}`).textContent = 'N/A';
-    document.getElementById(`delta-rad-res${i}`).textContent = 'N/A';
-    document.getElementById(`delta-deg-res${i}`).textContent = 'N/A';
-  },
-
-  init() {
-    const inputs = document.querySelectorAll('#loss-tangent-calculator input');
-    inputs.forEach(input => {
-      input.addEventListener('input', () => this.calculate());
-    });
-    this.calculate(); // 初始计算
-  }
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-  lossTangentCalculator.init();
-});
-</script>
-
-
-<h2 id="2-各种传播损耗参数的换算"><a href="#2-各种传播损耗参数的换算" class="headerlink" title="2 各种传播损耗参数的换算"></a>2 各种传播损耗参数的换算</h2><p>对于沿$z$轴正向传输电磁波$E=E_0e^{-\gamma z}$，其传播常数为：</p>
-<script type="math/tex; mode=display">
-\gamma=jk=j\omega\sqrt{\mu(\epsilon^{\prime}-j\epsilon^{\prime\prime})}
-=j\frac{2\pi}\lambda(n-j \kappa)</script><p>其中$\alpha$代表衰减，于是</p>
-<script type="math/tex; mode=display">
-E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定义 $\alpha[dB/cm]$:</p>
-<script type="math/tex; mode=display">
-\eta=10^{-\frac{100\alpha}{10}L}</script><p>解出 $\alpha(\kappa)[dB/cm]$:</p>
-<script type="math/tex; mode=display">
-10^{-\frac{100\alpha}{10}L}=e^{-\frac{4\pi}\lambda \kappa L}</script><script type="math/tex; mode=display">
-\alpha = \frac{0.2}{ln(10)}\frac{2\pi}{\lambda}\kappa</script><p>定义 $\alpha’[1/m]$:</p>
-<script type="math/tex; mode=display">
-\eta=e^{-\alpha'L}</script><p>解出 $\alpha’(\alpha)[dB/cm]$:</p>
-<script type="math/tex; mode=display">
-\alpha'=10 \alpha ln(10)</script><p>
-  <title>参数转换器</title>
-  <style>
-    .table-container {
-      width: 60%;
-      margin: 20px auto;
-      font-family: Arial, sans-serif;
-    }
-    .table-title {
-      text-align: center;
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      text-align: center;
-      padding: 10px;
-    }
-    th {
-      background-color: #f7f7f7;
-    }
-    input {
-      width: 90%;
-      padding: 5px;
-      text-align: center;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-  </style>
-</p>
-
-  <div class="table-container">
-    <h3>损耗参数换算工具</h3>
-    <div class="table-title"></div>
-    <table border="1" id="conversionTable" class="display">
-      <thead>
-        <tr>
-          <th>λ(nm)</th>
-          <th>κ</th>
-          <th>α(dB/cm)</th>
-          <th>α'(1/m)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input type="number" class="lambda-input" placeholder="输入 λ(nm)" step="0.01"></td>
-          <td><input type="number" class="kappa-input" placeholder="输入 κ" step="0.00001"></td>
-          <td><input type="number" class="alpha-db-input" placeholder="输入 α(dB/cm)" step="0.01"></td>
-          <td><input type="number" class="alpha-prime-input" placeholder="输入 α'(1/m)" step="0.01"></td>
-        </tr>
-        <tr>
-          <td><input type="number" class="lambda-input" placeholder="输入 λ(nm)" step="0.01"></td>
-          <td><input type="number" class="kappa-input" placeholder="输入 κ" step="0.00001"></td>
-          <td><input type="number" class="alpha-db-input" placeholder="输入 α(dB/cm)" step="0.01"></td>
-          <td><input type="number" class="alpha-prime-input" placeholder="输入 α'(1/m)" step="0.01"></td>
-        </tr>
-        <tr>
-          <td><input type="number" class="lambda-input" placeholder="输入 λ(nm)" step="0.01"></td>
-          <td><input type="number" class="kappa-input" placeholder="输入 κ" step="0.00001"></td>
-          <td><input type="number" class="alpha-db-input" placeholder="输入 α(dB/cm)" step="0.01"></td>
-          <td><input type="number" class="alpha-prime-input" placeholder="输入 α'(1/m)" step="0.01"></td>
-        </tr>
-        <tr>
-          <td><input type="number" class="lambda-input" placeholder="输入 λ(nm)" step="0.01"></td>
-          <td><input type="number" class="kappa-input" placeholder="输入 κ" step="0.00001"></td>
-          <td><input type="number" class="alpha-db-input" placeholder="输入 α(dB/cm)" step="0.01"></td>
-          <td><input type="number" class="alpha-prime-input" placeholder="输入 α'(1/m)" step="0.01"></td>
-        </tr>
-        <tr>
-          <td><input type="number" class="lambda-input" placeholder="输入 λ(nm)" step="0.01"></td>
-          <td><input type="number" class="kappa-input" placeholder="输入 κ" step="0.00001"></td>
-          <td><input type="number" class="alpha-db-input" placeholder="输入 α(dB/cm)" step="0.01"></td>
-          <td><input type="number" class="alpha-prime-input" placeholder="输入 α'(1/m)" step="0.01"></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-
-  <script>
-    $(document).ready(function () {
-      const ln10 = Math.log(10);
-      const factor = 0.2 * 2 * Math.PI / ln10;
-
-      function updateValues(row, inputType) {
-        const lambda = parseFloat(row.find('.lambda-input').val()); // 波长 λ
-        const kappa = parseFloat(row.find('.kappa-input').val());  // κ
-        const alphaDb = parseFloat(row.find('.alpha-db-input').val());  // α (dB/cm)
-        const alphaPrime = parseFloat(row.find('.alpha-prime-input').val()); // α' (1/m)
-
-        if (inputType === 'kappa' && !isNaN(kappa) && !isNaN(lambda)) {
-          const alpha = (factor * kappa / lambda) * 1e9; // 计算 α (dB/cm)
-          const alphaPrime = 10 * alpha * ln10;         // 计算 α' (1/m)
-          row.find('.alpha-db-input').val(alpha.toFixed(7));
-          row.find('.alpha-prime-input').val(alphaPrime.toFixed(7));
-        } else if (inputType === 'alpha-db' && !isNaN(alphaDb) && !isNaN(lambda)) {
-          const kappa = (alphaDb * lambda) / (factor * 1e9); // 计算 κ
-          const alphaPrime = 10 * alphaDb * ln10;           // 计算 α' (1/m)
-          row.find('.kappa-input').val(kappa.toFixed(7));
-          row.find('.alpha-prime-input').val(alphaPrime.toFixed(7));
-        } else if (inputType === 'alpha-prime' && !isNaN(alphaPrime) && !isNaN(lambda)) {
-          const alphaDb = alphaPrime/10/ln10;   
-          const kappa = (alphaDb * lambda) / (factor * 1e9); // 计算 κ       
-          row.find('.kappa-input').val(kappa.toFixed(7));
-          row.find('.alpha-db-input').val(alphaDb.toFixed(7));
-        } else if (inputType === 'alpha-prime' && !isNaN(alphaPrime)) {
-          const alpha = alphaPrime / (10 * ln10);           // 计算 α (dB/cm)
-          row.find('.alpha-db-input').val(alpha.toFixed(7));
-        } else if (inputType === 'alpha-db' && !isNaN(alphaDb)) {
-          const alphaPrime = 10 * alphaDb * ln10;           
-          row.find('.alpha-prime-input').val(alphaPrime.toFixed(7));
-        } else if (inputType === 'lambda' && !isNaN(lambda)) {
-          if (!isNaN(kappa)) {
-            const alpha = (factor * kappa / lambda) * 1e9;
-            const alphaPrime = 10 * alpha * ln10;
-            row.find('.alpha-db-input').val(alpha.toFixed(7));
-            row.find('.alpha-prime-input').val(alphaPrime.toFixed(7));
-          } else if (!isNaN(alphaDb)) {
-            const kappa = (alphaDb * lambda) / (factor * 1e9);
-            row.find('.kappa-input').val(kappa.toFixed(7));
-          }
-        }
-      }
-
-      // 监听输入框变化
-      $('.lambda-input').on('input', function () {
-        const row = $(this).closest('tr');
-        updateValues(row, 'lambda');
-      });
-
-      $('.kappa-input').on('input', function () {
-        const row = $(this).closest('tr');
-        updateValues(row, 'kappa');
-      });
-
-      $('.alpha-db-input').on('input', function () {
-        const row = $(this).closest('tr');
-        updateValues(row, 'alpha-db');
-      });
-
-      $('.alpha-prime-input').on('input', function () {
-        const row = $(this).closest('tr');
-        updateValues(row, 'alpha-prime');
-      });
-    });
-  </script>
-
-
-
-
+                <p>凛冬将至，父母周六开车来上海送温暖，回去时发现天色已晚导致视线不好，于是临时决定住一天，重温一下2014年的上海之旅。</p>
+<h2 id="11月15日"><a href="#11月15日" class="headerlink" title="11月15日"></a>11月15日</h2><p>在胖子餐馆旁的一家山东羊汤馆子就餐完，以及订好住宿之后，我们从酒店步行前往万达地铁站，乘坐地铁到陆家嘴欣赏夜景。</p>
+<p>地铁口出来就是国金IFS，抬头就能看到三件套，西边则是正大光场，人行道上换着花样拜pos拍照打卡的人络绎不绝。说来可笑，由于天天都能从研究院看见三件套，而且从远处看感觉并非很壮观，所以也没专门关注过，直到亲临脚下才感受到震撼。</p>
+<p><img src="https://s2.loli.net/2025/11/16/LIWrPgeYSo8na7F.jpg" alt=""></p>
+<p>不过对于我们这样的穷鬼来说，这些大楼也就只有在外面看看有些意思。进去后就被限制的死死的，连电梯都上不了，除非掏钱。顶层观光要买票，其余楼层则是办公或酒店区域，需要门禁才能上电梯，不知在这里的打工仔上班时有没有一种旅游的感觉。</p>
+<p>在上海中心转转悠悠，出门看到嘉禾正在搞拍卖预展，闲人随便进，于是进去感受了下资本的力量。一进去就看到陈逸飞大师的画作充当展览门面，其它的画则大体可以分为两类，一类是随便涂抹几下的抽象派，一类是不像画出来的AI派或者摄影派。除此之外，还有罗丹大师的思想者，不过应该是脱模的。</p>
+<p><img src="https://s2.loli.net/2025/11/16/zADWh2pk7yEPdc5.jpg" alt=""></p>
+<p>展览区几乎没什么人，人都集中在拍卖现场，一晃神竞价就上到四百多万了，这些狗大户可真有实力。因为没有实力所以觉得没啥意思，遂出门，发现一个带着贝雷帽的艺术家模样的大叔姗姗来迟，赶路时不停打量着我们，不知其心理活动如何。</p>
+<p><img src="https://s2.loli.net/2025/11/16/tU1qrY2DNzb8cV6.jpg" alt=""></p>
+<p>回到IFS准备坐地铁回去时，一则黑白配色的手表广告吸引了父母，上面有两个外国老男人和他们的签名。他们觉得眼熟，驻足沉思了许久，结果后来还是识图才认出来。一个是阿尔帕西诺，另一个是罗伯特德罗尼。他们知道名字后十分惊讶：怎么都老成这个样子了？我感觉这个对他们带来的震撼貌似大于刚刚的拍卖会。</p>
+<h2 id="11月16日"><a href="#11月16日" class="headerlink" title="11月16日"></a>11月16日</h2><p>早上8点半研究院门口集合去食堂早餐完毕后，打的去三林东坐地铁到大世界。地铁站出来是金陵中路上的广场公园，不远处矗立着蓝白色基调的后现代风格巨兽，我心想这些老家伙可比那些玻璃幕墙有意思的多。街道上还有些中老年人在那不停拍照，兴高采烈的样子。其中一位大妈让我帮她和这些巨兽合影，我随意拍了几张，获得称赞连连。</p>
+<p><img src="https://s2.loli.net/2025/11/16/bSjF5kRoUtEYns3.jpg" alt=""></p>
+<p>向东走到金陵东路，则更有老上海风味，道路两边的历史建筑没有过多翻新，让我父母想起来年轻时来上海的时光。</p>
+<p><img src="https://s2.loli.net/2025/11/16/j6vVElI5AMguwJ1.jpg" alt=""></p>
+<p>过马路时随手拍的照片都充满老上海风味：</p>
+<p><img src="https://s2.loli.net/2025/11/16/3SVwh68vrG29OQe.jpg" alt=""></p>
+<p>精致小巧的老上海鸽子笼：</p>
+<p><img src="https://s2.loli.net/2025/11/16/nHDzuRbU5IVowP3.jpg" alt=""></p>
+<p>不过好多地方都在拆迁起高楼，弄得烟尘四起，尤其是人民路两边，这让我父母有些失落，因为一些记忆已经不能通过现实实体进行映射了。我们在小巷子里不停穿梭以躲避施工，最后弄得我们自己都晕了。</p>
+<p>沿着人民路走到豫园地铁站4号口便能看到如下美景：<br><img src="https://s2.loli.net/2025/11/16/mpH7nWN8g5fQIuE.jpg" alt=""></p>
+<p>到了豫园，发现完全是人挤人，买个东西吃都得社恐，我心想闲人怎么这么多的？经过绿波廊，看到蟹黄汤包店，一只48元，于是果断买入，只为不虚此行。但是后来发现不是以前买的那家，以前买的是南翔馒头店里的，印象中要排很长的队，蟹黄汤包也是真的大。从豫园东边出来，来到古城公园，我们找了个荫凉的地方歇了歇脚。</p>
+<p>从古城公园北面出来，我们扫了共享单车沿着永安路、金陵东路、河南中路骑行，去南京路再怀旧一下。离南京路还有个八百米左右，我们还了车，下来走走顺便找吃的。沿路路过建设大楼和圣三一教堂，年代感十足。</p>
+<p><img src="https://s2.loli.net/2025/11/16/M4IQ8gNEsRUbYk6.jpg" alt="建设大楼"></p>
+<p>我们随便找了家小餐厅，点了上海炒面、红烧牛肉面和小馄饨。吃完后路过一些卖老上海特产的店，我又看到雪花膏（在豫园也看到了，当时我以为是吃的，被父母嘲笑了一番，他们还说这不就是他们以前小时候用的），由于我十分好奇到底是啥，遂花了十块大洋买了一盒。</p>
+<p>南京路上人好像没有以前那么多，但是仍然很多。本着来都来了的思想，我拍了外滩照片留念：</p>
+<p><img src="https://s2.loli.net/2025/11/16/Zum9BkIJdVWY1oA.jpg" alt=""></p>
+<p>然后向西一直走，走到南京西路，进入国际饭店，怀旧了一下以前入住于此的时光。</p>
+<p><img src="https://s2.loli.net/2025/11/16/qWBGd1PtEpxMbJa.jpg" alt=""></p>
+<p><img src="https://s2.loli.net/2025/11/16/4d7fatpvsbY5cw2.jpg" alt=""></p>
+<p>至此，短暂而充实的周末出游便结束了。</p>
 
                 
             </div>
@@ -720,7 +476,7 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://increcrazer.github.io/2024/11/17/dian-ci-bo-sun-hao-huan-suan-yuan-li-he-gong-ju/">http://increcrazer.github.io/2024/11/17/dian-ci-bo-sun-hao-huan-suan-yuan-li-he-gong-ju/</a>
+                    <a href="http://increcrazer.github.io/2025/11/16/lu-jia-zui-yu-yuan-nan-jing-lu-you-ji/">http://increcrazer.github.io/2025/11/16/lu-jia-zui-yu-yuan-nan-jing-lu-you-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -758,8 +514,8 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/tool-convert/">
-                                    <span class="chip bg-color">tool, convert</span>
+                                <a href="/tags/diary-travel/">
+                                    <span class="chip bg-color">diary, travel</span>
                                 </a>
                             
                         </div>
@@ -862,16 +618,17 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/12/03/wei-qiang-can-shu-ji-suan-gong-ju/">
+                <a href="/2025/11/16/lu-jia-zui-yu-yuan-nan-jing-lu-you-ji/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/09/16/Fuwlm2vojInzMhx.jpg" class="responsive-img" alt="微腔参数计算工具">
+                        <img src="https://s2.loli.net/2025/11/16/qWBGd1PtEpxMbJa.jpg" class="responsive-img" alt="陆家嘴、豫园、南京路游记">
                         
-                        <span class="card-title">微腔参数计算工具</span>
+                        <span class="card-title">陆家嘴、豫园、南京路游记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -881,26 +638,27 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-12-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-11-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/tool/" class="post-category">
-                                    tool
+                            <a href="/categories/vision/" class="post-category">
+                                    vision
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tool-photonics/">
-                        <span class="chip bg-color">tool, photonics</span>
+                    <a href="/tags/diary-travel/">
+                        <span class="chip bg-color">diary, travel</span>
                     </a>
                     
                 </div>
@@ -914,12 +672,12 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/10/27/new-focus-1544-guang-dian-tan-ce-qi-shou-ce-zhai-lu/">
+                <a href="/2025/09/04/jiang-cheng-you-ji-zhi-hua-ke-pei-xun/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2024/09/16/Fuwlm2vojInzMhx.jpg" class="responsive-img" alt="New Focus 1544光电探测器 手册摘录">
+                        <img src="https://s2.loli.net/2025/09/04/3DJxWBILTeEFKob.jpg" class="responsive-img" alt="江城游记之华科培训">
                         
-                        <span class="card-title">New Focus 1544光电探测器 手册摘录</span>
+                        <span class="card-title">江城游记之华科培训</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -930,14 +688,14 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-10-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-09-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/science/" class="post-category">
-                                    science
+                            <a href="/categories/vision/" class="post-category">
+                                    vision
                                 </a>
                             
                             
@@ -947,8 +705,8 @@ E=E_0e^{-j\frac{2\pi}\lambda nL}e^{-\frac{2\pi}\lambda \kappa L}</script><p>定�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/apparatus-datasheet/">
-                        <span class="chip bg-color">apparatus, datasheet</span>
+                    <a href="/tags/diary-travel/">
+                        <span class="chip bg-color">diary, travel</span>
                     </a>
                     
                 </div>

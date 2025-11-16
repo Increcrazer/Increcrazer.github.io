@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-09-06T13:47:21.670Z</updated>
+  <updated>2025-11-16T13:32:37.569Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>陆家嘴、豫园、南京路游记</title>
+    <link href="http://increcrazer.github.io/2025/11/16/lu-jia-zui-yu-yuan-nan-jing-lu-you-ji/"/>
+    <id>http://increcrazer.github.io/2025/11/16/lu-jia-zui-yu-yuan-nan-jing-lu-you-ji/</id>
+    <published>2025-11-16T11:02:08.198Z</published>
+    <updated>2025-11-16T13:32:37.569Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;凛冬将至，父母周六开车来上海送温暖，回去时发现天色已晚导致视线不好，于是临时决定住一天，重温一下2014年的上海之旅。&lt;/p&gt;
+&lt;h2 id=&quot;11月15日&quot;&gt;&lt;a href=&quot;#11月15日&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vision" scheme="http://increcrazer.github.io/categories/vision/"/>
+    
+    
+    <category term="diary, travel" scheme="http://increcrazer.github.io/tags/diary-travel/"/>
+    
+  </entry>
   
   <entry>
     <title>江城游记之华科培训</title>
@@ -475,33 +501,6 @@
     
     
     <category term="stock, leek" scheme="http://increcrazer.github.io/tags/stock-leek/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>线性和非线性效应公式速查</title>
-    <link href="http://increcrazer.github.io/2024/12/17/xian-xing-he-fei-xian-xing-xiao-ying-gong-shi-su-cha/"/>
-    <id>http://increcrazer.github.io/2024/12/17/xian-xing-he-fei-xian-xing-xiao-ying-gong-shi-su-cha/</id>
-    <published>2024-12-17T07:42:26.923Z</published>
-    <updated>2024-12-29T04:46:00.389Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-线性效应&quot;&gt;&lt;a href=&quot;#1-线性效应&quot; class=&quot;headerlink&quot; title=&quot;1 线性效应&quot;&gt;&lt;/a&gt;1 线性效应&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;对$n(&#92;omega)$在$&#92;omega_0$处展开&lt;/p&gt;
-&lt;script</summary>
-        
-      
-    
-    
-    
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
-    
-    
-    <category term="photonics, tool" scheme="http://increcrazer.github.io/tags/photonics-tool/"/>
     
   </entry>
   
