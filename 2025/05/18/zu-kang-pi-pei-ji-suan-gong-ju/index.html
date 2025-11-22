@@ -393,14 +393,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    906
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -793,6 +793,14 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>到这里是不是有疑问，那这个阻抗变换器有个蛋用！确实，这个设计的主要目的是让输入端看起来无反射，实现最大功率传输。另外，由于$Z_1$比$Z_0$更接近$Z_L$，所以终端反射也有所降低。</p>
 <p>到这里，敏锐如我立马想到能不能搞多级四分之一波长变换器来逐步减小反射，GPT给出肯定答案，你发明了<strong>多级阻抗匹配网络</strong>！<br><img src="https://s2.loli.net/2025/05/18/iPwAkEsyxmhfHjN.png" alt=""></p>
 <h2 id="5-终端开路或短路时传输线上的电压波电流波情况"><a href="#5-终端开路或短路时传输线上的电压波电流波情况" class="headerlink" title="5 终端开路或短路时传输线上的电压波电流波情况"></a>5 终端开路或短路时传输线上的电压波电流波情况</h2><p>可以发现传输线上的电压幅度不是固定的，但是终端上的电压幅度总是为0（短路）或2（断路）。<br><img src="https://s2.loli.net/2025/05/18/RNBdFbUKju8L4QT.gif" alt=""><br>此处感谢Deepseek生成的代码：<a target="_blank" rel="noopener" href="https://github.com/Increcrazer/AI-generated-tool/blob/main/Transmissionline/open_short.m">open_short.m</a>。计算入射波和反射波的叠加时将反射处看成0坐标点，可以减少计算量。</p>
+<h2 id="6-广义S参数和S参数重整化"><a href="#6-广义S参数和S参数重整化" class="headerlink" title="6 广义S参数和S参数重整化"></a>6 广义S参数和S参数重整化</h2><p>广义S参数是按照功率幅度进行定义的。当端口阻抗完全一致时，广义S参数和S参数相同。比如我们使用矢网对一个DUT进行测试，其两个端口阻抗都是50$\Omega$，那么此时测的S参数也等于广义S参数。假如端口阻抗不一致时，则需要用到广义S参数。</p>
+<p>得知一组端口阻抗测量下的广义S参数，可以通过计算得到另一组端口阻抗测量下的广义S参数（HFSS中你无需重新仿真，改变Port Zo，仿真得到的广义S参数也会随之改变）。</p>
+<p>可以参考：</p>
+<ol>
+<li>Pozar D M. Microwave engineering[J]. Fourth Editions, University of Massachusetts at Amherst, John Wiley &amp; Sons, Inc, 2012: 26-30. section 4.3</li>
+<li><a target="_blank" rel="noopener" href="https://www.rfcafe.com/references/electrical/s-h-y-z.htm">https://www.rfcafe.com/references/electrical/s-h-y-z.htm</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.signalintegrityjournal.com/articles/270-s-parameter-renormalization-the-art-of-cheating">https://www.signalintegrityjournal.com/articles/270-s-parameter-renormalization-the-art-of-cheating</a></li>
+</ol>
 
                 
             </div>
@@ -1289,7 +1297,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.1k</span>
+                        class="white-color">34.4k</span>
             
             
             
