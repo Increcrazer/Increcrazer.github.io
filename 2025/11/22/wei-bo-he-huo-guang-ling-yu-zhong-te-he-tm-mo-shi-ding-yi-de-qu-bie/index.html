@@ -78,9 +78,9 @@ TM（Transverse Magnetic）模：Hz = 0
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
 </head>
 
 <!-- KaTeX 支持 -->
@@ -435,7 +435,7 @@ TM（Transverse Magnetic）模：Hz = 0
 <p><img src="https://s2.loli.net/2025/11/22/6HsrtAc4CqbudDZ.png" alt="TE20"></p>
 <p><img src="https://s2.loli.net/2025/11/22/RnZHM3SLVwmGeIW.png" alt="TE01"></p>
 <p>至于是TE还是TM模式，则要在HFSS中画出纵向截面上的场分布来判断，如果没有纵向的$E$, 则是TE模；反之亦然。</p>
-<h2 id="硅光中的定义"><a href="#硅光中的定义" class="headerlink" title="硅光中的定义"></a>硅光中的定义</h2><p>由于硅光波导是强约束导波结构（$n_{Si}≈3.48$, $n_{SiO₂}≈1.44$ at 1550nm）,所以无论TE还是TM，都一定有Ez不可能为零，因此硅光的TE/TM不能用$E_z=0$或$H_z=0$来定义。硅光里的TE和TM是由横截面上是由$E_x$还是$E_y$占主导来决定的（即依据偏振方向来决定）。例如，在MODE中，TE polarization fraction的大小决定了模式是TE还是TM模。<br><img src="https://s2.loli.net/2025/11/22/hQY2pncRo8ZegtG.png" alt="#1是TE模，#2是TM模"></p>
+<h2 id="硅光中的定义"><a href="#硅光中的定义" class="headerlink" title="硅光中的定义"></a>硅光中的定义</h2><p>由于硅光波导是强约束导波结构($n_{Si}≈3.48$, $n_{SiO₂}≈1.44$ at 1550nm), 所以无论TE还是TM，都一定有Ez不可能为零，因此硅光的TE/TM不能用$E_z=0$或$H_z=0$来定义。硅光里的TE和TM是由横截面上是由$E_x$还是$E_y$占主导来决定的（即依据偏振方向来决定）。例如，在MODE中，TE polarization fraction的大小决定了模式是TE还是TM模。<br><img src="https://s2.loli.net/2025/11/22/hQY2pncRo8ZegtG.png" alt="#1是TE模，#2是TM模"></p>
 
                 
             </div>
@@ -1207,6 +1207,22 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
