@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-11-16T13:37:04.907Z</updated>
+  <updated>2025-11-22T15:56:46.770Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微波和硅光领域中TE和TM模式定义的区别</title>
+    <link href="http://increcrazer.github.io/2025/11/22/wei-bo-he-huo-guang-ling-yu-zhong-te-he-tm-mo-shi-ding-yi-de-qu-bie/"/>
+    <id>http://increcrazer.github.io/2025/11/22/wei-bo-he-huo-guang-ling-yu-zhong-te-he-tm-mo-shi-ding-yi-de-qu-bie/</id>
+    <published>2025-11-22T15:29:52.146Z</published>
+    <updated>2025-11-22T15:56:46.770Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;微波中的定义&quot;&gt;&lt;a href=&quot;#微波中的定义&quot; class=&quot;headerlink&quot; title=&quot;微波中的定义&quot;&gt;&lt;/a&gt;微波中的定义&lt;/h2&gt;&lt;p&gt;在微波导波理论里：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TE（Transverse Electric）模：Ez =</summary>
+        
+      
+    
+    
+    
+    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
+    
+    
+    <category term="electronic, PCB" scheme="http://increcrazer.github.io/tags/electronic-PCB/"/>
+    
+  </entry>
   
   <entry>
     <title>上海周末小出游</title>
@@ -476,31 +503,6 @@
     
     
     <category term="math, tool" scheme="http://increcrazer.github.io/tags/math-tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>股市常识（长期断更）</title>
-    <link href="http://increcrazer.github.io/2024/12/23/gu-shi-chang-shi-chi-xu-geng-xin/"/>
-    <id>http://increcrazer.github.io/2024/12/23/gu-shi-chang-shi-chi-xu-geng-xin/</id>
-    <published>2024-12-23T13:23:34.844Z</published>
-    <updated>2025-01-12T14:23:14.749Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;说明-20250112&quot;&gt;&lt;a href=&quot;#说明-20250112&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="economics" scheme="http://increcrazer.github.io/categories/economics/"/>
-    
-    
-    <category term="stock, leek" scheme="http://increcrazer.github.io/tags/stock-leek/"/>
     
   </entry>
   
