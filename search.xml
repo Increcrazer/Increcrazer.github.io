@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>为什么偏振对比度相比强度消光比而言更敏感</title>
-      <link href="/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-er-yan-geng-min-gan/"/>
-      <url>/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-er-yan-geng-min-gan/</url>
+      <title>为什么偏振对比度相比强度消光比更敏感</title>
+      <link href="/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-geng-min-gan/"/>
+      <url>/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-geng-min-gan/</url>
       
         <content type="html"><![CDATA[<h2 id="强度消光比和偏振对比度"><a href="#强度消光比和偏振对比度" class="headerlink" title="强度消光比和偏振对比度"></a>强度消光比和偏振对比度</h2><p>设$\theta$为某一调制臂上的相位，则：</p><ul><li>强度消光比<script type="math/tex; mode=display">f(\theta) = {\cos^{2}\left(\frac{\theta}{2}\right)}</script></li><li>偏振对比度<script type="math/tex; mode=display">f(\theta) = \frac{1}{\tan^{2}\left(\frac{\pi - \theta}{4}\right)}</script></li></ul><p>注：这里的偏振对比度是一组正交基的平均对比度，即在Bloch球上的某一平面上是这样：</p><p><img src="https://s2.loli.net/2025/11/29/QmULRGePsKa3iYl.png" alt=""></p><h2 id="仿真模拟"><a href="#仿真模拟" class="headerlink" title="仿真模拟"></a>仿真模拟</h2><p><img src="https://s2.loli.net/2025/11/29/DTnrtvsZONSEh31.png" alt=""></p><p><img src="https://s2.loli.net/2025/11/29/FG5zUJnmo1vNWyq.png" alt=""></p><p>注：仿真中强度对比度设置为10000.</p><h2 id="实际中的与理论相对应的现象"><a href="#实际中的与理论相对应的现象" class="headerlink" title="实际中的与理论相对应的现象"></a>实际中的与理论相对应的现象</h2><ul><li>由于在半波位置，强度调制消光比的斜率几乎为0，而偏振调制对比度斜率无穷大，因此使用强度调制无法准确得到调制器的半波电压，而偏振调制可以。</li><li>偏振调制对比度对于调制相位的波动更加敏感。</li><li>稍微优化一下调制相位，偏振对比度会有巨大提升。</li></ul>]]></content>
       
