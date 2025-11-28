@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-11-28T17:52:47.013Z</updated>
+  <updated>2025-11-28T17:58:18.304Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么偏振对比度相比强度消光比更敏感</title>
+    <link href="http://increcrazer.github.io/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-er-yan-geng-min-gan/"/>
+    <id>http://increcrazer.github.io/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-er-yan-geng-min-gan/</id>
+    <published>2025-11-28T17:58:18.303Z</published>
+    <updated>2025-11-28T17:58:18.304Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;强度消光比和偏振对比度&quot;&gt;&lt;a href=&quot;#强度消光比和偏振对比度&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="photonic" scheme="http://increcrazer.github.io/tags/photonic/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么偏振对比度相比强度消光比更敏感</title>
@@ -477,31 +502,6 @@
     
     
     <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Rusca2018-公式推导</title>
-    <link href="http://increcrazer.github.io/2025/01/14/rusca2018-gong-shi-tui-dao/"/>
-    <id>http://increcrazer.github.io/2025/01/14/rusca2018-gong-shi-tui-dao/</id>
-    <published>2025-01-14T12:42:34.560Z</published>
-    <updated>2025-07-19T12:12:31.464Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.052336&quot;&gt;&lt;strong&gt;&lt;em&gt;Rusca D, Boaron A, Curty M, et al. Security proof</summary>
-        
-      
-    
-    
-    
-    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
-    
-    
-    <category term="QKD, timebin" scheme="http://increcrazer.github.io/tags/QKD-timebin/"/>
     
   </entry>
   
