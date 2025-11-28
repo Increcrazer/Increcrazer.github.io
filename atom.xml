@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-11-22T16:05:18.716Z</updated>
+  <updated>2025-11-28T17:51:38.557Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么偏振对比度相比强度消光比而言更敏感</title>
+    <link href="http://increcrazer.github.io/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-er-yan-geng-min-gan/"/>
+    <id>http://increcrazer.github.io/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-er-yan-geng-min-gan/</id>
+    <published>2025-11-28T17:22:49.824Z</published>
+    <updated>2025-11-28T17:51:38.557Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;强度消光比和偏振对比度&quot;&gt;&lt;a href=&quot;#强度消光比和偏振对比度&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="photonic" scheme="http://increcrazer.github.io/tags/photonic/"/>
+    
+  </entry>
   
   <entry>
     <title>微波和硅光领域中TE和TM模式定义的区别</title>
@@ -477,32 +502,6 @@
     
     
     <category term="QKD, timebin" scheme="http://increcrazer.github.io/tags/QKD-timebin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>两种统计分布</title>
-    <link href="http://increcrazer.github.io/2024/12/29/liang-chong-tong-ji-fen-bu/"/>
-    <id>http://increcrazer.github.io/2024/12/29/liang-chong-tong-ji-fen-bu/</id>
-    <published>2024-12-29T05:41:38.855Z</published>
-    <updated>2024-12-29T07:20:35.402Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-高斯分布&quot;&gt;&lt;a href=&quot;#1-高斯分布&quot; class=&quot;headerlink&quot; title=&quot;1 高斯分布&quot;&gt;&lt;/a&gt;1 高斯分布&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;定义&lt;br&gt;  &lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
-    
-    
-    <category term="math, tool" scheme="http://increcrazer.github.io/tags/math-tool/"/>
     
   </entry>
   
