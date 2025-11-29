@@ -4,13 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="为什么偏振对比度相比强度消光比更敏感, 老王Hub">
-    <meta name="description" content="强度消光比和偏振对比度设$\theta$为某一调制臂上的相位，则：
+    <meta name="keywords" content="对强度消光比、偏振对比度的一些细节讨论, 老王Hub">
+    <meta name="description" content="强度消光比和偏振对比度公式设$\theta$为某一调制臂上的相位，则：
 
 强度消光比
-f(\theta) \propto {\cos^{2}\left(\frac{\theta}{2}\right)}
-偏振对比度
-f(\theta) = \fr">
+f(\theta) \propto {\cos^{2}\left(\frac{\theta}{2}+\frac{\pi}{2}\right)}
+偏振对比度">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -33,7 +32,7 @@ f(\theta) = \fr">
 </script>
 
 
-    <title>为什么偏振对比度相比强度消光比更敏感 | 老王Hub</title>
+    <title>对强度消光比、偏振对比度的一些细节讨论 | 老王Hub</title>
     <link rel="icon" type="image/png" href="/medias/wyafavicon.png">
     
 
@@ -335,7 +334,7 @@ f(\theta) = \fr">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">为什么偏振对比度相比强度消光比更敏感</h1>
+                    <h1 class="description center-align post-title">对强度消光比、偏振对比度的一些细节讨论</h1>
                 </div>
             </div>
         </div>
@@ -394,7 +393,7 @@ f(\theta) = \fr">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    225
+                    283
                 </div>
                 
 
@@ -424,22 +423,25 @@ f(\theta) = \fr">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="强度消光比和偏振对比度"><a href="#强度消光比和偏振对比度" class="headerlink" title="强度消光比和偏振对比度"></a>强度消光比和偏振对比度</h2><p>设$\theta$为某一调制臂上的相位，则：</p>
+                <h2 id="强度消光比和偏振对比度"><a href="#强度消光比和偏振对比度" class="headerlink" title="强度消光比和偏振对比度"></a>强度消光比和偏振对比度</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>设$\theta$为某一调制臂上的相位，则：</p>
 <ul>
 <li>强度消光比<script type="math/tex; mode=display">
-f(\theta) \propto {\cos^{2}\left(\frac{\theta}{2}\right)}</script></li>
+f(\theta) \propto {\cos^{2}\left(\frac{\theta}{2}+\frac{\pi}{2}\right)}</script></li>
 <li>偏振对比度<script type="math/tex; mode=display">
 f(\theta) = \frac{1}{\tan^{2}\left(\frac{\pi - \theta}{4}\right)}</script></li>
 </ul>
 <p>注：这里的偏振对比度是一组正交基的平均对比度，即在Bloch球上的某一平面上是这样：</p>
 <p><img src="https://s2.loli.net/2025/11/29/QmULRGePsKa3iYl.png" alt=""></p>
-<h2 id="仿真模拟"><a href="#仿真模拟" class="headerlink" title="仿真模拟"></a>仿真模拟</h2><p><img src="https://s2.loli.net/2025/11/29/w93C4HKLjXNayFm.png" alt=""></p>
+<h3 id="宽频光对于消光比（对比度）的劣化影响"><a href="#宽频光对于消光比（对比度）的劣化影响" class="headerlink" title="宽频光对于消光比（对比度）的劣化影响"></a>宽频光对于消光比（对比度）的劣化影响</h3><p><img src="https://s2.loli.net/2025/11/29/KPHIESi9pmafUwV.png" alt=""></p>
+<h2 id="仿真模拟"><a href="#仿真模拟" class="headerlink" title="仿真模拟"></a>仿真模拟</h2><h3 id="公式-1"><a href="#公式-1" class="headerlink" title="公式"></a>公式</h3><p><img src="https://s2.loli.net/2025/11/29/w93C4HKLjXNayFm.png" alt=""></p>
 <p><img src="https://s2.loli.net/2025/11/29/VD9uAJa4yCcbvzL.png" alt=""></p>
 <p>注：仿真中强度对比度设置为10000.</p>
+<h3 id="宽频光对于消光比（对比度）的劣化影响-1"><a href="#宽频光对于消光比（对比度）的劣化影响-1" class="headerlink" title="宽频光对于消光比（对比度）的劣化影响"></a>宽频光对于消光比（对比度）的劣化影响</h3><p><img src="https://s2.loli.net/2025/11/29/7sQmoIGUOPyv4Nn.png" alt=""></p>
 <h2 id="实际中的与理论相对应的现象"><a href="#实际中的与理论相对应的现象" class="headerlink" title="实际中的与理论相对应的现象"></a>实际中的与理论相对应的现象</h2><ul>
 <li>由于在半波位置，强度调制消光比的斜率几乎为0，而偏振调制对比度斜率无穷大，因此使用强度调制无法准确得到调制器的半波电压，而偏振调制可以。</li>
 <li>偏振调制对比度对于调制相位的波动更加敏感。</li>
 <li>稍微优化一下调制相位，偏振对比度会有巨大提升。</li>
+<li>宽频光对于强度调制消光比的劣化程度更大。</li>
 </ul>
 
                 
@@ -467,7 +469,7 @@ f(\theta) = \frac{1}{\tan^{2}\left(\frac{\pi - \theta}{4}\right)}</script></li>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://increcrazer.github.io/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-geng-min-gan/">http://increcrazer.github.io/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-geng-min-gan/</a>
+                    <a href="http://increcrazer.github.io/2025/11/29/dui-qiang-du-xiao-guang-bi-pian-zhen-dui-bi-du-de-yi-xie-xi-jie-tao-lun/">http://increcrazer.github.io/2025/11/29/dui-qiang-du-xiao-guang-bi-pian-zhen-dui-bi-du-de-yi-xie-xi-jie-tao-lun/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -614,12 +616,12 @@ f(\theta) = \frac{1}{\tan^{2}\left(\frac{\pi - \theta}{4}\right)}</script></li>
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2025/11/29/wei-shi-me-pian-zhen-dui-bi-du-xiang-bi-qiang-du-dui-bi-du-geng-min-gan/">
+                <a href="/2025/11/29/dui-qiang-du-xiao-guang-bi-pian-zhen-dui-bi-du-de-yi-xie-xi-jie-tao-lun/">
                     <div class="card-image">
                         
-                        <img src="https://s2.loli.net/2025/11/29/u9tkfd8xEhbJaRQ.jpg" class="responsive-img" alt="为什么偏振对比度相比强度消光比更敏感">
+                        <img src="https://s2.loli.net/2025/11/29/u9tkfd8xEhbJaRQ.jpg" class="responsive-img" alt="对强度消光比、偏振对比度的一些细节讨论">
                         
-                        <span class="card-title">为什么偏振对比度相比强度消光比更敏感</span>
+                        <span class="card-title">对强度消光比、偏振对比度的一些细节讨论</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1212,22 +1214,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
