@@ -6,7 +6,7 @@
   <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
   
   <link href="http://increcrazer.github.io/"/>
-  <updated>2025-11-29T05:51:29.767Z</updated>
+  <updated>2025-12-28T17:03:16.223Z</updated>
   <id>http://increcrazer.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>单参量、二参量酉变换的一些不对称性</title>
+    <link href="http://increcrazer.github.io/2025/12/14/yi-wei-er-wei-you-bian-huan-de-yi-xie-bu-dui-cheng-xing/"/>
+    <id>http://increcrazer.github.io/2025/12/14/yi-wei-er-wei-you-bian-huan-de-yi-xie-bu-dui-cheng-xing/</id>
+    <published>2025-12-14T15:23:30.507Z</published>
+    <updated>2025-12-28T17:03:16.223Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    
+    
+    <category term="photonic" scheme="http://increcrazer.github.io/tags/photonic/"/>
+    
+  </entry>
   
   <entry>
     <title>对强度消光比、偏振对比度的一些细节讨论</title>
@@ -360,7 +385,7 @@
     <link href="http://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/"/>
     <id>http://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/</id>
     <published>2025-02-16T14:19:10.342Z</published>
-    <updated>2025-08-18T09:39:58.639Z</updated>
+    <updated>2025-12-28T17:05:45.775Z</updated>
     
     
       
@@ -477,31 +502,6 @@
     
     
     <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Rusca2018-公式推导</title>
-    <link href="http://increcrazer.github.io/2025/01/14/rusca2018-gong-shi-tui-dao/"/>
-    <id>http://increcrazer.github.io/2025/01/14/rusca2018-gong-shi-tui-dao/</id>
-    <published>2025-01-14T12:42:34.560Z</published>
-    <updated>2025-07-19T12:12:31.464Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.052336&quot;&gt;&lt;strong&gt;&lt;em&gt;Rusca D, Boaron A, Curty M, et al. Security proof</summary>
-        
-      
-    
-    
-    
-    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
-    
-    
-    <category term="QKD, timebin" scheme="http://increcrazer.github.io/tags/QKD-timebin/"/>
     
   </entry>
   
