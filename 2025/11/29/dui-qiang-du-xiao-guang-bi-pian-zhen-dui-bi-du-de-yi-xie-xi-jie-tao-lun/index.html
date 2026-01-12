@@ -393,14 +393,14 @@ f(\theta) \propto {\cos^{2}\left(\frac{\theta}{2}+\frac{\pi}{2}\right)}
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    204
+                    782
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -434,69 +434,138 @@ f(\theta) = \frac{1}{\tan^{2}\left(\frac{\pi - \theta}{4}\right)}</script></li>
 <p><img src="https://s2.loli.net/2025/11/29/QmULRGePsKa3iYl.png" alt=""></p>
 <p>对于超导探测器上算出来的大值/小值单偏振态对比度，实际上是$\cos^2(\theta/2)/\sin^2(\theta/2)=1/\tan^2(\theta/2)$，其中$\theta$为单偏振态和检测基矢之间夹角。</p>
 <div>
-  <h3>对比度与角度计算器</h3>
+  <h3>对比度与角度互换算器</h3>
   <table border="1">
     <thead>
       <tr>
         <th>对比度(dB)</th>
-        <th>对比度</th>
+        <th>对比度(线性值)</th>
         <th>和检测基之间夹角(°)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="number" id="contrast_db1" value="23" oninput="calculateAngle()"></td>
-        <td id="contrast_value1">N/A</td>
-        <td id="angle1">N/A</td>
+        <td><input type="number" id="db1" step="0.1" oninput="calculateFromDB(1)"></td>
+        <td><input type="number" id="linear1" step="0.001" oninput="calculateFromLinear(1)"></td>
+        <td><input type="number" id="angle1" step="0.001" oninput="calculateFromAngle(1)"></td>
       </tr>
       <tr>
-        <td><input type="number" id="contrast_db2" value="25" oninput="calculateAngle()"></td>
-        <td id="contrast_value2">N/A</td>
-        <td id="angle2">N/A</td>
+        <td><input type="number" id="db2" step="0.1" oninput="calculateFromDB(2)"></td>
+        <td><input type="number" id="linear2" step="0.001" oninput="calculateFromLinear(2)"></td>
+        <td><input type="number" id="angle2" step="0.001" oninput="calculateFromAngle(2)"></td>
       </tr>
       <tr>
-        <td><input type="number" id="contrast_db3" value="20" oninput="calculateAngle()"></td>
-        <td id="contrast_value3">N/A</td>
-        <td id="angle3">N/A</td>
+        <td><input type="number" id="db3" step="0.1" oninput="calculateFromDB(3)"></td>
+        <td><input type="number" id="linear3" step="0.001" oninput="calculateFromLinear(3)"></td>
+        <td><input type="number" id="angle3" step="0.001" oninput="calculateFromAngle(3)"></td>
       </tr>
       <tr>
-        <td><input type="number" id="contrast_db4" value="30" oninput="calculateAngle()"></td>
-        <td id="contrast_value4">N/A</td>
-        <td id="angle4">N/A</td>
+        <td><input type="number" id="db4" step="0.1" oninput="calculateFromDB(4)"></td>
+        <td><input type="number" id="linear4" step="0.001" oninput="calculateFromLinear(4)"></td>
+        <td><input type="number" id="angle4" step="0.001" oninput="calculateFromAngle(4)"></td>
       </tr>
       <tr>
-        <td><input type="number" id="contrast_db5" value="18" oninput="calculateAngle()"></td>
-        <td id="contrast_value5">N/A</td>
-        <td id="angle5">N/A</td>
+        <td><input type="number" id="db5" step="0.1" oninput="calculateFromDB(5)"></td>
+        <td><input type="number" id="linear5" step="0.001" oninput="calculateFromLinear(5)"></td>
+        <td><input type="number" id="angle5" step="0.001" oninput="calculateFromAngle(5)"></td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <script>
-function calculateAngle() {
-    for (let i = 1; i <= 5; i++) {
-        var contrast_db = parseFloat(document.getElementById('contrast_db' + i).value);
+// 初始化所有行，第1行初始值为23dB
+function initialize() {
+  // 设置第1行的初始值
+  document.getElementById('db1').value = "23";
+  calculateFromDB(1);
 
-        if (!isNaN(contrast_db)) {
-            // 计算对比度：C = 10^(dB/10)
-            var contrast_value = Math.pow(10, contrast_db / 10);
+  // 为其他行设置一些示例值，方便用户理解
+  document.getElementById('db2').value = "20";
+  calculateFromDB(2);
 
-            // 计算角度：angle = atan(sqrt(1/contrast_value)) * 2 / π * 180°
-            // 根据你提供的公式：=ATAN(SQRT(1/ ))*2/3.14159*180
-            var angle_rad = Math.atan(Math.sqrt(1 / contrast_value));
-            var angle_deg = angle_rad * 2 / Math.PI * 180;
+  document.getElementById('db3').value = "30";
+  calculateFromDB(3);
 
-            document.getElementById('contrast_value' + i).innerText = contrast_value.toFixed(4);
-            document.getElementById('angle' + i).innerText = angle_deg.toFixed(4);
-        } else {
-            document.getElementById('contrast_value' + i).innerText = 'N/A';
-            document.getElementById('angle' + i).innerText = 'N/A';
-        }
-    }
+  document.getElementById('linear4').value = "1000";
+  calculateFromLinear(4);
+
+  document.getElementById('angle5').value = "8.1";
+  calculateFromAngle(5);
 }
-// 页面加载时自动计算初始值
-window.onload = calculateAngle();
+
+// 从dB值计算
+function calculateFromDB(row) {
+  const db = parseFloat(document.getElementById('db' + row).value);
+
+  if (!isNaN(db)) {
+    // 计算线性对比度: C = 10^(dB/10)
+    const linear = Math.pow(10, db / 10);
+    document.getElementById('linear' + row).value = linear.toFixed(6);
+
+    // 计算角度: θ = atan(√(1/C)) * 2/π * 180°
+    const angle_rad = Math.atan(Math.sqrt(1 / linear));
+    const angle_deg = angle_rad * 2 / Math.PI * 180;
+    document.getElementById('angle' + row).value = angle_deg.toFixed(4);
+  } else {
+    // 清除其他输入
+    document.getElementById('linear' + row).value = '';
+    document.getElementById('angle' + row).value = '';
+  }
+}
+
+// 从线性值计算
+function calculateFromLinear(row) {
+  const linear = parseFloat(document.getElementById('linear' + row).value);
+
+  if (!isNaN(linear) && linear > 0) {
+    // 计算dB值: dB = 10 * log10(linear)
+    const db = 10 * Math.log10(linear);
+    document.getElementById('db' + row).value = db.toFixed(4);
+
+    // 计算角度
+    const angle_rad = Math.atan(Math.sqrt(1 / linear));
+    const angle_deg = angle_rad * 2 / Math.PI * 180;
+    document.getElementById('angle' + row).value = angle_deg.toFixed(4);
+  } else {
+    // 清除其他输入
+    document.getElementById('db' + row).value = '';
+    document.getElementById('angle' + row).value = '';
+  }
+}
+
+// 从角度计算
+function calculateFromAngle(row) {
+  const angle_deg = parseFloat(document.getElementById('angle' + row).value);
+
+  if (!isNaN(angle_deg)) {
+    // 正确推导的反向公式：
+    // 原始公式：angle_deg = atan(√(1/C)) * 2/π * 180
+    // 设 x = atan(√(1/C))
+    // 则 angle_deg = x * 2/π * 180
+    // 所以 x = angle_deg * π / 360
+    // tan(x) = √(1/C)
+    // tan²(x) = 1/C
+    // C = 1 / tan²(x)
+
+    const x = angle_deg * Math.PI / 360; // 这是关键，不是angle_deg * π / 180
+    const tan_x = Math.tan(x);
+    const linear = 1 / (tan_x * tan_x);
+
+    document.getElementById('linear' + row).value = linear.toFixed(6);
+
+    // 从线性值计算dB
+    const db = 10 * Math.log10(linear);
+    document.getElementById('db' + row).value = db.toFixed(4);
+  } else {
+    // 清除其他输入
+    document.getElementById('db' + row).value = '';
+    document.getElementById('linear' + row).value = '';
+  }
+}
+
+// 页面加载时初始化所有行
+window.onload = initialize;
 </script>
 
 
@@ -1007,7 +1076,7 @@ window.onload = calculateAngle();
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">35.6k</span>
+                        class="white-color">36.2k</span>
             
             
             
