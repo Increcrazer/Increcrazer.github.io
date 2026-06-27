@@ -891,7 +891,7 @@
                 <button id="unlockDocs" class="docs-btn" type="button"><i class="fas fa-lock-open"></i>进入</button>
                 <span id="gateStatus" class="docs-status"></span>
             </div>
-            <p class="helper">芝麻开门！</p>
+            <p class="helper">markdown云端管理工具，欢迎使用，密码为123456</p>
         </section>
 
         <section id="docsApp" class="docs-panel docs-app docs-hidden">
@@ -900,15 +900,15 @@
                 <div class="docs-grid">
                     <div class="docs-field">
                         <label for="githubOwner">Owner</label>
-                        <input id="githubOwner" value="Increcrazer" autocomplete="off">
+                        <input id="githubOwner" value="your name" autocomplete="off">
                     </div>
                     <div class="docs-field">
                         <label for="githubRepo">Repo</label>
-                        <input id="githubRepo" value="mdfile" autocomplete="off">
+                        <input id="githubRepo" value="your repository name" autocomplete="off">
                     </div>
                     <div class="docs-field">
                         <label for="githubBranch">Branch</label>
-                        <input id="githubBranch" value="main" autocomplete="off">
+                        <input id="githubBranch" value="your branch name" autocomplete="off">
                     </div>
                     <div class="docs-field">
                         <label for="githubToken">GitHub Token</label>
@@ -916,7 +916,7 @@
                     </div>
                     <div class="docs-field wide">
                         <label for="githubPath">Markdown 路径</label>
-                        <input id="githubPath" value="QKD/notes.md" autocomplete="off">
+                        <input id="githubPath" value="xxx/xxx.md" autocomplete="off">
                     </div>
                     <div class="docs-field wide">
                         <label for="commitMessage">提交说明</label>
@@ -924,7 +924,7 @@
                     </div>
                     <div class="docs-field full">
                         <label for="githubFolder">文件夹路径</label>
-                        <input id="githubFolder" value="QKD" autocomplete="off" placeholder="例如：source/_posts 或 web-docs">
+                        <input id="githubFolder" value="xxx" autocomplete="off" placeholder="例如：source/_posts 或 web-docs">
                     </div>
                 </div>
                 <div class="docs-actions">
@@ -975,7 +975,7 @@
 (function () {
     'use strict';
 
-    var passwordSha256 = 'da12330be5133745720ccd77d4d00d290a1583275881331149713943429d2841';
+    var passwordSha256 = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92';
     var gate = document.getElementById('docsGate');
     var app = document.getElementById('docsApp');
     var passwordInput = document.getElementById('docsPassword');
@@ -2054,22 +2054,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
