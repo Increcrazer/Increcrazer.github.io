@@ -358,12 +358,17 @@
         --docs-muted: #637083;
         --docs-accent: #2e7d67;
         --docs-danger: #b42318;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        overflow-x: clip;
         color: var(--docs-ink);
     }
 
     .docs-shell {
-        width: min(1280px, calc(100% - 32px));
-        margin: -72px auto 42px;
+        box-sizing: border-box;
+        width: min(1800px, calc(100% - 8px));
+        margin: -72px auto 72px;
         position: relative;
         z-index: 2;
     }
@@ -398,7 +403,7 @@
     }
 
     .docs-toolbar {
-        padding: 18px 22px 8px;
+        padding: 18px 18px 8px;
         border-bottom: 1px solid var(--docs-border);
         background: var(--docs-soft);
     }
@@ -556,13 +561,19 @@
 
     .docs-workspace {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        min-height: 68vh;
+        grid-template-columns: minmax(520px, 1fr) minmax(600px, 1.08fr);
+        min-height: 680px;
+        transition: grid-template-columns 0.2s ease;
     }
 
     .docs-editor-wrap,
     .docs-preview-wrap {
+        display: flex;
+        flex-direction: column;
         min-width: 0;
+        min-height: 0;
+        background: #fff;
+        overflow: hidden;
     }
 
     .docs-editor-wrap {
@@ -571,10 +582,10 @@
 
     .docs-editor-head,
     .docs-preview-head {
+        flex: 0 0 44px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 44px;
         padding: 0 16px;
         border-bottom: 1px solid var(--docs-border);
         background: #fff;
@@ -583,14 +594,63 @@
         font-size: 0.86rem;
     }
 
+    .docs-head-actions {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .docs-toolrow {
+        flex: 0 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+        min-height: 42px;
+        padding: 6px 10px;
+        border-bottom: 1px solid var(--docs-border);
+        background: #fbfcfe;
+    }
+
+    .docs-icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        background: transparent;
+        color: #475569;
+        cursor: pointer;
+        font-weight: 700;
+    }
+
+    .docs-icon-btn:hover,
+    .docs-icon-btn.active {
+        border-color: var(--docs-border);
+        background: #eef7f4;
+        color: var(--docs-accent);
+    }
+
+    .docs-separator {
+        width: 1px;
+        height: 22px;
+        margin: 0 3px;
+        background: var(--docs-border);
+    }
+
     #docsMarkdown {
+        flex: 1 1 auto;
         display: block;
         width: 100%;
-        min-height: calc(68vh - 44px);
+        min-height: 680px;
+        height: auto;
         padding: 18px;
         border: 0;
         outline: none;
-        resize: vertical;
+        resize: none;
+        overflow: hidden;
         color: #111827;
         background: #fcfdff;
         font-family: Consolas, Monaco, "Courier New", monospace;
@@ -599,12 +659,46 @@
         box-sizing: border-box;
     }
 
+    .docs-editor-wrap .CodeMirror {
+        flex: 1 1 auto;
+        height: 100%;
+        min-height: 0;
+        color: #111827;
+        background: #fcfdff;
+        font-family: Consolas, Monaco, "Courier New", monospace;
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .docs-editor-wrap .CodeMirror-gutters {
+        border-right: 1px solid #e3e8ef;
+        background: #f6f8fb;
+    }
+
+    .docs-editor-wrap .CodeMirror-linenumber {
+        color: #94a3b8;
+    }
+
     .docs-preview {
-        min-height: calc(68vh - 44px);
+        flex: 1 1 auto;
+        min-height: 680px;
         padding: 20px 24px 34px;
-        overflow: auto;
+        overflow-y: hidden;
+        overflow-x: hidden;
         background: #fff;
         line-height: 1.8;
+        scroll-behavior: auto;
+    }
+
+    .docs-preview * {
+        max-width: 100%;
+    }
+
+    .docs-preview p,
+    .docs-preview li,
+    .docs-preview a {
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
     .docs-preview h1,
@@ -616,7 +710,7 @@
 
     .docs-preview pre {
         padding: 14px;
-        overflow: auto;
+        overflow-x: auto;
         border-radius: 6px;
         background: #111827;
         color: #e5e7eb;
@@ -642,7 +736,15 @@
 
     .docs-preview table {
         width: 100%;
+        display: block;
+        overflow-x: auto;
         border-collapse: collapse;
+    }
+
+    .docs-preview .katex-display {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 2px;
     }
 
     .docs-preview th,
@@ -655,6 +757,28 @@
         display: none !important;
     }
 
+    .docs-app.editor-only .docs-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .docs-app.editor-only .docs-preview-wrap {
+        display: none;
+    }
+
+    .docs-app.preview-only .docs-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .docs-app.preview-only .docs-editor-wrap {
+        display: none;
+    }
+
+    @media (max-width: 1200px) {
+        .docs-workspace {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        }
+    }
+
     @media (max-width: 992px) {
         .docs-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -662,17 +786,25 @@
 
         .docs-workspace {
             grid-template-columns: 1fr;
+            height: auto;
+            min-height: 0;
         }
 
         .docs-editor-wrap {
             border-right: 0;
             border-bottom: 1px solid var(--docs-border);
         }
+
+        #docsMarkdown,
+        .docs-editor-wrap .CodeMirror,
+        .docs-preview {
+            min-height: 520px;
+        }
     }
 
     @media (max-width: 600px) {
         .docs-shell {
-            width: calc(100% - 18px);
+            width: calc(100% - 8px);
             margin-top: -54px;
         }
 
@@ -762,7 +894,7 @@
             <p class="helper">芝麻开门！</p>
         </section>
 
-        <section id="docsApp" class="docs-panel docs-hidden">
+        <section id="docsApp" class="docs-panel docs-app docs-hidden">
             <div class="docs-toolbar">
                 <h2>Markdown 文档</h2>
                 <div class="docs-grid">
@@ -809,7 +941,6 @@
                     </div>
                     <div id="fileList" class="docs-file-list"></div>
                 </div>
-                <p class="docs-form-note">建议使用 fine-grained personal access token，只给目标仓库 Contents 读写权限。保存会提交 Markdown 文件，不会执行 Hexo 发布。</p>
             </div>
 
             <div class="docs-workspace">
@@ -852,12 +983,18 @@
     var unlockButton = document.getElementById('unlockDocs');
     var markdown = document.getElementById('docsMarkdown');
     var preview = document.getElementById('docsPreview');
+    var workspace = document.querySelector('.docs-workspace');
     var stats = document.getElementById('docStats');
     var status = document.getElementById('docsStatus');
     var browserPanel = document.getElementById('docsBrowser');
     var fileList = document.getElementById('fileList');
     var folderLabel = document.getElementById('folderLabel');
     var currentSha = null;
+    var editor = null;
+    var isSyncingScroll = false;
+    var syncScrollEnabled = true;
+    var renderTimer = null;
+    var tallerColumn = null;
 
     function setStatus(message, isError) {
         status.textContent = message || '';
@@ -879,15 +1016,38 @@
         return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(bytesToHex);
     }
 
+    function getMarkdownValue() {
+        return editor ? editor.getValue() : markdown.value;
+    }
+
+    function setMarkdownValue(value) {
+        if (editor) {
+            editor.setValue(value);
+        } else {
+            markdown.value = value;
+        }
+        syncColumnHeights();
+        renderMarkdown();
+    }
+
+    function focusEditor() {
+        if (editor) {
+            editor.focus();
+        } else {
+            markdown.focus();
+        }
+    }
+
     function unlock() {
         sha256(passwordInput.value).then(function (hash) {
             if (hash === passwordSha256) {
                 sessionStorage.setItem('docsUnlocked', '1');
                 gate.classList.add('docs-hidden');
                 app.classList.remove('docs-hidden');
+                initEditor();
                 renderMarkdown();
                 setGateStatus('');
-                markdown.focus();
+                focusEditor();
             } else {
                 setGateStatus('密码不正确', true);
             }
@@ -897,7 +1057,7 @@
     }
 
     function renderMarkdown() {
-        var value = markdown.value;
+        var value = getMarkdownValue();
         var html = '';
         if (window.marked && window.DOMPurify) {
             var protectedMarkdown = protectMath(value);
@@ -917,7 +1077,121 @@
         }
         preview.innerHTML = html;
         renderMath();
+        syncColumnHeights();
         stats.textContent = value.length + ' 字';
+    }
+
+    function syncColumnHeights() {
+        if (editor) {
+            return;
+        }
+
+        var editorHead = document.querySelector('.docs-editor-head');
+        var previewHead = document.querySelector('.docs-preview-head');
+        var editorHeadHeight = editorHead ? editorHead.offsetHeight : 44;
+        var previewHeadHeight = previewHead ? previewHead.offsetHeight : 44;
+
+        workspace.style.height = 'auto';
+        markdown.style.height = 'auto';
+        markdown.style.overflowY = 'hidden';
+        preview.style.height = 'auto';
+        preview.style.overflowY = 'hidden';
+
+        var leftNatural = editorHeadHeight + Math.max(680, markdown.scrollHeight);
+        var rightNatural = previewHeadHeight + Math.max(680, preview.scrollHeight);
+        var targetHeight = Math.max(680, Math.min(leftNatural, rightNatural));
+        var editorBodyHeight = Math.max(0, targetHeight - editorHeadHeight);
+        var previewBodyHeight = Math.max(0, targetHeight - previewHeadHeight);
+
+        workspace.style.height = targetHeight + 'px';
+        markdown.style.height = editorBodyHeight + 'px';
+        preview.style.height = previewBodyHeight + 'px';
+        tallerColumn = null;
+        markdown.style.overflowY = 'hidden';
+        preview.style.overflowY = 'hidden';
+        if (leftNatural > rightNatural + 2) {
+            tallerColumn = markdown;
+            markdown.style.overflowY = 'auto';
+        } else if (rightNatural > leftNatural + 2) {
+            tallerColumn = preview;
+            preview.style.overflowY = 'auto';
+        }
+        syncTallerColumnAtPageEdge();
+    }
+
+    function syncTallerColumnAtPageEdge() {
+        if (!tallerColumn) {
+            return;
+        }
+
+        var maxWindowScroll = Math.max(
+            document.documentElement.scrollHeight,
+            document.body.scrollHeight
+        ) - window.innerHeight;
+
+        if (maxWindowScroll <= 0) {
+            return;
+        }
+
+        if (window.scrollY >= maxWindowScroll - 2) {
+            tallerColumn.scrollTop = tallerColumn.scrollHeight - tallerColumn.clientHeight;
+        } else if (window.scrollY <= 2) {
+            tallerColumn.scrollTop = 0;
+        }
+    }
+
+    function scheduleRender() {
+        if (renderTimer) {
+            window.clearTimeout(renderTimer);
+        }
+        renderTimer = window.setTimeout(function () {
+            renderTimer = null;
+            renderMarkdown();
+        }, 80);
+    }
+
+    function initEditor() {
+        if (editor || !window.CodeMirror) {
+            return;
+        }
+
+        editor = CodeMirror.fromTextArea(markdown, {
+            mode: 'markdown',
+            theme: 'eclipse',
+            lineNumbers: true,
+            lineWrapping: true,
+            tabSize: 2,
+            indentUnit: 2,
+            extraKeys: {
+                Enter: 'newlineAndIndentContinueMarkdownList',
+                'Ctrl-B': function () { applyMarkdownAction('bold'); },
+                'Cmd-B': function () { applyMarkdownAction('bold'); },
+                'Ctrl-I': function () { applyMarkdownAction('italic'); },
+                'Cmd-I': function () { applyMarkdownAction('italic'); }
+            }
+        });
+
+        editor.on('change', scheduleRender);
+
+        editor.on('scroll', function () {
+            syncPreviewFromEditor();
+        });
+
+        editor.getScrollerElement().addEventListener('scroll', function () {
+            window.requestAnimationFrame(syncPreviewFromEditor);
+        });
+    }
+
+    function getEditorScrollElement() {
+        return editor ? editor.getScrollerElement() : markdown;
+    }
+
+    function syncPreviewFromEditor() {
+        return;
+    }
+
+    function syncEditorFromPreview() {
+        return;
     }
 
     function protectMath(text) {
@@ -1056,8 +1330,7 @@
                 throw new Error('请选择一个 Markdown 文件路径');
             }
             currentSha = data.sha;
-            markdown.value = decodeBase64(data.content || '');
-            renderMarkdown();
+            setMarkdownValue(decodeBase64(data.content || ''));
             setStatus('已载入：' + cfg.path);
         }).catch(function (error) {
             currentSha = null;
@@ -1163,7 +1436,7 @@
         }).then(function (existing) {
             var body = {
                 message: cfg.message,
-                content: encodeBase64(markdown.value),
+                content: encodeBase64(getMarkdownValue()),
                 branch: cfg.branch
             };
             if (existing && existing.sha) {
@@ -1191,11 +1464,73 @@
             String(now.getDate()).padStart(2, '0') + '-' + String(now.getHours()).padStart(2, '0') +
             String(now.getMinutes()).padStart(2, '0');
         document.getElementById('githubPath').value = 'web-docs/' + stamp + '.md';
-        markdown.value = '# 未命名文档\n\n';
+        setMarkdownValue('# 未命名文档\n\n');
         currentSha = null;
-        renderMarkdown();
         setStatus('已创建新文档路径');
-        markdown.focus();
+        focusEditor();
+    }
+
+    function applyMarkdownAction(action) {
+        var value = getMarkdownValue();
+        var start = editor ? editor.indexFromPos(editor.getCursor('from')) : markdown.selectionStart;
+        var end = editor ? editor.indexFromPos(editor.getCursor('to')) : markdown.selectionEnd;
+        var selected = value.slice(start, end);
+        var replacement = selected;
+        var cursorOffset = 0;
+
+        if (action === 'heading') {
+            replacement = selected ? selected.replace(/^/gm, '## ') : '## 标题';
+            cursorOffset = replacement.length;
+        } else if (action === 'bold') {
+            replacement = '**' + (selected || '加粗文本') + '**';
+            cursorOffset = selected ? replacement.length : 2;
+        } else if (action === 'italic') {
+            replacement = '*' + (selected || '斜体文本') + '*';
+            cursorOffset = selected ? replacement.length : 1;
+        } else if (action === 'quote') {
+            replacement = selected ? selected.replace(/^/gm, '> ') : '> 引用内容';
+            cursorOffset = replacement.length;
+        } else if (action === 'link') {
+            replacement = '[' + (selected || '链接文本') + '](https://example.com)';
+            cursorOffset = selected ? replacement.length : 1;
+        } else if (action === 'image') {
+            replacement = '![' + (selected || '图片描述') + '](https://example.com/image.png)';
+            cursorOffset = selected ? replacement.length : 2;
+        } else if (action === 'code') {
+            replacement = '```text\n' + (selected || '代码') + '\n```';
+            cursorOffset = selected ? replacement.length : 8;
+        } else if (action === 'math') {
+            replacement = selected ? '\\[\n' + selected + '\n\\]' : '\\[\nE = mc^2\n\\]';
+            cursorOffset = selected ? replacement.length : 3;
+        }
+
+        if (editor) {
+            editor.replaceRange(replacement, editor.posFromIndex(start), editor.posFromIndex(end));
+            editor.focus();
+            if (!selected) {
+                editor.setCursor(editor.posFromIndex(start + cursorOffset));
+            }
+        } else {
+            markdown.setRangeText(replacement, start, end, 'end');
+            markdown.focus();
+            if (!selected) {
+                markdown.selectionStart = markdown.selectionEnd = start + cursorOffset;
+            }
+            renderMarkdown();
+        }
+    }
+
+    function setViewMode(mode) {
+        app.classList.toggle('editor-only', mode === 'editor');
+        app.classList.toggle('preview-only', mode === 'preview');
+        Array.prototype.forEach.call(document.querySelectorAll('[data-view-mode]'), function (button) {
+            button.classList.toggle('active', button.getAttribute('data-view-mode') === mode);
+        });
+        if (editor) {
+            window.setTimeout(function () {
+                editor.refresh();
+            }, 50);
+        }
     }
 
     unlockButton.addEventListener('click', unlock);
@@ -1204,19 +1539,50 @@
             unlock();
         }
     });
-    markdown.addEventListener('input', renderMarkdown);
+    markdown.addEventListener('input', scheduleRender);
+    markdown.addEventListener('input', syncColumnHeights);
+    markdown.addEventListener('scroll', syncPreviewFromEditor);
+    preview.addEventListener('scroll', syncEditorFromPreview);
+    Array.prototype.forEach.call(document.querySelectorAll('[data-md-action]'), function (button) {
+        button.addEventListener('click', function () {
+            applyMarkdownAction(button.getAttribute('data-md-action'));
+        });
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-view-mode]'), function (button) {
+        button.addEventListener('click', function () {
+            setViewMode(button.getAttribute('data-view-mode'));
+        });
+    });
+    var syncScrollToggle = document.getElementById('syncScrollToggle');
+    if (syncScrollToggle) {
+        syncScrollToggle.addEventListener('click', function () {
+            syncScrollEnabled = !syncScrollEnabled;
+            this.classList.toggle('active', syncScrollEnabled);
+        });
+    }
     document.getElementById('loadFolder').addEventListener('click', loadFolder);
     document.getElementById('loadDoc').addEventListener('click', loadDoc);
     document.getElementById('saveDoc').addEventListener('click', saveDoc);
     document.getElementById('newDoc').addEventListener('click', newDoc);
+    window.addEventListener('resize', function () {
+        if (editor) {
+            editor.refresh();
+        }
+        syncColumnHeights();
+        syncPreviewFromEditor();
+    });
+    window.addEventListener('scroll', syncTallerColumnAtPageEdge);
 
     if (sessionStorage.getItem('docsUnlocked') === '1') {
         gate.classList.add('docs-hidden');
         app.classList.remove('docs-hidden');
+        initEditor();
         renderMarkdown();
+        syncColumnHeights();
     }
 })();
 </script>
+
 
 
     <footer class="page-footer bg-color">
