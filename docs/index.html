@@ -912,7 +912,7 @@
                     </div>
                     <div class="docs-field">
                         <label for="githubToken">GitHub Token</label>
-                        <input id="githubToken" type="password" autocomplete="off" placeholder="仅保存在本页内存">
+                        <input id="githubToken" type="password" autocomplete="off" placeholder="本机记住，换电脑需重填">
                     </div>
                     <div class="docs-field wide">
                         <label for="githubPath">Markdown 路径</label>
@@ -995,6 +995,9 @@
     var syncScrollEnabled = true;
     var renderTimer = null;
     var tallerColumn = null;
+    var storagePrefix = 'docsEditor:';
+    var unlockStorageKey = storagePrefix + 'unlocked';
+    var githubStorageKey = storagePrefix + 'githubConfig';
 
     function setStatus(message, isError) {
         status.textContent = message || '';
@@ -1004,6 +1007,69 @@
     function setGateStatus(message, isError) {
         gateStatus.textContent = message || '';
         gateStatus.classList.toggle('error', Boolean(isError));
+    }
+
+    function readLocalJson(key) {
+        try {
+            return JSON.parse(localStorage.getItem(key) || 'null');
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function writeLocalJson(key, value) {
+        try {
+            localStorage.setItem(key, JSON.stringify(value));
+        } catch (error) {
+            setStatus('浏览器未允许本地保存，下次可能需要重新填写配置。', true);
+        }
+    }
+
+    function rememberUnlocked() {
+        try {
+            localStorage.setItem(unlockStorageKey, '1');
+            sessionStorage.setItem(unlockStorageKey, '1');
+        } catch (error) {
+            sessionStorage.setItem(unlockStorageKey, '1');
+        }
+    }
+
+    function isRememberedUnlocked() {
+        try {
+            return localStorage.getItem(unlockStorageKey) === '1' ||
+                sessionStorage.getItem(unlockStorageKey) === '1' ||
+                sessionStorage.getItem('docsUnlocked') === '1';
+        } catch (error) {
+            return sessionStorage.getItem(unlockStorageKey) === '1' ||
+                sessionStorage.getItem('docsUnlocked') === '1';
+        }
+    }
+
+    function hydrateGithubConfig() {
+        var saved = readLocalJson(githubStorageKey);
+        if (!saved) {
+            return;
+        }
+
+        [
+            ['githubOwner', saved.owner],
+            ['githubRepo', saved.repo],
+            ['githubBranch', saved.branch],
+            ['githubPath', saved.path],
+            ['githubFolder', saved.folder],
+            ['githubToken', saved.token],
+            ['commitMessage', saved.message]
+        ].forEach(function (pair) {
+            var input = document.getElementById(pair[0]);
+            if (input && pair[1]) {
+                input.value = pair[1];
+            }
+        });
+    }
+
+    function rememberGithubConfig() {
+        var cfg = getGithubConfig();
+        writeLocalJson(githubStorageKey, cfg);
     }
 
     function bytesToHex(buffer) {
@@ -1041,7 +1107,7 @@
     function unlock() {
         sha256(passwordInput.value).then(function (hash) {
             if (hash === passwordSha256) {
-                sessionStorage.setItem('docsUnlocked', '1');
+                rememberUnlocked();
                 gate.classList.add('docs-hidden');
                 app.classList.remove('docs-hidden');
                 initEditor();
@@ -1331,6 +1397,7 @@
             }
             currentSha = data.sha;
             setMarkdownValue(decodeBase64(data.content || ''));
+            rememberGithubConfig();
             setStatus('已载入：' + cfg.path);
         }).catch(function (error) {
             currentSha = null;
@@ -1360,6 +1427,7 @@
             }
             document.getElementById('githubFolder').value = targetFolder;
             renderFileList(items, targetFolder);
+            rememberGithubConfig();
             setStatus('已载入文件夹：' + (targetFolder || '/'));
         }).catch(function (error) {
             setStatus(error.message, true);
@@ -1452,6 +1520,7 @@
             });
         }).then(function (data) {
             currentSha = data.content && data.content.sha;
+            rememberGithubConfig();
             setStatus('保存成功：' + cfg.path);
         }).catch(function (error) {
             setStatus(error.message, true);
@@ -1573,7 +1642,9 @@
     });
     window.addEventListener('scroll', syncTallerColumnAtPageEdge);
 
-    if (sessionStorage.getItem('docsUnlocked') === '1') {
+    hydrateGithubConfig();
+
+    if (isRememberedUnlocked()) {
         gate.classList.add('docs-hidden');
         app.classList.remove('docs-hidden');
         initEditor();
