@@ -1262,11 +1262,64 @@
 
     function protectMath(text) {
         var math = [];
-        var protectedText = text.replace(/(\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\))/g, function (match) {
+        function stash(value) {
             var token = 'DOCS_MATH_TOKEN_' + math.length + '_END';
-            math.push(match);
+            math.push(value);
             return token;
-        });
+        }
+
+        var protectedText = '';
+        var index = 0;
+        while (index < text.length) {
+            if (text.slice(index, index + 2) === '$$') {
+                var displayDollarEnd = text.indexOf('$$', index + 2);
+                if (displayDollarEnd > -1) {
+                    protectedText += stash(text.slice(index, displayDollarEnd + 2));
+                    index = displayDollarEnd + 2;
+                    continue;
+                }
+            }
+
+            if (text.slice(index, index + 2) === '\\[') {
+                var bracketEnd = text.indexOf('\\]', index + 2);
+                if (bracketEnd > -1) {
+                    protectedText += stash(text.slice(index, bracketEnd + 2));
+                    index = bracketEnd + 2;
+                    continue;
+                }
+            }
+
+            if (text.slice(index, index + 2) === '\\(') {
+                var parenEnd = text.indexOf('\\)', index + 2);
+                if (parenEnd > -1) {
+                    protectedText += stash(text.slice(index, parenEnd + 2));
+                    index = parenEnd + 2;
+                    continue;
+                }
+            }
+
+            if (text[index] === '$' && text[index - 1] !== '\\' && text[index + 1] !== '$') {
+                var inlineEnd = index + 1;
+                while (inlineEnd < text.length) {
+                    if (text[inlineEnd] === '\n') {
+                        break;
+                    }
+                    if (text[inlineEnd] === '$' && text[inlineEnd - 1] !== '\\' && text[inlineEnd + 1] !== '$') {
+                        protectedText += stash(text.slice(index, inlineEnd + 1));
+                        index = inlineEnd + 1;
+                        break;
+                    }
+                    inlineEnd += 1;
+                }
+                if (index === inlineEnd + 1) {
+                    continue;
+                }
+            }
+
+            protectedText += text[index];
+            index += 1;
+        }
+
         return { text: protectedText, math: math };
     }
 
@@ -1297,6 +1350,7 @@
         renderMathInElement(preview, {
             delimiters: [
                 { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
                 { left: '\\[', right: '\\]', display: true },
                 { left: '\\(', right: '\\)', display: false }
             ],
