@@ -73,9 +73,9 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
 </head>
 
 <!-- KaTeX 支持 -->
@@ -173,6 +173,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -264,6 +275,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
 		</a>
           
         </li>
@@ -881,38 +903,25 @@
 
 <main class="content docs-page">
     <div class="docs-shell">
-        <section id="docsGate" class="docs-panel docs-gate">
-            <h2>文档编辑</h2>
-            <div class="docs-field">
-                <label for="docsPassword">访问密码</label>
-                <input id="docsPassword" type="password" autocomplete="current-password" placeholder="输入密码后进入">
-            </div>
-            <div class="docs-actions">
-                <button id="unlockDocs" class="docs-btn" type="button"><i class="fas fa-lock-open"></i>进入</button>
-                <span id="gateStatus" class="docs-status"></span>
-            </div>
-            <p class="helper">markdown云端管理工具，欢迎使用，密码为123456</p>
-        </section>
-
-        <section id="docsApp" class="docs-panel docs-app docs-hidden">
+        <section id="docsApp" class="docs-panel docs-app">
             <div class="docs-toolbar">
                 <h2>Markdown 文档</h2>
                 <div class="docs-grid">
                     <div class="docs-field">
                         <label for="githubOwner">Owner</label>
-                        <input id="githubOwner" value="your name" autocomplete="off">
+                        <input id="githubOwner" value="xxx" autocomplete="off">
                     </div>
                     <div class="docs-field">
                         <label for="githubRepo">Repo</label>
-                        <input id="githubRepo" value="your repository name" autocomplete="off">
+                        <input id="githubRepo" value="xxx" autocomplete="off">
                     </div>
                     <div class="docs-field">
                         <label for="githubBranch">Branch</label>
-                        <input id="githubBranch" value="your branch name" autocomplete="off">
+                        <input id="githubBranch" value="main" autocomplete="off">
                     </div>
                     <div class="docs-field">
                         <label for="githubToken">GitHub Token</label>
-                        <input id="githubToken" type="password" autocomplete="off" placeholder="本机记住，换电脑需重填">
+                        <input id="githubToken" type="password" autocomplete="off" placeholder="读取公开仓库不需要，保存时需要">
                     </div>
                     <div class="docs-field wide">
                         <label for="githubPath">Markdown 路径</label>
@@ -949,9 +958,37 @@
                         <span>Markdown</span>
                         <span id="docStats">0 字</span>
                     </div>
-                    <textarea id="docsMarkdown" spellcheck="false"># 新文档
+                    <textarea id="docsMarkdown" spellcheck="false"># Markdown 云端文档工具
 
-在左侧编写 Markdown，右侧会实时预览。
+这是一个公开可用的 Markdown 编辑和预览页面。左侧编辑，右侧实时渲染。
+
+## 基本用法
+
+1. 填写 GitHub `owner`、`repo`、`branch`。
+2. 如果只是读取公开仓库，`GitHub Token` 可以留空。
+3. 填写 `文件夹路径` 后点击“载入文件夹”，可以浏览文件夹和 Markdown 文件。
+4. 填写 `Markdown 路径` 后点击“载入”，可以打开指定 Markdown。
+5. 编辑完成后，填写 `GitHub Token`，再点击“保存到 GitHub”。
+
+## 路径示例
+
+```text
+notes/Pereira2020.md
+papers/qkd/decoy-state.md
+drafts/new-note.md
+```
+
+## 数学公式
+
+行内公式支持 `$p_Z^A$`，块级公式支持：
+
+$$
+\bar X=\frac{1}{N}\sum_{i=1}^{N}X_i
+$$
+
+## Token 权限
+
+读取公开仓库不需要 token。保存需要一个能写入目标仓库的 GitHub Fine-grained token，建议只授予目标文档仓库的 `Contents: Read and write` 权限。
 </textarea>
                 </div>
                 <div class="docs-preview-wrap">
@@ -975,12 +1012,7 @@
 (function () {
     'use strict';
 
-    var passwordSha256 = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92';
-    var gate = document.getElementById('docsGate');
     var app = document.getElementById('docsApp');
-    var passwordInput = document.getElementById('docsPassword');
-    var gateStatus = document.getElementById('gateStatus');
-    var unlockButton = document.getElementById('unlockDocs');
     var markdown = document.getElementById('docsMarkdown');
     var preview = document.getElementById('docsPreview');
     var workspace = document.querySelector('.docs-workspace');
@@ -996,17 +1028,11 @@
     var renderTimer = null;
     var tallerColumn = null;
     var storagePrefix = 'docsEditor:';
-    var unlockStorageKey = storagePrefix + 'unlocked';
     var githubStorageKey = storagePrefix + 'githubConfig';
 
     function setStatus(message, isError) {
         status.textContent = message || '';
         status.classList.toggle('error', Boolean(isError));
-    }
-
-    function setGateStatus(message, isError) {
-        gateStatus.textContent = message || '';
-        gateStatus.classList.toggle('error', Boolean(isError));
     }
 
     function readLocalJson(key) {
@@ -1022,26 +1048,6 @@
             localStorage.setItem(key, JSON.stringify(value));
         } catch (error) {
             setStatus('浏览器未允许本地保存，下次可能需要重新填写配置。', true);
-        }
-    }
-
-    function rememberUnlocked() {
-        try {
-            localStorage.setItem(unlockStorageKey, '1');
-            sessionStorage.setItem(unlockStorageKey, '1');
-        } catch (error) {
-            sessionStorage.setItem(unlockStorageKey, '1');
-        }
-    }
-
-    function isRememberedUnlocked() {
-        try {
-            return localStorage.getItem(unlockStorageKey) === '1' ||
-                sessionStorage.getItem(unlockStorageKey) === '1' ||
-                sessionStorage.getItem('docsUnlocked') === '1';
-        } catch (error) {
-            return sessionStorage.getItem(unlockStorageKey) === '1' ||
-                sessionStorage.getItem('docsUnlocked') === '1';
         }
     }
 
@@ -1072,16 +1078,6 @@
         writeLocalJson(githubStorageKey, cfg);
     }
 
-    function bytesToHex(buffer) {
-        return Array.prototype.map.call(new Uint8Array(buffer), function (byte) {
-            return byte.toString(16).padStart(2, '0');
-        }).join('');
-    }
-
-    function sha256(text) {
-        return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(bytesToHex);
-    }
-
     function getMarkdownValue() {
         return editor ? editor.getValue() : markdown.value;
     }
@@ -1102,24 +1098,6 @@
         } else {
             markdown.focus();
         }
-    }
-
-    function unlock() {
-        sha256(passwordInput.value).then(function (hash) {
-            if (hash === passwordSha256) {
-                rememberUnlocked();
-                gate.classList.add('docs-hidden');
-                app.classList.remove('docs-hidden');
-                initEditor();
-                renderMarkdown();
-                setGateStatus('');
-                focusEditor();
-            } else {
-                setGateStatus('密码不正确', true);
-            }
-        }).catch(function () {
-            setGateStatus('当前浏览器不支持密码校验', true);
-        });
     }
 
     function renderMarkdown() {
@@ -1371,7 +1349,16 @@
         };
     }
 
-    function validateGithubConfig(cfg) {
+    function validateGithubReadConfig(cfg, needsPath) {
+        if (!cfg.owner || !cfg.repo || !cfg.branch) {
+            throw new Error('请填写 owner、repo 和 branch');
+        }
+        if (needsPath && !cfg.path) {
+            throw new Error('请填写 Markdown 文件路径');
+        }
+    }
+
+    function validateGithubWriteConfig(cfg) {
         if (!cfg.owner || !cfg.repo || !cfg.branch || !cfg.path) {
             throw new Error('请填写 owner、repo、branch 和文件路径');
         }
@@ -1419,11 +1406,14 @@
 
     function githubFetch(url, cfg, options) {
         options = options || {};
-        options.headers = Object.assign({
+        var headers = {
             Accept: 'application/vnd.github+json',
-            Authorization: 'Bearer ' + cfg.token,
             'X-GitHub-Api-Version': '2022-11-28'
-        }, options.headers || {});
+        };
+        if (cfg.token) {
+            headers.Authorization = 'Bearer ' + cfg.token;
+        }
+        options.headers = Object.assign(headers, options.headers || {});
         return fetch(url, options).then(function (response) {
             return response.text().then(function (text) {
                 var data = text ? JSON.parse(text) : {};
@@ -1438,7 +1428,7 @@
     function loadDoc() {
         var cfg = getGithubConfig();
         try {
-            validateGithubConfig(cfg);
+            validateGithubReadConfig(cfg, true);
         } catch (error) {
             setStatus(error.message, true);
             return;
@@ -1463,12 +1453,7 @@
         var cfg = getGithubConfig();
         var targetFolder = typeof path === 'string' ? path : cfg.folder;
         try {
-            if (!cfg.owner || !cfg.repo || !cfg.branch) {
-                throw new Error('请填写 owner、repo 和 branch');
-            }
-            if (!cfg.token) {
-                throw new Error('请填写 GitHub Token');
-            }
+            validateGithubReadConfig(cfg, false);
         } catch (error) {
             setStatus(error.message, true);
             return;
@@ -1543,7 +1528,7 @@
     function saveDoc() {
         var cfg = getGithubConfig();
         try {
-            validateGithubConfig(cfg);
+            validateGithubWriteConfig(cfg);
         } catch (error) {
             setStatus(error.message, true);
             return;
@@ -1656,12 +1641,6 @@
         }
     }
 
-    unlockButton.addEventListener('click', unlock);
-    passwordInput.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-            unlock();
-        }
-    });
     markdown.addEventListener('input', scheduleRender);
     markdown.addEventListener('input', syncColumnHeights);
     markdown.addEventListener('scroll', syncPreviewFromEditor);
@@ -1697,17 +1676,11 @@
     window.addEventListener('scroll', syncTallerColumnAtPageEdge);
 
     hydrateGithubConfig();
-
-    if (isRememberedUnlocked()) {
-        gate.classList.add('docs-hidden');
-        app.classList.remove('docs-hidden');
-        initEditor();
-        renderMarkdown();
-        syncColumnHeights();
-    }
+    initEditor();
+    renderMarkdown();
+    syncColumnHeights();
 })();
 </script>
-
 
 
     <footer class="page-footer bg-color">
@@ -2054,6 +2027,22 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
