@@ -940,6 +940,7 @@
                     <button id="loadFolder" class="docs-btn secondary" type="button"><i class="fas fa-folder-open"></i>载入文件夹</button>
                     <button id="loadDoc" class="docs-btn secondary" type="button"><i class="fas fa-cloud-download-alt"></i>载入</button>
                     <button id="saveDoc" class="docs-btn" type="button"><i class="fas fa-cloud-upload-alt"></i>保存到 GitHub</button>
+                    <button id="exportPdf" class="docs-btn ghost" type="button"><i class="fas fa-file-pdf"></i>导出 PDF</button>
                     <button id="newDoc" class="docs-btn ghost" type="button"><i class="fas fa-file"></i>新文档</button>
                     <span id="docsStatus" class="docs-status"></span>
                 </div>
@@ -1578,6 +1579,51 @@ $$
         focusEditor();
     }
 
+    function pdfTitle() {
+        var heading = preview.querySelector('h1, h2');
+        var fromHeading = heading ? heading.textContent.trim() : '';
+        var fromPath = document.getElementById('githubPath').value.trim().split('/').pop().replace(/\.md(?:own)?$/i, '');
+        return (fromHeading || fromPath || 'markdown-preview').replace(/[\\/:*?"<>|]/g, '-');
+    }
+
+    function exportPreviewPdf() {
+        renderMarkdown();
+
+        var printWindow = window.open('', '_blank');
+        if (!printWindow) {
+            setStatus('浏览器拦截了导出窗口，请允许弹窗后重试。', true);
+            return;
+        }
+
+        var title = pdfTitle();
+        var html = '<!doctype html><html><head><meta charset="utf-8">' +
+            '<title>' + escapeHtml(title) + '</title>' +
+            '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">' +
+            '<style>' +
+            '@page{size:A4;margin:18mm 16mm;}' +
+            'html,body{margin:0;padding:0;background:#fff;color:#111827;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;font-size:11pt;line-height:1.75;}' +
+            'body{box-sizing:border-box;}' +
+            'h1,h2,h3{break-after:avoid;page-break-after:avoid;color:#111827;line-height:1.35;}' +
+            'h1{font-size:24pt;margin:0 0 14pt;}h2{font-size:18pt;margin:22pt 0 10pt;}h3{font-size:14pt;margin:18pt 0 8pt;}' +
+            'p,li,blockquote,pre,table{break-inside:avoid-page;page-break-inside:avoid;}' +
+            'p{margin:0 0 10pt;}ul,ol{padding-left:22pt;}blockquote{margin:12pt 0;padding:10pt 12pt;border-left:3pt solid #2e7d67;background:#eef8f4;color:#334155;}' +
+            'pre{white-space:pre-wrap;word-break:break-word;padding:10pt;background:#f6f8fb;border:1px solid #e5e7eb;border-radius:4pt;}' +
+            'code{font-family:Consolas,Monaco,"Courier New",monospace;font-size:0.92em;}' +
+            'table{width:100%;border-collapse:collapse;}th,td{border:1px solid #d8dee6;padding:5pt 7pt;}' +
+            'img{max-width:100%;height:auto;break-inside:avoid-page;page-break-inside:avoid;}' +
+            '.katex-display{margin:12pt 0;overflow:visible;}' +
+            'a{color:#2563eb;text-decoration:none;}' +
+            '@media screen{body{max-width:210mm;margin:0 auto;padding:18mm 16mm;box-shadow:0 12px 40px rgba(15,23,42,.14);}}' +
+            '</style></head><body>' + preview.innerHTML +
+            '<script>window.addEventListener("load",function(){var imgs=[].slice.call(document.images);Promise.all(imgs.map(function(img){return img.complete?Promise.resolve():new Promise(function(resolve){img.onload=img.onerror=resolve;});})).then(function(){setTimeout(function(){window.print();},150);});});<\/script>' +
+            '</body></html>';
+
+        printWindow.document.open();
+        printWindow.document.write(html);
+        printWindow.document.close();
+        setStatus('已打开 PDF 导出窗口，请在打印对话框中选择“另存为 PDF”。');
+    }
+
     function applyMarkdownAction(action) {
         var value = getMarkdownValue();
         var start = editor ? editor.indexFromPos(editor.getCursor('from')) : markdown.selectionStart;
@@ -1665,6 +1711,7 @@ $$
     document.getElementById('loadFolder').addEventListener('click', loadFolder);
     document.getElementById('loadDoc').addEventListener('click', loadDoc);
     document.getElementById('saveDoc').addEventListener('click', saveDoc);
+    document.getElementById('exportPdf').addEventListener('click', exportPreviewPdf);
     document.getElementById('newDoc').addEventListener('click', newDoc);
     window.addEventListener('resize', function () {
         if (editor) {
@@ -2027,22 +2074,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
