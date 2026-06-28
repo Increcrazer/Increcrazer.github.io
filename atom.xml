@@ -3,11 +3,11 @@
   <title>老王Hub</title>
   
   
-  <link href="http://increcrazer.github.io/atom.xml" rel="self"/>
+  <link href="https://increcrazer.github.io/atom.xml" rel="self"/>
   
-  <link href="http://increcrazer.github.io/"/>
+  <link href="https://increcrazer.github.io/"/>
   <updated>2025-12-28T17:27:31.626Z</updated>
-  <id>http://increcrazer.github.io/</id>
+  <id>https://increcrazer.github.io/</id>
   
   <author>
     <name>Caeser Wang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>单参量、二参量酉变换的一些不对称性</title>
-    <link href="http://increcrazer.github.io/2025/12/14/yi-wei-er-wei-you-bian-huan-de-yi-xie-bu-dui-cheng-xing/"/>
-    <id>http://increcrazer.github.io/2025/12/14/yi-wei-er-wei-you-bian-huan-de-yi-xie-bu-dui-cheng-xing/</id>
+    <link href="https://increcrazer.github.io/2025/12/14/yi-wei-er-wei-you-bian-huan-de-yi-xie-bu-dui-cheng-xing/"/>
+    <id>https://increcrazer.github.io/2025/12/14/yi-wei-er-wei-you-bian-huan-de-yi-xie-bu-dui-cheng-xing/</id>
     <published>2025-12-14T15:23:30.507Z</published>
     <updated>2025-12-28T17:27:31.626Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="science" scheme="https://increcrazer.github.io/categories/science/"/>
     
     
-    <category term="photonic" scheme="http://increcrazer.github.io/tags/photonic/"/>
+    <category term="photonic" scheme="https://increcrazer.github.io/tags/photonic/"/>
     
   </entry>
   
   <entry>
     <title>对强度消光比、偏振对比度的一些细节讨论</title>
-    <link href="http://increcrazer.github.io/2025/11/29/dui-qiang-du-xiao-guang-bi-pian-zhen-dui-bi-du-de-yi-xie-xi-jie-tao-lun/"/>
-    <id>http://increcrazer.github.io/2025/11/29/dui-qiang-du-xiao-guang-bi-pian-zhen-dui-bi-du-de-yi-xie-xi-jie-tao-lun/</id>
+    <link href="https://increcrazer.github.io/2025/11/29/dui-qiang-du-xiao-guang-bi-pian-zhen-dui-bi-du-de-yi-xie-xi-jie-tao-lun/"/>
+    <id>https://increcrazer.github.io/2025/11/29/dui-qiang-du-xiao-guang-bi-pian-zhen-dui-bi-du-de-yi-xie-xi-jie-tao-lun/</id>
     <published>2025-11-28T17:58:18.303Z</published>
     <updated>2026-01-12T12:55:53.198Z</updated>
     
@@ -59,17 +59,17 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="science" scheme="https://increcrazer.github.io/categories/science/"/>
     
     
-    <category term="photonic" scheme="http://increcrazer.github.io/tags/photonic/"/>
+    <category term="photonic" scheme="https://increcrazer.github.io/tags/photonic/"/>
     
   </entry>
   
   <entry>
     <title>微波和硅光领域中TE和TM模式定义的区别</title>
-    <link href="http://increcrazer.github.io/2025/11/22/wei-bo-he-huo-guang-ling-yu-zhong-te-he-tm-mo-shi-ding-yi-de-qu-bie/"/>
-    <id>http://increcrazer.github.io/2025/11/22/wei-bo-he-huo-guang-ling-yu-zhong-te-he-tm-mo-shi-ding-yi-de-qu-bie/</id>
+    <link href="https://increcrazer.github.io/2025/11/22/wei-bo-he-huo-guang-ling-yu-zhong-te-he-tm-mo-shi-ding-yi-de-qu-bie/"/>
+    <id>https://increcrazer.github.io/2025/11/22/wei-bo-he-huo-guang-ling-yu-zhong-te-he-tm-mo-shi-ding-yi-de-qu-bie/</id>
     <published>2025-11-22T15:29:52.146Z</published>
     <updated>2025-11-22T16:05:18.716Z</updated>
     
@@ -86,17 +86,17 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="science" scheme="https://increcrazer.github.io/categories/science/"/>
     
     
-    <category term="electronic, photonic" scheme="http://increcrazer.github.io/tags/electronic-photonic/"/>
+    <category term="electronic, photonic" scheme="https://increcrazer.github.io/tags/electronic-photonic/"/>
     
   </entry>
   
   <entry>
     <title>上海周末小出游</title>
-    <link href="http://increcrazer.github.io/2025/11/16/shang-hai-zhou-mo-xiao-chu-you/"/>
-    <id>http://increcrazer.github.io/2025/11/16/shang-hai-zhou-mo-xiao-chu-you/</id>
+    <link href="https://increcrazer.github.io/2025/11/16/shang-hai-zhou-mo-xiao-chu-you/"/>
+    <id>https://increcrazer.github.io/2025/11/16/shang-hai-zhou-mo-xiao-chu-you/</id>
     <published>2025-11-16T11:02:08.198Z</published>
     <updated>2025-11-16T13:37:04.907Z</updated>
     
@@ -112,17 +112,17 @@
     
     
     
-    <category term="vision" scheme="http://increcrazer.github.io/categories/vision/"/>
+    <category term="vision" scheme="https://increcrazer.github.io/categories/vision/"/>
     
     
-    <category term="diary, travel" scheme="http://increcrazer.github.io/tags/diary-travel/"/>
+    <category term="diary, travel" scheme="https://increcrazer.github.io/tags/diary-travel/"/>
     
   </entry>
   
   <entry>
     <title>江城游记之华科培训</title>
-    <link href="http://increcrazer.github.io/2025/09/04/jiang-cheng-you-ji-zhi-hua-ke-pei-xun/"/>
-    <id>http://increcrazer.github.io/2025/09/04/jiang-cheng-you-ji-zhi-hua-ke-pei-xun/</id>
+    <link href="https://increcrazer.github.io/2025/09/04/jiang-cheng-you-ji-zhi-hua-ke-pei-xun/"/>
+    <id>https://increcrazer.github.io/2025/09/04/jiang-cheng-you-ji-zhi-hua-ke-pei-xun/</id>
     <published>2025-09-04T14:07:49.161Z</published>
     <updated>2026-06-27T12:45:28.618Z</updated>
     
@@ -138,17 +138,17 @@
     
     
     
-    <category term="vision" scheme="http://increcrazer.github.io/categories/vision/"/>
+    <category term="vision" scheme="https://increcrazer.github.io/categories/vision/"/>
     
     
-    <category term="diary, travel" scheme="http://increcrazer.github.io/tags/diary-travel/"/>
+    <category term="diary, travel" scheme="https://increcrazer.github.io/tags/diary-travel/"/>
     
   </entry>
   
   <entry>
     <title>波分复用光纤QKD的退化机制</title>
-    <link href="http://increcrazer.github.io/2025/08/16/bo-fen-fu-yong-guang-xian-qkd-de-tui-hua-ji-zhi/"/>
-    <id>http://increcrazer.github.io/2025/08/16/bo-fen-fu-yong-guang-xian-qkd-de-tui-hua-ji-zhi/</id>
+    <link href="https://increcrazer.github.io/2025/08/16/bo-fen-fu-yong-guang-xian-qkd-de-tui-hua-ji-zhi/"/>
+    <id>https://increcrazer.github.io/2025/08/16/bo-fen-fu-yong-guang-xian-qkd-de-tui-hua-ji-zhi/</id>
     <published>2025-08-15T16:51:06.692Z</published>
     <updated>2025-09-07T12:44:37.144Z</updated>
     
@@ -164,17 +164,17 @@
     
     
     
-    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
+    <category term="note" scheme="https://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, fiber" scheme="http://increcrazer.github.io/tags/QKD-fiber/"/>
+    <category term="QKD, fiber" scheme="https://increcrazer.github.io/tags/QKD-fiber/"/>
     
   </entry>
   
   <entry>
     <title>SIP数据备忘</title>
-    <link href="http://increcrazer.github.io/2025/07/23/sip-shu-ju-bei-wang/"/>
-    <id>http://increcrazer.github.io/2025/07/23/sip-shu-ju-bei-wang/</id>
+    <link href="https://increcrazer.github.io/2025/07/23/sip-shu-ju-bei-wang/"/>
+    <id>https://increcrazer.github.io/2025/07/23/sip-shu-ju-bei-wang/</id>
     <published>2025-07-23T07:06:08.512Z</published>
     <updated>2025-07-23T08:17:03.964Z</updated>
     
@@ -183,17 +183,17 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="science" scheme="https://increcrazer.github.io/categories/science/"/>
     
     
-    <category term="photonic" scheme="http://increcrazer.github.io/tags/photonic/"/>
+    <category term="photonic" scheme="https://increcrazer.github.io/tags/photonic/"/>
     
   </entry>
   
   <entry>
     <title>光芯片数据备忘</title>
-    <link href="http://increcrazer.github.io/2025/07/21/guang-xin-pian-shu-ju-bei-wang/"/>
-    <id>http://increcrazer.github.io/2025/07/21/guang-xin-pian-shu-ju-bei-wang/</id>
+    <link href="https://increcrazer.github.io/2025/07/21/guang-xin-pian-shu-ju-bei-wang/"/>
+    <id>https://increcrazer.github.io/2025/07/21/guang-xin-pian-shu-ju-bei-wang/</id>
     <published>2025-07-21T03:35:14.485Z</published>
     <updated>2025-08-02T06:31:17.222Z</updated>
     
@@ -202,17 +202,17 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="science" scheme="https://increcrazer.github.io/categories/science/"/>
     
     
-    <category term="photonic" scheme="http://increcrazer.github.io/tags/photonic/"/>
+    <category term="photonic" scheme="https://increcrazer.github.io/tags/photonic/"/>
     
   </entry>
   
   <entry>
     <title>Sixto2022-公式推导</title>
-    <link href="http://increcrazer.github.io/2025/07/15/sixto2022-gong-shi-tui-dao/"/>
-    <id>http://increcrazer.github.io/2025/07/15/sixto2022-gong-shi-tui-dao/</id>
+    <link href="https://increcrazer.github.io/2025/07/15/sixto2022-gong-shi-tui-dao/"/>
+    <id>https://increcrazer.github.io/2025/07/15/sixto2022-gong-shi-tui-dao/</id>
     <published>2025-07-14T16:21:19.150Z</published>
     <updated>2025-08-07T07:09:35.165Z</updated>
     
@@ -227,17 +227,17 @@
     
     
     
-    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
+    <category term="note" scheme="https://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
+    <category term="QKD, decoy" scheme="https://increcrazer.github.io/tags/QKD-decoy/"/>
     
   </entry>
   
   <entry>
     <title>一种超高效的IQ调制器工作点调节算法</title>
-    <link href="http://increcrazer.github.io/2025/06/15/yi-chong-chao-gao-xiao-de-iq-diao-zhi-qi-gong-zuo-dian-diao-jie-suan-fa/"/>
-    <id>http://increcrazer.github.io/2025/06/15/yi-chong-chao-gao-xiao-de-iq-diao-zhi-qi-gong-zuo-dian-diao-jie-suan-fa/</id>
+    <link href="https://increcrazer.github.io/2025/06/15/yi-chong-chao-gao-xiao-de-iq-diao-zhi-qi-gong-zuo-dian-diao-jie-suan-fa/"/>
+    <id>https://increcrazer.github.io/2025/06/15/yi-chong-chao-gao-xiao-de-iq-diao-zhi-qi-gong-zuo-dian-diao-jie-suan-fa/</id>
     <published>2025-06-15T04:21:25.045Z</published>
     <updated>2025-07-14T11:31:49.633Z</updated>
     
@@ -246,17 +246,17 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="science" scheme="https://increcrazer.github.io/categories/science/"/>
     
     
-    <category term="modulator" scheme="http://increcrazer.github.io/tags/modulator/"/>
+    <category term="modulator" scheme="https://increcrazer.github.io/tags/modulator/"/>
     
   </entry>
   
   <entry>
     <title>行波调制器上电压 公式摘录</title>
-    <link href="http://increcrazer.github.io/2025/05/26/xing-bo-diao-zhi-qi-shang-dian-ya-gong-shi-zhai-lu/"/>
-    <id>http://increcrazer.github.io/2025/05/26/xing-bo-diao-zhi-qi-shang-dian-ya-gong-shi-zhai-lu/</id>
+    <link href="https://increcrazer.github.io/2025/05/26/xing-bo-diao-zhi-qi-shang-dian-ya-gong-shi-zhai-lu/"/>
+    <id>https://increcrazer.github.io/2025/05/26/xing-bo-diao-zhi-qi-shang-dian-ya-gong-shi-zhai-lu/</id>
     <published>2025-05-25T16:52:59.899Z</published>
     <updated>2025-07-09T16:03:53.114Z</updated>
     
@@ -271,17 +271,17 @@
     
     
     
-    <category term="science" scheme="http://increcrazer.github.io/categories/science/"/>
+    <category term="science" scheme="https://increcrazer.github.io/categories/science/"/>
     
     
-    <category term="modulator" scheme="http://increcrazer.github.io/tags/modulator/"/>
+    <category term="modulator" scheme="https://increcrazer.github.io/tags/modulator/"/>
     
   </entry>
   
   <entry>
     <title>阻抗匹配计算工具</title>
-    <link href="http://increcrazer.github.io/2025/05/18/zu-kang-pi-pei-ji-suan-gong-ju/"/>
-    <id>http://increcrazer.github.io/2025/05/18/zu-kang-pi-pei-ji-suan-gong-ju/</id>
+    <link href="https://increcrazer.github.io/2025/05/18/zu-kang-pi-pei-ji-suan-gong-ju/"/>
+    <id>https://increcrazer.github.io/2025/05/18/zu-kang-pi-pei-ji-suan-gong-ju/</id>
     <published>2025-05-18T09:17:12.287Z</published>
     <updated>2025-11-22T07:57:19.155Z</updated>
     
@@ -297,17 +297,17 @@
     
     
     
-    <category term="tool" scheme="http://increcrazer.github.io/categories/tool/"/>
+    <category term="tool" scheme="https://increcrazer.github.io/categories/tool/"/>
     
     
-    <category term="electronic, PCB" scheme="http://increcrazer.github.io/tags/electronic-PCB/"/>
+    <category term="electronic, PCB" scheme="https://increcrazer.github.io/tags/electronic-PCB/"/>
     
   </entry>
   
   <entry>
     <title>江城游记之武大赏樱</title>
-    <link href="http://increcrazer.github.io/2025/03/19/jiang-cheng-you-ji-zhi-wu-da-shang-ying/"/>
-    <id>http://increcrazer.github.io/2025/03/19/jiang-cheng-you-ji-zhi-wu-da-shang-ying/</id>
+    <link href="https://increcrazer.github.io/2025/03/19/jiang-cheng-you-ji-zhi-wu-da-shang-ying/"/>
+    <id>https://increcrazer.github.io/2025/03/19/jiang-cheng-you-ji-zhi-wu-da-shang-ying/</id>
     <published>2025-03-19T08:23:25.038Z</published>
     <updated>2026-01-11T07:50:07.685Z</updated>
     
@@ -322,17 +322,17 @@
     
     
     
-    <category term="vision" scheme="http://increcrazer.github.io/categories/vision/"/>
+    <category term="vision" scheme="https://increcrazer.github.io/categories/vision/"/>
     
     
-    <category term="diary, travel" scheme="http://increcrazer.github.io/tags/diary-travel/"/>
+    <category term="diary, travel" scheme="https://increcrazer.github.io/tags/diary-travel/"/>
     
   </entry>
   
   <entry>
     <title>江城游记之巡礼《三色绘恋》</title>
-    <link href="http://increcrazer.github.io/2025/03/18/jiang-cheng-you-ji-zhi-xun-li-san-se-hui-lian/"/>
-    <id>http://increcrazer.github.io/2025/03/18/jiang-cheng-you-ji-zhi-xun-li-san-se-hui-lian/</id>
+    <link href="https://increcrazer.github.io/2025/03/18/jiang-cheng-you-ji-zhi-xun-li-san-se-hui-lian/"/>
+    <id>https://increcrazer.github.io/2025/03/18/jiang-cheng-you-ji-zhi-xun-li-san-se-hui-lian/</id>
     <published>2025-03-17T16:29:56.366Z</published>
     <updated>2025-07-09T16:17:47.888Z</updated>
     
@@ -348,17 +348,17 @@
     
     
     
-    <category term="vision" scheme="http://increcrazer.github.io/categories/vision/"/>
+    <category term="vision" scheme="https://increcrazer.github.io/categories/vision/"/>
     
     
-    <category term="diary, travel" scheme="http://increcrazer.github.io/tags/diary-travel/"/>
+    <category term="diary, travel" scheme="https://increcrazer.github.io/tags/diary-travel/"/>
     
   </entry>
   
   <entry>
     <title>CAAC无人机执照应试考点</title>
-    <link href="http://increcrazer.github.io/2025/03/18/wu-ren-ji-jia-kao-zhi-shi-dian/"/>
-    <id>http://increcrazer.github.io/2025/03/18/wu-ren-ji-jia-kao-zhi-shi-dian/</id>
+    <link href="https://increcrazer.github.io/2025/03/18/wu-ren-ji-jia-kao-zhi-shi-dian/"/>
+    <id>https://increcrazer.github.io/2025/03/18/wu-ren-ji-jia-kao-zhi-shi-dian/</id>
     <published>2025-03-17T16:29:56.359Z</published>
     <updated>2025-03-14T16:09:13.607Z</updated>
     
@@ -373,17 +373,17 @@
     
     
     
-    <category term="toy" scheme="http://increcrazer.github.io/categories/toy/"/>
+    <category term="toy" scheme="https://increcrazer.github.io/categories/toy/"/>
     
     
-    <category term="drone" scheme="http://increcrazer.github.io/tags/drone/"/>
+    <category term="drone" scheme="https://increcrazer.github.io/tags/drone/"/>
     
   </entry>
   
   <entry>
     <title>Lim2014-公式推导</title>
-    <link href="http://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/"/>
-    <id>http://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/</id>
+    <link href="https://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/"/>
+    <id>https://increcrazer.github.io/2025/02/16/lim2014-gong-shi-tui-dao/</id>
     <published>2025-02-16T14:19:10.342Z</published>
     <updated>2025-12-28T17:05:45.775Z</updated>
     
@@ -398,17 +398,17 @@
     
     
     
-    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
+    <category term="note" scheme="https://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
+    <category term="QKD, decoy" scheme="https://increcrazer.github.io/tags/QKD-decoy/"/>
     
   </entry>
   
   <entry>
     <title>Lo2005-精简版</title>
-    <link href="http://increcrazer.github.io/2025/01/27/lo2005-jing-jian-ban/"/>
-    <id>http://increcrazer.github.io/2025/01/27/lo2005-jing-jian-ban/</id>
+    <link href="https://increcrazer.github.io/2025/01/27/lo2005-jing-jian-ban/"/>
+    <id>https://increcrazer.github.io/2025/01/27/lo2005-jing-jian-ban/</id>
     <published>2025-01-27T14:49:51.377Z</published>
     <updated>2025-02-22T14:10:34.352Z</updated>
     
@@ -423,17 +423,17 @@
     
     
     
-    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
+    <category term="note" scheme="https://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
+    <category term="QKD, decoy" scheme="https://increcrazer.github.io/tags/QKD-decoy/"/>
     
   </entry>
   
   <entry>
     <title>Wang2005-公式推导</title>
-    <link href="http://increcrazer.github.io/2025/01/26/wang2005-gong-shi-tui-dao/"/>
-    <id>http://increcrazer.github.io/2025/01/26/wang2005-gong-shi-tui-dao/</id>
+    <link href="https://increcrazer.github.io/2025/01/26/wang2005-gong-shi-tui-dao/"/>
+    <id>https://increcrazer.github.io/2025/01/26/wang2005-gong-shi-tui-dao/</id>
     <published>2025-01-26T13:47:54.672Z</published>
     <updated>2025-07-19T11:35:34.009Z</updated>
     
@@ -448,17 +448,17 @@
     
     
     
-    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
+    <category term="note" scheme="https://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
+    <category term="QKD, decoy" scheme="https://increcrazer.github.io/tags/QKD-decoy/"/>
     
   </entry>
   
   <entry>
     <title>Hwang2003-精简版</title>
-    <link href="http://increcrazer.github.io/2025/01/20/hwang2003-jing-jian-ban/"/>
-    <id>http://increcrazer.github.io/2025/01/20/hwang2003-jing-jian-ban/</id>
+    <link href="https://increcrazer.github.io/2025/01/20/hwang2003-jing-jian-ban/"/>
+    <id>https://increcrazer.github.io/2025/01/20/hwang2003-jing-jian-ban/</id>
     <published>2025-01-20T14:22:53.724Z</published>
     <updated>2025-01-29T06:10:29.697Z</updated>
     
@@ -473,17 +473,17 @@
     
     
     
-    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
+    <category term="note" scheme="https://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
+    <category term="QKD, decoy" scheme="https://increcrazer.github.io/tags/QKD-decoy/"/>
     
   </entry>
   
   <entry>
     <title>Ma2005-公式推导</title>
-    <link href="http://increcrazer.github.io/2025/01/20/ma2005-gong-shi-tui-dao/"/>
-    <id>http://increcrazer.github.io/2025/01/20/ma2005-gong-shi-tui-dao/</id>
+    <link href="https://increcrazer.github.io/2025/01/20/ma2005-gong-shi-tui-dao/"/>
+    <id>https://increcrazer.github.io/2025/01/20/ma2005-gong-shi-tui-dao/</id>
     <published>2025-01-19T16:20:26.595Z</published>
     <updated>2025-07-19T12:14:10.394Z</updated>
     
@@ -498,10 +498,10 @@
     
     
     
-    <category term="note" scheme="http://increcrazer.github.io/categories/note/"/>
+    <category term="note" scheme="https://increcrazer.github.io/categories/note/"/>
     
     
-    <category term="QKD, decoy" scheme="http://increcrazer.github.io/tags/QKD-decoy/"/>
+    <category term="QKD, decoy" scheme="https://increcrazer.github.io/tags/QKD-decoy/"/>
     
   </entry>
   
