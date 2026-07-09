@@ -1106,7 +1106,9 @@ $$
         var html = '';
         if (window.marked && window.DOMPurify) {
             var protectedMarkdown = protectMath(value);
-            html = marked.parse(protectedMarkdown.text, { breaks: true, gfm: true });
+            var protectedStrong = protectCjkStrong(protectedMarkdown.text);
+            html = marked.parse(protectedStrong.text, { breaks: true, gfm: true });
+            html = restoreStrong(html, protectedStrong.strong);
             html = restoreMath(html, protectedMarkdown.math);
             html = DOMPurify.sanitize(html);
         } else {
@@ -1306,6 +1308,27 @@ $$
         math.forEach(function (formula, index) {
             var token = 'DOCS_MATH_TOKEN_' + index + '_END';
             html = html.split(token).join(escapeHtml(formula));
+        });
+        return html;
+    }
+
+    function protectCjkStrong(text) {
+        var strong = [];
+        var cjkAfterStrong = /(\*\*|__)([^\n]+?)\1(?=[\u3400-\u9fff\uf900-\ufaff])/g;
+        return {
+            text: text.replace(cjkAfterStrong, function (match, delimiter, content) {
+                var token = 'DOCS_STRONG_TOKEN_' + strong.length + '_END';
+                strong.push('<strong>' + escapeHtml(content) + '</strong>');
+                return token;
+            }),
+            strong: strong
+        };
+    }
+
+    function restoreStrong(html, strong) {
+        strong.forEach(function (strongHtml, index) {
+            var token = 'DOCS_STRONG_TOKEN_' + index + '_END';
+            html = html.split(token).join(strongHtml);
         });
         return html;
     }
@@ -2074,22 +2097,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
