@@ -768,7 +768,7 @@ calculateSourcePower();
             </tr>
             <tr id="ABLossRow">
                 <td>A镜-B镜损耗</td>
-                <td id="ABLoss">0.0178</td>
+                <td id="ABLoss">0.01777778</td>
             </tr>
             <tr id="ABLossdBRow">
                 <td>A镜-B镜损耗(负数，dB)</td>
@@ -811,7 +811,7 @@ function calculateSpaceLoss() {
         // 显示结果
         document.getElementById('spaceLoss').innerText = spaceLoss.toFixed(8);
         document.getElementById('spaceLossdB').innerText = spaceLossdB.toFixed(2);
-        document.getElementById('ABLoss').innerText = ABLoss.toFixed(4);
+        document.getElementById('ABLoss').innerText = ABLoss.toFixed(8);
         document.getElementById('ABLossdB').innerText = ABLossdB.toFixed(4);
     } else {
         document.getElementById('spaceLoss').innerText = 'N/A';
