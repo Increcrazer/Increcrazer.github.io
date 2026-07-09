@@ -442,7 +442,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    912
+                    927
                 </div>
                 
 
@@ -739,7 +739,7 @@ calculateSourcePower();
         </thead>
         <tbody>
             <tr>
-                <td>发散角 (urad)</td>
+                <td>发散角（半角，urad）</td>
                 <td><input type="number" id="divergenceAngle" value="35" min="0" max="100000" step="1"></td>
             </tr>
             <tr>
@@ -756,19 +756,23 @@ calculateSourcePower();
             </tr>
             <tr id="spaceLossRow">
                 <td>空间损耗</td>
-                <td id="spaceLoss">0.0711</td>
+                <td id="spaceLoss">0.07111111</td>
+            </tr>
+            <tr id="spaceLossdBRow">
+                <td>空间损耗(负数，dB)</td>
+                <td id="spaceLossdB">-11.48</td>
             </tr>
             <tr>
-                <td>大气损耗</td>
-                <td><input type="number" id="atmosphericLoss" value="0.25" min="0" max="1" step="0.05"></td>
+                <td>大气损耗(负数，dB)</td>
+                <td><input type="number" id="atmosphericLoss" value="-6.02" max="0" step="0.01"></td>
             </tr>
             <tr id="ABLossRow">
                 <td>A镜-B镜损耗</td>
                 <td id="ABLoss">0.0178</td>
             </tr>
             <tr id="ABLossdBRow">
-                <td>A镜-B镜损耗（dB）</td>
-                <td id="ABLossdB">0.0178</td>
+                <td>A镜-B镜损耗(负数，dB)</td>
+                <td id="ABLossdB">-17.50</td>
             </tr>
         </tbody>
     </table>
@@ -781,16 +785,16 @@ function calculateSpaceLoss() {
     var distance = parseFloat(document.getElementById('distance').value);
     var transmitterDiameter = parseFloat(document.getElementById('transmitterDiameter').value);
     var receiverDiameter = parseFloat(document.getElementById('receiverDiameter').value);
-    var atmosphericLoss = parseFloat(document.getElementById('atmosphericLoss').value);
+    var atmosphericLossdB = parseFloat(document.getElementById('atmosphericLoss').value);
 
-        // 验证发散角是否在 0 到 1 的范围内
-    if (atmosphericLoss < 0 || atmosphericLoss > 1) {
-        alert("大气损耗必须在 0 和 1 之间");
+        // 验证大气损耗dB是否为非正数
+    if (atmosphericLossdB > 0) {
+        alert("大气损耗(dB)必须小于或等于 0");
         return;
     }
 
     // 验证输入是否为有效数字
-    if (!isNaN(divergenceAngle) && !isNaN(distance) && !isNaN(receiverDiameter) && !isNaN(atmosphericLoss)) {
+    if (!isNaN(divergenceAngle) && !isNaN(distance) && !isNaN(transmitterDiameter) && !isNaN(receiverDiameter) && !isNaN(atmosphericLossdB)) {
         // 计算空间损耗的公式
         if (receiverDiameter <= transmitterDiameter + 2 * divergenceAngle * distance / 1000){
             var spaceLoss = Math.pow((receiverDiameter / (transmitterDiameter + 2 * divergenceAngle * distance / 1000)), 2);
@@ -799,15 +803,19 @@ function calculateSpaceLoss() {
             var spaceLoss = 1;
         }
         // 计算A镜-B镜损耗的公式
+        var spaceLossdB = 10 * Math.log10(spaceLoss);
+        var atmosphericLoss = Math.pow(10, atmosphericLossdB / 10);
         var ABLoss = spaceLoss * atmosphericLoss;
         var ABLossdB = 10 * Math.log10(ABLoss);
 
         // 显示结果
-        document.getElementById('spaceLoss').innerText = spaceLoss.toFixed(4);
+        document.getElementById('spaceLoss').innerText = spaceLoss.toFixed(8);
+        document.getElementById('spaceLossdB').innerText = spaceLossdB.toFixed(2);
         document.getElementById('ABLoss').innerText = ABLoss.toFixed(4);
         document.getElementById('ABLossdB').innerText = ABLossdB.toFixed(4);
     } else {
         document.getElementById('spaceLoss').innerText = 'N/A';
+        document.getElementById('spaceLossdB').innerText = 'N/A';
         document.getElementById('ABLoss').innerText = 'N/A';
         document.getElementById('ABLossdB').innerText = 'N/A';
     }
@@ -1041,7 +1049,7 @@ th, td {
 }
 #photonEnergyRow, #decoy2RatioRow, #averagePhotonPulseRow, #photonfrequencyRow,
 #sourcePowerRow, #sourcePowerdBmRow, 
-#spaceLossRow, #ABLossRow,#ABLossdBRow,
+#spaceLossRow, #spaceLossdBRow, #ABLossRow,#ABLossdBRow,
 #totalEfficiencyRow, #totalEfficiencydBRow,
 #eventCountRow, #totalnoiseRow, #noiseBERRow, #QBERRow
  {
