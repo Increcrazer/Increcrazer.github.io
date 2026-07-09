@@ -1314,9 +1314,12 @@ $$
 
     function protectCjkStrong(text) {
         var strong = [];
-        var cjkAfterStrong = /(\*\*|__)([^\n]+?)\1(?=[\u3400-\u9fff\uf900-\ufaff])/g;
+        var cjkStrong = /(\*\*|__)([^\n]+?)\1/g;
         return {
-            text: text.replace(cjkAfterStrong, function (match, delimiter, content) {
+            text: text.replace(cjkStrong, function (match, delimiter, content) {
+                if (!/[\u3400-\u9fff\uf900-\ufaff\uff00-\uffef]/.test(content)) {
+                    return match;
+                }
                 var token = 'DOCS_STRONG_TOKEN_' + strong.length + '_END';
                 strong.push('<strong>' + escapeHtml(content) + '</strong>');
                 return token;
