@@ -1044,6 +1044,7 @@ $$
     var tallerColumn = null;
     var storagePrefix = 'docsEditor:';
     var githubStorageKey = storagePrefix + 'githubConfig';
+    var maxPasteImageBytes = 10 * 1024 * 1024;
 
     function setStatus(message, isError) {
         status.textContent = message || '';
@@ -1234,6 +1235,10 @@ $$
 
         editor.on('change', scheduleRender);
 
+        editor.on('paste', function (cm, event) {
+            handlePasteImages(event);
+        });
+
         editor.on('scroll', function () {
             syncPreviewFromEditor();
         });
@@ -1418,6 +1423,15 @@ $$
         }
     }
 
+    function validateGithubImageConfig(cfg) {
+        if (!cfg.owner || !cfg.repo || !cfg.branch) {
+            throw new Error('请填写 owner、repo 和 branch');
+        }
+        if (!cfg.token) {
+            throw new Error('粘贴图片需要 GitHub Token，用来把图片写入仓库 img 文件夹');
+        }
+    }
+
     function githubUrl(cfg) {
         return 'https://api.github.com/repos/' + encodeURIComponent(cfg.owner) + '/' +
             encodeURIComponent(cfg.repo) + '/contents/' + cfg.path.split('/').map(encodeURIComponent).join('/') +
@@ -1444,6 +1458,20 @@ $$
             binary += String.fromCharCode(byte);
         });
         return btoa(binary);
+    }
+
+    function fileToBase64(file) {
+        return new Promise(function (resolve, reject) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var result = String(reader.result || '');
+                resolve(result.indexOf(',') > -1 ? result.split(',').pop() : result);
+            };
+            reader.onerror = function () {
+                reject(new Error('读取图片失败'));
+            };
+            reader.readAsDataURL(file);
+        });
     }
 
     function decodeBase64(base64) {
@@ -1573,6 +1601,119 @@ $$
                 button.classList.add('active');
             });
             fileList.appendChild(button);
+        });
+    }
+
+    function imageExtension(file) {
+        var byType = {
+            'image/jpeg': 'jpg',
+            'image/png': 'png',
+            'image/gif': 'gif',
+            'image/webp': 'webp',
+            'image/svg+xml': 'svg',
+            'image/bmp': 'bmp'
+        };
+        if (byType[file.type]) {
+            return byType[file.type];
+        }
+        var match = /\.([a-z0-9]+)$/i.exec(file.name || '');
+        return match ? match[1].toLowerCase() : 'png';
+    }
+
+    function timestampForFileName() {
+        var now = new Date();
+        return now.getFullYear() +
+            String(now.getMonth() + 1).padStart(2, '0') +
+            String(now.getDate()).padStart(2, '0') + '-' +
+            String(now.getHours()).padStart(2, '0') +
+            String(now.getMinutes()).padStart(2, '0') +
+            String(now.getSeconds()).padStart(2, '0') + '-' +
+            String(now.getMilliseconds()).padStart(3, '0');
+    }
+
+    function rawGithubUrl(cfg, targetPath) {
+        return 'https://raw.githubusercontent.com/' +
+            [cfg.owner, cfg.repo, cfg.branch].map(encodeURIComponent).join('/') + '/' +
+            targetPath.split('/').map(encodeURIComponent).join('/');
+    }
+
+    function clipboardImageFiles(event) {
+        var data = event && event.clipboardData;
+        if (!data || !data.items) {
+            return [];
+        }
+        return Array.prototype.map.call(data.items, function (item) {
+            if (item.kind === 'file' && /^image\//i.test(item.type)) {
+                return item.getAsFile();
+            }
+            return null;
+        }).filter(Boolean);
+    }
+
+    function insertMarkdownAtCursor(text) {
+        if (editor) {
+            editor.replaceSelection(text, 'end');
+            editor.focus();
+        } else {
+            var start = markdown.selectionStart;
+            var end = markdown.selectionEnd;
+            markdown.setRangeText(text, start, end, 'end');
+            markdown.focus();
+            renderMarkdown();
+        }
+    }
+
+    function uploadClipboardImage(file, index, total, cfg, stamp) {
+        if (file.size > maxPasteImageBytes) {
+            return Promise.reject(new Error('图片过大：单张不能超过 10MB'));
+        }
+        var filename = stamp + (total > 1 ? '-' + String(index + 1).padStart(2, '0') : '') + '.' + imageExtension(file);
+        var imagePath = 'img/' + filename;
+        return fileToBase64(file).then(function (content) {
+            return githubFetch(githubContentsUrl(cfg, imagePath, false), cfg, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    message: 'docs: upload pasted image',
+                    content: content,
+                    branch: cfg.branch
+                })
+            });
+        }).then(function () {
+            return '![' + filename + '](' + rawGithubUrl(cfg, imagePath) + ')';
+        });
+    }
+
+    function handlePasteImages(event) {
+        if (event.docsImagePasteHandled) {
+            return;
+        }
+        var files = clipboardImageFiles(event);
+        if (!files.length) {
+            return;
+        }
+        event.docsImagePasteHandled = true;
+        event.preventDefault();
+
+        var cfg = getGithubConfig();
+        try {
+            validateGithubImageConfig(cfg);
+        } catch (error) {
+            setStatus(error.message, true);
+            return;
+        }
+
+        var stamp = timestampForFileName();
+        setStatus('正在上传 ' + files.length + ' 张图片到 GitHub/img...');
+        Promise.all(files.map(function (file, index) {
+            return uploadClipboardImage(file, index, files.length, cfg, stamp);
+        })).then(function (links) {
+            insertMarkdownAtCursor(links.join('\n') + '\n');
+            rememberGithubConfig();
+            renderMarkdown();
+            setStatus('图片已上传到 img 文件夹，并插入 Markdown。');
+        }).catch(function (error) {
+            setStatus(error.message, true);
         });
     }
 
@@ -1740,6 +1881,7 @@ $$
 
     markdown.addEventListener('input', scheduleRender);
     markdown.addEventListener('input', syncColumnHeights);
+    markdown.addEventListener('paste', handlePasteImages);
     markdown.addEventListener('scroll', syncPreviewFromEditor);
     preview.addEventListener('scroll', syncEditorFromPreview);
     Array.prototype.forEach.call(document.querySelectorAll('[data-md-action]'), function (button) {
