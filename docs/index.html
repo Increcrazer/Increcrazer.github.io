@@ -1362,6 +1362,15 @@ $$
         });
     }
 
+    function normalizeMathDots(math) {
+        var dotPattern = /[·∙⋅・]/g;
+        return math
+            .replace(/\\text\{([^{}]*[·∙⋅・][^{}]*)\}/g, function (match, content) {
+                return '\\mathrm{' + content.replace(dotPattern, '\\cdot ') + '}';
+            })
+            .replace(dotPattern, '\\cdot ');
+    }
+
     function renderMath() {
         if (!window.renderMathInElement) {
             return;
@@ -1374,6 +1383,7 @@ $$
                 { left: '\\(', right: '\\)', display: false }
             ],
             throwOnError: false,
+            preProcess: normalizeMathDots,
             ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         });
     }
