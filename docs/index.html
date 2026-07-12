@@ -1001,6 +1001,10 @@ $$
 \bar X=\frac{1}{N}\sum_{i=1}^{N}X_i
 $$
 
+## 粘贴图片
+
+复制截图或图片后，在编辑区直接粘贴即可上传到当前仓库的 `img/` 文件夹，并自动插入 Markdown 图片链接。粘贴图片需要填写 GitHub Token。
+
 ## Token 权限
 
 读取公开仓库不需要 token。保存需要一个能写入目标仓库的 GitHub Fine-grained token，建议只授予目标文档仓库的 `Contents: Read and write` 权限。
@@ -1045,6 +1049,7 @@ $$
     var storagePrefix = 'docsEditor:';
     var githubStorageKey = storagePrefix + 'githubConfig';
     var maxPasteImageBytes = 10 * 1024 * 1024;
+    var objectImageUrls = [];
 
     function setStatus(message, isError) {
         status.textContent = message || '';
@@ -1138,6 +1143,7 @@ $$
             }) + '</code></pre>';
         }
         preview.innerHTML = html;
+        hydratePreviewImages();
         renderMath();
         syncColumnHeights();
         stats.textContent = value.length + ' 字';
@@ -1451,6 +1457,26 @@ $$
         return url;
     }
 
+    function parseGithubRawUrl(src) {
+        var match = /^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/i.exec(src || '');
+        if (!match) {
+            return null;
+        }
+        return {
+            owner: decodeURIComponent(match[1]),
+            repo: decodeURIComponent(match[2]),
+            branch: decodeURIComponent(match[3]),
+            path: match[4].split('/').map(decodeURIComponent).join('/')
+        };
+    }
+
+    function revokePreviewObjectUrls() {
+        objectImageUrls.forEach(function (url) {
+            URL.revokeObjectURL(url);
+        });
+        objectImageUrls = [];
+    }
+
     function encodeBase64(text) {
         var bytes = new TextEncoder().encode(text);
         var binary = '';
@@ -1458,6 +1484,17 @@ $$
             binary += String.fromCharCode(byte);
         });
         return btoa(binary);
+    }
+
+    function base64ToBlobUrl(base64, mimeType) {
+        var binary = atob(base64.replace(/\s/g, ''));
+        var bytes = new Uint8Array(binary.length);
+        for (var i = 0; i < binary.length; i += 1) {
+            bytes[i] = binary.charCodeAt(i);
+        }
+        var url = URL.createObjectURL(new Blob([bytes], { type: mimeType || 'image/png' }));
+        objectImageUrls.push(url);
+        return url;
     }
 
     function fileToBase64(file) {
@@ -1481,6 +1518,38 @@ $$
             bytes[i] = binary.charCodeAt(i);
         }
         return new TextDecoder().decode(bytes);
+    }
+
+    function hydratePreviewImages() {
+        revokePreviewObjectUrls();
+        var cfg = getGithubConfig();
+        if (!cfg.owner || !cfg.repo || !cfg.branch || !cfg.token) {
+            return;
+        }
+
+        Array.prototype.forEach.call(preview.querySelectorAll('img'), function (img) {
+            var raw = parseGithubRawUrl(img.getAttribute('src'));
+            if (!raw || raw.owner !== cfg.owner || raw.repo !== cfg.repo || raw.branch !== cfg.branch) {
+                return;
+            }
+
+            function retryWithToken() {
+                img.removeEventListener('error', retryWithToken);
+                githubFetch(githubContentsUrl(cfg, raw.path, true), cfg).then(function (data) {
+                    if (!data || data.type !== 'file' || !data.content) {
+                        throw new Error('图片文件读取失败');
+                    }
+                    img.src = base64ToBlobUrl(data.content, data.encoding === 'base64' ? '' : '');
+                }).catch(function () {
+                    img.dataset.githubImageError = 'true';
+                });
+            }
+
+            img.addEventListener('error', retryWithToken);
+            if (img.complete && !img.naturalWidth) {
+                retryWithToken();
+            }
+        });
     }
 
     function githubFetch(url, cfg, options) {
