@@ -437,14 +437,14 @@ I_{\min}(\theta)\propto\cos^{2}\left(\frac{\theta}{2}+\frac{\p">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
 
@@ -476,23 +476,21 @@ I_{\min}(\theta)\propto\cos^{2}\left(\frac{\theta}{2}+\frac{\pi}{2}\right)=\sin^
 C_{\mathrm{I}}(\theta)\propto\frac{1}{\sin^2(\theta/2)}</script></li>
 <li><p>一组正交基的平均偏振对比度为</p>
 <script type="math/tex; mode=display">
-C_{\mathrm{avg}}(\theta)=\frac{1}{\tan^{2}\left(\frac{\theta}{4}\right)}</script></li>
+C_{\mathrm{avg}}(\theta)=\frac{1}{\tan^{2}\left(\frac{\pi-\theta}{4}\right)}</script></li>
 </ul>
 <p>注：这里的平均偏振对比度，是一组正交基在Bloch球上的某一平面上共同偏离理想位置时得到的平均对比度：</p>
 <p><img src="https://s2.loli.net/2025/11/29/QmULRGePsKa3iYl.png" alt=""></p>
-<p>对于超导探测器上算出来的大值/小值单偏振态对比度，情况不完全一样：它来自某一个偏振态和对应检偏基重合，而另一个正交态相对于这个检偏基存在偏离。因此若以偏离理想态的角度$\theta$为变量，理想点在$\theta=0$，有方向的投影比为</p>
+<p>对于超导探测器上算出来的单偏振态对比度，情况不完全一样：它来自某一个偏振态和对应检偏基重合，而另一个正交态相对于这个检偏基存在偏离。因此仍以调制相位$\theta$为变量，理想点在$\theta=\pi$，单偏振态和目标检偏基之间的偏离角为$\pi-\theta$，超导单态对比度为</p>
 <script type="math/tex; mode=display">
-R_{\mathrm{SNSPD}}(\theta)=\frac{\cos^2\left(\frac{\theta}{2}\right)}{\sin^2\left(\frac{\theta}{2}\right)}=\frac{1}{\tan^2\left(\frac{\theta}{2}\right)}</script><p>但实验上说“大值/小值对比度”时，应取较大探测值除以较小探测值，所以表格里的超导单态对比度为</p>
-<script type="math/tex; mode=display">
-C_{\mathrm{SNSPD}}(\theta)=\max\left(R_{\mathrm{SNSPD}}(\theta),\frac{1}{R_{\mathrm{SNSPD}}(\theta)}\right)</script><p>若把保真度记为$F$，其定义为目标态和实际态内积模平方：</p>
+C_{\mathrm{SNSPD}}(\theta)=\frac{\cos^2\left(\frac{\pi-\theta}{2}\right)}{\sin^2\left(\frac{\pi-\theta}{2}\right)}=\frac{1}{\tan^2\left(\frac{\pi-\theta}{2}\right)}</script><p>这里保留的是有方向的单态投影比，所以当$\theta&lt;90^\circ$时，$C_{\mathrm{SNSPD}}&lt;1$，对应的dB值为负；当$\theta=180^\circ$时，平均偏振对比度和超导单态对比度都趋于无穷大。</p>
+<p>若把保真度记为$F$，其定义为目标态和实际态内积模平方：</p>
 <script type="math/tex; mode=display">
 F=|\langle\psi_{\mathrm{target}}|\psi_{\mathrm{actual}}\rangle|^2</script><p>Bloch球上的夹角是态矢夹角的两倍，所以以$\theta$为变量时：</p>
 <script type="math/tex; mode=display">
-F(\theta)=\cos^2\left(\frac{\theta}{2}\right)</script><p>由此可得保真度和有方向投影比的互换关系：</p>
+F(\theta)=\cos^2\left(\frac{\pi-\theta}{2}\right)</script><p>由此可得保真度和超导单态对比度的互换关系：</p>
 <script type="math/tex; mode=display">
-F=\frac{R_{\mathrm{SNSPD}}}{R_{\mathrm{SNSPD}}+1},\quad R_{\mathrm{SNSPD}}=\frac{F}{1-F}</script><script type="math/tex; mode=display">
-\theta=2\arctan\left(\frac{1}{\sqrt{R_{\mathrm{SNSPD}}}}\right)=2\arccos\sqrt{F}</script><p>注意：仅从“大值/小值”形式的$C_{\mathrm{SNSPD}}$反推时，会丢失哪一个探测值更大的方向信息；计算器默认取靠近理想点$\theta=0$的高保真分支。</p>
-<div>
+F=\frac{C_{\mathrm{SNSPD}}}{C_{\mathrm{SNSPD}}+1},\quad C_{\mathrm{SNSPD}}=\frac{F}{1-F}</script><script type="math/tex; mode=display">
+\theta=\pi-2\arctan\left(\frac{1}{\sqrt{C_{\mathrm{SNSPD}}}}\right)=\pi-2\arccos\sqrt{F}</script><div>
   <h3>对比度、保真度与theta互换算器</h3>
   <table border="1">
     <thead>
@@ -508,42 +506,42 @@ F=\frac{R_{\mathrm{SNSPD}}}{R_{\mathrm{SNSPD}}+1},\quad R_{\mathrm{SNSPD}}=\frac
     <tbody>
       <tr>
         <td><input type="number" step="0.01" min="0" max="180" id="theta1" oninput="calculateFromTheta(1)"></td>
-        <td><input type="number" step="0.01" min="0" id="avgDb1" oninput="calculateFromAvgDB(1)"></td>
-        <td><input type="number" step="0.01" min="1" id="avgLinear1" oninput="calculateFromAvgLinear(1)"></td>
-        <td><input type="number" step="0.01" min="0" id="snspdDb1" oninput="calculateFromSNSPDDB(1)"></td>
-        <td><input type="number" step="0.01" min="1" id="snspdLinear1" oninput="calculateFromSNSPDLinear(1)"></td>
+        <td><input type="text" inputmode="decimal" id="avgDb1" oninput="calculateFromAvgDB(1)"></td>
+        <td><input type="text" inputmode="decimal" id="avgLinear1" oninput="calculateFromAvgLinear(1)"></td>
+        <td><input type="text" inputmode="decimal" id="snspdDb1" oninput="calculateFromSNSPDDB(1)"></td>
+        <td><input type="text" inputmode="decimal" id="snspdLinear1" oninput="calculateFromSNSPDLinear(1)"></td>
         <td><input type="number" step="0.000001" min="0" max="1" id="fidelity1" oninput="calculateFromFidelity(1)"></td>
       </tr>
       <tr>
         <td><input type="number" step="0.01" min="0" max="180" id="theta2" oninput="calculateFromTheta(2)"></td>
-        <td><input type="number" step="0.01" min="0" id="avgDb2" oninput="calculateFromAvgDB(2)"></td>
-        <td><input type="number" step="0.01" min="1" id="avgLinear2" oninput="calculateFromAvgLinear(2)"></td>
-        <td><input type="number" step="0.01" min="0" id="snspdDb2" oninput="calculateFromSNSPDDB(2)"></td>
-        <td><input type="number" step="0.01" min="1" id="snspdLinear2" oninput="calculateFromSNSPDLinear(2)"></td>
+        <td><input type="text" inputmode="decimal" id="avgDb2" oninput="calculateFromAvgDB(2)"></td>
+        <td><input type="text" inputmode="decimal" id="avgLinear2" oninput="calculateFromAvgLinear(2)"></td>
+        <td><input type="text" inputmode="decimal" id="snspdDb2" oninput="calculateFromSNSPDDB(2)"></td>
+        <td><input type="text" inputmode="decimal" id="snspdLinear2" oninput="calculateFromSNSPDLinear(2)"></td>
         <td><input type="number" step="0.000001" min="0" max="1" id="fidelity2" oninput="calculateFromFidelity(2)"></td>
       </tr>
       <tr>
         <td><input type="number" step="0.01" min="0" max="180" id="theta3" oninput="calculateFromTheta(3)"></td>
-        <td><input type="number" step="0.01" min="0" id="avgDb3" oninput="calculateFromAvgDB(3)"></td>
-        <td><input type="number" step="0.01" min="1" id="avgLinear3" oninput="calculateFromAvgLinear(3)"></td>
-        <td><input type="number" step="0.01" min="0" id="snspdDb3" oninput="calculateFromSNSPDDB(3)"></td>
-        <td><input type="number" step="0.01" min="1" id="snspdLinear3" oninput="calculateFromSNSPDLinear(3)"></td>
+        <td><input type="text" inputmode="decimal" id="avgDb3" oninput="calculateFromAvgDB(3)"></td>
+        <td><input type="text" inputmode="decimal" id="avgLinear3" oninput="calculateFromAvgLinear(3)"></td>
+        <td><input type="text" inputmode="decimal" id="snspdDb3" oninput="calculateFromSNSPDDB(3)"></td>
+        <td><input type="text" inputmode="decimal" id="snspdLinear3" oninput="calculateFromSNSPDLinear(3)"></td>
         <td><input type="number" step="0.000001" min="0" max="1" id="fidelity3" oninput="calculateFromFidelity(3)"></td>
       </tr>
       <tr>
         <td><input type="number" step="0.01" min="0" max="180" id="theta4" oninput="calculateFromTheta(4)"></td>
-        <td><input type="number" step="0.01" min="0" id="avgDb4" oninput="calculateFromAvgDB(4)"></td>
-        <td><input type="number" step="0.01" min="1" id="avgLinear4" oninput="calculateFromAvgLinear(4)"></td>
-        <td><input type="number" step="0.01" min="0" id="snspdDb4" oninput="calculateFromSNSPDDB(4)"></td>
-        <td><input type="number" step="0.01" min="1" id="snspdLinear4" oninput="calculateFromSNSPDLinear(4)"></td>
+        <td><input type="text" inputmode="decimal" id="avgDb4" oninput="calculateFromAvgDB(4)"></td>
+        <td><input type="text" inputmode="decimal" id="avgLinear4" oninput="calculateFromAvgLinear(4)"></td>
+        <td><input type="text" inputmode="decimal" id="snspdDb4" oninput="calculateFromSNSPDDB(4)"></td>
+        <td><input type="text" inputmode="decimal" id="snspdLinear4" oninput="calculateFromSNSPDLinear(4)"></td>
         <td><input type="number" step="0.000001" min="0" max="1" id="fidelity4" oninput="calculateFromFidelity(4)"></td>
       </tr>
       <tr>
         <td><input type="number" step="0.01" min="0" max="180" id="theta5" oninput="calculateFromTheta(5)"></td>
-        <td><input type="number" step="0.01" min="0" id="avgDb5" oninput="calculateFromAvgDB(5)"></td>
-        <td><input type="number" step="0.01" min="1" id="avgLinear5" oninput="calculateFromAvgLinear(5)"></td>
-        <td><input type="number" step="0.01" min="0" id="snspdDb5" oninput="calculateFromSNSPDDB(5)"></td>
-        <td><input type="number" step="0.01" min="1" id="snspdLinear5" oninput="calculateFromSNSPDLinear(5)"></td>
+        <td><input type="text" inputmode="decimal" id="avgDb5" oninput="calculateFromAvgDB(5)"></td>
+        <td><input type="text" inputmode="decimal" id="avgLinear5" oninput="calculateFromAvgLinear(5)"></td>
+        <td><input type="text" inputmode="decimal" id="snspdDb5" oninput="calculateFromSNSPDDB(5)"></td>
+        <td><input type="text" inputmode="decimal" id="snspdLinear5" oninput="calculateFromSNSPDLinear(5)"></td>
         <td><input type="number" step="0.000001" min="0" max="1" id="fidelity5" oninput="calculateFromFidelity(5)"></td>
       </tr>
     </tbody>
@@ -552,10 +550,10 @@ F=\frac{R_{\mathrm{SNSPD}}}{R_{\mathrm{SNSPD}}+1},\quad R_{\mathrm{SNSPD}}=\frac
 
 <script>
 function initialize() {
-  document.getElementById('theta1').value = "10";
+  document.getElementById('theta1').value = "170";
   calculateFromTheta(1);
 
-  document.getElementById('theta2').value = "5";
+  document.getElementById('theta2').value = "175";
   calculateFromTheta(2);
 
   document.getElementById('avgDb3').value = "20";
@@ -601,7 +599,7 @@ function calculateFromAvgLinear(row) {
 function calculateFromSNSPDDB(row) {
   const db = parseFloat(document.getElementById('snspdDb' + row).value);
 
-  if (!isNaN(db) && db >= 0) {
+  if (!isNaN(db)) {
     calculateFromSNSPDLinearValue(row, Math.pow(10, db / 10), 'snspdDb');
   } else {
     clearRow(row, ['theta', 'avgDb', 'avgLinear', 'snspdLinear', 'fidelity']);
@@ -611,7 +609,7 @@ function calculateFromSNSPDDB(row) {
 function calculateFromSNSPDLinear(row) {
   const linear = parseFloat(document.getElementById('snspdLinear' + row).value);
 
-  if (!isNaN(linear) && linear >= 1) {
+  if (!isNaN(linear) && linear > 0) {
     calculateFromSNSPDLinearValue(row, linear, 'snspdLinear');
   } else {
     clearRow(row, ['theta', 'avgDb', 'avgLinear', 'snspdDb', 'fidelity']);
@@ -622,12 +620,12 @@ function calculateFromFidelity(row) {
   const fidelity = parseFloat(document.getElementById('fidelity' + row).value);
 
   if (!isNaN(fidelity) && fidelity > 0 && fidelity < 1) {
-    const thetaRad = 2 * Math.acos(Math.sqrt(fidelity));
+    const thetaRad = Math.PI - 2 * Math.acos(Math.sqrt(fidelity));
     fillFromTheta(row, radToDeg(thetaRad), 'fidelity');
   } else if (fidelity === 1) {
-    fillFromTheta(row, 0, 'fidelity');
-  } else if (fidelity === 0) {
     fillFromTheta(row, 180, 'fidelity');
+  } else if (fidelity === 0) {
+    fillFromTheta(row, 0, 'fidelity');
   } else {
     clearRow(row, ['theta', 'avgDb', 'avgLinear', 'snspdDb', 'snspdLinear']);
   }
@@ -638,26 +636,27 @@ function calculateFromAvgLinearValue(row, linear, sourceField) {
     clearRow(row, ['theta', 'avgDb', 'snspdDb', 'snspdLinear', 'fidelity']);
     return;
   }
-  // C_avg = cot^2(theta / 4)
-  const thetaRad = 4 * Math.atan(1 / Math.sqrt(linear));
+  // C_avg = cot^2((pi - theta) / 4)
+  const thetaRad = Math.PI - 4 * Math.atan(1 / Math.sqrt(linear));
   fillFromTheta(row, radToDeg(thetaRad), sourceField);
 }
 
 function calculateFromSNSPDLinearValue(row, linear, sourceField) {
-  if (!(linear >= 1)) {
+  if (!(linear > 0)) {
     clearRow(row, ['theta', 'avgDb', 'avgLinear', 'snspdDb', 'fidelity']);
     return;
   }
-  // C_SNSPD is big/small; use the high-fidelity branch near theta = 0.
-  const thetaRad = 2 * Math.atan(1 / Math.sqrt(linear));
+  // C_SNSPD = cot^2((pi - theta) / 2)
+  const thetaRad = Math.PI - 2 * Math.atan(1 / Math.sqrt(linear));
   fillFromTheta(row, radToDeg(thetaRad), sourceField);
 }
 
 function fillFromTheta(row, thetaDeg, sourceField) {
   const thetaRad = degToRad(thetaDeg);
-  const avgLinear = contrastFromHalfAngle(thetaRad / 4);
-  const snspdLinear = bigSmallContrastFromHalfAngle(thetaRad / 2);
-  const fidelity = Math.pow(Math.cos(thetaRad / 2), 2);
+  const delta = Math.PI - thetaRad;
+  const avgLinear = contrastFromHalfAngle(delta / 4);
+  const snspdLinear = contrastFromHalfAngle(delta / 2);
+  const fidelity = Math.pow(Math.cos(delta / 2), 2);
 
   setFieldValue(row, 'theta', formatNumber(thetaDeg, 2), sourceField);
   setContrast(row, 'avg', avgLinear, sourceField);
@@ -673,18 +672,10 @@ function contrastFromHalfAngle(x) {
   return 1 / (tanX * tanX);
 }
 
-function bigSmallContrastFromHalfAngle(x) {
-  const directedContrast = contrastFromHalfAngle(x);
-  if (!isFinite(directedContrast) || Math.abs(directedContrast) < 1e-12) {
-    return Infinity;
-  }
-  return Math.max(directedContrast, 1 / directedContrast);
-}
-
 function setContrast(row, prefix, linear, sourceField) {
   if (!isFinite(linear)) {
-    setFieldValue(row, prefix + 'Db', '', sourceField);
-    setFieldValue(row, prefix + 'Linear', '', sourceField);
+    setFieldValue(row, prefix + 'Db', '∞', sourceField);
+    setFieldValue(row, prefix + 'Linear', '∞', sourceField);
     return;
   }
 
