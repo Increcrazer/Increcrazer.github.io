@@ -7,9 +7,9 @@
     <meta name="keywords" content="对强度消光比、偏振对比度的一些细节讨论, 老王Hub">
     <meta name="description" content="强度消光比和偏振对比度公式设$\theta$为某一调制臂上的相位，则：
 
-强度消光比
-f(\theta) \propto {\cos^{2}\left(\frac{\theta}{2}+\frac{\pi}{2}\right)}
-偏振对比度">
+强度调制时，经过干涉后的暗端强度可写为
+
+I_{\min}(\theta)\propto\cos^{2}\left(\frac{\theta}{2}+\frac{\p">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -437,14 +437,14 @@ f(\theta) \propto {\cos^{2}\left(\frac{\theta}{2}+\frac{\pi}{2}\right)}
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    782
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -469,147 +469,258 @@ f(\theta) \propto {\cos^{2}\left(\frac{\theta}{2}+\frac{\pi}{2}\right)}
             <div id="articleContent">
                 <h2 id="强度消光比和偏振对比度"><a href="#强度消光比和偏振对比度" class="headerlink" title="强度消光比和偏振对比度"></a>强度消光比和偏振对比度</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>设$\theta$为某一调制臂上的相位，则：</p>
 <ul>
-<li>强度消光比<script type="math/tex; mode=display">
-f(\theta) \propto {\cos^{2}\left(\frac{\theta}{2}+\frac{\pi}{2}\right)}</script></li>
-<li>偏振对比度<script type="math/tex; mode=display">
-f(\theta) = \frac{1}{\tan^{2}\left(\frac{\pi - \theta}{4}\right)}</script></li>
+<li><p>强度调制时，经过干涉后的暗端强度可写为</p>
+<script type="math/tex; mode=display">
+I_{\min}(\theta)\propto\cos^{2}\left(\frac{\theta}{2}+\frac{\pi}{2}\right)=\sin^2\left(\frac{\theta}{2}\right)</script><p>若把亮端强度近似看作归一化常数，则强度消光比为</p>
+<script type="math/tex; mode=display">
+C_{\mathrm{I}}(\theta)\propto\frac{1}{\sin^2(\theta/2)}</script></li>
+<li><p>一组正交基的平均偏振对比度为</p>
+<script type="math/tex; mode=display">
+C_{\mathrm{avg}}(\theta)=\frac{1}{\tan^{2}\left(\frac{\theta}{4}\right)}</script></li>
 </ul>
-<p>注：这里的偏振对比度是一组正交基的平均对比度，即在Bloch球上的某一平面上是这样：</p>
+<p>注：这里的平均偏振对比度，是一组正交基在Bloch球上的某一平面上共同偏离理想位置时得到的平均对比度：</p>
 <p><img src="https://s2.loli.net/2025/11/29/QmULRGePsKa3iYl.png" alt=""></p>
-<p>对于超导探测器上算出来的大值/小值单偏振态对比度，实际上是$\cos^2(\theta/2)/\sin^2(\theta/2)=1/\tan^2(\theta/2)$，其中$\theta$为单偏振态和检测基矢之间夹角。</p>
+<p>对于超导探测器上算出来的大值/小值单偏振态对比度，情况不完全一样：它来自某一个偏振态和对应检偏基重合，而另一个正交态相对于这个检偏基存在偏离。因此若以偏离理想态的角度$\theta$为变量，理想点在$\theta=0$，有方向的投影比为</p>
+<script type="math/tex; mode=display">
+R_{\mathrm{SNSPD}}(\theta)=\frac{\cos^2\left(\frac{\theta}{2}\right)}{\sin^2\left(\frac{\theta}{2}\right)}=\frac{1}{\tan^2\left(\frac{\theta}{2}\right)}</script><p>但实验上说“大值/小值对比度”时，应取较大探测值除以较小探测值，所以表格里的超导单态对比度为</p>
+<script type="math/tex; mode=display">
+C_{\mathrm{SNSPD}}(\theta)=\max\left(R_{\mathrm{SNSPD}}(\theta),\frac{1}{R_{\mathrm{SNSPD}}(\theta)}\right)</script><p>若把保真度记为$F$，其定义为目标态和实际态内积模平方：</p>
+<script type="math/tex; mode=display">
+F=|\langle\psi_{\mathrm{target}}|\psi_{\mathrm{actual}}\rangle|^2</script><p>Bloch球上的夹角是态矢夹角的两倍，所以以$\theta$为变量时：</p>
+<script type="math/tex; mode=display">
+F(\theta)=\cos^2\left(\frac{\theta}{2}\right)</script><p>由此可得保真度和有方向投影比的互换关系：</p>
+<script type="math/tex; mode=display">
+F=\frac{R_{\mathrm{SNSPD}}}{R_{\mathrm{SNSPD}}+1},\quad R_{\mathrm{SNSPD}}=\frac{F}{1-F}</script><script type="math/tex; mode=display">
+\theta=2\arctan\left(\frac{1}{\sqrt{R_{\mathrm{SNSPD}}}}\right)=2\arccos\sqrt{F}</script><p>注意：仅从“大值/小值”形式的$C_{\mathrm{SNSPD}}$反推时，会丢失哪一个探测值更大的方向信息；计算器默认取靠近理想点$\theta=0$的高保真分支。</p>
 <div>
-  <h3>对比度与角度互换算器</h3>
+  <h3>对比度、保真度与theta互换算器</h3>
   <table border="1">
     <thead>
       <tr>
-        <th>对比度(dB)</th>
-        <th>对比度(线性值)</th>
-        <th>和检测基之间夹角(°)</th>
+        <th>theta(°)</th>
+        <th>平均偏振对比度(dB)</th>
+        <th>平均偏振对比度(线性值)</th>
+        <th>超导单态对比度(dB)</th>
+        <th>超导单态对比度(线性值)</th>
+        <th>保真度</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="number" id="db1" step="0.1" oninput="calculateFromDB(1)"></td>
-        <td><input type="number" id="linear1" step="0.001" oninput="calculateFromLinear(1)"></td>
-        <td><input type="number" id="angle1" step="0.001" oninput="calculateFromAngle(1)"></td>
+        <td><input type="number" step="0.01" min="0" max="180" id="theta1" oninput="calculateFromTheta(1)"></td>
+        <td><input type="number" step="0.01" min="0" id="avgDb1" oninput="calculateFromAvgDB(1)"></td>
+        <td><input type="number" step="0.01" min="1" id="avgLinear1" oninput="calculateFromAvgLinear(1)"></td>
+        <td><input type="number" step="0.01" min="0" id="snspdDb1" oninput="calculateFromSNSPDDB(1)"></td>
+        <td><input type="number" step="0.01" min="1" id="snspdLinear1" oninput="calculateFromSNSPDLinear(1)"></td>
+        <td><input type="number" step="0.000001" min="0" max="1" id="fidelity1" oninput="calculateFromFidelity(1)"></td>
       </tr>
       <tr>
-        <td><input type="number" id="db2" step="0.1" oninput="calculateFromDB(2)"></td>
-        <td><input type="number" id="linear2" step="0.001" oninput="calculateFromLinear(2)"></td>
-        <td><input type="number" id="angle2" step="0.001" oninput="calculateFromAngle(2)"></td>
+        <td><input type="number" step="0.01" min="0" max="180" id="theta2" oninput="calculateFromTheta(2)"></td>
+        <td><input type="number" step="0.01" min="0" id="avgDb2" oninput="calculateFromAvgDB(2)"></td>
+        <td><input type="number" step="0.01" min="1" id="avgLinear2" oninput="calculateFromAvgLinear(2)"></td>
+        <td><input type="number" step="0.01" min="0" id="snspdDb2" oninput="calculateFromSNSPDDB(2)"></td>
+        <td><input type="number" step="0.01" min="1" id="snspdLinear2" oninput="calculateFromSNSPDLinear(2)"></td>
+        <td><input type="number" step="0.000001" min="0" max="1" id="fidelity2" oninput="calculateFromFidelity(2)"></td>
       </tr>
       <tr>
-        <td><input type="number" id="db3" step="0.1" oninput="calculateFromDB(3)"></td>
-        <td><input type="number" id="linear3" step="0.001" oninput="calculateFromLinear(3)"></td>
-        <td><input type="number" id="angle3" step="0.001" oninput="calculateFromAngle(3)"></td>
+        <td><input type="number" step="0.01" min="0" max="180" id="theta3" oninput="calculateFromTheta(3)"></td>
+        <td><input type="number" step="0.01" min="0" id="avgDb3" oninput="calculateFromAvgDB(3)"></td>
+        <td><input type="number" step="0.01" min="1" id="avgLinear3" oninput="calculateFromAvgLinear(3)"></td>
+        <td><input type="number" step="0.01" min="0" id="snspdDb3" oninput="calculateFromSNSPDDB(3)"></td>
+        <td><input type="number" step="0.01" min="1" id="snspdLinear3" oninput="calculateFromSNSPDLinear(3)"></td>
+        <td><input type="number" step="0.000001" min="0" max="1" id="fidelity3" oninput="calculateFromFidelity(3)"></td>
       </tr>
       <tr>
-        <td><input type="number" id="db4" step="0.1" oninput="calculateFromDB(4)"></td>
-        <td><input type="number" id="linear4" step="0.001" oninput="calculateFromLinear(4)"></td>
-        <td><input type="number" id="angle4" step="0.001" oninput="calculateFromAngle(4)"></td>
+        <td><input type="number" step="0.01" min="0" max="180" id="theta4" oninput="calculateFromTheta(4)"></td>
+        <td><input type="number" step="0.01" min="0" id="avgDb4" oninput="calculateFromAvgDB(4)"></td>
+        <td><input type="number" step="0.01" min="1" id="avgLinear4" oninput="calculateFromAvgLinear(4)"></td>
+        <td><input type="number" step="0.01" min="0" id="snspdDb4" oninput="calculateFromSNSPDDB(4)"></td>
+        <td><input type="number" step="0.01" min="1" id="snspdLinear4" oninput="calculateFromSNSPDLinear(4)"></td>
+        <td><input type="number" step="0.000001" min="0" max="1" id="fidelity4" oninput="calculateFromFidelity(4)"></td>
       </tr>
       <tr>
-        <td><input type="number" id="db5" step="0.1" oninput="calculateFromDB(5)"></td>
-        <td><input type="number" id="linear5" step="0.001" oninput="calculateFromLinear(5)"></td>
-        <td><input type="number" id="angle5" step="0.001" oninput="calculateFromAngle(5)"></td>
+        <td><input type="number" step="0.01" min="0" max="180" id="theta5" oninput="calculateFromTheta(5)"></td>
+        <td><input type="number" step="0.01" min="0" id="avgDb5" oninput="calculateFromAvgDB(5)"></td>
+        <td><input type="number" step="0.01" min="1" id="avgLinear5" oninput="calculateFromAvgLinear(5)"></td>
+        <td><input type="number" step="0.01" min="0" id="snspdDb5" oninput="calculateFromSNSPDDB(5)"></td>
+        <td><input type="number" step="0.01" min="1" id="snspdLinear5" oninput="calculateFromSNSPDLinear(5)"></td>
+        <td><input type="number" step="0.000001" min="0" max="1" id="fidelity5" oninput="calculateFromFidelity(5)"></td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <script>
-// 初始化所有行，第1行初始值为23dB
 function initialize() {
-  // 设置第1行的初始值
-  document.getElementById('db1').value = "23";
-  calculateFromDB(1);
+  document.getElementById('theta1').value = "10";
+  calculateFromTheta(1);
 
-  // 为其他行设置一些示例值，方便用户理解
-  document.getElementById('db2').value = "20";
-  calculateFromDB(2);
+  document.getElementById('theta2').value = "5";
+  calculateFromTheta(2);
 
-  document.getElementById('db3').value = "30";
-  calculateFromDB(3);
+  document.getElementById('avgDb3').value = "20";
+  calculateFromAvgDB(3);
 
-  document.getElementById('linear4').value = "1000";
-  calculateFromLinear(4);
+  document.getElementById('snspdDb4').value = "20";
+  calculateFromSNSPDDB(4);
 
-  document.getElementById('angle5').value = "8.1";
-  calculateFromAngle(5);
+  document.getElementById('fidelity5').value = "0.99";
+  calculateFromFidelity(5);
 }
 
-// 从dB值计算
-function calculateFromDB(row) {
-  const db = parseFloat(document.getElementById('db' + row).value);
+function calculateFromTheta(row) {
+  const thetaDeg = parseFloat(document.getElementById('theta' + row).value);
 
-  if (!isNaN(db)) {
-    // 计算线性对比度: C = 10^(dB/10)
-    const linear = Math.pow(10, db / 10);
-    document.getElementById('linear' + row).value = linear.toFixed(6);
-
-    // 计算角度: θ = atan(√(1/C)) * 2/π * 180°
-    const angle_rad = Math.atan(Math.sqrt(1 / linear));
-    const angle_deg = angle_rad * 2 / Math.PI * 180;
-    document.getElementById('angle' + row).value = angle_deg.toFixed(4);
+  if (!isNaN(thetaDeg) && thetaDeg >= 0 && thetaDeg <= 180) {
+    fillFromTheta(row, thetaDeg, 'theta');
   } else {
-    // 清除其他输入
-    document.getElementById('linear' + row).value = '';
-    document.getElementById('angle' + row).value = '';
+    clearRow(row, ['avgDb', 'avgLinear', 'snspdDb', 'snspdLinear', 'fidelity']);
   }
 }
 
-// 从线性值计算
-function calculateFromLinear(row) {
-  const linear = parseFloat(document.getElementById('linear' + row).value);
+function calculateFromAvgDB(row) {
+  const db = parseFloat(document.getElementById('avgDb' + row).value);
 
-  if (!isNaN(linear) && linear > 0) {
-    // 计算dB值: dB = 10 * log10(linear)
-    const db = 10 * Math.log10(linear);
-    document.getElementById('db' + row).value = db.toFixed(4);
-
-    // 计算角度
-    const angle_rad = Math.atan(Math.sqrt(1 / linear));
-    const angle_deg = angle_rad * 2 / Math.PI * 180;
-    document.getElementById('angle' + row).value = angle_deg.toFixed(4);
+  if (!isNaN(db) && db >= 0) {
+    calculateFromAvgLinearValue(row, Math.pow(10, db / 10), 'avgDb');
   } else {
-    // 清除其他输入
-    document.getElementById('db' + row).value = '';
-    document.getElementById('angle' + row).value = '';
+    clearRow(row, ['theta', 'avgLinear', 'snspdDb', 'snspdLinear', 'fidelity']);
   }
 }
 
-// 从角度计算
-function calculateFromAngle(row) {
-  const angle_deg = parseFloat(document.getElementById('angle' + row).value);
+function calculateFromAvgLinear(row) {
+  const linear = parseFloat(document.getElementById('avgLinear' + row).value);
 
-  if (!isNaN(angle_deg)) {
-    // 正确推导的反向公式：
-    // 原始公式：angle_deg = atan(√(1/C)) * 2/π * 180
-    // 设 x = atan(√(1/C))
-    // 则 angle_deg = x * 2/π * 180
-    // 所以 x = angle_deg * π / 360
-    // tan(x) = √(1/C)
-    // tan²(x) = 1/C
-    // C = 1 / tan²(x)
-
-    const x = angle_deg * Math.PI / 360; // 这是关键，不是angle_deg * π / 180
-    const tan_x = Math.tan(x);
-    const linear = 1 / (tan_x * tan_x);
-
-    document.getElementById('linear' + row).value = linear.toFixed(6);
-
-    // 从线性值计算dB
-    const db = 10 * Math.log10(linear);
-    document.getElementById('db' + row).value = db.toFixed(4);
+  if (!isNaN(linear) && linear >= 1) {
+    calculateFromAvgLinearValue(row, linear, 'avgLinear');
   } else {
-    // 清除其他输入
-    document.getElementById('db' + row).value = '';
-    document.getElementById('linear' + row).value = '';
+    clearRow(row, ['theta', 'avgDb', 'snspdDb', 'snspdLinear', 'fidelity']);
   }
+}
+
+function calculateFromSNSPDDB(row) {
+  const db = parseFloat(document.getElementById('snspdDb' + row).value);
+
+  if (!isNaN(db) && db >= 0) {
+    calculateFromSNSPDLinearValue(row, Math.pow(10, db / 10), 'snspdDb');
+  } else {
+    clearRow(row, ['theta', 'avgDb', 'avgLinear', 'snspdLinear', 'fidelity']);
+  }
+}
+
+function calculateFromSNSPDLinear(row) {
+  const linear = parseFloat(document.getElementById('snspdLinear' + row).value);
+
+  if (!isNaN(linear) && linear >= 1) {
+    calculateFromSNSPDLinearValue(row, linear, 'snspdLinear');
+  } else {
+    clearRow(row, ['theta', 'avgDb', 'avgLinear', 'snspdDb', 'fidelity']);
+  }
+}
+
+function calculateFromFidelity(row) {
+  const fidelity = parseFloat(document.getElementById('fidelity' + row).value);
+
+  if (!isNaN(fidelity) && fidelity > 0 && fidelity < 1) {
+    const thetaRad = 2 * Math.acos(Math.sqrt(fidelity));
+    fillFromTheta(row, radToDeg(thetaRad), 'fidelity');
+  } else if (fidelity === 1) {
+    fillFromTheta(row, 0, 'fidelity');
+  } else if (fidelity === 0) {
+    fillFromTheta(row, 180, 'fidelity');
+  } else {
+    clearRow(row, ['theta', 'avgDb', 'avgLinear', 'snspdDb', 'snspdLinear']);
+  }
+}
+
+function calculateFromAvgLinearValue(row, linear, sourceField) {
+  if (!(linear >= 1)) {
+    clearRow(row, ['theta', 'avgDb', 'snspdDb', 'snspdLinear', 'fidelity']);
+    return;
+  }
+  // C_avg = cot^2(theta / 4)
+  const thetaRad = 4 * Math.atan(1 / Math.sqrt(linear));
+  fillFromTheta(row, radToDeg(thetaRad), sourceField);
+}
+
+function calculateFromSNSPDLinearValue(row, linear, sourceField) {
+  if (!(linear >= 1)) {
+    clearRow(row, ['theta', 'avgDb', 'avgLinear', 'snspdDb', 'fidelity']);
+    return;
+  }
+  // C_SNSPD is big/small; use the high-fidelity branch near theta = 0.
+  const thetaRad = 2 * Math.atan(1 / Math.sqrt(linear));
+  fillFromTheta(row, radToDeg(thetaRad), sourceField);
+}
+
+function fillFromTheta(row, thetaDeg, sourceField) {
+  const thetaRad = degToRad(thetaDeg);
+  const avgLinear = contrastFromHalfAngle(thetaRad / 4);
+  const snspdLinear = bigSmallContrastFromHalfAngle(thetaRad / 2);
+  const fidelity = Math.pow(Math.cos(thetaRad / 2), 2);
+
+  setFieldValue(row, 'theta', formatNumber(thetaDeg, 2), sourceField);
+  setContrast(row, 'avg', avgLinear, sourceField);
+  setContrast(row, 'snspd', snspdLinear, sourceField);
+  setFieldValue(row, 'fidelity', formatNumber(fidelity, 6), sourceField);
+}
+
+function contrastFromHalfAngle(x) {
+  const tanX = Math.tan(x);
+  if (Math.abs(tanX) < 1e-12) {
+    return Infinity;
+  }
+  return 1 / (tanX * tanX);
+}
+
+function bigSmallContrastFromHalfAngle(x) {
+  const directedContrast = contrastFromHalfAngle(x);
+  if (!isFinite(directedContrast) || Math.abs(directedContrast) < 1e-12) {
+    return Infinity;
+  }
+  return Math.max(directedContrast, 1 / directedContrast);
+}
+
+function setContrast(row, prefix, linear, sourceField) {
+  if (!isFinite(linear)) {
+    setFieldValue(row, prefix + 'Db', '', sourceField);
+    setFieldValue(row, prefix + 'Linear', '', sourceField);
+    return;
+  }
+
+  setFieldValue(row, prefix + 'Db', formatNumber(10 * Math.log10(linear), 2), sourceField);
+  setFieldValue(row, prefix + 'Linear', formatNumber(linear, 2), sourceField);
+}
+
+function setFieldValue(row, field, value, sourceField) {
+  if (field !== sourceField) {
+    document.getElementById(field + row).value = value;
+  }
+}
+
+function degToRad(deg) {
+  return deg * Math.PI / 180;
+}
+
+function radToDeg(rad) {
+  return rad * 180 / Math.PI;
+}
+
+function formatNumber(value, digits) {
+  if (Math.abs(value) < 1e-12) {
+    value = 0;
+  }
+  return value.toFixed(digits);
+}
+
+function clearRow(row, fields) {
+  fields.forEach(function(field) {
+    document.getElementById(field + row).value = '';
+  });
 }
 
 // 页面加载时初始化所有行
-window.onload = initialize;
+window.addEventListener('load', initialize);
 </script>
 
 
@@ -1124,7 +1235,7 @@ window.onload = initialize;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">36.4k</span>
+                        class="white-color">36.9k</span>
             
             
             
