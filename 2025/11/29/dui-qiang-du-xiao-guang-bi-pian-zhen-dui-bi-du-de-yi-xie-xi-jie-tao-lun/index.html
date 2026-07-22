@@ -77,9 +77,9 @@ I_{\min}(\theta)\propto\cos^{2}\left(\frac{\theta}{2}+\frac{\p">
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
 </head>
 
 <!-- KaTeX 支持 -->
@@ -506,42 +506,42 @@ F=\frac{C_{\mathrm{SNSPD}}}{C_{\mathrm{SNSPD}}+1},\quad C_{\mathrm{SNSPD}}=\frac
     <tbody>
       <tr>
         <td><input type="number" step="0.01" min="0" max="180" id="theta1" oninput="calculateFromTheta(1)"></td>
-        <td><input type="text" inputmode="decimal" id="avgDb1" oninput="calculateFromAvgDB(1)"></td>
-        <td><input type="text" inputmode="decimal" id="avgLinear1" oninput="calculateFromAvgLinear(1)"></td>
-        <td><input type="text" inputmode="decimal" id="snspdDb1" oninput="calculateFromSNSPDDB(1)"></td>
-        <td><input type="text" inputmode="decimal" id="snspdLinear1" oninput="calculateFromSNSPDLinear(1)"></td>
+        <td><input type="number" step="0.01" min="0" id="avgDb1" oninput="calculateFromAvgDB(1)"></td>
+        <td><input type="number" step="0.01" min="1" id="avgLinear1" oninput="calculateFromAvgLinear(1)"></td>
+        <td><input type="number" step="0.01" id="snspdDb1" oninput="calculateFromSNSPDDB(1)"></td>
+        <td><input type="number" step="0.01" min="0" id="snspdLinear1" oninput="calculateFromSNSPDLinear(1)"></td>
         <td><input type="number" step="0.000001" min="0" max="1" id="fidelity1" oninput="calculateFromFidelity(1)"></td>
       </tr>
       <tr>
         <td><input type="number" step="0.01" min="0" max="180" id="theta2" oninput="calculateFromTheta(2)"></td>
-        <td><input type="text" inputmode="decimal" id="avgDb2" oninput="calculateFromAvgDB(2)"></td>
-        <td><input type="text" inputmode="decimal" id="avgLinear2" oninput="calculateFromAvgLinear(2)"></td>
-        <td><input type="text" inputmode="decimal" id="snspdDb2" oninput="calculateFromSNSPDDB(2)"></td>
-        <td><input type="text" inputmode="decimal" id="snspdLinear2" oninput="calculateFromSNSPDLinear(2)"></td>
+        <td><input type="number" step="0.01" min="0" id="avgDb2" oninput="calculateFromAvgDB(2)"></td>
+        <td><input type="number" step="0.01" min="1" id="avgLinear2" oninput="calculateFromAvgLinear(2)"></td>
+        <td><input type="number" step="0.01" id="snspdDb2" oninput="calculateFromSNSPDDB(2)"></td>
+        <td><input type="number" step="0.01" min="0" id="snspdLinear2" oninput="calculateFromSNSPDLinear(2)"></td>
         <td><input type="number" step="0.000001" min="0" max="1" id="fidelity2" oninput="calculateFromFidelity(2)"></td>
       </tr>
       <tr>
         <td><input type="number" step="0.01" min="0" max="180" id="theta3" oninput="calculateFromTheta(3)"></td>
-        <td><input type="text" inputmode="decimal" id="avgDb3" oninput="calculateFromAvgDB(3)"></td>
-        <td><input type="text" inputmode="decimal" id="avgLinear3" oninput="calculateFromAvgLinear(3)"></td>
-        <td><input type="text" inputmode="decimal" id="snspdDb3" oninput="calculateFromSNSPDDB(3)"></td>
-        <td><input type="text" inputmode="decimal" id="snspdLinear3" oninput="calculateFromSNSPDLinear(3)"></td>
+        <td><input type="number" step="0.01" min="0" id="avgDb3" oninput="calculateFromAvgDB(3)"></td>
+        <td><input type="number" step="0.01" min="1" id="avgLinear3" oninput="calculateFromAvgLinear(3)"></td>
+        <td><input type="number" step="0.01" id="snspdDb3" oninput="calculateFromSNSPDDB(3)"></td>
+        <td><input type="number" step="0.01" min="0" id="snspdLinear3" oninput="calculateFromSNSPDLinear(3)"></td>
         <td><input type="number" step="0.000001" min="0" max="1" id="fidelity3" oninput="calculateFromFidelity(3)"></td>
       </tr>
       <tr>
         <td><input type="number" step="0.01" min="0" max="180" id="theta4" oninput="calculateFromTheta(4)"></td>
-        <td><input type="text" inputmode="decimal" id="avgDb4" oninput="calculateFromAvgDB(4)"></td>
-        <td><input type="text" inputmode="decimal" id="avgLinear4" oninput="calculateFromAvgLinear(4)"></td>
-        <td><input type="text" inputmode="decimal" id="snspdDb4" oninput="calculateFromSNSPDDB(4)"></td>
-        <td><input type="text" inputmode="decimal" id="snspdLinear4" oninput="calculateFromSNSPDLinear(4)"></td>
+        <td><input type="number" step="0.01" min="0" id="avgDb4" oninput="calculateFromAvgDB(4)"></td>
+        <td><input type="number" step="0.01" min="1" id="avgLinear4" oninput="calculateFromAvgLinear(4)"></td>
+        <td><input type="number" step="0.01" id="snspdDb4" oninput="calculateFromSNSPDDB(4)"></td>
+        <td><input type="number" step="0.01" min="0" id="snspdLinear4" oninput="calculateFromSNSPDLinear(4)"></td>
         <td><input type="number" step="0.000001" min="0" max="1" id="fidelity4" oninput="calculateFromFidelity(4)"></td>
       </tr>
       <tr>
         <td><input type="number" step="0.01" min="0" max="180" id="theta5" oninput="calculateFromTheta(5)"></td>
-        <td><input type="text" inputmode="decimal" id="avgDb5" oninput="calculateFromAvgDB(5)"></td>
-        <td><input type="text" inputmode="decimal" id="avgLinear5" oninput="calculateFromAvgLinear(5)"></td>
-        <td><input type="text" inputmode="decimal" id="snspdDb5" oninput="calculateFromSNSPDDB(5)"></td>
-        <td><input type="text" inputmode="decimal" id="snspdLinear5" oninput="calculateFromSNSPDLinear(5)"></td>
+        <td><input type="number" step="0.01" min="0" id="avgDb5" oninput="calculateFromAvgDB(5)"></td>
+        <td><input type="number" step="0.01" min="1" id="avgLinear5" oninput="calculateFromAvgLinear(5)"></td>
+        <td><input type="number" step="0.01" id="snspdDb5" oninput="calculateFromSNSPDDB(5)"></td>
+        <td><input type="number" step="0.01" min="0" id="snspdLinear5" oninput="calculateFromSNSPDLinear(5)"></td>
         <td><input type="number" step="0.000001" min="0" max="1" id="fidelity5" oninput="calculateFromFidelity(5)"></td>
       </tr>
     </tbody>
@@ -674,8 +674,8 @@ function contrastFromHalfAngle(x) {
 
 function setContrast(row, prefix, linear, sourceField) {
   if (!isFinite(linear)) {
-    setFieldValue(row, prefix + 'Db', '∞', sourceField);
-    setFieldValue(row, prefix + 'Linear', '∞', sourceField);
+    setFieldValue(row, prefix + 'Db', '', sourceField, '∞');
+    setFieldValue(row, prefix + 'Linear', '', sourceField, '∞');
     return;
   }
 
@@ -683,9 +683,11 @@ function setContrast(row, prefix, linear, sourceField) {
   setFieldValue(row, prefix + 'Linear', formatNumber(linear, 2), sourceField);
 }
 
-function setFieldValue(row, field, value, sourceField) {
+function setFieldValue(row, field, value, sourceField, title) {
   if (field !== sourceField) {
-    document.getElementById(field + row).value = value;
+    const input = document.getElementById(field + row);
+    input.value = value;
+    input.title = title || '';
   }
 }
 
@@ -1499,22 +1501,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
