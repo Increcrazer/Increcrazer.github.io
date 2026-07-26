@@ -1529,6 +1529,40 @@ $$
         return url;
     }
 
+    function blobToDataUrl(blob) {
+        return new Promise(function (resolve, reject) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                resolve(String(reader.result || ''));
+            };
+            reader.onerror = function () {
+                reject(new Error('图片转换失败'));
+            };
+            reader.readAsDataURL(blob);
+        });
+    }
+
+    function imageMimeFromPath(path) {
+        var extension = String(path || '').split('?')[0].split('#')[0].split('.').pop().toLowerCase();
+        return {
+            jpg: 'image/jpeg',
+            jpeg: 'image/jpeg',
+            png: 'image/png',
+            gif: 'image/gif',
+            webp: 'image/webp',
+            svg: 'image/svg+xml',
+            bmp: 'image/bmp'
+        }[extension] || 'image/png';
+    }
+
+    function githubContentImageDataUrl(data, path) {
+        if (!data || data.type !== 'file' || !data.content) {
+            throw new Error('图片文件读取失败');
+        }
+        var mimeType = imageMimeFromPath(data.name || path);
+        return 'data:' + mimeType + ';base64,' + data.content.replace(/\s/g, '');
+    }
+
     function fileToBase64(file) {
         return new Promise(function (resolve, reject) {
             var reader = new FileReader();
@@ -1571,7 +1605,7 @@ $$
                     if (!data || data.type !== 'file' || !data.content) {
                         throw new Error('图片文件读取失败');
                     }
-                    img.src = base64ToBlobUrl(data.content, data.encoding === 'base64' ? '' : '');
+                    img.src = base64ToBlobUrl(data.content, imageMimeFromPath(raw.path));
                 }).catch(function () {
                     img.dataset.githubImageError = 'true';
                 });
@@ -1878,43 +1912,112 @@ $$
         return (fromHeading || fromPath || 'markdown-preview').replace(/[\\/:*?"<>|]/g, '-');
     }
 
+    function absoluteImageUrl(src) {
+        try {
+            return new URL(src, window.location.href).href;
+        } catch (error) {
+            return src;
+        }
+    }
+
+    function fetchImageDataUrl(src, cfg) {
+        if (!src || /^data:/i.test(src)) {
+            return Promise.resolve(src);
+        }
+
+        var absoluteSrc = absoluteImageUrl(src);
+        var raw = parseGithubRawUrl(absoluteSrc);
+        if (raw && cfg.token && raw.owner === cfg.owner && raw.repo === cfg.repo && raw.branch === cfg.branch) {
+            return githubFetch(githubContentsUrl(cfg, raw.path, true), cfg).then(function (data) {
+                return githubContentImageDataUrl(data, raw.path);
+            });
+        }
+
+        return fetch(absoluteSrc, { mode: 'cors' }).then(function (response) {
+            if (!response.ok) {
+                throw new Error('图片读取失败：' + response.status);
+            }
+            return response.blob();
+        }).then(blobToDataUrl).catch(function (error) {
+            if (raw && cfg.token) {
+                return githubFetch(githubContentsUrl(cfg, raw.path, true), cfg).then(function (data) {
+                    return githubContentImageDataUrl(data, raw.path);
+                });
+            }
+            throw error;
+        });
+    }
+
+    function pdfPreviewHtmlWithEmbeddedImages() {
+        var cfg = getGithubConfig();
+        var clone = preview.cloneNode(true);
+        var cloneImages = Array.prototype.slice.call(clone.querySelectorAll('img'));
+        var liveImages = Array.prototype.slice.call(preview.querySelectorAll('img'));
+
+        return Promise.all(cloneImages.map(function (cloneImg, index) {
+            var liveImg = liveImages[index];
+            var src = (liveImg && (liveImg.currentSrc || liveImg.getAttribute('src'))) || cloneImg.getAttribute('src') || '';
+            return fetchImageDataUrl(src, cfg).then(function (dataUrl) {
+                if (dataUrl) {
+                    cloneImg.setAttribute('src', dataUrl);
+                }
+            }).catch(function () {
+                cloneImg.setAttribute('data-pdf-image-missing', 'true');
+            });
+        })).then(function () {
+            return clone.innerHTML;
+        });
+    }
+
     function exportPreviewPdf() {
         renderMarkdown();
+        setStatus('正在准备 PDF 图片...');
 
         var printWindow = window.open('', '_blank');
         if (!printWindow) {
             setStatus('浏览器拦截了导出窗口，请允许弹窗后重试。', true);
             return;
         }
-
-        var title = pdfTitle();
-        var html = '<!doctype html><html><head><meta charset="utf-8">' +
-            '<title>' + escapeHtml(title) + '</title>' +
-            '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">' +
-            '<style>' +
-            '@page{size:A4;margin:18mm 16mm;}' +
-            'html,body{margin:0;padding:0;background:#fff;color:#111827;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;font-size:11pt;line-height:1.75;}' +
-            'body{box-sizing:border-box;}' +
-            'h1,h2,h3{break-after:avoid;page-break-after:avoid;color:#111827;line-height:1.35;}' +
-            'h1{font-size:24pt;margin:0 0 14pt;}h2{font-size:18pt;margin:22pt 0 10pt;}h3{font-size:14pt;margin:18pt 0 8pt;}' +
-            'p,li,blockquote,pre,table{break-inside:avoid-page;page-break-inside:avoid;}' +
-            'p{margin:0 0 10pt;}ul,ol{padding-left:22pt;}blockquote{margin:12pt 0;padding:10pt 12pt;border-left:3pt solid #2e7d67;background:#eef8f4;color:#334155;}' +
-            'pre{white-space:pre-wrap;word-break:break-word;padding:10pt;background:#f6f8fb;border:1px solid #e5e7eb;border-radius:4pt;}' +
-            'code{font-family:Consolas,Monaco,"Courier New",monospace;font-size:0.92em;}' +
-            'table{width:100%;border-collapse:collapse;}th,td{border:1px solid #d8dee6;padding:5pt 7pt;}' +
-            'img{max-width:100%;height:auto;break-inside:avoid-page;page-break-inside:avoid;}' +
-            '.katex-display{margin:12pt 0;overflow:visible;}' +
-            '.katex-mathml{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden;}.katex-html{display:inline-block;}' +
-            'a{color:#2563eb;text-decoration:none;}' +
-            '@media screen{body{max-width:210mm;margin:0 auto;padding:18mm 16mm;box-shadow:0 12px 40px rgba(15,23,42,.14);}}' +
-            '</style></head><body>' + preview.innerHTML +
-            '<script>window.addEventListener("load",function(){var imgs=[].slice.call(document.images);Promise.all(imgs.map(function(img){return img.complete?Promise.resolve():new Promise(function(resolve){img.onload=img.onerror=resolve;});})).then(function(){setTimeout(function(){window.print();},150);});});<\/script>' +
-            '</body></html>';
-
         printWindow.document.open();
-        printWindow.document.write(html);
+        printWindow.document.write('<!doctype html><html><head><meta charset="utf-8"><title>正在准备 PDF...</title></head><body style="font-family:sans-serif;padding:24px;">正在准备 PDF 图片...</body></html>');
         printWindow.document.close();
-        setStatus('已打开 PDF 导出窗口，请在打印对话框中选择“另存为 PDF”。');
+
+        pdfPreviewHtmlWithEmbeddedImages().then(function (contentHtml) {
+            var title = pdfTitle();
+            var html = '<!doctype html><html><head><meta charset="utf-8">' +
+                '<title>' + escapeHtml(title) + '</title>' +
+                '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">' +
+                '<style>' +
+                '@page{size:A4;margin:18mm 16mm;}' +
+                'html,body{margin:0;padding:0;background:#fff;color:#111827;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;font-size:11pt;line-height:1.75;}' +
+                'body{box-sizing:border-box;}' +
+                'h1,h2,h3{break-after:avoid;page-break-after:avoid;color:#111827;line-height:1.35;}' +
+                'h1{font-size:24pt;margin:0 0 14pt;}h2{font-size:18pt;margin:22pt 0 10pt;}h3{font-size:14pt;margin:18pt 0 8pt;}' +
+                'p,li,blockquote,pre,table{break-inside:avoid-page;page-break-inside:avoid;}' +
+                'p{margin:0 0 10pt;}ul,ol{padding-left:22pt;}blockquote{margin:12pt 0;padding:10pt 12pt;border-left:3pt solid #2e7d67;background:#eef8f4;color:#334155;}' +
+                'pre{white-space:pre-wrap;word-break:break-word;padding:10pt;background:#f6f8fb;border:1px solid #e5e7eb;border-radius:4pt;}' +
+                'code{font-family:Consolas,Monaco,"Courier New",monospace;font-size:0.92em;}' +
+                'table{width:100%;border-collapse:collapse;}th,td{border:1px solid #d8dee6;padding:5pt 7pt;}' +
+                'img{max-width:100%;height:auto;break-inside:avoid-page;page-break-inside:avoid;}' +
+                'img[data-pdf-image-missing="true"]{display:none;}' +
+                '.katex-display{margin:12pt 0;overflow:visible;}' +
+                '.katex-mathml{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden;}.katex-html{display:inline-block;}' +
+                'a{color:#2563eb;text-decoration:none;}' +
+                '@media screen{body{max-width:210mm;margin:0 auto;padding:18mm 16mm;box-shadow:0 12px 40px rgba(15,23,42,.14);}}' +
+                '</style></head><body>' + contentHtml +
+                '<script>window.addEventListener("load",function(){var imgs=[].slice.call(document.images);Promise.all(imgs.map(function(img){return img.complete?Promise.resolve():new Promise(function(resolve){img.onload=img.onerror=resolve;});})).then(function(){setTimeout(function(){window.print();},150);});});<\/script>' +
+                '</body></html>';
+
+            printWindow.document.open();
+            printWindow.document.write(html);
+            printWindow.document.close();
+            setStatus('已打开 PDF 导出窗口，请在打印对话框中选择“另存为 PDF”。');
+        }).catch(function (error) {
+            printWindow.document.open();
+            printWindow.document.write('<!doctype html><html><head><meta charset="utf-8"><title>PDF 导出失败</title></head><body style="font-family:sans-serif;padding:24px;color:#b42318;">PDF 图片准备失败：' + escapeHtml(error.message || String(error)) + '</body></html>');
+            printWindow.document.close();
+            setStatus(error.message || 'PDF 图片准备失败', true);
+        });
     }
 
     function applyMarkdownAction(action) {
