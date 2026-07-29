@@ -463,7 +463,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>今天再次听祖师爷 Brassard 讲 <strong>“Who told you that Nature is nonlocal?”</strong>，他的主旨是要纠正人们的一个认知错误，而这个错误是由于定义不清导致的。遗憾的是，我听到证明unitary quantum theory是separatable时就听不懂了，会后回忆感觉许多听不懂的地方是因为没有了解历史遗留问题或者对于某些概念词汇理解有偏差导致的，于是结合AI帮着整理一下中心思想。</p>
+                <p>今天再次听祖师爷 Brassard 讲 <strong>“Who told you that Nature is nonlocal?”</strong>，他的主旨是要纠正人们的一个认知错误，而这个错误是由于定义不清导致的。遗憾的是，我听到证明unitary quantum theory是separable时就听不懂了，会后回忆感觉许多听不懂的地方是因为没有了解历史遗留问题或者对于某些概念词汇理解有偏差导致的，于是结合AI帮着整理一下中心思想。</p>
 <p>这个问题最核心的地方不在于 Bell 定理是否正确，也不在于 Bell 实验是否可靠，而在于：</p>
 <blockquote>
 <p>Bell 定理到底排除了什么？它是否真的证明了“自然界是非局域的”？</p>
@@ -481,14 +481,14 @@
 <p>Alice 和 Bob 的粒子在分开之前，已经共享了一份隐藏信息：</p>
 <script type="math/tex; mode=display">
 \lambda</script><p>这份隐藏信息可以很复杂，也可以带有随机性。但关键是：两边分开以后，Alice 和 Bob 只能根据自己的本地测量选择和这份共同隐藏信息给出结果。</p>
-<p>如果 Alice 的测量选择是 (x)，Bob 的测量选择是 (y)，输出分别是 (A)、(B)，那么局域隐变量理论要求：</p>
+<p>如果 Alice 的测量选择是 $x$，Bob 的测量选择是 $y$，输出分别是 $A$、$B$，那么局域隐变量理论要求：</p>
 <script type="math/tex; mode=display">
 A=A(x,\lambda)</script><script type="math/tex; mode=display">
 B=B(y,\lambda)</script><p>这里的<strong>局域性</strong>体现在：</p>
 <script type="math/tex; mode=display">
 A \text{ 不依赖 } y</script><script type="math/tex; mode=display">
 B \text{ 不依赖 } x</script><p>也就是说，Alice 的结果不能瞬间依赖 Bob 远处选了什么；Bob 的结果也不能瞬间依赖 Alice 远处选了什么。</p>
-<p>这里的<strong>实在性</strong>是 Bell 型的、比较强的实在性：每一种可能测量的结果，在测量前已经由 (\lambda) 决定好了。比如：</p>
+<p>这里的<strong>实在性</strong>是 Bell 型的、比较强的实在性：每一种可能测量的结果，在测量前已经由 $\lambda$ 决定好了。比如：</p>
 <script type="math/tex; mode=display">
 A_0,A_1,B_0,B_1</script><p>都可以看成已经写在“答案表”里。</p>
 <p>所以局域隐变量理论的图像是：</p>
@@ -501,7 +501,7 @@ A_0,A_1,B_0,B_1</script><p>都可以看成已经写在“答案表”里。</p>
 <ol>
 <li><p><strong>实在性 realism</strong><br>有一个真实世界存在。观测结果不是无中生有，而是由某种真实状态决定。</p>
 </li>
-<li><p><strong>可分离性 separability</strong><br>如果有两个分离系统 (A) 和 (B)，那么联合系统 (AB) 的真实状态应该可以由 (A)、(B) 各自的真实状态组合出来。</p>
+<li><p><strong>可分离性 separability</strong><br>如果有两个分离系统 $A$ 和 $B$，那么联合系统 $AB$ 的真实状态应该可以由 $A$、$B$ 各自的真实状态组合出来。</p>
 </li>
 <li><p><strong>无超距作用 no spooky action at a distance</strong><br>Alice 远处做什么，不能瞬间改变 Bob 这里的真实状态。</p>
 </li>
@@ -510,18 +510,18 @@ A_0,A_1,B_0,B_1</script><p>都可以看成已经写在“答案表”里。</p>
 <p>这个区分非常关键。标准量子力学里，一个纠缠态通常不能写成：</p>
 <script type="math/tex; mode=display">
 |\psi_{AB}\rangle = |\psi_A\rangle \otimes |\psi_B\rangle</script><p>所以如果你把真实状态直接等同于普通波函数，就很难保留可分离性。</p>
-<p>Brassard 的意思是：如果坚持局域实在，那么标准波函数可能不是 physical reality 的完整描述。</p>
+<p>Brassard 的意思是：<strong>如果坚持局域实在，那么标准波函数可能不是 physical reality 的完整描述。</strong></p>
 <h3 id="no-signalling-theory"><a href="#no-signalling-theory" class="headerlink" title="no-signalling theory"></a>no-signalling theory</h3><p>no-signalling theory 用人话说就是：</p>
 <blockquote>
 <p>允许远处两个人的数据有奇怪相关性，但不允许他们用这种相关性瞬间发消息。</p>
 </blockquote>
-<p>数学上，它要求 Alice 的测量选择 (x) 不能改变 Bob 本地可见的统计分布：</p>
+<p>数学上，它要求 Alice 的测量选择 $x$ 不能改变 Bob 本地可见的统计分布：</p>
 <script type="math/tex; mode=display">
-P(B\mid y,x)=P(B\mid y)</script><p>也就是说，Bob 只看自己手里的数据，无法判断 Alice 选了 (x=0) 还是 (x=1)。</p>
-<p>但要注意，no-signalling 并不是说 Alice 和 Bob 的结果没有相关性。事实上，在纠缠实验中，如果事后知道 Alice 的结果 (a)，Bob 的条件统计可以不同：</p>
+P(B\mid y,x)=P(B\mid y)</script><p>也就是说，Bob 只看自己手里的数据，无法判断 Alice 选了 $x=0$ 还是 $x=1$。</p>
+<p>但要注意，no-signalling 并不是说 Alice 和 Bob 的结果没有相关性。事实上，在纠缠实验中，如果事后知道 Alice 的结果 $a$，Bob 的条件统计可以不同：</p>
 <script type="math/tex; mode=display">
-P(B\mid y,x,a)</script><p>可以依赖 (a)。</p>
-<p>这不违反 no-signalling，因为 Bob 在本地并不知道 (a)。他必须等 Alice 用普通通信方式告诉他结果，才能看到这种相关性。</p>
+P(B\mid y,x,a)</script><p>可以依赖 $a$。</p>
+<p>这不违反 no-signalling，因为 Bob 在本地并不知道 $a$。他必须等 Alice 用普通通信方式告诉他结果，才能看到这种相关性。</p>
 <p>所以 no-signalling 的重点是：</p>
 <blockquote>
 <p>相关性可以存在，但不能被用来超光速通信。</p>
@@ -564,7 +564,7 @@ P(A\mid x,\lambda)P(B\mid y,\lambda)</script><p>Bell 实验说明，自然界的
 <ol>
 <li>世界只有一个实际结果；</li>
 <li>测量前每个可能结果都已经确定；</li>
-<li>Alice 和 Bob 的测量选择独立于隐藏变量 (\lambda)；</li>
+<li>Alice 和 Bob 的测量选择独立于隐藏变量 $\lambda$；</li>
 <li>远处选择不能瞬间影响本地结果；</li>
 </ol>
 <p>那么 Bell 实验确实会逼你放弃其中至少一个。</p>
@@ -628,7 +628,7 @@ P(A\mid x,\lambda)P(B\mid y,\lambda)</script><p>Bell 实验说明，自然界的
 </blockquote>
 <h2 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h2><p>这次听下来，我觉得 Brassard 的重点不是否认 Bell 定理，也不是否认 Bell 实验，而是反对一个被过度传播的结论：</p>
 <blockquote>
-<p>Bell violation (\neq) Nature is nonlocal.</p>
+<p>Bell violation $\neq$ Nature is nonlocal.</p>
 </blockquote>
 <p>更准确的链条应该是：</p>
 <script type="math/tex; mode=display">
