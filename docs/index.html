@@ -1045,6 +1045,8 @@ $$
     var isSyncingScroll = false;
     var syncScrollEnabled = true;
     var renderTimer = null;
+    var columnSyncTimers = [];
+    var lastPreviewContentHeight = 0;
     var tallerColumn = null;
     var storagePrefix = 'docsEditor:';
     var githubStorageKey = storagePrefix + 'githubConfig';
@@ -1145,8 +1147,8 @@ $$
         preview.innerHTML = html;
         hydratePreviewImages();
         renderMath();
-        syncColumnHeights();
         watchPreviewImageHeights();
+        scheduleStableColumnHeightSync();
         stats.textContent = value.length + ' 字';
     }
 
@@ -1173,6 +1175,7 @@ $$
 
         var leftNatural = editorHeadHeight + editorNaturalHeight;
         var rightNatural = previewHeadHeight + Math.max(680, preview.scrollHeight);
+        lastPreviewContentHeight = preview.scrollHeight;
         var targetHeight = Math.max(680, Math.min(leftNatural, rightNatural));
         var editorBodyHeight = Math.max(0, targetHeight - editorHeadHeight);
         var previewBodyHeight = Math.max(0, targetHeight - previewHeadHeight);
@@ -1198,11 +1201,36 @@ $$
         syncTallerColumnAtPageEdge();
     }
 
-    function queueColumnHeightSync() {
+    function clearColumnSyncTimers() {
+        columnSyncTimers.forEach(function (timer) {
+            window.clearTimeout(timer);
+        });
+        columnSyncTimers = [];
+    }
+
+    function scheduleColumnHeightSync(delay) {
+        if (delay > 0) {
+            columnSyncTimers.push(window.setTimeout(function () {
+                syncColumnHeights();
+                syncTallerColumnAtPageEdge();
+            }, delay));
+            return;
+        }
+
         window.requestAnimationFrame(function () {
             syncColumnHeights();
             syncTallerColumnAtPageEdge();
         });
+    }
+
+    function queueColumnHeightSync() {
+        scheduleColumnHeightSync(0);
+    }
+
+    function scheduleStableColumnHeightSync() {
+        clearColumnSyncTimers();
+        scheduleColumnHeightSync(0);
+        [80, 180, 360, 800, 1400].forEach(scheduleColumnHeightSync);
     }
 
     function watchPreviewImageHeights() {
@@ -1211,14 +1239,32 @@ $$
                 return;
             }
             img.dataset.docsHeightWatcher = 'true';
-            img.addEventListener('load', queueColumnHeightSync, { once: true });
-            img.addEventListener('error', queueColumnHeightSync, { once: true });
+            img.loading = 'eager';
+            img.decoding = 'async';
+            img.addEventListener('load', scheduleStableColumnHeightSync);
+            img.addEventListener('error', scheduleStableColumnHeightSync);
+            if (img.decode) {
+                img.decode().then(scheduleStableColumnHeightSync).catch(function () {});
+            }
             if (img.complete) {
-                queueColumnHeightSync();
+                scheduleStableColumnHeightSync();
             }
         });
     }
 
+    function initPreviewResizeObserver() {
+        if (!window.ResizeObserver) {
+            return;
+        }
+
+        var observer = new ResizeObserver(function () {
+            var nextHeight = preview.scrollHeight;
+            if (Math.abs(nextHeight - lastPreviewContentHeight) > 2) {
+                scheduleStableColumnHeightSync();
+            }
+        });
+        observer.observe(preview);
+    }
     function syncTallerColumnAtPageEdge() {
         if (!tallerColumn) {
             return;
@@ -1604,6 +1650,7 @@ $$
                         throw new Error('图片文件读取失败');
                     }
                     img.src = base64ToBlobUrl(data.content, imageMimeFromPath(raw.path));
+                    scheduleStableColumnHeightSync();
                 }).catch(function () {
                     img.dataset.githubImageError = 'true';
                 });
@@ -2119,6 +2166,7 @@ $$
 
     hydrateGithubConfig();
     initEditor();
+    initPreviewResizeObserver();
     renderMarkdown();
     syncColumnHeights();
 })();
