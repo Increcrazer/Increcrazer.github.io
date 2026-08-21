@@ -587,6 +587,8 @@
 
     .docs-workspace {
         display: grid;
+        contain: layout paint;
+        isolation: isolate;
         grid-template-columns: minmax(520px, 1fr) minmax(600px, 1.08fr);
         min-height: 680px;
         transition: grid-template-columns 0.2s ease;
@@ -600,6 +602,7 @@
         min-height: 0;
         background: #fff;
         overflow: hidden;
+        contain: layout paint;
     }
 
     .docs-editor-wrap {
@@ -714,6 +717,8 @@
         background: #fff;
         line-height: 1.8;
         scroll-behavior: auto;
+        contain: layout paint;
+        overscroll-behavior: contain;
     }
 
     .docs-preview * {
