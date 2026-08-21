@@ -73,9 +73,9 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
 </head>
 
 <!-- KaTeX 支持 -->
@@ -716,6 +716,14 @@
         max-width: 100%;
     }
 
+    .docs-preview img {
+        display: block;
+        height: auto;
+        max-height: 72vh;
+        margin: 16px auto;
+        object-fit: contain;
+    }
+
     .docs-preview p,
     .docs-preview li,
     .docs-preview a {
@@ -1159,22 +1167,21 @@ $$
         var previewHeadHeight = previewHead ? previewHead.offsetHeight : 44;
         var editorScroll = getEditorScrollElement();
         var editorNaturalHeight = 680;
-
-        workspace.style.height = 'auto';
         if (editor) {
             editor.getScrollerElement().style.overflowY = 'hidden';
             editor.refresh();
             editorNaturalHeight = Math.max(680, editor.getScrollInfo().height);
         } else {
-            markdown.style.height = 'auto';
+            markdown.style.height = '0px';
             markdown.style.overflowY = 'hidden';
             editorNaturalHeight = Math.max(680, markdown.scrollHeight);
         }
-        preview.style.height = 'auto';
+        preview.style.height = '0px';
         preview.style.overflowY = 'hidden';
 
+        var previewNaturalHeight = Math.max(680, preview.scrollHeight);
         var leftNatural = editorHeadHeight + editorNaturalHeight;
-        var rightNatural = previewHeadHeight + Math.max(680, preview.scrollHeight);
+        var rightNatural = previewHeadHeight + previewNaturalHeight;
         lastPreviewContentHeight = preview.scrollHeight;
         var targetHeight = Math.max(680, Math.min(leftNatural, rightNatural));
         var editorBodyHeight = Math.max(0, targetHeight - editorHeadHeight);
