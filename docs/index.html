@@ -1122,13 +1122,39 @@ $$
         return editor ? editor.getValue() : markdown.value;
     }
 
+    function resetDocumentLayoutState() {
+        clearColumnSyncTimers();
+        tallerColumn = null;
+        lastPreviewContentHeight = 0;
+        workspace.style.height = '680px';
+        preview.scrollTop = 0;
+        preview.style.height = '0px';
+        preview.style.overflowY = 'hidden';
+
+        var editorScroll = getEditorScrollElement();
+        if (editorScroll) {
+            editorScroll.scrollTop = 0;
+            editorScroll.style.overflowY = 'hidden';
+        }
+        if (editor) {
+            editor.setCursor({ line: 0, ch: 0 });
+            editor.setSize(null, '680px');
+            editor.refresh();
+        } else {
+            markdown.scrollTop = 0;
+            markdown.style.height = '680px';
+        }
+    }
+
     function setMarkdownValue(value) {
+        resetDocumentLayoutState();
         if (editor) {
             editor.setValue(value);
+            editor.setCursor({ line: 0, ch: 0 });
         } else {
             markdown.value = value;
+            markdown.selectionStart = markdown.selectionEnd = 0;
         }
-        syncColumnHeights();
         renderMarkdown();
     }
 
@@ -1176,6 +1202,7 @@ $$
         var previewHeadHeight = previewHead ? previewHead.offsetHeight : 44;
         var editorScroll = getEditorScrollElement();
         var editorNaturalHeight = 680;
+        workspace.style.height = '680px';
         if (editor) {
             editor.getScrollerElement().style.overflowY = 'hidden';
             editor.refresh();
@@ -1465,7 +1492,6 @@ $$
             }[char];
         });
     }
-
     function normalizeMathDots(math) {
         var dotPattern = /[·∙⋅・]/g;
         return math
@@ -1475,6 +1501,13 @@ $$
             .replace(dotPattern, '\\cdot ');
     }
 
+    function normalizeMathVectors(math) {
+        return math.replace(/\\vec\s*\{([^{}]+)\}/g, '\\overrightarrow{$1}');
+    }
+
+    function normalizeMathInput(math) {
+        return normalizeMathVectors(normalizeMathDots(math));
+    }
     function renderMath() {
         if (!window.renderMathInElement) {
             return;
@@ -1487,7 +1520,10 @@ $$
                 { left: '\\(', right: '\\)', display: false }
             ],
             throwOnError: false,
-            preProcess: normalizeMathDots,
+            macros: {
+                '\\vec': '\\overrightarrow{#1}'
+            },
+            preProcess: normalizeMathInput,
             ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         });
     }
@@ -2146,7 +2182,6 @@ $$
     }
 
     markdown.addEventListener('input', scheduleRender);
-    markdown.addEventListener('input', syncColumnHeights);
     markdown.addEventListener('paste', handlePasteImages);
     markdown.addEventListener('scroll', syncPreviewFromEditor);
     preview.addEventListener('scroll', syncEditorFromPreview);
