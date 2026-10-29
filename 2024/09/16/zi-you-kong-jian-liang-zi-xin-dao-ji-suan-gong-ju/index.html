@@ -78,9 +78,9 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 7.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
 </head>
 
 <!-- KaTeX 支持 -->
@@ -438,14 +438,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.1k
+                    6.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    33 分
+                    35 分
                 </div>
                 
 
@@ -491,9 +491,17 @@
           <strong>诱骗 D</strong><input aria-label="诱骗态平均光子数" id="qkd-nu" type="number" value="0.1" min="0" step="0.001"><input aria-label="诱骗态发送概率" id="qkd-pD" type="number" value="0.25" min="0" max="1" step="0.01">
           <strong>真空 V</strong><input aria-label="真空态平均光子数" id="qkd-w" type="number" value="0.0002" min="0" step="0.0001"><output id="qkd-pV">0.25</output>
         </div>
-        <p class="qkd-hint">真空态允许残余光；要求 μ &gt; ν &gt; w ≥ 0，三个发送概率均大于零。光强在本次扫描中固定。</p>
-        <div class="qkd-inline"><span>本块发送时长</span><strong id="qkd-duration">—</strong></div>
-        <details><summary>光源平均功率</summary><label>波长 / nm<input id="qkd-wavelength" type="number" value="1550.92" min="0" step="0.01"></label><div class="qkd-inline"><span>平均光子数 / pulse</span><output id="qkd-mean">—</output></div><div class="qkd-inline"><span>源端平均功率</span><output id="qkd-power">—</output></div><div class="qkd-inline"><span>单光子能量</span><output id="qkd-energy">—</output></div></details>
+        <p class="qkd-hint">真空态允许残余光；要求 μ &gt; ν &gt; w ≥ 0，三个发送概率均大于零。真空态概率由另外两态自动补足。光强在本次扫描中固定。</p>
+        <div class="qkd-inline qkd-derived"><span>计算结果 · 本块发送时长</span><strong id="qkd-duration">—</strong></div>
+        <details><summary>光源平均功率</summary>
+          <label>波长 / nm<input id="qkd-wavelength" type="number" value="1550.92" min="0" step="0.01"></label>
+          <div class="qkd-table-wrap"><table class="qkd-result-table"><caption>光源计算结果</caption><tbody>
+            <tr data-quantity="neutral"><th scope="row">平均光子数 / pulse</th><td id="qkd-mean">—</td></tr>
+            <tr data-quantity="power"><th scope="row">源端平均功率 / nW</th><td id="qkd-power">—</td></tr>
+            <tr data-quantity="power"><th scope="row">源端平均功率 / dBm</th><td id="qkd-power-db">—</td></tr>
+            <tr data-quantity="neutral"><th scope="row">单光子能量 / J</th><td id="qkd-energy">—</td></tr>
+          </tbody></table></div>
+        </details>
       </section>
       <section class="qkd-card">
         <h3><span>02</span> 接收与信道</h3>
@@ -503,35 +511,38 @@
           <label>滤波效率<input id="qkd-filter" type="number" value="1" min="0" max="1" step="0.01"></label>
           <label>探测器效率<input id="qkd-detector" type="number" value="0.2" min="0" max="1" step="0.01"></label>
         </div>
-        <div class="qkd-grid qkd-window-controls">
+        <div class="qkd-grid qkd-window-controls qkd-window-auto" id="qkd-window-controls">
           <label>窗口效率来源<select class="browser-default" id="qkd-windowMode"><option value="gaussian">按高斯时间窗计算</option><option value="manual">手动输入窗口效率</option></select></label>
-          <label><span>窗口效率 η<sub>win</sub></span><input id="qkd-windowEfficiency" type="number" value="1" min="0" max="1" step="any" readonly=""></label>
+          <label id="qkd-manual-window" class="qkd-quantity-control" data-quantity="window" hidden=""><span>手动窗口效率 η<sub>win</sub></span><input id="qkd-windowEfficiency" type="number" value="0.8" min="0" max="1" step="any" readonly=""></label>
         </div>
-        <p class="qkd-hint" id="qkd-window-note">自动值由软件时间窗和 FWHM 算出；手动值替代高斯通过率。暗计数仍按软件时间窗计算。</p>
-        <div class="qkd-inline"><span>窗口效率（百分比 / dB）</span><output id="qkd-window-readout">—</output></div>
-        <div class="qkd-inline"><span>Bob 光路效率（不含窗口）</span><output id="qkd-bob-optical">—</output></div>
-        <div class="qkd-inline"><span>B 后总效率（含窗口）</span><output id="qkd-bob">—</output></div>
+        <p class="qkd-hint" id="qkd-window-note">窗口效率由软件时间窗和 FWHM 算出，结果见下表。</p>
+        <div class="qkd-table-wrap"><table class="qkd-result-table qkd-efficiency-table"><caption>接收效率计算结果</caption><thead><tr><th>物理量</th><th>效率</th><th>dB</th></tr></thead><tbody>
+          <tr data-quantity="window"><th scope="row">窗口效率</th><td id="qkd-window-readout">—</td><td id="qkd-window-db">—</td></tr>
+          <tr data-quantity="receiver"><th scope="row">Bob 光路<br>不含窗口</th><td id="qkd-bob-optical">—</td><td id="qkd-bob-optical-db">—</td></tr>
+          <tr data-quantity="total"><th scope="row">B 后总效率<br>含窗口</th><td id="qkd-bob">—</td><td id="qkd-bob-db">—</td></tr>
+        </tbody></table></div>
         <details id="qkd-geometry" open=""><summary>自由空间距离模型 / A—B 镜间计算</summary>
           <div class="qkd-grid">
             <label>计算距离 / km<input id="qkd-linkDistance" type="number" value="30" min="0" step="any"></label>
             <label>发散半角 / μrad<input id="qkd-divergence" type="number" value="35" min="0" step="1"></label>
             <label>发送口径 / m<input id="qkd-transmitter" type="number" value="0.1" min="0" step="0.01"></label>
             <label>接收口径 / m<input id="qkd-receiver" type="number" value="0.28" min="0" step="0.01"></label>
-            <label>该距离的大气损耗 / dB（非正）<input id="qkd-atmosphereDb" type="number" value="-6.02" max="0" step="any"></label>
             <label>大气衰减系数 / dB·km⁻¹<input id="qkd-atmosphere" type="number" value="0.20066666666666666" min="0" step="any"></label>
             <label>其他信道衰减 / dB<input id="qkd-extraLoss" type="number" value="0" min="0" step="0.1"></label>
           </div>
-          <div class="qkd-table-wrap qkd-link-table"><table><caption>当前计算距离的链路结果</caption><tbody>
-            <tr><th scope="row">光斑直径 / m</th><td id="qkd-beam-diameter">—</td></tr>
-            <tr><th scope="row">空间透射率</th><td id="qkd-space-transmission">—</td></tr>
-            <tr><th scope="row">空间损耗 / dB（非正）</th><td id="qkd-space-db">—</td></tr>
-            <tr><th scope="row">大气透射率</th><td id="qkd-atmosphere-transmission">—</td></tr>
-            <tr><th scope="row">A—B 镜间透射率（含大气）</th><td id="qkd-ab-transmission">—</td></tr>
-            <tr><th scope="row">A—B 镜间损耗 / dB（非正）</th><td id="qkd-ab-db">—</td></tr>
-            <tr><th scope="row">全信道衰减 / dB（非负）</th><td id="qkd-link-loss">—</td></tr>
+          <div class="qkd-table-wrap qkd-link-table"><table class="qkd-result-table"><caption>当前计算距离的链路结果</caption><tbody>
+            <tr data-quantity="neutral"><th scope="row">光斑直径 / m</th><td id="qkd-beam-diameter">—</td></tr>
+            <tr data-quantity="space"><th scope="row">空间透射率</th><td id="qkd-space-transmission">—</td></tr>
+            <tr data-quantity="space"><th scope="row">空间损耗 / dB（非正）</th><td id="qkd-space-db">—</td></tr>
+            <tr data-quantity="atmosphere"><th scope="row">该距离的大气透射率</th><td id="qkd-atmosphere-transmission">—</td></tr>
+            <tr data-quantity="atmosphere"><th scope="row">该距离的大气损耗 / dB（非正）</th><td id="qkd-atmosphereDb">—</td></tr>
+            <tr data-quantity="total"><th scope="row">A—B 镜间透射率（含大气）</th><td id="qkd-ab-transmission">—</td></tr>
+            <tr data-quantity="total"><th scope="row">A—B 镜间损耗 / dB（非正）</th><td id="qkd-ab-db">—</td></tr>
+            <tr data-quantity="channel"><th scope="row">全信道透射率</th><td id="qkd-link-transmission">—</td></tr>
+            <tr data-quantity="channel"><th scope="row">全信道衰减 / dB（非负）</th><td id="qkd-link-loss">—</td></tr>
           </tbody></table></div>
           <button type="button" id="qkd-use-distance" class="qkd-quiet">将此距离用于曲线当前点</button>
-          <p class="qkd-hint">此处可独立计算，不受曲线横轴选择影响。修改大气损耗会按当前距离折算每公里衰减；修改距离或每公里衰减会更新该距离的大气损耗。A—B 镜间结果只含几何收光和大气，全信道衰减还包含其他固定损耗。此近似不单独模拟湍流和抖动。</p>
+          <p class="qkd-hint">同色行是同一物理量的线性与 dB 表示。大气损耗由计算距离和每公里衰减系数得到。A—B 镜间结果只含几何收光和大气，全信道还包含其他固定损耗。此处可独立计算，不受曲线横轴选择影响；此近似不单独模拟湍流和抖动。</p>
         </details>
       </section>
       <section class="qkd-card">
@@ -587,7 +598,7 @@
       </section>
     </div>
   </div>
-  <details class="qkd-card qkd-utilities"><summary>功率与透射率单位转换器</summary><div class="qkd-grid"><label>功率 / W<input id="qkd-watts" type="number" value="1" min="0" step="any"></label><label>功率 / dBm<input id="qkd-dbm" type="number" value="30" step="any"></label><label>透射率<input id="qkd-transmission" type="number" value="0.01" min="0" max="1" step="any"></label><label>透射率 / dB（非正数）<input id="qkd-transmissionDb" type="number" value="-20" max="0" step="any"></label></div></details>
+  <details class="qkd-card qkd-utilities"><summary>功率与透射率单位转换器</summary><p class="qkd-hint">同色栏目是同一物理量的两种表示，可修改任意一侧进行换算。</p><div class="qkd-grid"><label class="qkd-quantity-control" data-quantity="power">功率 / W<input id="qkd-watts" type="number" value="1" min="0" step="any"></label><label class="qkd-quantity-control" data-quantity="power">功率 / dBm<input id="qkd-dbm" type="number" value="30" step="any"></label><label class="qkd-quantity-control" data-quantity="space">透射率<input id="qkd-transmission" type="number" value="0.01" min="0" max="1" step="any"></label><label class="qkd-quantity-control" data-quantity="space">透射率 / dB（非正数）<input id="qkd-transmissionDb" type="number" value="-20" max="0" step="any"></label></div></details>
   <details class="qkd-card qkd-method"><summary>计算口径与公式</summary>
     <p>有限码长流程对应当前 <code>Decoy_Li2025_corefunc.m</code> 的固定光强仿真：观测计数 → 期望计数 Chernoff 界 → 信号态单光子期望下界 → 当前有限块实际下界 → X/Z 交叉估计相位误码 → 两基信号态成钥。诱骗态和真空态用于估计，不直接加入原始密钥。</p>
     <h4>密钥长度与成码率</h4>
@@ -612,6 +623,24 @@
 #li2025-tool .qkd-window-controls{margin-top:16px}#li2025-tool label>span{display:inline}#li2025-tool label sub{font-size:.8em;line-height:0;vertical-align:sub}#li2025-tool input[readonly]{background:#f0f5fb;color:#4d6580}#li2025-tool .qkd-link-table{margin:16px 0}#li2025-tool .qkd-link-table caption{text-align:left;font-size:12px;font-weight:600;margin-bottom:8px;color:#405c7c}#li2025-tool .qkd-link-table th{font-weight:500;white-space:normal}#li2025-tool .qkd-link-table td{background:#eef6ff;font-variant-numeric:tabular-nums;color:#204d7d}#li2025-tool .qkd-method h4{font-size:15px;font-weight:650;margin:24px 0 10px}#li2025-tool .qkd-method p{font-size:13px;line-height:1.9}#li2025-tool math{font-family:"Cambria Math","STIX Two Math","Latin Modern Math",serif;font-size:1.1em;color:#253b56}#li2025-tool .qkd-equation{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:8px 10px;margin:10px 0;background:#f8faff;border:1px solid #e8eef6;border-radius:6px}#li2025-tool .qkd-equation math{font-size:16px;min-width:max-content;margin:8px auto}#li2025-tool .qkd-equation annotation{display:none}
 @media(max-width:1000px){#li2025-tool .qkd-workbench{grid-template-columns:1fr}#li2025-tool .qkd-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}#li2025-tool .qkd-controls .qkd-card{margin:0}#li2025-tool .qkd-controls .qkd-card:last-child{grid-column:1/-1}#li2025-tool .qkd-results{grid-row:1}#li2025-tool .qkd-card{padding:18px}}
 @media(max-width:520px){#li2025-tool .qkd-controls{display:block}#li2025-tool .qkd-controls .qkd-card{margin-bottom:14px}#li2025-tool .qkd-card{padding:14px}#li2025-tool .qkd-metrics{padding:10px;grid-template-columns:1fr 1fr}#li2025-tool .qkd-main-metric{grid-column:1/-1}#li2025-tool .qkd-heading .qkd-actions button{flex:1}#li2025-tool .qkd-chart-title h3{font-size:20px}#li2025-tool #qkd-tooltip{font-size:10px;left:45px;max-width:calc(100% - 55px)}}
+#li2025-tool [data-quantity="neutral"]{--quantity-bg:#f4f6f8;--quantity-ink:#4e5c6d}
+#li2025-tool [data-quantity="space"]{--quantity-bg:#edf4ff;--quantity-ink:#315a85}
+#li2025-tool [data-quantity="atmosphere"]{--quantity-bg:#edf8f0;--quantity-ink:#36654b}
+#li2025-tool [data-quantity="total"]{--quantity-bg:#f3effb;--quantity-ink:#60458a}
+#li2025-tool [data-quantity="channel"]{--quantity-bg:#fff7e6;--quantity-ink:#80642c}
+#li2025-tool [data-quantity="window"]{--quantity-bg:#edf8fb;--quantity-ink:#235e6b}
+#li2025-tool [data-quantity="receiver"]{--quantity-bg:#fff1f3;--quantity-ink:#8a4353}
+#li2025-tool [data-quantity="power"]{--quantity-bg:#fff4e9;--quantity-ink:#865523}
+#li2025-tool table.qkd-result-table{margin:14px 0 4px;font-size:11px}
+#li2025-tool table.qkd-result-table caption{text-align:left;font-size:12px;font-weight:600;margin:0 0 8px;color:#405c7c}
+#li2025-tool table.qkd-result-table tr[data-quantity]>th,#li2025-tool table.qkd-result-table tr[data-quantity]>td{background:var(--quantity-bg);color:var(--quantity-ink);border-bottom:1px solid #ffffffc0;padding:8px 7px}
+#li2025-tool table.qkd-result-table th{font-weight:500;white-space:normal;line-height:1.6}
+#li2025-tool table.qkd-result-table td{font-weight:550;font-variant-numeric:tabular-nums}
+#li2025-tool .qkd-quantity-control{background:var(--quantity-bg);color:var(--quantity-ink);padding:9px;border-radius:7px}
+#li2025-tool .qkd-window-auto{grid-template-columns:1fr}
+#li2025-tool .qkd-derived{background:#f4f6f8;padding:8px 10px;border-radius:6px;color:#4e5c6d}
+#li2025-tool .qkd-efficiency-table th:first-child{width:44%}
+@media(max-width:520px){#li2025-tool table.qkd-result-table{font-size:11px}#li2025-tool table.qkd-result-table tr[data-quantity]>th,#li2025-tool table.qkd-result-table tr[data-quantity]>td{padding:8px 6px}}
 </style>
 
 <script id="li2025-core">
@@ -764,33 +793,33 @@
     if($('windowMode').value==='manual')p.windowEfficiency=bounded('windowEfficiency',0,1);
     const geometry={divergence:bounded('divergence',0,Number.MAX_VALUE),transmitter:bounded('transmitter',0,Number.MAX_VALUE,true),receiver:bounded('receiver',0,Number.MAX_VALUE,true),atmosphere:bounded('atmosphere',0,Number.MAX_VALUE),extraLoss:bounded('extraLoss',0,Number.MAX_VALUE)};
     const linkDistance=bounded('linkDistance',0,Number.MAX_VALUE);
-    const atmosphereDb=bounded('atmosphereDb',-Number.MAX_VALUE,0);
-    if(linkDistance===0&&atmosphereDb!==0)throw new Error('零距离对应零大气损耗；请先填写非零距离，再由总大气损耗折算每公里衰减。');
     const wavelength=bounded('wavelength',0,Number.MAX_VALUE,true);
     return {p,geometry,wavelength,linkDistance};
   }
   function save() { try { localStorage.setItem(storeKey,JSON.stringify(Object.fromEntries(inputs.map(el=>[el.id,el.value])))); text('storage','已在本机浏览器保存'); } catch (_) { text('storage','当前浏览器未启用本地保存'); } }
-  function load() { try { const data=JSON.parse(localStorage.getItem(storeKey)||'null'); if (data) { inputs.forEach(el=>{ if (typeof data[el.id]==='string') el.value=data[el.id]; }); if(data['qkd-atmosphereDb']===undefined)syncAtmosphere(false); text('storage','已恢复上次输入'); } } catch (_) { /* Storage is optional. */ } }
-  function syncAtmosphere(fromTotal) {
-    const distance=Number($('linkDistance').value);
-    if(fromTotal){if(distance>0)$('atmosphere').value=Number((-Number($('atmosphereDb').value)/distance).toPrecision(15));}
-    else if(Number.isFinite(distance)&&Number.isFinite(Number($('atmosphere').value)))$('atmosphereDb').value=Number((-distance*Number($('atmosphere').value)).toPrecision(15));
+  function load() { try { const data=JSON.parse(localStorage.getItem(storeKey)||'null'); if (data) { inputs.forEach(el=>{ if (typeof data[el.id]==='string') el.value=data[el.id]; }); text('storage','已恢复上次输入'); } } catch (_) { /* Storage is optional. */ } }
+  function syncWindowMode(){
+    const manual=$('windowMode').value==='manual';$('manual-window').hidden=!manual;$('windowEfficiency').readOnly=!manual;
+    $('window-controls').classList.toggle('qkd-window-auto',!manual);
+    text('window-note',manual?'手动值替代高斯通过率，只计入一次；暗计数仍按软件时间窗计算。':'窗口效率由软件时间窗和 FWHM 自动计算，结果见下表；暗计数仍按软件时间窗计算。');
   }
   function updateLink(config){
     const c=engine.channelComponents(config.linkDistance,config.geometry);
     text('beam-diameter',format(c.diameter,8));text('space-transmission',c.geo.toFixed(8));text('space-db',c.geoDb.toFixed(4));
-    text('atmosphere-transmission',c.atmosphere.toFixed(8));text('ab-transmission',c.ab.toFixed(8));text('ab-db',c.abDb.toFixed(4));text('link-loss',c.loss.toFixed(4));
+    text('atmosphere-transmission',c.atmosphere.toFixed(8));text('atmosphereDb',c.atmosphereDb.toFixed(4));
+    text('ab-transmission',c.ab.toFixed(8));text('ab-db',c.abDb.toFixed(4));text('link-transmission',(10**(-c.loss/10)).toFixed(8));text('link-loss',c.loss.toFixed(4));
   }
   function lossAt(x,c) { return $('axis').value==='loss'?x:engine.channelLoss(x,c.geometry); }
   function fail(error) {
     state=null;chartMap=null;$('error').hidden=false;text('error',error.message);text('status','请检查参数');
-    ['rate','per-pulse','key','channel','compare-rate','bob','bob-optical','window-readout','beam-diameter','space-transmission','space-db','atmosphere-transmission','ab-transmission','ab-db','link-loss','duration','power','energy','mean','performance'].forEach(id=>text(id,'—'));
+    ['rate','per-pulse','key','channel','compare-rate','bob','bob-db','bob-optical','bob-optical-db','window-readout','window-db','beam-diameter','space-transmission','space-db','atmosphere-transmission','atmosphereDb','ab-transmission','ab-db','link-transmission','link-loss','duration','power','power-db','energy','mean','performance'].forEach(id=>text(id,'—'));
     $('chart').innerHTML='';$('detail').innerHTML='';$('tooltip').hidden=true;
     ['svg','json','pin','current','slider'].forEach(id=>$(id).disabled=true);
   }
   function update() {
     clearTimeout(debounce);
     try {
+      syncWindowMode();
       const startTime=performance.now(), config=readConfig(), model=engine.createModel(config.p);
       const from=read('start'),to=read('end'),step=read('step');
       if (from<0||to<=from||step<=0) throw new Error('扫描范围须满足 0 ≤ 起点 < 终点，步长大于零。');
@@ -809,12 +838,11 @@
       const mean=config.p.k.reduce((s,k,i)=>s+k*config.p.pk[i],0);
       const energy=6.62607015e-34*299792458/(config.wavelength*1e-9),power=config.p.f*mean*energy;
       text('duration',format(config.p.N/config.p.f)+' s');text('mean',format(mean,7));
-      text('energy',energy.toExponential(6)+' J');text('power',format(power*1e9)+' nW · '+(10*Math.log10(power*1000)).toFixed(3)+' dBm');
-      $('windowEfficiency').readOnly=$('windowMode').value!=='manual';
-      if($('windowEfficiency').readOnly)$('windowEfficiency').value=Number(model.windowEfficiency.toPrecision(12));
-      const efficiencyText=x=>percent(x)+' / '+(x>0?(10*Math.log10(x)).toFixed(3):'−∞')+' dB';
-      text('window-readout',efficiencyText(model.windowEfficiency));text('bob-optical',efficiencyText(config.p.etaBob));
-      text('bob',efficiencyText(config.p.etaBob*model.windowEfficiency));updateLink(config);
+      text('energy',energy.toExponential(6));text('power',format(power*1e9));text('power-db',(10*Math.log10(power*1000)).toFixed(3));
+      const efficiencyDb=x=>x>0?(10*Math.log10(x)).toFixed(3):'−∞';
+      text('window-readout',percent(model.windowEfficiency));text('window-db',efficiencyDb(model.windowEfficiency));
+      text('bob-optical',percent(config.p.etaBob));text('bob-optical-db',efficiencyDb(config.p.etaBob));
+      text('bob',percent(config.p.etaBob*model.windowEfficiency));text('bob-db',efficiencyDb(config.p.etaBob*model.windowEfficiency));updateLink(config);
       text('axis-note',$('axis').value==='loss'?'信道衰减不包含 Bob 效率和时间窗损耗。':'距离模式采用几何收光 + 每公里大气衰减 + 其他固定信道衰减。');
       drawChart();showPoint(Number($('current').value));
       text('performance',x.length+' 点 · '+(performance.now()-startTime).toFixed(0)+' ms');save();
@@ -892,9 +920,7 @@
   $('current').addEventListener('input',()=>{if($('current').value.trim()!==''&&Number.isFinite(Number($('current').value))){showPoint(Number($('current').value));save();}});
   function schedule(){clearTimeout(debounce);debounce=setTimeout(update,160);}
   inputs.forEach(el=>{if(el.id!=='qkd-current')el.addEventListener('input',schedule);});
-  $('atmosphereDb').addEventListener('input',()=>syncAtmosphere(true));
-  ['atmosphere','linkDistance'].forEach(id=>$(id).addEventListener('input',()=>syncAtmosphere(false)));
-  $('windowMode').addEventListener('change',()=>{$('windowEfficiency').readOnly=$('windowMode').value!=='manual';update();});
+  $('windowMode').addEventListener('change',update);
   $('use-distance').addEventListener('click',()=>{
     try{const distance=bounded('linkDistance',0,Number.MAX_VALUE);if($('axis').value!=='distance'){$('start').value=0;$('end').value=Math.max(100,distance);$('step').value=Math.max(2,distance/100);}
       else{$('start').value=Math.min(Number($('start').value),distance);$('end').value=Math.max(Number($('end').value),distance);}
@@ -1425,7 +1451,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">44.6k</span>
+                        class="white-color">44.9k</span>
             
             
             
