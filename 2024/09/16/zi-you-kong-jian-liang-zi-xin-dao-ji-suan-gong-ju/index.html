@@ -438,14 +438,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.4k
+                    6.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    35 分
+                    36 分
                 </div>
                 
 
@@ -550,11 +550,14 @@
         <div class="qkd-grid">
           <label>Alice 选 X 概率<input id="qkd-qA" type="number" value="0.5" min="0" max="1" step="0.01"></label>
           <label>Bob 选 X 概率<input id="qkd-qB" type="number" value="0.5" min="0" max="1" step="0.01"></label>
+          <label>公开抽样比例 / %<input id="qkd-sampling" type="number" value="0" min="0" max="100" step="any"></label>
+          <div class="qkd-inline qkd-derived"><span>抽样后保留比例</span><strong id="qkd-retained">100%</strong></div>
           <label>X 基失配误码率<input id="qkd-eX" type="number" value="0.005" min="0" max="0.5" step="0.001"></label>
           <label>Z 基失配误码率<input id="qkd-eZ" type="number" value="0.005" min="0" max="0.5" step="0.001"></label>
           <label>软件时间窗 / ps<input id="qkd-gate" type="number" value="800" min="0" step="10"></label>
           <label>TDC 屏蔽时间 / ns<input id="qkd-deadtime" type="number" value="50" min="0" step="1"></label>
         </div>
+        <p class="qkd-hint">公开抽样比例由用户输入，默认 0%。按各基、各强度均匀随机抽样估算；公开样本不成钥，保留计数用于重新计算有限码长界。若数据已扣除公开样本，请设为 0%，避免重复扣除。</p>
         <details><summary>暗计数、后脉冲与安全参数</summary>
           <div class="qkd-grid">
             <label>X0 暗计数 / s⁻¹<input id="qkd-dX0" type="number" value="100" min="0" step="10"></label>
@@ -600,9 +603,12 @@
   </div>
   <details class="qkd-card qkd-utilities"><summary>功率与透射率单位转换器</summary><p class="qkd-hint">同色栏目是同一物理量的两种表示，可修改任意一侧进行换算。</p><div class="qkd-grid"><label class="qkd-quantity-control" data-quantity="power">功率 / W<input id="qkd-watts" type="number" value="1" min="0" step="any"></label><label class="qkd-quantity-control" data-quantity="power">功率 / dBm<input id="qkd-dbm" type="number" value="30" step="any"></label><label class="qkd-quantity-control" data-quantity="space">透射率<input id="qkd-transmission" type="number" value="0.01" min="0" max="1" step="any"></label><label class="qkd-quantity-control" data-quantity="space">透射率 / dB（非正数）<input id="qkd-transmissionDb" type="number" value="-20" max="0" step="any"></label></div></details>
   <details class="qkd-card qkd-method"><summary>计算口径与公式</summary>
-    <p>有限码长流程对应当前 <code>Decoy_Li2025_corefunc.m</code> 的固定光强仿真：观测计数 → 期望计数 Chernoff 界 → 信号态单光子期望下界 → 当前有限块实际下界 → X/Z 交叉估计相位误码 → 两基信号态成钥。诱骗态和真空态用于估计，不直接加入原始密钥。</p>
+    <p>有限码长流程对应当前 <code>Decoy_Li2025_corefunc.m</code> 的固定光强仿真：探测计数 → 扣除公开样本 → 保留计数的期望计数 Chernoff 界 → 信号态单光子期望下界 → 当前有限块实际下界 → X/Z 交叉估计相位误码 → 两基信号态成钥。诱骗态和真空态用于估计，不直接加入原始密钥。</p>
+    <h4>公开抽样与保留计数</h4>
+    <div class="qkd-equation" aria-label="均匀公开抽样后的计数"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>n</mi><mtext>keep</mtext></msub><mo>=</mo><mo>(</mo><mn>1</mn><mo>−</mo><mi>s</mi><mo>)</mo><msub><mi>n</mi><mtext>det</mtext></msub><mo>,</mo><mspace width="1em"></mspace><msub><mi>m</mi><mtext>keep</mtext></msub><mo>=</mo><mo>(</mo><mn>1</mn><mo>−</mo><mi>s</mi><mo>)</mo><msub><mi>m</mi><mtext>det</mtext></msub></mrow></math></div>
+    <p>其中 s 为输入百分数除以 100，n 和 m 分别是各基、各强度的探测计数与错误计数。使用保留数据重新计算 Chernoff 界、单光子界、相位误码界和纠错泄露；不在最终密钥长度上再乘保留比例。抽样发生在探测之后，探测器负载、死时间修正及实际发送量 N 均不变，成码率仍按完整发送时长 N/f 归一化。这里使用均匀随机抽样的模型均值，未模拟抽样 QBER 选择 LDPC 矩阵的过程。0% 时恢复未扣除公开样本的原核心计算。</p>
     <h4>密钥长度与成码率</h4>
-<div class="qkd-equation" aria-label="有限码长密钥表达式"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><msub><mi>ℓ</mi><mtext>raw</mtext></msub><mo>=</mo><munder><mo>∑</mo><mrow><mi>B</mi><mo>∈</mo><mo>{</mo><mi>X</mi><mo>,</mo><mi>Z</mi><mo>}</mo></mrow></munder><msubsup><mi>n</mi><mrow><mi>B</mi><mo>,</mo><mn>1</mn></mrow><mi>L</mi></msubsup><mrow><mo>[</mo><mrow><mn>1</mn><mo>−</mo><mrow><mi mathvariant="normal">h</mi><mrow><mo>(</mo><msubsup><mi>φ</mi><mi>B</mi><mi>U</mi></msubsup><mo>)</mo></mrow></mrow></mrow><mo>]</mo></mrow><mo>−</mo><msub><mi>λ</mi><mtext>EC</mtext></msub><mo>−</mo><msub><mi>Δ</mi><mtext>sec</mtext></msub></mrow></mrow><annotation encoding="application/x-tex">\ell_{\mathrm{raw}}=\sum_{B\in\{X,Z\}}n_{B,1}^{L}[1-h(\phi_B^{U})]-\lambda_{\mathrm{EC}}-\Delta_{\mathrm{sec}}</annotation></semantics></math></div><div class="qkd-equation" aria-label="最终非负整数密钥长度"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi>ℓ</mi><mo>=</mo><mrow><mi mathvariant="normal">max</mi><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mo>⌊</mo><mrow><mi mathvariant="normal">min</mi><mrow><mo>(</mo><mrow><msub><mi>n</mi><mtext>X,S</mtext></msub><mo>+</mo><msub><mi>n</mi><mtext>Z,S</mtext></msub><mo>,</mo><msub><mi>ℓ</mi><mtext>raw</mtext></msub></mrow><mo>)</mo></mrow></mrow><mo>⌋</mo></mrow><mo>)</mo></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\ell=\max\{0,\lfloor\min(n_{X,S}+n_{Z,S},\ell_{\mathrm{raw}})\rfloor\}</annotation></semantics></math></div><div class="qkd-equation" aria-label="每脉冲成码率与每秒成码率"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi>r</mi><mo>=</mo><mfrac><mi>ℓ</mi><mi>N</mi></mfrac><mo>,</mo><mspace width="0.6em"></mspace><mi>R</mi><mo>=</mo><mfrac><mrow><mi>f</mi><mi>ℓ</mi></mrow><mi>N</mi></mfrac></mrow></mrow><annotation encoding="application/x-tex">r=\frac{\ell}{N},\qquad R=\frac{f\ell}{N}</annotation></semantics></math></div>    <p>其中 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>n</mi><mrow><mi>B</mi><mo>,</mo><mn>1</mn></mrow><mi>L</mi></msubsup></mrow><annotation encoding="application/x-tex">n_{B,1}^{L}</annotation></semantics></math> 是本基信号态单光子实际计数下界，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>φ</mi><mi>B</mi><mi>U</mi></msubsup></mrow><annotation encoding="application/x-tex">\phi_B^{U}</annotation></semantics></math> 是相位误码率上界；<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math> 的单位是 bit/pulse，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math> 的单位是 bit/s。单光子错误数上界使用本基信号态总错误数，沿用式 (16)。</p>
+<div class="qkd-equation" aria-label="有限码长密钥表达式"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><msub><mi>ℓ</mi><mtext>raw</mtext></msub><mo>=</mo><munder><mo>∑</mo><mrow><mi>B</mi><mo>∈</mo><mo>{</mo><mi>X</mi><mo>,</mo><mi>Z</mi><mo>}</mo></mrow></munder><msubsup><mi>n</mi><mrow><mi>B</mi><mo>,</mo><mn>1</mn></mrow><mi>L</mi></msubsup><mrow><mo>[</mo><mrow><mn>1</mn><mo>−</mo><mrow><mi mathvariant="normal">h</mi><mrow><mo>(</mo><msubsup><mi>φ</mi><mi>B</mi><mi>U</mi></msubsup><mo>)</mo></mrow></mrow></mrow><mo>]</mo></mrow><mo>−</mo><msub><mi>λ</mi><mtext>EC</mtext></msub><mo>−</mo><msub><mi>Δ</mi><mtext>sec</mtext></msub></mrow></mrow><annotation encoding="application/x-tex">\ell_{\mathrm{raw}}=\sum_{B\in\{X,Z\}}n_{B,1}^{L}[1-h(\phi_B^{U})]-\lambda_{\mathrm{EC}}-\Delta_{\mathrm{sec}}</annotation></semantics></math></div><div class="qkd-equation" aria-label="最终非负整数密钥长度"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi>ℓ</mi><mo>=</mo><mrow><mi mathvariant="normal">max</mi><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mo>⌊</mo><mrow><mi mathvariant="normal">min</mi><mrow><mo>(</mo><mrow><msub><mi>n</mi><mtext>X,S</mtext></msub><mo>+</mo><msub><mi>n</mi><mtext>Z,S</mtext></msub><mo>,</mo><msub><mi>ℓ</mi><mtext>raw</mtext></msub></mrow><mo>)</mo></mrow></mrow><mo>⌋</mo></mrow><mo>)</mo></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\ell=\max\{0,\lfloor\min(n_{X,S}+n_{Z,S},\ell_{\mathrm{raw}})\rfloor\}</annotation></semantics></math></div><div class="qkd-equation" aria-label="每脉冲成码率与每秒成码率"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi>r</mi><mo>=</mo><mfrac><mi>ℓ</mi><mi>N</mi></mfrac><mo>,</mo><mspace width="0.6em"></mspace><mi>R</mi><mo>=</mo><mfrac><mrow><mi>f</mi><mi>ℓ</mi></mrow><mi>N</mi></mfrac></mrow></mrow><annotation encoding="application/x-tex">r=\frac{\ell}{N},\qquad R=\frac{f\ell}{N}</annotation></semantics></math></div>    <p>其中 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>n</mi><mrow><mi>B</mi><mo>,</mo><mn>1</mn></mrow><mi>L</mi></msubsup></mrow><annotation encoding="application/x-tex">n_{B,1}^{L}</annotation></semantics></math> 是扣除公开样本后，本基信号态单光子实际计数下界，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>φ</mi><mi>B</mi><mi>U</mi></msubsup></mrow><annotation encoding="application/x-tex">\phi_B^{U}</annotation></semantics></math> 是相位误码率上界；<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math> 的单位是 bit/pulse，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math> 的单位是 bit/s。单光子错误数上界使用本基信号态总错误数，沿用式 (16)。</p>
 <div class="qkd-equation" aria-label="密钥长度安全修正项"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><msub><mi>Δ</mi><mtext>sec</mtext></msub><mo>=</mo><mn>2</mn><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mfrac><mn>2</mn><msub><mi>ε</mi><mtext>cor</mtext></msub></mfrac></mrow><mo>+</mo><mn>4</mn><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mfrac><mn>1</mn><mrow><msqrt><mn>2</mn></msqrt><msub><mi>ε</mi><mtext>PA</mtext></msub><mover><mi>ε</mi><mo>^</mo></mover></mrow></mfrac></mrow></mrow></mrow><annotation encoding="application/x-tex">\Delta_{\mathrm{sec}}=2\log_2\frac{2}{\varepsilon_{\mathrm{cor}}}+4\log_2\frac{1}{\sqrt{2}\,\varepsilon_{\mathrm{PA}}\hat\varepsilon}</annotation></semantics></math></div>    <h4>安全参数分配</h4>
 <div class="qkd-equation" aria-label="最终安全参数到秘密性参数的换算"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><msub><mi>ε</mi><mtext>sec</mtext></msub><mo>=</mo><mfrac><msub><mi>ε</mi><mtext>total</mtext></msub><mn>2</mn></mfrac><mo>−</mo><msub><mi>ε</mi><mtext>cor</mtext></msub></mrow></mrow><annotation encoding="application/x-tex">\varepsilon_{\mathrm{sec}}=\frac{\varepsilon_{\mathrm{total}}}{2}-\varepsilon_{\mathrm{cor}}</annotation></semantics></math></div><div class="qkd-equation" aria-label="安全参数默认分配"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mover><mi>ε</mi><mo>^</mo></mover><mo>=</mo><mfrac><msub><mi>ε</mi><mtext>sec</mtext></msub><mn>8</mn></mfrac><mo>,</mo><mspace width="0.6em"></mspace><msub><mi>ε</mi><mtext>PA</mtext></msub><mo>=</mo><mfrac><msub><mi>ε</mi><mtext>sec</mtext></msub><mn>4</mn></mfrac><mo>,</mo><mspace width="0.6em"></mspace><mi>ξ</mi><mo>=</mo><mfrac><msup><mrow><mo>(</mo><mfrac><msub><mi>ε</mi><mtext>sec</mtext></msub><mn>8</mn></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mn>5</mn></mfrac></mrow></mrow><annotation encoding="application/x-tex">\hat\varepsilon=\frac{\varepsilon_{\mathrm{sec}}}{8},\quad\varepsilon_{\mathrm{PA}}=\frac{\varepsilon_{\mathrm{sec}}}{4},\quad\xi=\frac{(\varepsilon_{\mathrm{sec}}/8)^2}{5}</annotation></semantics></math></div>    <p>未加入光强波动、实测计数输入或额外光源标定失效概率。</p>
     <h4>光路、窗口与探测模型</h4>
@@ -707,6 +713,9 @@
     check(Array.isArray(p.k) && p.k.length===3 && p.k.every(Number.isFinite) && p.k[0]>p.k[1] && p.k[1]>p.k[2] && p.k[2]>=0,'光强须满足 μ > ν > w ≥ 0。');
     check(Array.isArray(p.pk) && p.pk.length===3 && p.pk.every(x=>Number.isFinite(x)&&x>0) && Math.abs(p.pk.reduce((s,x)=>s+x,0)-1)<1e-12,'三个发送概率须均大于零且总和为 1。');
     check(Array.isArray(p.dc) && p.dc.length===4 && p.dc.every(x=>Number.isFinite(x)&&x>=0),'四通道噪声计数率不得为负。');
+    const sampling=p.sampling===undefined ? 0 : p.sampling;
+    check(Number.isFinite(sampling)&&sampling>=0&&sampling<=1,'公开抽样比例须在 0% 到 100% 之间。');
+    const keep=1-sampling;
     const windowEfficiency=p.windowEfficiency===undefined ? erf(p.gate*Math.sqrt(Math.log(2))/p.fwhm) : p.windowEfficiency;
     check(Number.isFinite(windowEfficiency)&&windowEfficiency>=0&&windowEfficiency<=1,'窗口效率须在 0 到 1 之间。');
     const pdc=[(p.dc[0]+p.dc[1])/2*p.gate,(p.dc[2]+p.dc[3])/2*p.gate];
@@ -732,6 +741,11 @@
         m[j]=p.k.map((k,i)=>p.N*Cdt[j]*(P[j]*p.pk[i]*(pdc[j]+mis[j]*(-Math.expm1(-eta*k)))+p.afterpulse*D[i]/2));
       }
       check(n.flat().reduce((s,x)=>s+x,0)<=p.N*(1+1e-12) && m.every((row,j)=>row.every((x,i)=>x<=n[j][i])),'模型产生了不一致的探测/误码计数，请检查输入。');
+      // Uniform public disclosure thins accepted records after detector deadtime.
+      // Keep N and f unchanged: rates refer to the full physical transmission.
+      const nDetected=n.map(row=>row.slice()),mDetected=m.map(row=>row.slice());
+      const nSampled=nDetected.map(row=>row.map(x=>sampling*x));
+      for(let j=0;j<2;j++) { n[j]=n[j].map(x=>keep*x); m[j]=m[j].map(x=>keep*x); }
       const qber=n.map((row,j)=>row[0]===0 ? 0 : m[j][0]/row[0]);
       const leak=p.fEC*n.reduce((s,row,j)=>s+row[0]*entropy(qber[j]),0);
       const expected=n.map(row=>row.map(x=>expectedBounds(x,xi,p.N))), n1Expected=[],n1=[];
@@ -746,7 +760,7 @@
       const privacy=n1.map((x,j)=>x*(1-entropy(phi[j])));
       const lRaw=privacy[0]+privacy[1]-leak-correction;
       const l=Math.max(0,Math.floor(Math.min(n[0][0]+n[1][0],lRaw)));
-      return {loss,l,lRaw,rate:l/p.N,rateHz:p.f*l/p.N,n,m,qber,n1Expected,n1,e1,phi,privacy,leak,correction,Cdt,sourceValid,windowEfficiency,eta,
+      return {loss,l,lRaw,rate:l/p.N,rateHz:p.f*l/p.N,n,m,qber,n1Expected,n1,e1,phi,privacy,leak,correction,Cdt,sourceValid,windowEfficiency,eta,sampling,keep,nDetected,mDetected,nSampled,
         status:!sourceValid?'source_condition_failed':n1.some(x=>x<=0)?'insufficient_single_photon_counts':l===0?'no_positive_key':'ok'};
     }
     return {atLoss,windowEfficiency,sourceValid};
@@ -789,7 +803,7 @@
     const f=read('frequency')*1e6, epsCor=read('epsCor'), total=bounded('epsTotal',0,1,true);
     const etaBob=['optical','coupling','filter','detector'].map(id=>bounded(id,0,1)).reduce((a,b)=>a*b,1);
     const background=bounded('background',0,Number.MAX_VALUE)/4;
-    const p={N:read('N'),f,k:[read('mu'),read('nu'),read('w')],pk,etaBob,qA:read('qA'),qB:read('qB'),eX:read('eX'),eZ:read('eZ'),fEC:read('fEC'),gate:read('gate')*1e-12,fwhm:read('fwhm')*1e-12,deadtime:read('deadtime')*1e-9,afterpulse:read('afterpulse'),epsCor,epsSec:total/2-epsCor,dc:['dX0','dX1','dZ0','dZ1'].map(id=>bounded(id,0,Number.MAX_VALUE)+background)};
+    const p={N:read('N'),f,sampling:bounded('sampling',0,100)/100,k:[read('mu'),read('nu'),read('w')],pk,etaBob,qA:read('qA'),qB:read('qB'),eX:read('eX'),eZ:read('eZ'),fEC:read('fEC'),gate:read('gate')*1e-12,fwhm:read('fwhm')*1e-12,deadtime:read('deadtime')*1e-9,afterpulse:read('afterpulse'),epsCor,epsSec:total/2-epsCor,dc:['dX0','dX1','dZ0','dZ1'].map(id=>bounded(id,0,Number.MAX_VALUE)+background)};
     if($('windowMode').value==='manual')p.windowEfficiency=bounded('windowEfficiency',0,1);
     const geometry={divergence:bounded('divergence',0,Number.MAX_VALUE),transmitter:bounded('transmitter',0,Number.MAX_VALUE,true),receiver:bounded('receiver',0,Number.MAX_VALUE,true),atmosphere:bounded('atmosphere',0,Number.MAX_VALUE),extraLoss:bounded('extraLoss',0,Number.MAX_VALUE)};
     const linkDistance=bounded('linkDistance',0,Number.MAX_VALUE);
@@ -812,7 +826,7 @@
   function lossAt(x,c) { return $('axis').value==='loss'?x:engine.channelLoss(x,c.geometry); }
   function fail(error) {
     state=null;chartMap=null;$('error').hidden=false;text('error',error.message);text('status','请检查参数');
-    ['rate','per-pulse','key','channel','compare-rate','bob','bob-db','bob-optical','bob-optical-db','window-readout','window-db','beam-diameter','space-transmission','space-db','atmosphere-transmission','atmosphereDb','ab-transmission','ab-db','link-transmission','link-loss','duration','power','power-db','energy','mean','performance'].forEach(id=>text(id,'—'));
+    ['rate','per-pulse','key','channel','compare-rate','bob','bob-db','bob-optical','bob-optical-db','window-readout','window-db','beam-diameter','space-transmission','space-db','atmosphere-transmission','atmosphereDb','ab-transmission','ab-db','link-transmission','link-loss','retained','duration','power','power-db','energy','mean','performance'].forEach(id=>text(id,'—'));
     $('chart').innerHTML='';$('detail').innerHTML='';$('tooltip').hidden=true;
     ['svg','json','pin','current','slider'].forEach(id=>$(id).disabled=true);
   }
@@ -837,6 +851,7 @@
       const parsed=Number($('current').value);$('current').value=Number.isFinite(parsed)?Math.max(from,Math.min(to,parsed)):from;
       const mean=config.p.k.reduce((s,k,i)=>s+k*config.p.pk[i],0);
       const energy=6.62607015e-34*299792458/(config.wavelength*1e-9),power=config.p.f*mean*energy;
+      text('retained',percent(1-config.p.sampling));
       text('duration',format(config.p.N/config.p.f)+' s');text('mean',format(mean,7));
       text('energy',energy.toExponential(6));text('power',format(power*1e9));text('power-db',(10*Math.log10(power*1000)).toFixed(3));
       const efficiencyDb=x=>x>0?(10*Math.log10(x)).toFixed(3):'−∞';
@@ -859,7 +874,7 @@
       text('status',labels[r.status]);
       if (comparison) { const old=state.oldModel.atLoss(lossAt(value,comparison));text('compare-rate','对照 '+prettyRate(old.rateHz)+(old.rateHz>0?' · '+(r.rateHz/old.rateHz).toFixed(3)+'×':'')); }
       else text('compare-rate','固定配置仿真');
-      const rows=[['信号态筛后计数',r.n.map(row=>row[0]),false],['信号态错误数',r.m.map(row=>row[0]),false],['信号态 QBER',r.qber,true],['单光子期望下界',r.n1Expected,false],['单光子实际下界',r.n1,false],['单光子比特误码上界',r.e1,true],['相位误码上界',r.phi,true],['隐私项 / bit',r.privacy,false],['有效死时间修正',r.Cdt,false]];
+      const rows=[['信号态匹配基计数（抽样前）',r.nDetected.map(row=>row[0]),false],['信号态公开抽样计数',r.nSampled.map(row=>row[0]),false],['信号态保留计数（用于成码）',r.n.map(row=>row[0]),false],['保留信号态错误数',r.m.map(row=>row[0]),false],['信号态 QBER',r.qber,true],['单光子期望下界',r.n1Expected,false],['单光子实际下界',r.n1,false],['单光子比特误码上界',r.e1,true],['相位误码上界',r.phi,true],['隐私项 / bit',r.privacy,false],['有效死时间修正',r.Cdt,false]];
       $('detail').innerHTML=rows.map(([label,v,pct])=>'<tr><td>'+label+'</td><td>'+(pct?percent(v[0]):format(v[0],7))+'</td><td>'+(pct?percent(v[1]):format(v[1],7))+'</td></tr>').join('');
       if (chartMap) {
         const line=$('chart').querySelector('[data-current]'); const cx=chartMap.x(value);
@@ -943,7 +958,7 @@
   $('preset').addEventListener('click',()=>restore(true));$('reset').addEventListener('click',()=>restore(false));
   function download(name,type,body){const url=URL.createObjectURL(new Blob([body],{type}));const link=document.createElement('a');link.href=url;link.download=name;root.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
   $('svg').addEventListener('click',()=>{if(!state)return;const svg=$('chart').cloneNode(true);svg.setAttribute('xmlns','http://www.w3.org/2000/svg');svg.querySelector('[data-hover]').remove();download('Li2025-key-rate.svg','image/svg+xml',new XMLSerializer().serializeToString(svg));});
-  $('json').addEventListener('click',()=>{if(!state)return;download('Li2025-key-rate.json','application/json',JSON.stringify({model:'Li2025 fixed-intensity; matching local MATLAB core',axis:$('axis').value,units:{x:$('axis').value==='loss'?'dB':'km',rate:'bit/pulse',rateHz:'bit/s',loss:'dB'},configuration:state.config,comparisonConfiguration:comparison,currentX:Number($('current').value),curve:state.curve,comparisonCurve:state.oldCurve},null,2));});
+  $('json').addEventListener('click',()=>{if(!state)return;download('Li2025-key-rate.json','application/json',JSON.stringify({model:'Li2025 fixed-intensity with uniform public sampling; 0% matches local MATLAB core',axis:$('axis').value,units:{x:$('axis').value==='loss'?'dB':'km',rate:'bit/pulse',rateHz:'bit/s',loss:'dB'},configuration:state.config,comparisonConfiguration:comparison,currentX:Number($('current').value),curve:state.curve,comparisonCurve:state.oldCurve},null,2));});
   const converters=[['watts','dbm',v=>v>0?10*Math.log10(v*1000):null],['dbm','watts',v=>10**(v/10)/1000],['transmission','transmissionDb',v=>v>0&&v<=1?10*Math.log10(v):null],['transmissionDb','transmission',v=>v<=0?10**(v/10):null]];
   converters.forEach(([from,to,fn])=>$(from).addEventListener('input',()=>{const raw=$(from).value.trim(),v=Number(raw),answer=raw&&Number.isFinite(v)?fn(v):null;$(to).value=answer!==null&&Number.isFinite(answer)?Number(answer.toPrecision(12)):'';}));
   window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(state){drawChart();showPoint(Number($('current').value));}},100);});
@@ -1451,7 +1466,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">44.9k</span>
+                        class="white-color">45.3k</span>
             
             
             
