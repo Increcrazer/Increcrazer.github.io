@@ -438,14 +438,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.9k
+                    8.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    37 分
+                    44 分
                 </div>
                 
 
@@ -475,19 +475,19 @@
     <p>Li2025 有限码长 · SDV 三强度 · X / Z 两基信号态成钥</p>
     <div class="qkd-actions"><button type="button" id="qkd-preset">载入 MATLAB 对照示例</button><button type="button" id="qkd-reset" class="qkd-quiet">恢复页面默认</button><span id="qkd-storage" class="qkd-muted">修改参数后自动计算</span></div>
   </header>
-  <div class="qkd-notice">下列数值是仿真示例，请替换为实验标定值。调整参数即可重画曲线；本页扫描固定分发配置，不自动优化光强。</div>
+  <div class="qkd-notice">下列数值是仿真示例，请替换为实验标定值。调整参数即可重画曲线；曲线采用当前固定分发配置；可针对当前查看点优化 S/D 光强。</div>
   <div id="qkd-error" role="alert" hidden=""></div>
   <div class="qkd-workbench">
     <div class="qkd-controls">
       <section class="qkd-card">
         <h3><span>01</span> 光源与分发配置</h3>
         <div class="qkd-grid">
-          <label>重频 / MHz<input id="qkd-frequency" type="number" value="1250" min="0" step="50"></label>
-          <label>发送脉冲总数 N<input id="qkd-N" type="number" value="1e12" min="1" step="any"></label>
+          <label>重频 / MHz<input id="qkd-frequency" type="number" value="625" min="0" step="1"></label>
+          <label>发送脉冲总数 N<input id="qkd-N" type="number" value="625000000" min="1" step="any"></label>
         </div>
         <div class="qkd-intensities">
           <span>状态</span><span>平均光子数</span><span>发送概率</span>
-          <strong>信号 S</strong><input aria-label="信号态平均光子数" id="qkd-mu" type="number" value="0.6" min="0" step="0.01"><input aria-label="信号态发送概率" id="qkd-pS" type="number" value="0.5" min="0" max="1" step="0.01">
+          <strong>信号 S</strong><input aria-label="信号态平均光子数" id="qkd-mu" type="number" value="0.4" min="0" step="0.01"><input aria-label="信号态发送概率" id="qkd-pS" type="number" value="0.5" min="0" max="1" step="0.01">
           <strong>诱骗 D</strong><input aria-label="诱骗态平均光子数" id="qkd-nu" type="number" value="0.1" min="0" step="0.001"><input aria-label="诱骗态发送概率" id="qkd-pD" type="number" value="0.25" min="0" max="1" step="0.01">
           <strong>真空 V</strong><input aria-label="真空态平均光子数" id="qkd-w" type="number" value="0.0002" min="0" step="0.0001"><output id="qkd-pV">0.25</output>
         </div>
@@ -506,16 +506,16 @@
       <section class="qkd-card">
         <h3><span>02</span> 接收与信道</h3>
         <div class="qkd-grid">
-          <label>接收光学效率<input id="qkd-optical" type="number" value="0.6" min="0" max="1" step="0.01"></label>
-          <label>接收耦合效率<input id="qkd-coupling" type="number" value="0.6" min="0" max="1" step="0.01"></label>
+          <label>接收光学效率<input id="qkd-optical" type="number" value="0.32" min="0" max="1" step="0.01"></label>
+          <label>接收耦合效率<input id="qkd-coupling" type="number" value="0.82" min="0" max="1" step="0.01"></label>
           <label>滤波效率<input id="qkd-filter" type="number" value="1" min="0" max="1" step="0.01"></label>
           <label>探测器效率<input id="qkd-detector" type="number" value="0.2" min="0" max="1" step="0.01"></label>
         </div>
-        <div class="qkd-grid qkd-window-controls qkd-window-auto" id="qkd-window-controls">
-          <label>窗口效率来源<select class="browser-default" id="qkd-windowMode"><option value="gaussian">按高斯时间窗计算</option><option value="manual">手动输入窗口效率</option></select></label>
-          <label id="qkd-manual-window" class="qkd-quantity-control" data-quantity="window" hidden=""><span>手动窗口效率 η<sub>win</sub></span><input id="qkd-windowEfficiency" type="number" value="0.8" min="0" max="1" step="any" readonly=""></label>
+        <div class="qkd-grid qkd-window-controls" id="qkd-window-controls">
+          <label>窗口效率来源<select class="browser-default" id="qkd-windowMode"><option value="gaussian">按高斯时间窗计算</option><option value="manual" selected="">手动输入窗口效率</option></select></label>
+          <label id="qkd-manual-window" class="qkd-quantity-control" data-quantity="window"><span>手动窗口效率 η<sub>win</sub></span><input id="qkd-windowEfficiency" type="number" value="0.8" min="0" max="1" step="any"></label>
         </div>
-        <p class="qkd-hint" id="qkd-window-note">窗口效率由软件时间窗和 FWHM 算出，结果见下表。</p>
+        <p class="qkd-hint" id="qkd-window-note">默认手动窗口效率为 0.8，结果见下表；可切换为高斯时间窗计算。</p>
         <div class="qkd-table-wrap"><table class="qkd-result-table qkd-efficiency-table"><caption>接收效率计算结果</caption><thead><tr><th>物理量</th><th>效率</th><th>dB</th></tr></thead><tbody>
           <tr data-quantity="window"><th scope="row">窗口效率</th><td id="qkd-window-readout">—</td><td id="qkd-window-db">—</td></tr>
           <tr data-quantity="receiver"><th scope="row">Bob 光路<br>不含窗口</th><td id="qkd-bob-optical">—</td><td id="qkd-bob-optical-db">—</td></tr>
@@ -523,12 +523,12 @@
         </tbody></table></div>
         <details id="qkd-geometry" open=""><summary>自由空间距离模型 / A—B 镜间计算</summary>
           <div class="qkd-grid">
-            <label>计算距离 / km<input id="qkd-linkDistance" type="number" value="30" min="0" step="any"></label>
-            <label>发散半角 / μrad<input id="qkd-divergence" type="number" value="35" min="0" step="1"></label>
-            <label>发送口径 / m<input id="qkd-transmitter" type="number" value="0.1" min="0" step="0.01"></label>
+            <label>计算距离 / km<input id="qkd-linkDistance" type="number" value="7" min="0" step="any"></label>
+            <label>发散半角 / μrad<input id="qkd-divergence" type="number" value="30" min="0" step="1"></label>
+            <label>发送口径 / m<input id="qkd-transmitter" type="number" value="0.08" min="0" step="0.01"></label>
             <label>接收口径 / m<input id="qkd-receiver" type="number" value="0.28" min="0" step="0.01"></label>
-            <label>大气衰减系数 / dB·km⁻¹<input id="qkd-atmosphere" type="number" value="0.20066666666666666" min="0" step="any"></label>
-            <label>其他信道衰减 / dB<input id="qkd-extraLoss" type="number" value="0" min="0" step="0.1"></label>
+            <label>大气衰减系数 / dB·km⁻¹<input id="qkd-atmosphere" type="number" value="0.34" min="0" step="any"></label>
+            <label>其他信道衰减 / dB<input id="qkd-extraLoss" type="number" value="3" min="0" step="0.1"></label>
           </div>
           <div class="qkd-table-wrap qkd-link-table"><table class="qkd-result-table"><caption>当前计算距离的链路结果</caption><tbody>
             <tr data-quantity="neutral"><th scope="row">光斑直径 / m</th><td id="qkd-beam-diameter">—</td></tr>
@@ -550,28 +550,28 @@
         <div class="qkd-grid">
           <label>Alice 选 X 概率<input id="qkd-qA" type="number" value="0.5" min="0" max="1" step="0.01"></label>
           <label>Bob 选 X 概率<input id="qkd-qB" type="number" value="0.5" min="0" max="1" step="0.01"></label>
-          <label>公开抽样比例 / %<input id="qkd-sampling" type="number" value="0" min="0" max="100" step="any"></label>
-          <div class="qkd-inline qkd-derived"><span>抽样后保留比例</span><strong id="qkd-retained">100%</strong></div>
-          <label>X 基失配误码率<input id="qkd-eX" type="number" value="0.005" min="0" max="0.5" step="0.001"></label>
-          <label>Z 基失配误码率<input id="qkd-eZ" type="number" value="0.005" min="0" max="0.5" step="0.001"></label>
-          <label>软件时间窗 / ps<input id="qkd-gate" type="number" value="800" min="0" step="10"></label>
-          <label>TDC 屏蔽时间 / ns<input id="qkd-deadtime" type="number" value="50" min="0" step="1"></label>
+          <label>公开抽样比例 / %<input id="qkd-sampling" type="number" value="10" min="0" max="100" step="any"></label>
+          <div class="qkd-inline qkd-derived"><span>抽样后保留比例</span><strong id="qkd-retained">90%</strong></div>
+          <label>X 基失配误码率<input id="qkd-eX" type="number" value="0.0128" min="0" max="0.5" step="0.0001"></label>
+          <label>Z 基失配误码率<input id="qkd-eZ" type="number" value="0.0128" min="0" max="0.5" step="0.0001"></label>
+          <label>软件时间窗 / ps<input id="qkd-gate" type="number" value="320" min="0" step="10"></label>
+          <label>TDC 屏蔽时间 / ns<input id="qkd-deadtime" type="number" value="10000" min="0" step="1"></label>
         </div>
-        <p class="qkd-hint">公开抽样比例由用户输入，默认 0%。按各基、各强度均匀随机抽样估算；公开样本不成钥，保留计数用于重新计算有限码长界。若数据已扣除公开样本，请设为 0%，避免重复扣除。</p>
+        <p class="qkd-hint">公开抽样比例由用户输入，页面默认 10%。按各基、各强度均匀随机抽样估算；公开样本不成钥，保留计数用于重新计算有限码长界。若数据已扣除公开样本，请设为 0%，避免重复扣除。</p>
         <details><summary>暗计数、后脉冲与安全参数</summary>
           <div class="qkd-grid">
-            <label>X0 暗计数 / s⁻¹<input id="qkd-dX0" type="number" value="100" min="0" step="10"></label>
-            <label>X1 暗计数 / s⁻¹<input id="qkd-dX1" type="number" value="100" min="0" step="10"></label>
-            <label>Z0 暗计数 / s⁻¹<input id="qkd-dZ0" type="number" value="100" min="0" step="10"></label>
-            <label>Z1 暗计数 / s⁻¹<input id="qkd-dZ1" type="number" value="100" min="0" step="10"></label>
-            <label>四通道总背景计数 / s⁻¹<input id="qkd-background" type="number" value="0" min="0" step="10"></label>
-            <label><span>后脉冲概率 p<sub>ap</sub></span><input id="qkd-afterpulse" type="number" value="0" min="0" max="1" step="0.001"></label>
+            <label>X0 暗计数 / s⁻¹<input id="qkd-dX0" type="number" value="0" min="0" step="10"></label>
+            <label>X1 暗计数 / s⁻¹<input id="qkd-dX1" type="number" value="0" min="0" step="10"></label>
+            <label>Z0 暗计数 / s⁻¹<input id="qkd-dZ0" type="number" value="0" min="0" step="10"></label>
+            <label>Z1 暗计数 / s⁻¹<input id="qkd-dZ1" type="number" value="0" min="0" step="10"></label>
+            <label>四通道总背景计数 / s⁻¹<input id="qkd-background" type="number" value="640" min="0" step="10"></label>
+            <label><span>后脉冲概率 p<sub>ap</sub></span><input id="qkd-afterpulse" type="number" value="0.02" min="0" max="1" step="0.001"></label>
             <label>时间分布 FWHM / ps<input id="qkd-fwhm" type="number" value="70" min="0" step="1"></label>
             <label><span>纠错效率 f<sub>EC</sub></span><input id="qkd-fEC" type="number" value="1.16" min="1" step="0.01"></label>
             <label><span>最终安全参数 ε<sub>total</sub></span><input id="qkd-epsTotal" type="number" value="1e-10" min="0" max="1" step="any"></label>
             <label><span>正确性参数 ε<sub>cor</sub></span><input id="qkd-epsCor" type="number" value="1e-15" min="0" max="1" step="any"></label>
           </div>
-          <p class="qkd-hint">暗计数与背景计数填写时间筛选前的速率，背景平均分到四通道。信号的窗口通过率由“接收与信道”中的设置确定，只计入一次。屏蔽沿用 MATLAB 的每基有效死时间近似；50 ns 不代表 SNSPD 本征恢复时间。</p>
+          <p class="qkd-hint">暗计数与背景计数填写时间筛选前的速率，背景平均分到四通道。信号的窗口通过率由“接收与信道”中的设置确定，只计入一次。屏蔽沿用 MATLAB 的每基有效死时间近似；此处的有效死时间不等同于探测器本征恢复时间。</p>
         </details>
       </section>
     </div>
@@ -579,19 +579,41 @@
       <section class="qkd-card qkd-chart-card">
         <div class="qkd-chart-title"><div><span class="qkd-eyebrow">SECRET KEY RATE</span><h3>成码率曲线</h3></div><span id="qkd-status" role="status">正在计算</span></div>
         <div class="qkd-grid qkd-chart-options">
-          <label>横轴<select class="browser-default" id="qkd-axis"><option value="loss">信道衰减 𝓛 / dB</option><option value="distance">通信距离 L / km</option></select></label>
+          <label>横轴<select class="browser-default" id="qkd-axis"><option value="loss">信道衰减 𝓛 / dB</option><option value="distance" selected="">通信距离 L / km</option></select></label>
           <label>纵轴<select class="browser-default" id="qkd-unit"><option value="Hz">R / (bit·s⁻¹)</option><option value="pulse">r / (bit·pulse⁻¹)</option></select></label>
         </div>
-        <div class="qkd-grid qkd-range"><label>起点<input id="qkd-start" type="number" value="0" min="0" step="any"></label><label>终点<input id="qkd-end" type="number" value="50" min="0" step="any"></label><label>步长<input id="qkd-step" type="number" value="1" min="0" step="any"></label></div>
+        <div class="qkd-grid qkd-range"><label>起点<input id="qkd-start" type="number" value="0" min="0" step="any"></label><label>终点<input id="qkd-end" type="number" value="30" min="0" step="any"></label><label>步长<input id="qkd-step" type="number" value="1" min="0" step="any"></label></div>
         <p id="qkd-axis-note" class="qkd-hint">信道衰减不包含 Bob 效率和时间窗损耗。</p>
         <div class="qkd-plot" id="qkd-plot"><svg id="qkd-chart" viewBox="0 0 900 430" role="img" aria-label="Li2025 成码率曲线"></svg><div id="qkd-tooltip" hidden=""></div></div>
         <p class="qkd-hint">纵轴为对数。悬停查看采样点，点击曲线可选点；底部 × 表示未得到正密钥，不把零值替换成正数。</p>
-        <div class="qkd-point-control"><label>当前查看点<input id="qkd-current" type="number" value="20" min="0" step="any"></label><input id="qkd-slider" aria-label="当前查看点滑块" type="range" min="0" max="50" step="0.01" value="20"></div>
+        <div class="qkd-point-control"><label>当前查看点<input id="qkd-current" type="number" value="7" min="0" step="any"></label><input id="qkd-slider" aria-label="当前查看点滑块" type="range" min="0" max="30" step="0.01" value="7"></div>
         <div class="qkd-metrics" aria-live="polite">
           <div class="qkd-main-metric"><span>当前成码率</span><strong id="qkd-rate">—</strong><small id="qkd-per-pulse">—</small></div>
           <div><span>每块密钥长度</span><strong id="qkd-key">—</strong><small>bit / block</small></div>
           <div><span>实际信道衰减</span><strong id="qkd-channel">—</strong><small id="qkd-compare-rate">固定配置仿真</small></div>
         </div>
+        <section class="qkd-optimizer" aria-labelledby="qkd-opt-title">
+          <h4 id="qkd-opt-title">当前点 S / D 光强优化</h4>
+          <p class="qkd-hint">只搜索信号 S 与诱骗 D 的平均光子数；真空 V、发送概率、抽样比例及其余参数固定。应用后整条曲线使用同一组 S/D，不逐点优化。</p>
+          <details><summary>搜索范围</summary><div class="qkd-grid qkd-opt-bounds">
+            <label>信号 S 下限<input id="qkd-opt-mu-min" type="number" value="0.05" min="0" step="any"></label>
+            <label>信号 S 上限<input id="qkd-opt-mu-max" type="number" value="1" min="0" step="any"></label>
+            <label>诱骗 D 下限<input id="qkd-opt-nu-min" type="number" value="0.0001" min="0" step="any"></label>
+            <label>诱骗 D 上限<input id="qkd-opt-nu-max" type="number" value="0.4" min="0" step="any"></label>
+          </div></details>
+          <div class="qkd-actions"><button type="button" id="qkd-optimize">优化当前点 S / D</button><button type="button" id="qkd-opt-cancel" class="qkd-quiet" hidden="">取消搜索</button></div>
+          <p id="qkd-opt-status" class="qkd-hint" role="status">选择曲线上的当前点后，点击优化。</p>
+          <div id="qkd-opt-results" hidden="">
+            <p id="qkd-opt-target" class="qkd-hint"></p>
+            <div class="qkd-table-wrap"><table><thead><tr><th>当前点比较</th><th>原配置</th><th>搜索结果</th></tr></thead><tbody>
+              <tr><th scope="row">信号 S 平均光子数</th><td id="qkd-opt-before-mu">—</td><td id="qkd-opt-after-mu">—</td></tr>
+              <tr><th scope="row">诱骗 D 平均光子数</th><td id="qkd-opt-before-nu">—</td><td id="qkd-opt-after-nu">—</td></tr>
+              <tr><th scope="row">成码率 / bit·s⁻¹</th><td id="qkd-opt-before-rate">—</td><td id="qkd-opt-after-rate">—</td></tr>
+            </tbody></table></div>
+            <div class="qkd-actions"><button type="button" id="qkd-opt-apply" disabled="">应用 S / D 并重画曲线</button><span id="qkd-opt-gain" class="qkd-muted"></span></div>
+          </div>
+          <p class="qkd-hint">在给定范围与短时预算内搜索较优配置，不保证全局最优；没有找到正密钥时不提供可应用的光强。</p>
+        </section>
         <div class="qkd-actions"><button type="button" id="qkd-pin">保存当前配置为对照</button><button type="button" id="qkd-clear" class="qkd-quiet" disabled="">清除对照</button><button type="button" id="qkd-svg" class="qkd-quiet">导出 SVG</button><button type="button" id="qkd-json" class="qkd-quiet">导出数据 JSON</button></div>
         <div class="qkd-legend"><span><i></i>当前配置</span><span id="qkd-comparison-legend" hidden=""><i></i>保存的对照配置</span><span id="qkd-performance">—</span></div>
         <details><summary>当前点的计数与安全估计</summary>
@@ -605,6 +627,8 @@
   <details class="qkd-card qkd-utilities"><summary>功率与透射率单位转换器</summary><p class="qkd-hint">同色栏目是同一物理量的两种表示，可修改任意一侧进行换算。</p><div class="qkd-grid"><label class="qkd-quantity-control" data-quantity="power">功率 / W<input id="qkd-watts" type="number" value="1" min="0" step="any"></label><label class="qkd-quantity-control" data-quantity="power">功率 / dBm<input id="qkd-dbm" type="number" value="30" step="any"></label><label class="qkd-quantity-control" data-quantity="space">透射率<input id="qkd-transmission" type="number" value="0.01" min="0" max="1" step="any"></label><label class="qkd-quantity-control" data-quantity="space">透射率 / dB（非正数）<input id="qkd-transmissionDb" type="number" value="-20" max="0" step="any"></label></div></details>
   <details class="qkd-card qkd-method"><summary>计算口径与公式</summary>
     <p>有限码长流程对应当前 <code>Decoy_Li2025_corefunc.m</code> 的固定光强仿真：探测计数 → 扣除公开样本 → 保留计数的期望计数 Chernoff 界 → 信号态单光子期望下界 → 当前有限块实际下界 → X/Z 交叉估计相位误码 → 两基信号态成钥。诱骗态和真空态用于估计，不直接加入原始密钥。</p>
+    <h4>当前点 S / D 光强优化</h4>
+    <p>搜索直接调用本页同一有限码长成码函数，固定真空态光强、发送概率和其余实验参数。采用粗搜索与多起点局部细化，每次最多评估 500 组，搜索时间预算约 1.5 秒，并分批让出浏览器执行时间。始终包含原配置，返回结果不低于原配置的整数密钥长度；未找到正密钥时不提供可应用的光强。结果是在指定范围与预算内找到的较优解，不保证全局最优。</p>
     <h4>公开抽样与保留计数</h4>
     <div class="qkd-equation" aria-label="均匀公开抽样后的计数"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>n</mi><mtext>keep</mtext></msub><mo>=</mo><mo>(</mo><mn>1</mn><mo>−</mo><mi>s</mi><mo>)</mo><msub><mi>n</mi><mtext>det</mtext></msub><mo>,</mo><mspace width="1em"></mspace><msub><mi>m</mi><mtext>keep</mtext></msub><mo>=</mo><mo>(</mo><mn>1</mn><mo>−</mo><mi>s</mi><mo>)</mo><msub><mi>m</mi><mtext>det</mtext></msub></mrow></math></div>
     <p>其中 s 为输入百分数除以 100，n 和 m 分别是各基、各强度的探测计数与错误计数。使用保留数据重新计算 Chernoff 界、单光子界、相位误码界和纠错泄露；不在最终密钥长度上再乘保留比例。抽样发生在探测之后，探测器负载、死时间修正及实际发送量 N 均不变，成码率仍按完整发送时长 N/f 归一化。这里使用均匀随机抽样的模型均值，未模拟抽样 QBER 选择 LDPC 矩阵的过程。0% 时恢复未扣除公开样本的原核心计算。</p>
@@ -648,6 +672,7 @@
 #li2025-tool .qkd-derived{background:#f4f6f8;padding:8px 10px;border-radius:6px;color:#4e5c6d}
 #li2025-tool .qkd-efficiency-table th:first-child{width:44%}
 @media(max-width:520px){#li2025-tool table.qkd-result-table{font-size:11px}#li2025-tool table.qkd-result-table tr[data-quantity]>th,#li2025-tool table.qkd-result-table tr[data-quantity]>td{padding:8px 6px}}
+#li2025-tool .qkd-optimizer{border:1px solid #d5e3f5;border-radius:9px;background:#f8fbff;padding:14px;margin:16px 0}#li2025-tool .qkd-optimizer h4{margin:0 0 8px;font-size:15px;font-weight:650}#li2025-tool .qkd-optimizer .qkd-hint{margin:8px 0}#li2025-tool .qkd-optimizer .qkd-actions{margin-top:10px}#li2025-tool .qkd-opt-bounds{margin:10px 0}#li2025-tool #qkd-opt-status{color:#315a85}#li2025-tool #qkd-opt-results td{font-variant-numeric:tabular-nums}
 </style>
 
 <script id="li2025-core">
@@ -779,6 +804,82 @@
 })(typeof window!=='undefined'?window:globalThis);
 </script>
 
+<script id="li2025-optimizer">
+/* Bounded deterministic coarse search + multi-start pattern refinement, S/D only. */
+(function(global){
+  'use strict';
+  const now=()=>typeof performance!=='undefined'?performance.now():Date.now();
+  function check(ok,message){if(!ok)throw new Error(message);}
+  async function optimizeSD(p,loss,settings={}){
+    const engine=global.Li2025QKD;
+    const bounds=settings.bounds||[[0.05,1],[0.0001,0.4]];
+    check(Array.isArray(bounds)&&bounds.length===2&&bounds.every(b=>Array.isArray(b)&&b.length===2&&b.every(Number.isFinite)&&b[0]>0&&b[1]>b[0]),'S/D 搜索范围须满足 0 < 下限 < 上限。');
+    const maxEvaluations=settings.maxEvaluations??500,maxMs=settings.maxMs??1500;
+    check(Number.isInteger(maxEvaluations)&&maxEvaluations>=1&&Number.isFinite(maxMs)&&maxMs>0,'搜索预算无效。');
+    const baseline=engine.calculate(p,loss),start=now(),w=p.k[2],gap=1e-8;
+    check(p.k.slice(0,2).every((k,i)=>k>=bounds[i][0]&&k<=bounds[i][1]),'当前 S/D 光强须位于搜索范围内，请调整范围。');
+    const nuLow=Math.max(bounds[1][0],w+gap),muLow=Math.max(bounds[0][0],nuLow+w+2*gap),muHigh=bounds[0][1];
+    check(muHigh>muLow&&bounds[1][1]>nuLow,'当前真空态与搜索范围不兼容，请增大 S/D 上限。');
+    let evaluations=1,best={k:p.k.slice(),result:baseline},lastYield=now();
+    const cache=new Map(),points=[];
+    const score=r=>r.sourceValid&&Number.isFinite(r.lRaw)?r.lRaw:-Infinity;
+    const key=k=>k.join(',');
+    cache.set(key(p.k),best);
+    const aborted=()=>{if(settings.signal?.aborted){const e=new Error('已取消优化');e.name='AbortError';throw e;}};
+    const stop=()=>evaluations>=maxEvaluations?'evaluation_limit':now()-start>=maxMs?'time_limit':'';
+    const decode=u=>{const mu=muLow+(muHigh-muLow)*u[0],upper=Math.min(bounds[1][1],mu-w-gap);return [mu,Math.exp(Math.log(nuLow)+u[1]*Math.log(upper/nuLow)),w];};
+    const better=(a,b)=>a.result.l>b.result.l||(a.result.l===b.result.l&&score(a.result)>score(b.result));
+    async function evaluate(u){
+      aborted();if(stop())return null;
+      const k=decode(u),id=key(k);let point=cache.get(id);
+      if(!point){point={k,result:engine.calculate({...p,k},loss)};cache.set(id,point);evaluations++;}
+      if(better(point,best))best=point;
+      if(now()-lastYield>=12){
+        settings.onProgress?.({evaluations,bestRateHz:best.result.rateHz,elapsedMs:now()-start});
+        await new Promise(resolve=>setTimeout(resolve,0));lastYield=now();aborted();
+      }
+      return {u:u.slice(),point};
+    }
+    // Coarse grid covers both bounds; logarithmic nu resolution covers weak decoys.
+    if((p.sampling??0)<1){
+      const grid=8;
+      for(let i=0;i<=grid&&!stop();i++)for(let j=0;j<=grid&&!stop();j++){
+        const item=await evaluate([i/grid,j/grid]);if(item)points.push(item);
+      }
+      if(p.k[0]>=muLow&&p.k[0]<=muHigh&&p.k[1]>nuLow&&p.k[1]<Math.min(bounds[1][1],p.k[0]-w-gap)){
+        const upper=Math.min(bounds[1][1],p.k[0]-w-gap);
+        points.push({u:[(p.k[0]-muLow)/(muHigh-muLow),Math.log(p.k[1]/nuLow)/Math.log(upper/nuLow)],point:{k:p.k.slice(),result:baseline}});
+      }
+      points.sort((a,b)=>score(b.point.result)-score(a.point.result));
+      const seeds=[];
+      for(const item of points){if(seeds.every(old=>Math.hypot(old.u[0]-item.u[0],old.u[1]-item.u[1])>.08))seeds.push(item);if(seeds.length===4)break;}
+      const directions=[[1,0],[-1,0],[0,1],[0,-1],[1,1],[1,-1],[-1,1],[-1,-1]];
+      for(const seed of seeds){
+        let current=seed,step=.125;
+        for(let pass=0;pass<18&&step>=1e-5&&!stop();pass++){
+          const previous=current;
+          for(const d of directions){
+            if(stop())break;
+            const u=previous.u.map((v,i)=>Math.min(1,Math.max(0,v+step*d[i])));
+            const trial=await evaluate(u);
+            if(trial&&score(trial.point.result)>score(current.point.result))current=trial;
+          }
+          if(current===previous)step/=2;
+        }
+      }
+    }
+    aborted();
+    // Re-evaluate the exact returned intensities and include the original configuration.
+    const verified=engine.calculate({...p,k:best.k.slice()},loss);
+    if(verified.l<baseline.l)best={k:p.k.slice(),result:baseline};else best.result=verified;
+    const elapsedMs=now()-start,reason=stop()||'converged';
+    return {baseline,result:best.result,k:best.result.l>0?best.k.slice():null,candidateK:best.k.slice(),fixedVacuum:w,
+      evaluations,elapsedMs,reason,bounds:bounds.map(b=>b.slice()),loss,status:best.result.l>0?'positive_key_found':'no_positive_key_found'};
+  }
+  global.Li2025Optimizer=Object.freeze({optimizeSD});
+})(typeof window!=='undefined'?window:globalThis);
+</script>
+
 <script id="li2025-ui">
 (function () {
   'use strict';
@@ -790,6 +891,7 @@
   const defaults=Object.fromEntries(inputs.map(el=>[el.id,el.value]));
   const storeKey='li2025-free-space-v1';
   let comparison=null, state=null, debounce=null, chartMap=null, resizeTimer=null;
+  let optimization=null,optimizationController=null,optimizationTicket=0,displayedPoint=null;
   const units=()=> $('unit').value==='Hz';
   const rateValue=r=>units()?r.rateHz:r.rate;
   const axisName=()=> $('axis').value==='loss'?'信道衰减 / dB':'通信距离 / km';
@@ -832,6 +934,7 @@
     ['svg','json','pin','current','slider'].forEach(id=>$(id).disabled=true);
   }
   function update() {
+    invalidateOptimization();
     clearTimeout(debounce);
     try {
       syncWindowMode();
@@ -868,6 +971,7 @@
     if (!state) return;
     try {
       const value=Math.max(state.from,Math.min(state.to,x));
+      if(displayedPoint!==value)invalidateOptimization();displayedPoint=value;
       const r=state.model.atLoss(lossAt(value,state.config));
       $('current').value=Number(value.toPrecision(10));$('slider').value=value;
       text('rate',prettyRate(r.rateHz));text('per-pulse',format(r.rate,7)+' bit/pulse');text('key',r.l.toLocaleString('en-US',{maximumFractionDigits:0}));text('channel',r.loss.toFixed(3)+' dB');
@@ -934,7 +1038,7 @@
   $('chart').addEventListener('click',event=>{const r=nearest(event);if(r){showPoint(r.x);save();}});
   $('slider').addEventListener('input',()=>{showPoint(Number($('slider').value));save();});
   $('current').addEventListener('input',()=>{if($('current').value.trim()!==''&&Number.isFinite(Number($('current').value))){showPoint(Number($('current').value));save();}});
-  function schedule(){clearTimeout(debounce);debounce=setTimeout(update,160);}
+  function schedule(){invalidateOptimization();clearTimeout(debounce);debounce=setTimeout(update,160);}
   inputs.forEach(el=>{if(el.id!=='qkd-current')el.addEventListener('input',schedule);});
   $('windowMode').addEventListener('change',update);
   $('use-distance').addEventListener('click',()=>{
@@ -951,9 +1055,42 @@
   $('unit').addEventListener('change',update);
   $('pin').addEventListener('click',()=>{if(state){comparison=JSON.parse(JSON.stringify(state.config));update();}});
   $('clear').addEventListener('click',()=>{comparison=null;update();});
+  function invalidateOptimization(message='参数或查看点改变后，请重新优化当前点。'){
+    optimizationController?.abort();optimizationController=null;optimization=null;optimizationTicket++;
+    $('optimize').disabled=false;$('opt-cancel').hidden=true;$('opt-results').hidden=true;$('opt-apply').disabled=true;
+    text('opt-status',message);
+  }
+  $('opt-cancel').addEventListener('click',()=>invalidateOptimization('已取消搜索，当前参数未改变。'));
+  $('optimize').addEventListener('click',async()=>{
+    update();if(!state)return;
+    const config=JSON.parse(JSON.stringify(state.config)),x=Number($('current').value),loss=lossAt(x,config);
+    const ticket=++optimizationTicket,controller=new AbortController();optimizationController=controller;
+    $('optimize').disabled=true;$('opt-cancel').hidden=false;text('opt-status','正在搜索当前点；可取消或修改参数。');
+    try{
+      const bounds=[[read('opt-mu-min'),read('opt-mu-max')],[read('opt-nu-min'),read('opt-nu-max')]];
+      const result=await window.Li2025Optimizer.optimizeSD(config.p,loss,{bounds,signal:controller.signal,
+        onProgress:progress=>{if(ticket===optimizationTicket)text('opt-status','正在搜索 · 已评估 '+progress.evaluations+' 组 · 当前最好 '+prettyRate(progress.bestRateHz));}});
+      if(ticket!==optimizationTicket)return;
+      if(!result.k){text('opt-status','给定范围与预算内未找到正密钥；当前参数保持不变。已评估 '+result.evaluations+' 组。');return;}
+      optimization={config,x,result};$('opt-results').hidden=false;$('opt-apply').disabled=false;
+      text('opt-target',($('axis').value==='loss'?'当前衰减 '+format(x)+' dB':'当前距离 '+format(x)+' km')+' · 实际衰减 '+loss.toFixed(3)+' dB · 真空 V 固定为 '+format(result.fixedVacuum,7));
+      text('opt-before-mu',format(config.p.k[0],8));text('opt-before-nu',format(config.p.k[1],8));
+      text('opt-after-mu',format(result.k[0],8));text('opt-after-nu',format(result.k[1],8));
+      text('opt-before-rate',format(result.baseline.rateHz,9));text('opt-after-rate',format(result.result.rateHz,9));
+      text('opt-gain',result.baseline.rateHz>0?'当前点提升 '+((result.result.rateHz/result.baseline.rateHz-1)*100).toFixed(2)+'%':'当前点从零密钥变为正密钥');
+      text('opt-status','搜索完成 · '+result.evaluations+' 组 · '+(result.elapsedMs/1000).toFixed(2)+' s'+(result.reason==='time_limit'?' · 已到时间预算':''));
+    }catch(error){if(ticket===optimizationTicket)text('opt-status',error.name==='AbortError'?'搜索已取消。':'无法优化：'+error.message);}
+    finally{if(ticket===optimizationTicket){optimizationController=null;$('optimize').disabled=false;$('opt-cancel').hidden=true;}}
+  });
+  $('opt-apply').addEventListener('click',()=>{
+    if(!optimization)return;
+    const selected=optimization.result.k.slice();$('mu').value=String(selected[0]);$('nu').value=String(selected[1]);
+    update();if(state)text('opt-status','已应用 S='+format(selected[0],8)+'、D='+format(selected[1],8)+' 并重画曲线；其余参数保持不变。');
+  });
+
   function restore(preset) {
     inputs.forEach(el=>el.value=defaults[el.id]);comparison=null;$('geometry').open=true;
-    if(preset){$('optical').value=0.5;$('coupling').value=0.5;$('filter').value=1;$('detector').value=0.4;}
+    if(preset){$('coupling').value='0.8';} // MATLAB对照示例沿用0.8；页面默认按用户截图设0.82。
     update();
   }
   $('preset').addEventListener('click',()=>restore(true));$('reset').addEventListener('click',()=>restore(false));
@@ -1467,7 +1604,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">45.4k</span>
+                        class="white-color">46.9k</span>
             
             
             
