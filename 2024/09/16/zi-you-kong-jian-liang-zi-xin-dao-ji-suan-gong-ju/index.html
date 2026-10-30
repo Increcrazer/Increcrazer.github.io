@@ -78,9 +78,9 @@
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"3Kq7DBTSsyAPWjmI",ck:"3Kq7DBTSsyAPWjmI"})</script>
 
-<meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="老王Hub" type="application/atom+xml">
 </head>
 
 <!-- KaTeX 支持 -->
@@ -438,14 +438,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.8k
+                    6.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    36 分
+                    37 分
                 </div>
                 
 
@@ -596,7 +596,8 @@
         <div class="qkd-legend"><span><i></i>当前配置</span><span id="qkd-comparison-legend" hidden=""><i></i>保存的对照配置</span><span id="qkd-performance">—</span></div>
         <details><summary>当前点的计数与安全估计</summary>
           <div class="qkd-table-wrap"><table><thead><tr><th>统计量</th><th>X 基</th><th>Z 基</th></tr></thead><tbody id="qkd-detail"></tbody></table></div>
-          <p class="qkd-hint">相位误码率采用对基单光子比特误码的随机抽样上界；相位上界达到 50% 时，该基隐私贡献为零。计数使用模型均值，最终密钥长度向下取整。</p>
+          <p class="qkd-hint"><strong>单光子安全贡献</strong>是各基单光子部分扣除相位误码带来的隐私代价后，对安全密钥长度的贡献，单位为 bit。X、Z 两基贡献相加后，还需扣除纠错泄露量和有限码长安全修正，才得到最终密钥长度；该项不是隐私放大保留比例。</p>
+          <p class="qkd-hint">相位误码率采用对基单光子比特误码的随机抽样上界；相位上界达到 50% 时，该基单光子安全贡献为零。计数使用模型均值，最终密钥长度向下取整。</p>
         </details>
       </section>
     </div>
@@ -874,7 +875,7 @@
       text('status',labels[r.status]);
       if (comparison) { const old=state.oldModel.atLoss(lossAt(value,comparison));text('compare-rate','对照 '+prettyRate(old.rateHz)+(old.rateHz>0?' · '+(r.rateHz/old.rateHz).toFixed(3)+'×':'')); }
       else text('compare-rate','固定配置仿真');
-      const rows=[['信号态匹配基计数（抽样前）',r.nDetected.map(row=>row[0]),false],['信号态公开抽样计数',r.nSampled.map(row=>row[0]),false],['信号态保留计数（用于成码）',r.n.map(row=>row[0]),false],['保留信号态错误数',r.m.map(row=>row[0]),false],['信号态 QBER',r.qber,true],['单光子期望下界',r.n1Expected,false],['单光子实际下界',r.n1,false],['单光子比特误码上界',r.e1,true],['相位误码上界',r.phi,true],['隐私项 / bit',r.privacy,false],['有效死时间修正',r.Cdt,false]];
+      const rows=[['信号态匹配基计数（抽样前）',r.nDetected.map(row=>row[0]),false],['信号态公开抽样计数',r.nSampled.map(row=>row[0]),false],['信号态保留计数（用于成码）',r.n.map(row=>row[0]),false],['保留信号态错误数',r.m.map(row=>row[0]),false],['信号态 QBER',r.qber,true],['单光子期望下界',r.n1Expected,false],['单光子实际下界',r.n1,false],['单光子比特误码上界',r.e1,true],['相位误码上界',r.phi,true],['单光子安全贡献 / bit',r.privacy,false],['有效死时间修正',r.Cdt,false]];
       $('detail').innerHTML=rows.map(([label,v,pct])=>'<tr><td>'+label+'</td><td>'+(pct?percent(v[0]):format(v[0],7))+'</td><td>'+(pct?percent(v[1]):format(v[1],7))+'</td></tr>').join('');
       if (chartMap) {
         const line=$('chart').querySelector('[data-current]'); const cx=chartMap.x(value);
@@ -1466,7 +1467,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">45.3k</span>
+                        class="white-color">45.4k</span>
             
             
             
@@ -1739,22 +1740,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
